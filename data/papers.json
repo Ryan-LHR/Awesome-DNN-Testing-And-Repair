@@ -1,0 +1,554 @@
+[
+  {
+    "id": "cocofuzzing-2023",
+    "title": "CoCoFuzzing: Testing Neural Code Models With Coverage-Guided Fuzzing",
+    "venue": "TR",
+    "venue_name": "IEEE Transactions on Reliability",
+    "paper_url": "https://doi.org/10.1109/tr.2022.3208239",
+    "alias": "CoCoFuzzing",
+    "authors": [
+      "Moshi Wei",
+      "Yuchao Huang",
+      "Jinqiu Yang",
+      "Junjie Wang",
+      "Song Wang"
+    ],
+    "abstract": null,
+    "publication_type": "journal",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": "2021-06-17",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1109/tr.2022.3208239",
+    "arxiv_url": "https://arxiv.org/abs/2106.09242",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/tr.2022.3208239",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://arxiv.org/abs/2106.09242",
+        "label": "arXiv public record",
+        "supports": "预印本标题、首发日期与研究内容"
+      }
+    ],
+    "notes": "截图年份为 2022；DOI 登记的正式卷期为 2023。已核实的预印本首发为 2021；在线发表年未从当前出版记录独立确认。"
+  },
+  {
+    "id": "iatt-2025",
+    "title": "IATT: Interpretation Analysis-based Transferable Test Generation for Convolutional Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3705301",
+    "alias": "IATT",
+    "authors": [
+      "Ruilin Xie",
+      "Xiang Chen",
+      "Qifan He",
+      "Bixin Li",
+      "Zhanqi Cui"
+    ],
+    "abstract": null,
+    "publication_type": "journal",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-04-28",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3705301",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3705301",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "npc-2022",
+    "title": "NPC: Neuron Path Coverage via Characterizing Decision Logic of Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3490489",
+    "alias": "NPC",
+    "authors": [
+      "Xiaofei Xie",
+      "Tianlin Li",
+      "Jian Wang",
+      "Lei Ma",
+      "Qing Guo",
+      "Felix Juefei-Xu",
+      "Yang Liu"
+    ],
+    "abstract": null,
+    "publication_type": "journal",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-03-24",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3490489",
+    "arxiv_url": "https://arxiv.org/abs/2203.12915",
+    "code_url": "https://github.com/ltl7155/NPC",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3490489",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://arxiv.org/abs/2203.12915",
+        "label": "arXiv public record",
+        "supports": "预印本标题、首发日期与研究内容"
+      },
+      {
+        "url": "https://github.com/ltl7155/NPC",
+        "label": "Author repository",
+        "supports": "作者实现与论文关联"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "deephunter-2019",
+    "title": "DeepHunter: A Coverage-Guided Fuzz Testing Framework for Deep Neural Networks",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3293882.3330579",
+    "alias": "DeepHunter",
+    "authors": [
+      "Xiaofei Xie",
+      "Lei Ma",
+      "Felix Juefei-Xu",
+      "Minhui Xue",
+      "Hongxu Chen",
+      "Yang Liu",
+      "Jianjun Zhao",
+      "Bo Li",
+      "Jianxiong Yin",
+      "Simon See"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2019,
+      "online_year": 2019,
+      "first_public_year": 2018,
+      "first_public_date": "2018-09-04",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3293882.3330579",
+    "arxiv_url": "https://arxiv.org/abs/1809.01266",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3293882.3330579",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://arxiv.org/abs/1809.01266",
+        "label": "arXiv public record",
+        "supports": "预印本标题、首发日期与研究内容"
+      }
+    ],
+    "notes": "按完整标题匹配 ISSTA 2019 正式论文；不因截图条目类型为“演示文档”而改记为 demo。另有不同标题的 ASE 2019 工具论文，未自动合并。"
+  },
+  {
+    "id": "coverage-quality-2020",
+    "title": "Correlations between Deep Neural Network Model Coverage Criteria and Model Quality",
+    "venue": "ESEC/FSE",
+    "venue_name": "Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3368089.3409671",
+    "alias": null,
+    "authors": [
+      "Shenao Yan",
+      "Guanhong Tao",
+      "Xuwei Liu",
+      "Juan Zhai",
+      "Shiqing Ma",
+      "Lei Xu",
+      "Xiangyu Zhang"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2020,
+      "online_year": 2020,
+      "first_public_year": 2020,
+      "first_public_date": "2020-11-08",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3368089.3409671",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3368089.3409671",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://people.cs.umass.edu/~juanzhai/papers/fse20_yan.pdf",
+        "label": "Author paper",
+        "supports": "研究问题与作者版本内容"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "test4deep-journal-2023",
+    "title": "A White-Box Testing for Deep Neural Networks Based on Neuron Coverage",
+    "venue": "TNNLS",
+    "venue_name": "IEEE Transactions on Neural Networks and Learning Systems",
+    "paper_url": "https://doi.org/10.1109/tnnls.2022.3156620",
+    "alias": "Test4Deep (journal)",
+    "authors": [
+      "Jing Yu",
+      "Shukai Duan",
+      "Xiaojun Ye"
+    ],
+    "abstract": null,
+    "publication_type": "journal",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-03-16",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1109/tnnls.2022.3156620",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/tnnls.2022.3156620",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35294361/",
+        "label": "PubMed publication record",
+        "supports": "在线发表日期与摘要中的 Test4Deep 名称"
+      }
+    ],
+    "notes": "截图年份 2022 与在线发表信息对应；正式卷期为 2023。与 2019 条目同用 Test4Deep 名称，但 DOI、标题与作者列表不同，暂分别保留；未声称已确认期刊扩展关系。"
+  },
+  {
+    "id": "test4deep-2019",
+    "title": "Test4Deep: an Effective White-Box Testing for Deep Neural Networks",
+    "venue": "CSE/EUC",
+    "venue_name": "2019 IEEE International Conference on Computational Science and Engineering (CSE) and IEEE International Conference on Embedded and Ubiquitous Computing (EUC)",
+    "paper_url": "https://doi.org/10.1109/cse/euc.2019.00013",
+    "alias": "Test4Deep (conference)",
+    "authors": [
+      "Jing Yu",
+      "Yao Fu",
+      "Yanan Zheng",
+      "Zheng Wang",
+      "Xiaojun Ye"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2019,
+      "online_year": null,
+      "first_public_year": 2019,
+      "first_public_date": null,
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1109/cse/euc.2019.00013",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/cse/euc.2019.00013",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      }
+    ],
+    "notes": "与同名工具的期刊论文属于不同 DOI 的出版记录；两者的具体版本关系尚待核实。"
+  },
+  {
+    "id": "ml-testing-survey-2022",
+    "title": "Machine Learning Testing: Survey, Landscapes and Horizons",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2019.2962027",
+    "alias": null,
+    "authors": [
+      "Jie M. Zhang",
+      "Mark Harman",
+      "Lei Ma",
+      "Yang Liu"
+    ],
+    "abstract": null,
+    "publication_type": "journal",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2019,
+      "first_public_date": "2019-06-19",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1109/tse.2019.2962027",
+    "arxiv_url": "https://arxiv.org/abs/1906.10742",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/tse.2019.2962027",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://arxiv.org/abs/1906.10742",
+        "label": "arXiv public record",
+        "supports": "预印本标题、首发日期与研究内容"
+      }
+    ],
+    "notes": "正式卷期年 2022、预印本首发年 2019。"
+  },
+  {
+    "id": "deeproad-2018",
+    "title": "DeepRoad: GAN-Based Metamorphic Testing and Input Validation Framework for Autonomous Driving Systems",
+    "venue": "ASE",
+    "venue_name": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3238147.3238187",
+    "alias": "DeepRoad",
+    "authors": [
+      "Mengshi Zhang",
+      "Yuqun Zhang",
+      "Lingming Zhang",
+      "Cong Liu",
+      "Sarfraz Khurshid"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2018,
+      "online_year": 2018,
+      "first_public_year": 2018,
+      "first_public_date": "2018-09-03",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3238147.3238187",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3238147.3238187",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      }
+    ],
+    "notes": "日期目前以可核实的正式出版记录为准；更早预印本日期未确认。"
+  },
+  {
+    "id": "cagfuzz-2022",
+    "title": "CAGFuzz: Coverage-Guided Adversarial Generative Fuzzing Testing for Image-Based Deep Learning Systems",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2021.3124006",
+    "alias": "CAGFuzz",
+    "authors": [
+      "Pengcheng Zhang",
+      "Bin Ren",
+      "Hai Dong",
+      "Qiyin Dai"
+    ],
+    "abstract": null,
+    "publication_type": "journal",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2022,
+      "first_public_date": "2022-11-01",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1109/tse.2021.3124006",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/tse.2021.3124006",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      }
+    ],
+    "notes": "当前记录为四位作者的期刊版本。检索到 2019 同名预印本，但其标题和作者列表不同；两者的版本关系尚待核实。"
+  },
+  {
+    "id": "uncertainty-2020",
+    "title": "Towards Characterizing Adversarial Defects of Deep Learning Software from the Lens of Uncertainty",
+    "venue": "ICSE",
+    "venue_name": "Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3377811.3380368",
+    "alias": null,
+    "authors": [
+      "Xiyue Zhang",
+      "Xiaofei Xie",
+      "Lei Ma",
+      "Xiaoning Du",
+      "Qiang Hu",
+      "Yang Liu",
+      "Jianjun Zhao",
+      "Meng Sun"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2020,
+      "online_year": 2020,
+      "first_public_year": 2020,
+      "first_public_date": "2020-04-24",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3377811.3380368",
+    "arxiv_url": "https://arxiv.org/abs/2004.11573",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3377811.3380368",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://arxiv.org/abs/2004.11573",
+        "label": "arXiv public record",
+        "supports": "预印本标题、首发日期与研究内容"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "ai-lancet-2021",
+    "title": "AI-Lancet: Locating Error-inducing Neurons to Optimize Neural Networks",
+    "venue": "CCS",
+    "venue_name": "Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security",
+    "paper_url": "https://doi.org/10.1145/3460120.3484818",
+    "alias": "AI-Lancet",
+    "authors": [
+      "Yue Zhao",
+      "Hong Zhu",
+      "Kai Chen",
+      "Shengzhi Zhang"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2021,
+      "online_year": 2021,
+      "first_public_year": 2021,
+      "first_public_date": "2021-11-12",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3460120.3484818",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3460120.3484818",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "deepcon-2021",
+    "title": "DeepCon: Contribution Coverage Testing for Deep Learning Systems",
+    "venue": "SANER",
+    "venue_name": "2021 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+    "paper_url": "https://doi.org/10.1109/saner50967.2021.00026",
+    "alias": "DeepCon",
+    "authors": [
+      "Zhiyang Zhou",
+      "Wensheng Dou",
+      "Jie Liu",
+      "Chenxin Zhang",
+      "Jun Wei",
+      "Dan Ye"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2021,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": null,
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1109/saner50967.2021.00026",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/saner50967.2021.00026",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      }
+    ],
+    "notes": "按出版记录记为 SANER 2021 会议论文，不沿用截图中的“演示文档”条目类型。"
+  },
+  {
+    "id": "deepxplore-2017",
+    "title": "DeepXplore: Automated Whitebox Testing of Deep Learning Systems",
+    "venue": "SOSP",
+    "venue_name": "Proceedings of the 26th Symposium on Operating Systems Principles",
+    "paper_url": "https://doi.org/10.1145/3132747.3132785",
+    "alias": "DeepXplore",
+    "authors": [
+      "Kexin Pei",
+      "Yinzhi Cao",
+      "Junfeng Yang",
+      "Suman Jana"
+    ],
+    "abstract": null,
+    "publication_type": "conference",
+    "dates": {
+      "publication_year": 2017,
+      "online_year": 2017,
+      "first_public_year": 2017,
+      "first_public_date": "2017-05-18",
+      "checked_on": "2026-10-28"
+    },
+    "doi": "10.1145/3132747.3132785",
+    "arxiv_url": "https://arxiv.org/abs/1705.06640",
+    "code_url": "https://github.com/peikexin9/deepxplore",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3132747.3132785",
+        "label": "Crossref DOI record",
+        "supports": "标题、作者、发表来源与卷期年份"
+      },
+      {
+        "url": "https://arxiv.org/abs/1705.06640",
+        "label": "arXiv public record",
+        "supports": "预印本标题、首发日期与研究内容"
+      },
+      {
+        "url": "https://github.com/peikexin9/deepxplore",
+        "label": "Author repository",
+        "supports": "作者实现与论文关联"
+      },
+      {
+        "url": "https://www.cs.columbia.edu/~junfeng/papers/deepxplore/",
+        "label": "Author publication page",
+        "supports": "正式完整标题、会议与研究内容"
+      }
+    ],
+    "notes": "来自此前对话中用户明确提及的种子；不属于这张截图的 13 行。"
+  }
+]
