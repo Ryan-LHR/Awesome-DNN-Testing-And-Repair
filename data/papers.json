@@ -2364,5 +2364,1959 @@
       }
     ],
     "notes": ""
+  },
+  {
+    "id": "seed-selection-2024",
+    "title": "Seed Selection for Testing Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3607190",
+    "alias": null,
+    "categories": [
+      "Test Generation",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Yuhan Zhi",
+      "Xiaofei Xie",
+      "Chao Shen",
+      "Jun Sun",
+      "Xiaoyu Zhang",
+      "Xiaohong Guan"
+    ],
+    "abstract": "Deep learning (DL) has been applied in many applications. Meanwhile, the quality of DL systems is becoming a big concern. To evaluate the quality of DL systems, a number of DL testing techniques have been proposed. To generate test cases, a set of initial seed inputs are required. Existing testing techniques usually construct seed corpus by randomly selecting inputs from training or test dataset. Till now, there is no study on how initial seed inputs affect the performance of DL testing and how to construct an optimal one. To fill this gap, we conduct the first systematic study to evaluate the impact of seed selection strategies on DL testing. Specifically, considering three popular goals of DL testing (i.e., coverage, failure detection, and robustness), we develop five seed selection strategies, including three based on single-objective optimization (SOO) and two based on multi-objective optimization (MOO). We evaluate these strategies on seven testing tools. Our results demonstrate that the selection of initial seed inputs greatly affects the testing performance. SOO-based selection can construct the best seed corpus that can boost DL testing with respect to the specific testing goal. MOO-based selection strategies can construct seed corpus that achieve balanced improvement on multiple objectives.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3607190",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3607190",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": "研究测试生成前的初始种子语料选择；按已确认口径归测试生成与实证研究。正式卷期为 2024，早期 Just Accepted 记录为 2023；更早公开的精确日期未独立确认。"
+  },
+  {
+    "id": "surprise-adequacy-journal-2023",
+    "title": "Evaluating Surprise Adequacy for Deep Learning System Testing",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3546947",
+    "alias": "SA (journal-version)",
+    "categories": [
+      "Coverage Metrics",
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Jinhan Kim",
+      "Robert Feldt",
+      "Shin Yoo"
+    ],
+    "abstract": "The rapid adoption of Deep Learning (DL) systems in safety critical domains such as medical imaging and autonomous driving urgently calls for ways to test their correctness and robustness. Borrowing from the concept of test adequacy in traditional software testing, existing work on testing of DL systems initially investigated DL systems from structural point of view, leading to a number of coverage metrics. Our lack of understanding of the internal mechanism of Deep Neural Networks (DNNs), however, means that coverage metrics defined on the Boolean dichotomy of coverage are hard to intuitively interpret and understand. We propose the degree of out-of-distribution-ness of a given input as its adequacy for testing: the more surprising a given input is to the DNN under test, the more likely the system will show unexpected behavior for the input. We develop the concept of surprise into a test adequacy criterion, called Surprise Adequacy (SA). Intuitively, SA measures the difference in the behavior of the DNN for the given input and its behavior for the training data. We posit that a good test input should be sufficiently, but not overtly, surprising compared to the training dataset. This article evaluates SA using a range of DL systems from simple image classifiers to autonomous driving car platforms, as well as both small and large data benchmarks ranging from MNIST to ImageNet. The results show that the SA value of an input can be a reliable predictor of the correctness of the mode behavior. We also show that SA can be used to detect adversarial examples, and also be efficiently computed against large training dataset such as ImageNet using sampling.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-03-29",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3546947",
+    "arxiv_url": null,
+    "code_url": "https://github.com/coinse/sadl",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3546947",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      },
+      {
+        "url": "https://coinse.github.io/publications/pdfs/Kim2022hg.pdf",
+        "label": "SA journal extension paper",
+        "supports": "正文明确的会议与期刊扩展关系"
+      },
+      {
+        "url": "https://github.com/coinse/sadl",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": "ICSE 2019 Surprise Adequacy 论文的期刊扩展版本，与会议版本分别保留。"
+  },
+  {
+    "id": "surprise-adequacy-2019",
+    "title": "Guiding Deep Learning System Testing Using Surprise Adequacy",
+    "venue": "ICSE",
+    "venue_name": "2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE)",
+    "paper_url": "https://doi.org/10.1109/icse.2019.00108",
+    "alias": "SA (conf-version)",
+    "categories": [
+      "Coverage Metrics",
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Jinhan Kim",
+      "Robert Feldt",
+      "Shin Yoo"
+    ],
+    "abstract": "Deep Learning (DL) systems are rapidly being adopted in safety and security critical domains, urgently calling for ways to test their correctness and robustness. Testing of DL systems has traditionally relied on manual collection and labelling of data. Recently, a number of coverage criteria based on neuron activation values have been proposed. These criteria essentially count the number of neurons whose activation during the execution of a DL system satisfied certain properties, such as being above predefined thresholds. However, existing coverage criteria are not sufficiently fine grained to capture subtle behaviours exhibited by DL systems. Moreover, evaluations have focused on showing correlation between adversarial examples and proposed criteria rather than evaluating and guiding their use for actual testing of DL systems. We propose a novel test adequacy criterion for testing of DL systems, called Surprise Adequacy for Deep Learning Systems (SADL), which is based on the behaviour of DL systems with respect to their training data. We measure the surprise of an input as the difference in DL system's behaviour between the input and the training data (i.e., what was learnt during training), and subsequently develop this as an adequacy criterion: a good test input should be sufficiently but not overtly surprising compared to training data. Empirical evaluation using a range of DL systems from simple image classifiers to autonomous driving car platforms shows that systematic sampling of inputs based on their surprise can improve classification accuracy of DL systems against adversarial examples by up to 77.5% via retraining.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2019,
+      "online_year": null,
+      "first_public_year": 2018,
+      "first_public_date": "2018-08-25",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/icse.2019.00108",
+    "arxiv_url": "https://arxiv.org/abs/1808.08444",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FICSE.2019.00108",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse.2019.00108",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/1808.08444",
+        "label": "Author preprint record",
+        "supports": "关联预印本的题名、作者与首发日期"
+      },
+      {
+        "url": "https://coinse.github.io/publications/pdfs/Kim2022hg.pdf",
+        "label": "SA journal extension paper",
+        "supports": "正文明确的会议与期刊扩展关系"
+      }
+    ],
+    "notes": "Surprise Adequacy 的 ICSE 2019 会议版本；期刊扩展为 Evaluating Surprise Adequacy for Deep Learning System Testing。"
+  },
+  {
+    "id": "graphprior-2024",
+    "title": "GraphPrior: Mutation-based Test Input Prioritization for Graph Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3607191",
+    "alias": "GraphPrior",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Xueqi Dang",
+      "Yinghua Li",
+      "Mike Papadakis",
+      "Jacques Klein",
+      "Tegawendé F. Bissyandé",
+      "Yves Le Traon"
+    ],
+    "abstract": "Graph Neural Networks (GNNs) have achieved promising performance in a variety of practical applications. Similar to traditional DNNs, GNNs could exhibit incorrect behavior that may lead to severe consequences, and thus testing is necessary and crucial. However, labeling all the test inputs for GNNs can be costly and time-consuming, especially when dealing with large and complex graphs, which seriously affects the efficiency of GNN testing. Existing studies have focused on test prioritization for DNNs, which aims to identify and prioritize fault-revealing tests (i.e., test inputs that are more likely to be misclassified) to detect system bugs earlier in a limited time. Although some DNN prioritization approaches have been demonstrated effective, there is a significant problem when applying them to GNNs: They do not take into account the connections (edges) between GNN test inputs (nodes), which play a significant role in GNN inference. In general, DNN test inputs are independent of each other, while GNN test inputs are usually represented as a graph with complex relationships between each test. In this article, we propose GraphPrior (GNN -oriented Test Prior itization), a set of approaches to prioritize test inputs specifically for GNNs via mutation analysis. Inspired by mutation testing in traditional software engineering, in which test suites are evaluated based on the mutants they kill, GraphPrior generates mutated models for GNNs and regards test inputs that kill many mutated models as more likely to be misclassified. Then, GraphPrior leverages the mutation results in two ways, killing-based and feature-based methods. When scoring a test input, the killing-based method considers each mutated model equally important, while feature-based methods learn different importance for each mutated model through ranking models. Finally, GraphPrior ranks all the test inputs based on their scores. We conducted an extensive study based on 604 subjects to evaluate GraphPrior on both natural and adversarial test inputs. The results demonstrate that KMGP, the killing-based GraphPrior approach, outperforms the compared approaches in a majority of cases, with an average improvement of 4.76% ~49.60% in terms of APFD. Furthermore, the feature-based GraphPrior approach, RFGP, performs the best among all the GraphPrior approaches. On adversarial test inputs, RFGP outperforms the compared approaches across different adversarial attacks, with the average improvement of 2.95% ~46.69%.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-07-04",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3607191",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3607191",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      },
+      {
+        "url": "https://orbilu.uni.lu/handle/10993/56068",
+        "label": "Author institutional publication record",
+        "supports": "较早公开版本日期 2023-07-04"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "datis-2024",
+    "title": "Distance-Aware Test Input Selection for Deep Neural Networks",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3650212.3652125",
+    "alias": "DATIS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Zhong Li",
+      "Zhengfeng Xu",
+      "Ruihua Ji",
+      "Minxue Pan",
+      "Tian Zhang",
+      "Linzhang Wang",
+      "Xuandong Li"
+    ],
+    "abstract": "Deep Neural Network (DNN) testing is one of the common practices to guarantee the quality of DNNs. However, DNN testing in general requires a significant amount of test inputs with oracle information (labels), which can be challenging and resource-intensive to obtain. To relieve this problem, we propose DATIS, a distance-aware test input selection approach for DNNs. Specifically, DATIS adopts a two-step approach for selecting test inputs. In the first step, it selects test inputs based on improved uncertainty scores derived from the distances between the test inputs and their nearest neighbor training samples. In the second step, it further eliminates test inputs that may cover the same faults by examining the distances among the selected test inputs. To evaluate DATIS, we conduct extensive experiments on 8 diverse subjects, taking into account different domains of test inputs, varied DNN structures, and diverse types of test inputs. Evaluation results show that DATIS significantly outperforms 15 baseline approaches in both selecting test inputs with high fault-revealing power and guiding the selection of data for DNN enhancement.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-09-11",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3650212.3652125",
+    "arxiv_url": null,
+    "code_url": "https://github.com/DATIS-24/DATIS",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3650212.3652125",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3650212.3652125",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://github.com/DATIS-24/DATIS",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "meta-model-test-selection-2024",
+    "title": "Test Selection for Deep Neural Networks using Meta-Models with Uncertainty Metrics",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3650212.3680312",
+    "alias": null,
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Demet Demir",
+      "Aysu Betin Can",
+      "Elif Surer"
+    ],
+    "abstract": "With the use of Deep Learning (DL) in safety-critical domains, the systematic testing of these systems has become a critical issue for human life. Due to the data-driven nature of Deep Neural Networks (DNNs), the effectiveness of tests is closely related to the adequacy of test datasets. Test data need to be labeled, which requires manual human effort and sometimes expert knowledge. DL system testers aim to select the test data that will be most helpful in identifying the weaknesses of the DNN model by using resources efficiently. To help achieve this goal, we propose a test data prioritization approach based on using a meta-model that gets uncertainty metrics as input, which are derived from outputs of other base models. Integrating different uncertainty metrics helps overcome individual limitations of these metrics and be effective in a wider range of scenarios. We train the meta-models with the objective of predicting whether a test input will lead the tested model to make an incorrect prediction or not. We conducted an experimental evaluation with popular image classification datasets and DNN models to evaluate the proposed approach. The results of the experiments demonstrate that our approach effectively prioritizes the test datasets and outperforms existing state-of-the-art test prioritization methods used in comparison. In the experiments, we evaluated the test prioritization approach from a distribution-aware perspective by generating test datasets with and without out-of-distribution data.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-09-11",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3650212.3680312",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3650212.3680312",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3650212.3680312",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "nns-2023",
+    "title": "In Defense of Simple Techniques for Neural Network Test Case Selection",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3597926.3598073",
+    "alias": "NNS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Shenglin Bao",
+      "Chaofeng Sha",
+      "Bihuan Chen",
+      "Xin Peng",
+      "Wenyun Zhao"
+    ],
+    "abstract": "Although deep learning (DL) software has been pervasive in various applications, the brittleness of deep neural networks (DNN) hinders their deployment in many tasks especially high-stake ones. To mitigate the risk accompanied with DL software fault, a variety of DNN testing techniques have been proposed such as test case selection. Among those test case selection or prioritization methods, the uncertainty-based ones such as DeepGini have demonstrated their effectiveness in finding DNN’s faults. Recently, TestRank, a learning based test ranking method has shown their out-performance over simple uncertainty-based test selection methods. However, this is achieved with a more complicated design which needs to train a graph convolutional network and a multi-layer Perceptron. In this paper, we propose a novel and lightweight DNN test selection method to enhance the effectiveness of existing simple ones. Besides the DNN model’s uncertainty on test case itself, we take into account model’s uncertainty on its neighbors. This could diversify the selected test cases and improve the effectiveness of existing uncertainty-based test selection methods. Extensive experiments on 5 datasets demonstrate the effectiveness of our approach.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-07-12",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3597926.3598073",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3597926.3598073",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3597926.3598073",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "simple-techniques-replication-2022",
+    "title": "Simple techniques work surprisingly well for neural network test prioritization and active learning (replicability study)",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 31st ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3533767.3534375",
+    "alias": null,
+    "categories": [
+      "Test Selection and Prioritization",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Michael Weiss",
+      "Paolo Tonella"
+    ],
+    "abstract": "Test Input Prioritizers (TIP) for Deep Neural Networks (DNN) are an important technique to handle the typically very large test datasets efficiently, saving computation and labelling costs. This is particularly true for large scale, deployed systems, where inputs observed in production are recorded to serve as potential test or training data for next versions of the system. Feng et. al. propose DeepGini, a very fast and simple TIP and show that it outperforms more elaborate techniques such as neuron- and surprise coverage. In a large-scale study (4 case studies, 8 test datasets, 32’200 trained models) we verify their findings. However, we also find that other comparable or even simpler baselines from the field of uncertainty quantification, such as the predicted softmax likelihood or the entropy of the predicted softmax likelihoods perform equally well as DeepGini.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-07-18",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3533767.3534375",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3533767.3534375",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3533767.3534375",
+        "label": "Published paper abstract",
+        "supports": "原文摘要直接提取自用户书目关联的同 DOI 论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "deepgini-2020",
+    "title": "DeepGini: prioritizing massive tests to enhance the robustness of deep neural networks",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 29th ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3395363.3397357",
+    "alias": "DeepGini",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yang Feng",
+      "Qingkai Shi",
+      "Xinyu Gao",
+      "Jun Wan",
+      "Chunrong Fang",
+      "Zhenyu Chen"
+    ],
+    "abstract": "Deep neural networks (DNN) have been deployed in many software systems to assist in various classification tasks. In company with the fantastic effectiveness in classification, DNNs could also exhibit incorrect behaviors and result in accidents and losses. Therefore, testing techniques that can detect incorrect DNN behaviors and improve DNN quality are extremely necessary and critical. However, the testing oracle, which defines the correct output for a given input, is often not available in the automated testing. To obtain the oracle information, the testing tasks of DNN-based systems usually require expensive human efforts to label the testing data, which significantly slows down the process of quality assurance. To mitigate this problem, we propose DeepGini, a test prioritization technique designed based on a statistical perspective of DNN. Such a statistical perspective allows us to reduce the problem of measuring misclassification probability to the problem of measuring set impurity, which allows us to quickly identify possibly-misclassified tests. To evaluate, we conduct an extensive empirical study on popular datasets and prevalent DNN models. The experimental results demonstrate that DeepGini outperforms existing coverage-based techniques in prioritizing tests regarding both effectiveness and efficiency. Meanwhile, we observe that the tests prioritized at the front by DeepGini are more effective in improving the DNN quality in comparison with the coverage-based techniques.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2020,
+      "online_year": 2020,
+      "first_public_year": 2020,
+      "first_public_date": "2020-07-18",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3395363.3397357",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3395363.3397357",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3395363.3397357",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "deepgd-2024",
+    "title": "DeepGD: A Multi-Objective Black-Box Test Selection Approach for Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3644388",
+    "alias": "DeepGD",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Zohreh Aghababaeyan",
+      "Manel Abdellatif",
+      "Mahboubeh Dadkhah",
+      "Lionel Briand"
+    ],
+    "abstract": "Deep neural networks (DNNs) are widely used in various application domains such as image processing, speech recognition, and natural language processing. However, testing DNN models may be challenging due to the complexity and size of their input domain. In particular, testing DNN models often requires generating or exploring large unlabeled datasets. In practice, DNN test oracles, which identify the correct outputs for inputs, often require expensive manual effort to label test data, possibly involving multiple experts to ensure labeling correctness. In this article, we propose DeepGD, a black-box multi-objective test selection approach for DNN models. It reduces the cost of labeling by prioritizing the selection of test inputs with high fault-revealing power from large unlabeled datasets. DeepGD not only selects test inputs with high uncertainty scores to trigger as many mispredicted inputs as possible but also maximizes the probability of revealing distinct faults in the DNN model by selecting diverse mispredicted inputs. The experimental results conducted on four widely used datasets and five DNN models show that in terms of fault-revealing ability, (1) white-box, coverage-based approaches fare poorly, (2) DeepGD outperforms existing black-box test selection approaches in terms of fault detection, and (3) DeepGD also leads to better guidance for DNN model retraining when using selected inputs to augment the training set.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-06-27",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3644388",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3644388",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "atom-2023",
+    "title": "ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems",
+    "venue": "ASE",
+    "venue_name": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+    "paper_url": "https://doi.org/10.1109/ase56229.2023.00156",
+    "alias": "ATOM",
+    "categories": [
+      "Coverage Metrics",
+      "Test Generation"
+    ],
+    "authors": [
+      "Shengyou Hu",
+      "Huayao Wu",
+      "Peng Wang",
+      "Jing Chang",
+      "Yongjun Tu",
+      "Xiu Jiang",
+      "Xintao Niu",
+      "Changhai Nie"
+    ],
+    "abstract": "Multi-label Image Classification Systems (MICSs) developed based on Deep Neural Networks (DNNs) are extensively used in people's daily life. Currently, although there are a variety of approaches to test DNN-based systems, they typically rely on the internals of DNNs to design test cases, and do not take the core specification of MICS (i.e., correctly recognizing multiple objects in a given image) into account. In this paper, we propose ATOM, an automated and systematic black-box testing framework for testing MICS. Specifically, ATOM exploits the label combination as the testing adequacy criteria, hoping to systematically examine the impact of correlations between a fixed number of labels on the classification ability of MICS. Then, ATOM leverages image search engine and natural language processing to find test images that are not only common to the real-world, but also relevant to target label combinations. Finally, ATOM combines metamorphic testing and label information to realize test oracle identification, based on which the ability of MICS in classifying different label combinations is evaluated. To evaluate the effectiveness of ATOM, we have performed experiments on two popular datasets of MICS, VOC and COCO (each with five state-of-the-art DNN models), and one real-world photo tagging application from our industrial partner. The experimental results reveal that the performance of current DNN-based MICSs remains less satisfactory even in recognizing correlations between only two labels, as ATOM triggers a total number of 6,049 such label combination related errors for all MICSs studied. In particular, ATOM reports 587 error-revealing images for the industrial MICS, in which 92% of them are confirmed by the developers.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": "2023-09-11",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/ase56229.2023.00156",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FASE56229.2023.00156",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/ase56229.2023.00156",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要；与正式出版题名和 DOI 对应"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "certpri-2023",
+    "title": "CertPri: Certifiable Prioritization for Deep Neural Networks via Movement Cost in Feature Space",
+    "venue": "ASE",
+    "venue_name": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+    "paper_url": "https://doi.org/10.1109/ase56229.2023.00126",
+    "alias": "CertPri",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Haibin Zheng",
+      "Jinyin Chen",
+      "Haibo Jin"
+    ],
+    "abstract": "Deep neural networks (DNNs) have demonstrated their outperformance in various software systems, but also exhibit misbehavior and even result in irreversible disasters. Therefore, it is crucial to identify the mis-behavior of DNN-based software and improve DNNs’ quality. Test input prioritization is one of the most appealing ways to guarantee DNNs’ quality, which prioritizes test inputs so that more bug-revealing inputs can be identified earlier with limited time and manual labeling efforts. However, the existing prioritization methods are still limited from three aspects: certifiability, effectiveness, and generalizability. To overcome the challenges, we propose CertPri, a test input prioritization technique designed based on a movement cost perspective of test inputs in DNNs’ feature space. CertPri differs from previous works in three key aspects: (1) certifiable: it provides a formal robustness guarantee for the movement cost; (2) effective: it leverages formally guaranteed movement costs to identify malicious bug-revealing inputs; and (3) generic: it can be applied to various tasks, data, models, and scenarios. Extensive evaluations across 2 tasks (i.e., classification and regression), 6 data forms, 4 model structures, and 2 scenarios (i.e., white-box and black-box) demonstrate CertPri’s superior performance. For instance, it significantly improves 53.97% prioritization effectiveness on average compared with baselines. Its robustness and generalizability are 1.41~2.00 times and 1.33~3.39 times that of baselines on average, respectively.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": "2023-07-18",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/ase56229.2023.00126",
+    "arxiv_url": "https://arxiv.org/abs/2307.09375",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FASE56229.2023.00126",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://conf.researchr.org/details/ase-2023/ase-2023-papers/6/CertPri-Certifiable-Prioritization-for-Deep-Neural-Networks-via-Movement-Cost-in-Fea",
+        "label": "ASE 2023 official program abstract",
+        "supports": "原文会议摘要与 Research Papers 轨道"
+      },
+      {
+        "url": "https://arxiv.org/abs/2307.09375",
+        "label": "Author preprint record",
+        "supports": "关联预印本的题名、作者与首发日期"
+      }
+    ],
+    "notes": "正式发表于 ASE 2023 Research Papers，arXiv:2307.09375 作为关联预印本；原文摘要采用官方会议程序记录。"
+  },
+  {
+    "id": "tdpr-2024",
+    "title": "Prioritizing Test Inputs for DNNs Using Training Dynamics",
+    "venue": "ASE",
+    "venue_name": "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3691620.3695498",
+    "alias": "TDPR",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Jian Shen",
+      "Zhong Li",
+      "Minxue Pan",
+      "Xuandong Li"
+    ],
+    "abstract": "Deep Neural Network (DNN) testing is one of the most widely-used techniques to guarantee the quality of DNNs. However, DNN testing typically requires the ground truth of test inputs, which is time-consuming and labor-intensive to obtain. To relieve the labeling-cost problem of DNN testing, we propose TDPR, a test input prioritization technique for DNNs based on training dynamics. The key insight of TDPR is that bug-revealing samples exhibit different learning trajectories compared to normal ones. Based on this, TDPR constructs a learning trajectory for each test input, which characterizes the evolving learning behavior of DNNs. Then, TDPR extracts features from these learning trajectories and applies learning-to-rank techniques to build a ranking model, which can intelligently utilize the generated features to prioritize test inputs. To evaluate TDPR, we conduct extensive experiments on 8 diverse subjects, considering various domains of test inputs, different DNN architectures, and diverse types of test inputs. The evaluation results demonstrate that TDPR outperforms 7 baseline approaches in both prioritizing test inputs and guiding the retraining of DNNs.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-10-27",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3691620.3695498",
+    "arxiv_url": null,
+    "code_url": "https://github.com/TDPR-24/TDPR",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3691620.3695498",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3691620.3695498",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://github.com/TDPR-24/TDPR",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "fast-2024",
+    "title": "FAST: Boosting Uncertainty-based Test Prioritization Methods for Neural Networks via Feature Selection",
+    "venue": "ASE",
+    "venue_name": "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3691620.3695472",
+    "alias": "FAST",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Jialuo Chen",
+      "Jingyi Wang",
+      "Xiyue Zhang",
+      "Youcheng Sun",
+      "Marta Kwiatkowska",
+      "Jiming Chen",
+      "Peng Cheng"
+    ],
+    "abstract": "Due to the vast testing space, the increasing demand for effective and efficient testing of deep neural networks (DNNs) has led to the development of various DNN test case prioritization techniques. However, the fact that DNNs can deliver high-confidence predictions for incorrectly predicted examples, known as the over-confidence problem, causes these methods to fail to reveal high-confidence errors. To address this limitation, in this work, we propose FAST, a method that boosts existing prioritization methods through guided FeAture SelecTion. FAST is based on the insight that certain features may introduce noise that affects the model’s output confidence, thereby contributing to high-confidence errors. It quantifies the importance of each feature for the model’s correct predictions, and then dynamically prunes the information from the noisy features during inference to derive a new probability vector for the uncertainty estimation. With the help of FAST, the high-confidence errors and correctly classified examples become more distinguishable, resulting in higher APFD (Average Percentage of Fault Detection) values for test prioritization, and higher generalization ability for model enhancement. We conduct extensive experiments to evaluate FAST across a diverse set of model structures on multiple benchmark datasets to validate the effectiveness, efficiency, and scalability of FAST compared to the state-of-the-art prioritization techniques.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-10-27",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3691620.3695472",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3691620.3695472",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3691620.3695472",
+        "label": "Published paper abstract",
+        "supports": "原文摘要直接提取自用户书目关联的同 DOI 论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "fipser-2024",
+    "title": "FIPSER: Improving Fairness Testing of DNN by Seed Prioritization",
+    "venue": "ASE",
+    "venue_name": "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3691620.3695486",
+    "alias": "FIPSER",
+    "categories": [
+      "Test Generation"
+    ],
+    "authors": [
+      "Junwei Chen",
+      "Yueling Zhang",
+      "Lingfeng Zhang",
+      "Min Zhang",
+      "Chengcheng Wan",
+      "Ting Su",
+      "Geguang Pu"
+    ],
+    "abstract": "As a rapidly evolving AI technology, deep neural networks are becoming increasingly integrated into human society, yet raising concerns about fairness issues. Previous studies have proposed a metric called causal fairness to measure the fairness of machine learning models and proposed some search algorithms to mine individual discrimination instance pairs (IDIPs). Fairness issues can be alleviated by retraining models with corrected IDIPs. However, the number of samples that are used as seeds for these methods is often limited due to the pursuit of efficiency. In addition, the quantity of IDIPs generated on different seeds varies, so it makes sense to select appropriate samples as seeds, which has not been sufficiently considered in past studies. In this paper, we study the imbalance in IDIP quantities for various datasets and sensitive attributes, highlighting the need for selecting and ranking seed samples. Then, we proposed FIPSER, a feature importance and perturbation potential-based seed prioritization method. Our experimental results show that, on average, when applied to the current state-of-the-art method of IDIP mining, FIPSER can improve its effectiveness by 45% and efficiency by 11%.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-10-27",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3691620.3695486",
+    "arxiv_url": null,
+    "code_url": "https://github.com/light-chimes/FIPSER",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3691620.3695486",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3691620.3695486",
+        "label": "Published paper abstract",
+        "supports": "原文摘要直接提取自用户书目关联的同 DOI 论文 PDF"
+      },
+      {
+        "url": "https://github.com/light-chimes/FIPSER",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": "选择并排序用于公平性测试搜索的种子；按已确认口径归测试生成。"
+  },
+  {
+    "id": "ats-2022",
+    "title": "Adaptive test selection for deep neural networks",
+    "venue": "ICSE",
+    "venue_name": "Proceedings of the 44th International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3510003.3510232",
+    "alias": "ATS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Xinyu Gao",
+      "Yang Feng",
+      "Yining Yin",
+      "Zixi Liu",
+      "Zhenyu Chen",
+      "Baowen Xu"
+    ],
+    "abstract": "Deep neural networks (DNN) have achieved tremendous development in the past decade. While many DNN-driven software applications have been deployed to solve various tasks, they could also produce incorrect behaviors and result in massive losses. To reveal the incorrect behaviors and improve the quality of DNN-driven applications, developers often need rich labeled data for the testing and optimization of DNN models. However, in practice, collecting diverse data from application scenarios and labeling them properly is often a highly expensive and time-consuming task.In this paper, we proposed an adaptive test selection method, namely ATS, for deep neural networks to alleviate this problem. ATS leverages the difference between the model outputs to measure the behavior diversity of DNN test data. And it aims at selecting a subset with diverse tests from a massive unlabelled dataset. We experiment ATS with four well-designed DNN models and four widely-used datasets in comparison with various kinds of neuron coverage (NC). The results demonstrate that ATS can significantly outperform all test selection methods in assessing both fault detection and model improvement capability of test suites. It is promising to save the data labeling and model retraining costs for deep neural networks.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-05-21",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3510003.3510232",
+    "arxiv_url": null,
+    "code_url": "https://github.com/SATE-Lab/ATS",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3510003.3510232",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3510003.3510232",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://github.com/SATE-Lab/ATS",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "coverage-failure-discovery-2024",
+    "title": "Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3672446",
+    "alias": null,
+    "categories": [
+      "Coverage Metrics",
+      "Test Selection and Prioritization",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Zhiyu Wang",
+      "Sihan Xu",
+      "Lingling Fan",
+      "Xiangrui Cai",
+      "Linyu Li",
+      "Zheli Liu"
+    ],
+    "abstract": "Quality assurance of deep neural networks (DNNs) is crucial for the deployment of DNN-based software, especially in mission- and safety-critical tasks. Inspired by structural white-box testing in traditional software, many test criteria have been proposed to test DNNs, i.e., to exhibit erroneous behaviors by activating new test units that have not been covered, such as new neurons, values, and decision paths. Many studies have been done to evaluate the effectiveness of DNN test coverage criteria. However, existing empirical studies mainly focused on measuring the effectiveness of DNN test criteria for improving the adversarial robustness of DNNs, while ignoring the correctness property when testing DNNs. To fill in this gap, we conduct a comprehensive study on 11 structural coverage criteria, 6 widely-used image datasets, and 9 popular DNNs. We investigate the effectiveness of DNN coverage criteria over natural inputs from four aspects: (1) the correlation between test coverage and test diversity; (2) the effects of criteria parameters and target DNNs; (3) the effectiveness to prioritize in-distribution natural inputs that lead to erroneous behaviors; and (4) the capability to detect out-of-distribution natural samples. Our findings include: (1) For measuring the diversity, coverage criteria considering the relationship between different neurons are more effective than coverage criteria that treat each neuron independently. For instance, the neuron-path criteria (i.e., SNPC and ANPC) show high correlation with test diversity, which is promising to measure test diversity for DNNs. (2) The hyper-parameters have a big influence on the effectiveness of criteria, especially those relevant to the granularity of test criteria. Meanwhile, the computational complexity is one of the important issues to be considered when designing deep learning test coverage criteria, especially for large-scale models. (3) Test criteria related to data distribution (i.e., LSA and DSA, SNAC, and NBC) can be used to prioritize both in-distribution natural faults and out-of-distribution inputs. Furthermore, for OOD detection, the boundary metrics (i.e., SNAC and NBC) are also effective indicators with lower computational costs and higher detection efficiency compared with LSA and DSA. These findings motivate follow-up research on scalable test coverage criteria that improve the correctness of DNNs.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-09-27",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3672446",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3672446",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "mlprior-2024",
+    "title": "Test Input Prioritization for Machine Learning Classifiers",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2024.3350019",
+    "alias": "MLPrior",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Xueqi Dang",
+      "Yinghua Li",
+      "Mike Papadakis",
+      "Jacques Klein",
+      "Tegawendé F. Bissyandé",
+      "Yves Le Traon"
+    ],
+    "abstract": "Machine learning has achieved remarkable success across diverse domains. Nevertheless, concerns about interpretability in black-box models, especially within Deep Neural Networks (DNNs), have become pronounced in safety-critical fields like healthcare and finance. Classical machine learning (ML) classifiers, known for their higher interpretability, are preferred in these domains. Similar to DNNs, classical ML classifiers can exhibit bugs that could lead to severe consequences in practice. Test input prioritization has emerged as a promising approach to ensure the quality of an ML system, which prioritizes potentially misclassified tests so that such tests can be identified earlier with limited manual labeling costs. However, when applying to classical ML classifiers, existing DNN test prioritization methods are constrained from three perspectives: 1) Coverage-based methods are inefficient and time-consuming; 2) Mutation-based methods cannot be adapted to classical ML models due to mismatched model mutation rules; 3) Confidence-based methods are restricted to a single dimension when applying to binary ML classifiers, solely depending on the model's prediction probability for one class. To overcome the challenges, we propose MLPrior, a test prioritization approach specifically tailored for classical ML models. MLPrior leverages the characteristics of classical ML classifiers (i.e., interpretable models and carefully engineered attribute features) to prioritize test inputs. The foundational principles are: 1) tests more sensitive to mutations are more likely to be misclassified, and 2) tests closer to the model's decision boundary are more likely to be misclassified. Building on the first concept, we design mutation rules to generate two types of mutation features (i.e., model mutation features and input mutation features) for each test. Drawing from the second notion, MLPrior generates attribute features of each test based on its attribute values, which can indirectly reveal the proximity between the test and the decision boundary. For each test, MLPrior combines all three types of features of it into a final vector. Subsequently, MLPrior employs a pre-trained ranking model to predict the misclassification probability of each test based on its final vector and ranks tests accordingly. We conducted an extensive study to evaluate MLPrior based on 185 subjects, encompassing natural datasets, mixed noisy datasets, and fairness datasets. The results demonstrate that MLPrior outperforms all the compared test prioritization approaches, with an average improvement of 14.74%∼66.93% on natural datasets, 18.55%∼67.73% on mixed noisy datasets, and 15.34%∼62.72% on fairness datasets.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": null,
+      "first_public_year": 2024,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/tse.2024.3350019",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FTSE.2024.3350019",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2024.3350019",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": "面向传统机器学习分类器；根据用户明确确认纳入测试选择与排序。"
+  },
+  {
+    "id": "noderank-2024",
+    "title": "Test Input Prioritization for Graph Neural Networks",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2024.3385538",
+    "alias": "NodeRank",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yinghua Li",
+      "Xueqi Dang",
+      "Weiguo Pian",
+      "Andrew Habib",
+      "Jacques Klein",
+      "Tegawendé F. Bissyandé"
+    ],
+    "abstract": "GNNs have shown remarkable performance in a variety of classification tasks. The reliability of GNN models needs to be thoroughly validated before their deployment to ensure their accurate functioning. Therefore, effective testing is essential for identifying vulnerabilities in GNN models. However, given the complexity and size of graph-structured data, the cost of manual labelling of GNN test inputs can be prohibitively high for real-world use cases. Although several approaches have been proposed in the general domain of Deep Neural Network (DNN) testing to alleviate this labelling cost issue, these approaches are not suitable for GNNs because they do not account for the interdependence between GNN test inputs, which is crucial for GNN inference. In this paper, we propose NodeRank, a novel test prioritization approach specifically for GNNs, guided by ensemble learning-based mutation analysis. Inspired by traditional mutation testing, where specific operators are applied to mutate code statements to identify whether provided test cases reveal faults, NodeRank operates on a crucial premise: If a test input (node) can kill many mutated models and produce different prediction results with many mutated inputs, this input is considered more likely to be misclassified by the GNN model and should be prioritized higher. Through prioritization, these potentially misclassified inputs can be identified earlier with limited manual labeling cost. NodeRank introduces mutation operators suitable for GNNs, focusing on three key aspects: the graph structure, the features of the graph nodes, and the GNN model itself. NodeRank generates mutants and compares their predictions against that of the initial test inputs. Based on the comparison results, a mutation feature vector is generated for each test input and used as the input to ranking models for test prioritization. Leveraging ensemble learning techniques, NodeRank combines the prediction results of the base ranking models and produces a misclassification score for each test input, which can indicate the likelihood of this input being misclassified. NodeRank sorts all the test inputs based on their scores in descending order. To evaluate NodeRank, we build 124 GNN subjects (i.e., a pair of dataset and GNN model), incorporating both natural and adversarial contexts. Our results demonstrate that NodeRank outperforms all the compared test prioritization approaches in terms of both APFD and PFD, which are widely-adopted metrics in this field. Specifically, NodeRank achieves an average improvement of between 4.41% and 58.11% on original datasets and between 4.96% and 62.15% on adversarial datasets.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-04-05",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/tse.2024.3385538",
+    "arxiv_url": null,
+    "code_url": "https://github.com/yinghuali/NodeRank",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FTSE.2024.3385538",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2024.3385538",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2024.3385538",
+        "label": "Published paper front matter",
+        "supports": "原文 Date of publication / Available online 日期"
+      },
+      {
+        "url": "https://github.com/yinghuali/NodeRank",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "nss-2024",
+    "title": "Neuron Sensitivity-Guided Test Case Selection",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3672454",
+    "alias": "NSS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Dong Huang",
+      "Qingwen Bu",
+      "Yichao Fu",
+      "Yuhao Qing",
+      "Xiaofei Xie",
+      "Junjie Chen",
+      "Heming Cui"
+    ],
+    "abstract": "Deep neural networks (DNNs) have been widely deployed in software to address various tasks (e.g., autonomous driving, medical diagnosis). However, they can also produce incorrect behaviors that result in financial losses and even threaten human safety. To reveal and repair incorrect behaviors in DNNs, developers often collect rich, unlabeled datasets from the natural world and label them to test DNN models. However, properly labeling a large number of datasets is a highly expensive and time-consuming task. To address the above-mentioned problem, we propose neuron sensitivity-guided test case selection (NSS), which can reduce the labeling time by selecting valuable test cases from unlabeled datasets. NSS leverages the information of the internal neuron induced by the test cases to select valuable test cases, which have high confidence in causing the model to behave incorrectly. We evaluated NSS with four widely used datasets and four well-designed DNN models compared to the state-of-the-art (SOTA) baseline methods. The results show that NSS performs well in assessing the probability of failure triggering in test cases and in the improvement capabilities of the model. Specifically, compared to the baseline approaches, NSS achieves a higher fault detection rate (e.g., when selecting 5% of the test cases from the unlabeled dataset in the MNIST and LeNet1 experiment, NSS can obtain an 81.8% fault detection rate, which is a 20% increase compared with SOTA baseline strategies).",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-09-27",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3672454",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3672454",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "rts-2023",
+    "title": "Robust Test Selection for Deep Neural Networks",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2023.3330982",
+    "alias": "RTS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Weifeng Sun",
+      "Meng Yan",
+      "Zhongxin Liu",
+      "David Lo"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) have been widely used in various domains, such as computer vision and software engineering. Although many DNNs have been deployed to assist various tasks in the real world, similar to traditional software, they also suffer from defects that may lead to severe outcomes. DNN testing is one of the most widely used methods to ensure the quality of DNNs. Such method needs rich test inputs with oracle information (expected output) to reveal the incorrect behaviors of a DNN model. However, manually labeling all the collected test inputs is a labor-intensive task, which delays the quality assurance process. Test selection tackles this problem by carefully selecting a small, more suspicious set of test inputs to label, enabling the failure detection of a DNN model with reduced effort. Researchers have proposed different test selection methods, including neuron-coverage-based and uncertainty-based methods, where the uncertainty-based method is arguably the most popular technique. Unfortunately, existing uncertainty-based selection methods meet the performance bottleneck due to one or several limitations: 1) they ignore noisy data in real scenarios; 2) they wrongly exclude many failure-revealing test inputs but rather include many successful test inputs (referring to those test inputs that are correctly predicted by the model); 3) they ignore the diversity of the selected test set. In this paper, we propose RTS, a Robust Test Selection method for deep neural networks to overcome the limitations mentioned above. First, RTS divides all unlabeled candidate test inputs into noise set, successful set, and suspicious set and assigns different selection prioritization to divided sets, which effectively alleviates the impact of noise and improves the ability to identify suspect test inputs. Subsequently, RTS leverages a probability-tier-matrix-based test metric for prioritizing the test inputs in each divided set (i.e., suspicious, successful, and noise set). As a result, RTS can select more suspicious test inputs within a limited selection size. We evaluate RTS by comparing it with 14 baseline methods under 5 widely-used DNN models and 6 widely-used datasets. The experimental results demonstrate that RTS can significantly outperform all test selection methods in failure detection capability and the test suites selected by RTS have the best model optimization capability. For example, when selecting 2.5% test input, RTS achieves an improvement of 9.37%-176.75% over baseline methods in terms of failure detection.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-11-15",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/tse.2023.3330982",
+    "arxiv_url": null,
+    "code_url": "https://github.com/swf1996120/RTS",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FTSE.2023.3330982",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2023.3330982",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2023.3330982",
+        "label": "Published paper front matter",
+        "supports": "原文 Date of publication / Available online 日期"
+      },
+      {
+        "url": "https://github.com/swf1996120/RTS",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "testrank-2021",
+    "title": "TestRank: Bringing Order into Unlabeled Test Instances for Deep Learning Tasks",
+    "venue": "NeurIPS",
+    "venue_name": "Advances in Neural Information Processing Systems",
+    "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/ae78510109d46b0a6eef9820a4ca95d6-Abstract.html",
+    "alias": "TestRank",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yu Li",
+      "Min Li",
+      "Qiuxia Lai",
+      "Yannan Liu",
+      "Qiang Xu"
+    ],
+    "abstract": "Deep learning (DL) systems are notoriously difficult to test and debug due to the lack of correctness proof and the huge test input space to cover. Given the ubiquitous unlabeled test data and high labeling cost, in this paper, we propose a novel test prioritization technique, namely TestRank, which aims at revealing more model failures with less labeling effort. TestRank brings order into the unlabeled test data according to their likelihood of being a failure, i.e., their failure-revealing capabilities. Different from existing solutions, TestRank leverages both intrinsic and contextual attributes of the unlabeled test data when prioritizing them. To be specific, we first build a similarity graph on both unlabeled test samples and labeled samples (e.g., training or previously labeled test samples). Then, we conduct graph-based semi-supervised learning to extract contextual features from the correctness of similar labeled samples. For a particular test instance, the contextual features extracted with the graph neural network and the intrinsic features obtained with the DL model itself are combined to predict its failure-revealing capability. Finally, TestRank prioritizes unlabeled test inputs in descending order of the above probability value. We evaluate TestRank on three popular image classification datasets, and results show that TestRank significantly outperforms existing test prioritization techniques.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2021,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": null,
+    "arxiv_url": null,
+    "code_url": "https://github.com/cure-lab/TestRank",
+    "evidence": [
+      {
+        "url": "https://proceedings.neurips.cc/paper/2021/hash/ae78510109d46b0a6eef9820a4ca95d6-Abstract.html",
+        "label": "NeurIPS 2021 official publication record",
+        "supports": "正式题名、作者、发表年份与原文摘要"
+      },
+      {
+        "url": "https://github.com/cure-lab/TestRank",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "dnn-test-optimization-survey-2024",
+    "title": "Test Optimization in DNN Testing: A Survey",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3643678",
+    "alias": null,
+    "categories": [
+      "Surveys"
+    ],
+    "authors": [
+      "Qiang Hu",
+      "Yuejun Guo",
+      "Xiaofei Xie",
+      "Maxime Cordy",
+      "Lei Ma",
+      "Mike Papadakis",
+      "Yves Le Traon"
+    ],
+    "abstract": "This article presents a comprehensive survey on test optimization in deep neural network (DNN) testing. Here, test optimization refers to testing with low data labeling effort. We analyzed 90 papers, including 43 from the software engineering (SE) community, 32 from the machine learning (ML) community, and 15 from other communities. Our study: (i) unifies the problems as well as terminologies associated with low-labeling cost testing, (ii) compares the distinct focal points of SE and ML communities, and (iii) reveals the pitfalls in existing literature. Furthermore, we highlight the research opportunities in this domain.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-04-20",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3643678",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3643678",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "prima-2021",
+    "title": "Prioritizing Test Inputs for Deep Neural Networks via Mutation Analysis",
+    "venue": "ICSE",
+    "venue_name": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
+    "paper_url": "https://doi.org/10.1109/icse43902.2021.00046",
+    "alias": "PRIMA",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Zan Wang",
+      "Hanmo You",
+      "Junjie Chen",
+      "Yingyi Zhang",
+      "Xuyuan Dong",
+      "Wenbin Zhang"
+    ],
+    "abstract": "Deep Neural Network (DNN) testing is one of the most widely-used ways to guarantee the quality of DNNs. However, labeling test inputs to check the correctness of DNN prediction is very costly, which could largely affect the efficiency of DNN testing, even the whole process of DNN development. To relieve the labeling-cost problem, we propose a novel test input prioritization approach (called PRIMA) for DNNs via intelligent mutation analysis in order to label more bug-revealing test inputs earlier for a limited time, which facilitates to improve the efficiency of DNN testing. PRIMA is based on the key insight: a test input that is able to kill many mutated models and produce different prediction results with many mutated inputs, is more likely to reveal DNN bugs, and thus it should be prioritized higher. After obtaining a number of mutation results from a series of our designed model and input mutation rules for each test input, PRIMA further incorporates learning-to-rank (a kind of supervised machine learning to solve ranking problems) to intelligently combine these mutation results for effective test input prioritization. We conducted an extensive study based on 36 popular subjects by carefully considering their diversity from five dimensions (i.e., different domains of test inputs, different DNN tasks, different network structures, different types of test inputs, and different training scenarios). Our experimental results demonstrate the effectiveness of PRIMA, significantly outperforming the state-of-the-art approaches (with the average improvement of 8.50%∼131.01% in terms of prioritization effectiveness). In particular, we have applied PRIMA to the practical autonomous-vehicle testing in a large motor company, and the results on 4 real-world scene-recognition models in autonomous vehicles further confirm the practicability of PRIMA.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2021,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/icse43902.2021.00046",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FICSE43902.2021.00046",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse43902.2021.00046",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "mcp-2020",
+    "title": "Multiple-boundary clustering and prioritization to promote neural network retraining",
+    "venue": "ASE",
+    "venue_name": "Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3324884.3416621",
+    "alias": "MCP",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Weijun Shen",
+      "Yanhui Li",
+      "Lin Chen",
+      "Yuanlei Han",
+      "Yuming Zhou",
+      "Baowen Xu"
+    ],
+    "abstract": "With the increasing application of deep learning (DL) models in many safety-critical scenarios, effective and efficient DL testing techniques are much in demand to improve the quality of DL models. One of the major challenges is the data gap between the training data to construct the models and the testing data to evaluate them. To bridge the gap, testers aim to collect an effective subset of inputs from the testing contexts, with limited labeling effort, for retraining DL models. To assist the subset selection, we propose Multiple-Boundary Clustering and Prioritization (MCP), a technique to cluster test samples into the boundary areas of multiple boundaries for DL models and specify the priority to select samples evenly from all boundary areas, to make sure enough useful samples for each boundary reconstruction. To evaluate MCP, we conduct an extensive empirical study with three popular DL models and 33 simulated testing contexts. The experiment results show that, compared with state-of-the-art baseline methods, on effectiveness, our approach MCP has a significantly better performance by evaluating the improved quality of retrained DL models; on efficiency, MCP also has the advantages in time costs.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2020,
+      "online_year": 2021,
+      "first_public_year": 2020,
+      "first_public_date": "2020-12-21",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3324884.3416621",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3324884.3416621",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1145/3324884.3416621",
+        "label": "Published paper abstract",
+        "supports": "原文摘要提取自用户书目关联 PDF，仅还原断行和字距"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "input-prioritization-2019",
+    "title": "Input Prioritization for Testing Neural Networks",
+    "venue": "AITest",
+    "venue_name": "2019 IEEE International Conference On Artificial Intelligence Testing (AITest)",
+    "paper_url": "https://doi.org/10.1109/aitest.2019.000-6",
+    "alias": null,
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Taejoon Byun",
+      "Vaibhav Sharma",
+      "Abhishek Vijayakumar",
+      "Sanjai Rayadurgam",
+      "Darren Cofer"
+    ],
+    "abstract": "Deep neural networks (DNNs) are increasingly being adopted for sensing and control functions in a variety of safety and mission-critical systems such as self-driving cars, autonomous air vehicles, medical diagnostics and industrial robotics. Failures of such systems can lead to loss of life or property, which necessitates stringent verification and validation for providing high assurance. Though formal verification approaches are being investigated, testing remains the primary technique for assessing the dependability of such systems. Due to the nature of the tasks handled by DNNs, the cost of obtaining test oracle data-the expected output, a.k.a. label, for a given input-is high, which significantly impacts the amount and quality of testing that can be performed. Thus, prioritizing input data for testing DNNs in meaningful ways to reduce the cost of labeling can go a long way in increasing testing efficacy. This paper proposes using gauges of the DNN's sentiment derived from the computation performed by the model, as a means to identify inputs that are likely to reveal weaknesses. We empirically assessed the efficacy of three such sentiment measures for prioritization-confidence, uncertainty and surprise-and compare their effectiveness in terms of their fault-revealing capability and retraining effectiveness. The results indicate that sentiment measures can effectively flag inputs that expose unacceptable DNN behavior. For MNIST models, the average percentage of inputs correctly flagged ranged from 88% to 94.8%.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2019,
+      "online_year": null,
+      "first_public_year": 2019,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/aitest.2019.000-6",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FAITest.2019.000-6",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/aitest.2019.000-6",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "surprise-adequacy-refinement-2021",
+    "title": "A Review and Refinement of Surprise Adequacy",
+    "venue": "DeepTest (workshop)",
+    "venue_name": "2021 IEEE/ACM Third International Workshop on Deep Learning for Testing and Testing for Deep Learning (DeepTest)",
+    "paper_url": "https://doi.org/10.1109/deeptest52559.2021.00009",
+    "alias": null,
+    "categories": [
+      "Coverage Metrics",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Michael Weiss",
+      "Rwiddhi Chakraborty",
+      "Paolo Tonella"
+    ],
+    "abstract": "Surprise Adequacy (SA) is one of the emerging and most promising adequacy criteria for Deep Learning (DL) testing. As an adequacy criterion, it has been used to assess the strength of DL test suites. In addition, it has also been used to find inputs to a Deep Neural Network (DNN) which were not sufficiently represented in the training data, or to select samples for DNN retraining. However, computation of the SA metric for a test suite can be prohibitively expensive, as it involves a quadratic number of distance calculations. Hence, we developed and released a performance-optimized, but functionally equivalent, implementation of SA, reducing the evaluation time by up to 97%. We also propose refined variants of the SA computation algorithm, aiming to further increase the evaluation speed. We then performed an empirical study on MNIST, focused on the out-of-distribution detection capabilities of SA, which allowed us to reproduce parts of the results presented when SA was first released. The experiments show that our refined variants are substantially faster than plain SA, while producing comparable outcomes. Our experimental results exposed also an overlooked issue of SA: it can be highly sensitive to the non-determinism associated with the DNN training procedure.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2021,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/deeptest52559.2021.00009",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FDeepTest52559.2021.00009",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/deeptest52559.2021.00009",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": "研究 SA 的使用、实现优化、变体和实证评估；发表于 DeepTest 2021 workshop。"
+  },
+  {
+    "id": "pcprior-2024",
+    "title": "Test Input Prioritization for 3D Point Clouds",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3643676",
+    "alias": "PCPrior",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yinghua Li",
+      "Xueqi Dang",
+      "Lei Ma",
+      "Jacques Klein",
+      "Yves Le Traon",
+      "Tegawendé F. Bissyandé"
+    ],
+    "abstract": "3D point cloud applications have become increasingly prevalent in diverse domains, showcasing their efficacy in various software systems. However, testing such applications presents unique challenges due to the high-dimensional nature of 3D point cloud data and the vast number of possible test cases. Test input prioritization has emerged as a promising approach to enhance testing efficiency by prioritizing potentially misclassified test cases during the early stages of the testing process. Consequently, this enables the early labeling of critical inputs, leading to a reduction in the overall labeling cost. However, applying existing prioritization methods to 3D point cloud data is constrained by several factors: (1) inadequate consideration of crucial spatial information, and (2) susceptibility to noises inherent in 3D point cloud data. In this article, we propose PCPrior, the first test prioritization approach specifically designed for 3D point cloud test cases. The fundamental concept behind PCPrior is that test inputs closer to the decision boundary of the model are more likely to be predicted incorrectly. To capture the spatial relationship between a point cloud test and the decision boundary, we propose transforming each test (a point cloud) into a low-dimensional feature vector, toward indirectly revealing the underlying proximity between a test and the decision boundary. To achieve this, we carefully design a group of feature generation strategies, and for each test input, we generate four distinct types of features, namely spatial features, mutation features, prediction features, and uncertainty features. Through a concatenation of the four feature types, PCPrior assembles a final feature vector for each test. Subsequently, a ranking model is employed to estimate the probability of misclassification for each test based on its feature vector. Finally, PCPrior ranks all tests based on their misclassification probabilities. We conducted an extensive study based on 165 subjects to evaluate the performance of PCPrior, encompassing both natural and noisy datasets. The results demonstrate that PCPrior outperforms all of the compared test prioritization approaches, with an average improvement of 10.99% to 66.94% on natural datasets and 16.62% to 53% on noisy datasets.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-06-04",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3643676",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3643676",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "gnn-test-selection-study-2024",
+    "title": "Towards Exploring the Limitations of Test Selection Techniques on Graph Neural Networks: An Empirical Study",
+    "venue": "EMSE",
+    "venue_name": "Empirical Software Engineering",
+    "paper_url": "https://doi.org/10.1007/s10664-024-10515-y",
+    "alias": null,
+    "categories": [
+      "Test Selection and Prioritization",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Xueqi Dang",
+      "Yinghua Li",
+      "Wei Ma",
+      "Yuejun Guo",
+      "Qiang Hu",
+      "Mike Papadakis",
+      "Maxime Cordy",
+      "Yves Le Traon"
+    ],
+    "abstract": "Graph Neural Networks (GNNs) have gained prominence in various domains, such as social network analysis, recommendation systems, and drug discovery, due to their ability to model complex relationships in graph-structured data. GNNs can exhibit incorrect behavior, resulting in severe consequences. Therefore, testing is necessary and pivotal. However, labeling all test inputs for GNNs can be prohibitively costly and time-consuming, especially when dealing with large and complex graphs. In response to these challenges, test selection has emerged as a strategic approach to alleviate labeling expenses. The objective of test selection is to select a subset of tests from the complete test set. While various test selection techniques have been proposed for traditional deep neural networks (DNNs), their adaptation to GNNs presents unique challenges due to the distinctions between DNN and GNN test data. Specifically, DNN test inputs are independent of each other, whereas GNN test inputs (nodes) exhibit intricate interdependencies. Therefore, it remains unclear whether DNN test selection approaches can perform effectively on GNNs. To fill the gap, we conduct an empirical study that systematically evaluates the effectiveness of various test selection methods in the context of GNNs, focusing on three critical aspects: 1) Misclassification detection: selecting test inputs that are more likely to be misclassified; 2) Accuracy estimation: selecting a small set of tests to precisely estimate the accuracy of the whole testing set; 3) Performance enhancement: selecting retraining inputs to improve the GNN accuracy. Our empirical study encompasses 7 graph datasets and 8 GNN models, evaluating 22 test selection approaches. Our study includes not only node classification datasets but also graph classification datasets. Our findings reveal that: 1) In GNN misclassification detection, confidence-based test selection methods, which perform well in DNNs, do not demonstrate the same level of effectiveness; 2) In terms of GNN accuracy estimation, clustering-based methods, while consistently performing better than random selection, provide only slight improvements; 3) Regarding selecting inputs for GNN performance improvement, test selection methods, such as confidence-based and clustering-based test selection methods, demonstrate only slight effectiveness; 4) Concerning performance enhancement, node importance-based test selection methods are not suitable, and in many cases, they even perform worse than random selection.",
+    "publication_type": "journal",
+    "ccf_rank": "B",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-07-22",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1007/s10664-024-10515-y",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1007%2Fs10664-024-10515-y",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "vrank-2024",
+    "title": "Prioritizing test cases for deep learning-based video classifiers",
+    "venue": "EMSE",
+    "venue_name": "Empirical Software Engineering",
+    "paper_url": "https://doi.org/10.1007/s10664-024-10520-1",
+    "alias": "VRank",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yinghua Li",
+      "Xueqi Dang",
+      "Lei Ma",
+      "Jacques Klein",
+      "Tegawendé F. Bissyandé"
+    ],
+    "abstract": "The widespread adoption of video-based applications across various fields highlights their importance in modern software systems. However, in comparison to images or text, labelling video test cases for the purpose of assessing system accuracy can lead to increased expenses due to their temporal structure and larger volume. Test prioritization has emerged as a promising approach to mitigate the labeling cost, which prioritizes potentially misclassified test inputs so that such inputs can be identified earlier with limited time and manual labeling efforts. However, applying existing prioritization techniques to video test cases faces certain limitations: they do not account for the unique temporal information present in video data. Unlike static image datasets that only contain spatial information, video inputs consist of multiple frames that capture the dynamic changes of objects over time. In this paper, we propose VRank, the first test prioritization approach designed specifically for video test inputs. The fundamental idea behind VRank is that video-type tests with a higher probability of being misclassified by the evaluated DNN classifier are considered more likely to reveal faults and will be prioritized higher. To this end, we train a ranking model with the aim of predicting the probability of a given test input being misclassified by a DNN classifier. This prediction relies on four types of generated features: temporal features (TF), video embedding features (EF), prediction features (PF), and uncertainty features (UF). We rank all test inputs in the target test set based on their misclassification probabilities. Videos with a higher likelihood of being misclassified will be prioritized higher. We conducted an empirical evaluation to assess the performance of VRank, involving 120 subjects with both natural and noisy datasets. The experimental results reveal VRank outperforms all compared test prioritization methods, with an average improvement of 5.76% ∼ 46.51% on natural datasets and 4.26% ∼ 53.56% on noisy datasets.",
+    "publication_type": "journal",
+    "ccf_rank": "B",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-07-22",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1007/s10664-024-10520-1",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1007%2Fs10664-024-10520-1",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "prophet-2025",
+    "title": "Prioritizing Speech Test Cases",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3707450",
+    "alias": "Prophet",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Zhou Yang",
+      "Jieke Shi",
+      "Muhammad Hilmi Asyrofi",
+      "Bowen Xu",
+      "Xin Zhou",
+      "Donggyun Han",
+      "David Lo"
+    ],
+    "abstract": "As Automated Speech Recognition (ASR) systems gain widespread acceptance, there is a pressing need to rigorously test and enhance their performance. Nonetheless, the process of collecting and executing speech test cases is typically both costly and time-consuming. This presents a compelling case for the strategic prioritization of speech test cases, which consist of a piece of audio and the corresponding reference text. The central question we address is: In what sequence should speech test cases be collected and executed to identify the maximum number of errors at the earliest stage? In this study, we introduce PRiOritizing sPeecH tEsT (Prophet) cases, a tool designed to predict the likelihood that speech test cases will identify errors. Consequently, Prophet can assess and prioritize these test cases without having to run the ASR system, facilitating large-scale analysis. Our evaluation encompasses 6 distinct prioritization techniques across 3 ASR systems and 12 datasets. When constrained by the same test budget, our approach identified 15.44% more misrecognized words than the leading state-of-the-art method. We select top-ranked speech test cases from the prioritized list to fine-tune ASR systems and analyze how our approach can improve the ASR system performance. Statistical evaluations show that our method delivers a considerably higher performance boost for ASR systems compared to established baseline techniques. Moreover, our correlation analysis confirms that fine-tuning an ASR system with a dataset where the model initially underperforms tends to yield greater performance improvements.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-04-28",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3707450",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3707450",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "test-selection-robustness-2025",
+    "title": "Assessing the Robustness of Test Selection Methods for Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3715693",
+    "alias": null,
+    "categories": [
+      "Test Selection and Prioritization",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Qiang Hu",
+      "Yuejun Guo",
+      "Xiaofei Xie",
+      "Maxime Cordy",
+      "Wei Ma",
+      "Mike Papadakis",
+      "Lei Ma",
+      "Yves Le Traon"
+    ],
+    "abstract": "Regularly testing deep learning-powered systems on newly collected data is critical to ensure their reliability, robustness, and efficacy in real-world applications. This process is demanding due to the significant time and human effort required for labeling new data. While test selection methods alleviate manual labor by labeling and evaluating only a subset of data while meeting testing criteria, we observe that such methods with reported promising results are simply evaluated, e.g., testing on original test data. The question arises: are they always reliable? In this paper, we explore when and to what extent test selection methods fail. First, we identify potential pitfalls of 11 selection methods based on their construction. Second, we conduct a study to empirically confirm the existence of these pitfalls. Furthermore, we demonstrate how pitfalls can break the reliability of these methods. Concretely, methods for fault detection suffer from data that are: 1) correctly classified but uncertain, or 2) misclassified but confident. Remarkably, the test relative coverage achieved by such methods drops by up to 86.85%. Besides, methods for performance estimation are sensitive to the choice of intermediate-layer output. The effectiveness of such methods can be even worse than random selection when using an inappropriate layer.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-01-29",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3715693",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3715693",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "deepvec-2025",
+    "title": "DeepVec: State-Vector Aware Test Case Selection for Enhancing Recurrent Neural Network",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2025.3565037",
+    "alias": "DeepVec",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Zhonghao Jiang",
+      "Meng Yan",
+      "Li Huang",
+      "Weifeng Sun",
+      "Chao Liu",
+      "Song Sun",
+      "David Lo"
+    ],
+    "abstract": "Deep Neural Networks (DNN) have realized significant achievements across various application domains. There is no doubt that testing and enhancing a pre-trained DNN that has been deployed in an application scenario is crucial, because it can reduce the failures of the DNN. DNN-driven software testing and enhancement require large amounts of labeled data. The high cost and inefficiency caused by the large volume of data of manual labeling, and the time consumption of testing all cases in real scenarios are unacceptable. Therefore, test case selection technologies are proposed to reduce the time cost by selecting and only labeling representative test cases without compromising testing performance. Test case selection based on neuron coverage (NC) or uncertainty metrics has achieved significant success in Convolutional Neural Networks (CNN) testing. However, it is challenging to transfer these methods to Recurrent Neural Networks (RNN), which excel at text tasks, due to the mismatch in model output formats and the reliance on image-specific characteristics. What’s more, balancing the execution cost and performance of the algorithm is also indispensable. In this paper, we propose a state-vector aware test case selection method for RNN models, namely DeepVec, which reduces the cost of data labeling and saves computing resources and balances the execution cost and performance. DeepVec selects data using uncertainty metric based on the norm of the output vector at each time step (i.e., state-vector), and similarity metric based on the direction angle of the state-vector. Because test cases with smaller state-vector norms often possess greater information entropy and similar changes of state-vector direction angle indicate similar RNN internal states. These metrics can be calculated with just a single inference, which gives it strong bug detection and model improvement capabilities. We evaluate DeepVec on five popular datasets, containing images and texts as well as commonly used 3 RNN classification models, and compare it with NC-based, uncertainty-based, and other black-box methods. Experimental results demonstrate that DeepVec achieves an average relative improvement of 12.5%-118.22% over baseline methods in selecting fault-revealing test cases with time costs reduced to only 1% to 1‱. At the same time, we find that the absolute accuracy improvement after retraining outperforms baseline methods by 0.29%-24.01% when selecting 15% data to retrain.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-04-28",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/tse.2025.3565037",
+    "arxiv_url": null,
+    "code_url": "https://github.com/ZhonghaoJiang/DeepVec",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FTSE.2025.3565037",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2025.3565037",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2025.3565037",
+        "label": "Published paper front matter",
+        "supports": "原文 Date of publication / Available online 日期"
+      },
+      {
+        "url": "https://github.com/ZhonghaoJiang/DeepVec",
+        "label": "Paper-linked implementation",
+        "supports": "作者在论文中提供的实现链接"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "audiotest-2025",
+    "title": "AudioTest: Prioritizing Audio Test Cases",
+    "venue": "PACMSE",
+    "venue_name": "Proceedings of the ACM on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3728907",
+    "alias": "AudioTest",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yinghua Li",
+      "Xueqi Dang",
+      "Wendkûuni C. Ouédraogo",
+      "Jacques Klein",
+      "Tegawendé F. Bissyandé"
+    ],
+    "abstract": "Audio classification systems, powered by deep neural networks (DNNs), are integral to various applications that impact daily lives, like voice-activated assistants. Ensuring the accuracy of these systems is crucial since inaccuracies can lead to significant security issues and user mistrust. However, testing audio classifiers presents a significant challenge: the high manual labeling cost for annotating audio test inputs. Test input prioritization has emerged as a promising approach to mitigate this labeling cost issue. It prioritizes potentially misclassified tests, allowing for the early labeling of such critical inputs and making debugging more efficient. However, when applying existing test prioritization methods to audio-type test inputs, there are some limitations: 1) Coverage-based methods are less effective and efficient than confidence-based methods. 2) Confidence-based methods rely only on prediction probability vectors, ignoring the unique characteristics of audio-type data. 3) Mutation-based methods lack designed mutation operations for audio data, making them unsuitable for audio-type test inputs. To overcome these challenges, we propose AudioTest, a novel test prioritization approach specifically designed for audio-type test inputs. The core premise is that tests closer to misclassified samples are more likely to be misclassified. Based on the special characteristics of audio-type data, AudioTest generates four types of features: time-domain features, frequency-domain features, perceptual features, and output features. For each test, AudioTest concatenates its four types of features into a feature vector and applies a carefully designed feature transformation strategy to bring misclassified tests closer in space. AudioTest leverages a trained model to predict the probability of misclassification of each test based on its transformed vectors and ranks all the tests accordingly. We evaluate the performance of AudioTest utilizing 96 subjects, encompassing natural and noisy datasets. We employed two classical metrics, Percentage of Fault Detection (PFD) and Average Percentage of Fault Detected (APFD), for our evaluation. The results demonstrate that AudioTest outperforms all the compared test prioritization approaches in terms of both PFD and APFD. The average improvement of AudioTest compared to the baseline test prioritization methods ranges from 12.63% to 54.58% on natural datasets and from 12.71% to 40.48% on noisy datasets.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-06-22",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3728907",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3728907",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      },
+      {
+        "url": "https://conf.researchr.org/details/issta-2025/issta-2025-papers/32/AudioTest-Prioritizing-Audio-Test-Cases",
+        "label": "ISSTA 2025 official program",
+        "supports": "PACMSE ISSTA 专刊论文与正式 ISSTA Research Papers 记录对应"
+      }
+    ],
+    "notes": "发表于 PACMSE 2(ISSTA)，对应 ISSTA 2025 Research Papers；以期刊载体记录出版类型，不另建重复会议记录。"
+  },
+  {
+    "id": "fats-2024",
+    "title": "FATS: Feature Distribution Analysis-Based Test Selection for Deep Learning Enhancement",
+    "venue": "TBD",
+    "venue_name": "IEEE Transactions on Big Data",
+    "paper_url": "https://doi.org/10.1109/tbdata.2023.3334648",
+    "alias": "FATS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Li Li",
+      "Chuanqi Tao",
+      "Hongjing Guo",
+      "Jingxuan Zhang",
+      "Xiaobing Sun"
+    ],
+    "abstract": "Deep Learning has been applied to many applications across different domains. However, the distribution shift between the test data and training data is a major factor impacting the quality of deep neural networks (DNNs). To address this issue, existing research mainly focuses on enhancing DNN models by retraining them using labeled test data. However, labeling test data is costly, which seriously reduces the efficiency of DNN testing. To solve this problem, test selection strategically selected a small set of tests to label. Unfortunately, existing test selection methods seldom focus on the data distribution shift. To address the issue, this paper proposes an approach for test selection named Feature Distribution Analysis-Based Test Selection (FATS). FATS analyzes the distributions of test data and training data and then adopts learning to rank (a kind of supervised machine learning to solve ranking tasks) to intelligently combine the results of analysis for test selection. We conduct an empirical study on popular datasets and DNN models, and then compare FATS with seven test selection methods. Experiment results show that FATS effectively alleviates the impact of distribution shifts and outperforms the compared methods with the average accuracy improvement of 19.6%∼69.7% for DNN model enhancement.",
+    "publication_type": "journal",
+    "ccf_rank": "C",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-11-20",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/tbdata.2023.3334648",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FTBDATA.2023.3334648",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/tbdata.2023.3334648",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1109/tbdata.2023.3334648",
+        "label": "Published paper front matter",
+        "supports": "原文 Date of publication / Available online 日期"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "dat-2022",
+    "title": "An Empirical Study on Data Distribution-Aware Test Selection for Deep Learning Enhancement",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3511598",
+    "alias": "DAT",
+    "categories": [
+      "Test Selection and Prioritization",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Qiang Hu",
+      "Yuejun Guo",
+      "Maxime Cordy",
+      "Xiaofei Xie",
+      "Lei Ma",
+      "Mike Papadakis",
+      "Yves Le Traon"
+    ],
+    "abstract": "Similar to traditional software that is constantly under evolution, deep neural networks need to evolve upon the rapid growth of test data for continuous enhancement (e.g., adapting to distribution shift in a new environment for deployment). However, it is labor intensive to manually label all of the collected test data. Test selection solves this problem by strategically choosing a small set to label. Via retraining with the selected set, deep neural networks will achieve competitive accuracy. Unfortunately, existing selection metrics involve three main limitations: (1) using different retraining processes, (2) ignoring data distribution shifts, and (3) being insufficiently evaluated. To fill this gap, we first conduct a systemically empirical study to reveal the impact of the retraining process and data distribution on model enhancement. Then based on our findings, we propose DAT, a novel distribution-aware test selection metric. Experimental results reveal that retraining using both the training and selected data outperforms using only the selected data. None of the selection metrics perform the best under various data distributions. By contrast, DAT effectively alleviates the impact of distribution shifts and outperforms the compared metrics by up to five times and 30.09% accuracy improvement for model enhancement on simulated and in-the-wild distribution shift scenarios, respectively.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-04-19",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3511598",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3511598",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      },
+      {
+        "url": "https://doi.org/10.1145/3511598",
+        "label": "Published paper front matter",
+        "supports": "原文完整作者及 Online AM 日期 2022-04-19"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "pricod-2026",
+    "title": "PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3730435",
+    "alias": "PriCod",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yinghua Li",
+      "Xueqi Dang",
+      "Jacques Klein",
+      "Yves Le Traon",
+      "Tegawendé F. Bissyandé"
+    ],
+    "abstract": "The widespread adoption of Deep Neural Networks (DNNs) has brought remarkable advances in machine learning. However, the computational and memory demands of complex DNNs hinder their deployment in resource-constrained environments. To address this challenge, compressed DNN models have emerged, offering a compromise between efficiency and accuracy. Nonetheless, assessing the performance of these compressed models can demand extensive testing, typically requiring high manual labeling costs, rendering the process resource-intensive and time-consuming. To mitigate these challenges, test input prioritization has emerged as a promising technique aimed at reducing labeling costs by prioritizing inputs that are more likely to be misclassified. This enables the early identification of bug-revealing tests with reduced time and manual labeling effort. In this article, we propose PriCod, a novel test prioritization approach designed for compressed DNNs. PriCod leverages the behavior disparities caused by model compression, along with the embeddings of test inputs, to effectively prioritize potentially misclassified tests. It operates on the premises that significant behavior disparities between the models indicate potential misclassifications and that inputs near decision boundaries are more likely to be misclassified. To this end, PriCod generates two types of features for each test input (i.e., deviation features and embedding features) to capture the prediction deviation caused by model compression and the proximity to decision boundaries, respectively. By combining these features, PriCod predicts the probability of misclassification for each test, ranking tests accordingly. We conduct an extensive study to evaluate the effectiveness of PriCod, comparing it with multiple test prioritization approaches. The experimental results demonstrate the effectiveness of PriCod, with average improvements of 7.43%–55.89% on natural test inputs, 7.92%–52.91% on noisy test inputs, and 7.03%–51.59% on adversarial test inputs, compared with existing test prioritization approaches.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2026,
+      "online_year": 2026,
+      "first_public_year": 2026,
+      "first_public_date": "2026-01-20",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3730435",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3730435",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "metasel-2025",
+    "title": "MetaSel: A Test Selection Approach for Fine-Tuned DNN Models",
+    "venue": "TSE",
+    "venue_name": "IEEE Transactions on Software Engineering",
+    "paper_url": "https://doi.org/10.1109/tse.2025.3612253",
+    "alias": "MetaSel",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Amin Abbasishahkoo",
+      "Mahboubeh Dadkhah",
+      "Lionel Briand",
+      "Dayi Lin"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) face challenges during deployment due to covariate shift, i.e., data distribution shifts between development and deployment contexts. Fine-tuning adapts pre-trained models to new contexts requiring smaller labeled sets. However, testing fine-tuned models under constrained labeling budgets remains a critical challenge. This paper introduces MetaSel, a new approach tailored for DNN models that have been fine-tuned to address covariate shift, to select tests from unlabeled inputs. MetaSel assumes that fine-tuned and pre-trained models share related data distributions and exhibit similar behaviors for many inputs. However, their behaviors diverge within the input subspace where fine-tuning alters decision boundaries, making those inputs more prone to misclassification. Unlike general approaches that rely solely on the DNN model and its input set, MetaSel leverages information from both the fine-tuned and pre-trained models and their behavioral differences to estimate misclassification probability for unlabeled test inputs, enabling more effective test selection. Our extensive empirical evaluation, comparing MetaSel against 11 state-of-the-art approaches and involving 68 fine-tuned models across weak, medium, and strong distribution shifts, demonstrates that MetaSel consistently delivers significant improvements in Test Relative Coverage (TRC) over existing baselines, particularly under highly constrained labeling budgets. MetaSel shows average TRC improvements of 28.46% to 56.18% over the most frequent second-best baselines while maintaining a high TRC median and low variability. Our results confirm MetaSel’s practicality, robustness, and cost-effectiveness for test selection in the context of fine-tuned models.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": null,
+      "first_public_year": 2025,
+      "first_public_date": "2025-03-21",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1109/tse.2025.3612253",
+    "arxiv_url": "https://arxiv.org/abs/2503.17534",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2FTSE.2025.3612253",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1109/tse.2025.3612253",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/2503.17534",
+        "label": "Author preprint record",
+        "supports": "关联预印本的题名、作者与首发日期"
+      }
+    ],
+    "notes": "发表于 TSE；在 FSE 2026 journal-first 轨道展示，不另计为会议版本。"
+  },
+  {
+    "id": "sets-2026",
+    "title": "SETS: A Simple yet Effective DNN Test Selection Approach",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3772084",
+    "alias": "SETS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Jingling Wang",
+      "Huayao Wu",
+      "Peng Wang",
+      "Xintao Niu",
+      "Changhai Nie"
+    ],
+    "abstract": "To reduce the substantial manual annotation costs in testing Deep Neural Networks (DNNs), various test selection approaches have been proposed, with uncertainty serving as a key objective to trigger more failures. However, focusing solely on uncertainty may expose failures caused by the same underlying fault in the model. Accordingly, recent studies have introduced diversity as another important objective, proposing multi-objective search-based approaches to select test inputs that can reveal distinct faults. Despite their effectiveness, these approaches typically require long execution times, limiting their efficiency in large-scale datasets. In this article, we propose SETS, a simple yet effective multi-objective DNN test selection approach. Like existing multi-objective approaches, SETS optimizes both uncertainty and diversity to maximize the number of unique faults detected by the selected test inputs. But SETS prioritizes high-uncertainty test inputs to reduce the candidate set size and employs an efficient greedy strategy to further reduce the number of fitness evaluations. Thus, SETS differentiates itself by considerably improving the efficiency of selection while preserving effectiveness. We evaluate SETS on eight subjects, demonstrating its significant superiority over baseline approaches. SETS can operate on average 42.98 times faster while still achieving better fault detection and model retraining with its simple implementation.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2026,
+      "online_year": 2026,
+      "first_public_year": 2025,
+      "first_public_date": null,
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3772084",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3772084",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间；出版社存入的原文摘要"
+      },
+      {
+        "url": "https://niuxintao.github.io/publications/",
+        "label": "Author publication list",
+        "supports": "2025 年 Just Accepted 阶段记录"
+      }
+    ],
+    "notes": "正式卷期为 2026；2025 年 Just Accepted 记录作为较早公开阶段保留年份，精确首发日未独立确认。在 FSE 2026 journal-first 轨道展示，不另计会议版本。"
+  },
+  {
+    "id": "eats-2025",
+    "title": "Efficient adaptive test case selection for DNNs robustness enhancement",
+    "venue": "JSS",
+    "venue_name": "Journal of Systems and Software",
+    "paper_url": "https://doi.org/10.1016/j.jss.2025.112451",
+    "alias": "EATS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Zhiyi Zhang",
+      "Huanze Meng",
+      "Yuchen Ding",
+      "Shuxian Chen",
+      "Yongming Yao"
+    ],
+    "abstract": "Deep neural networks (DNNs) have been widely used in various fields, and testing for DNN-based software has become increasingly important. To discover potential faults in DNNs, a large number of test cases and their corresponding labels are required. However, labeling so many test cases consumes enormous costs. Although there have been many test case selection techniques for DNN models, these techniques still have problems such as high overhead, low efficiency, and poor diversity. To address this problem, this paper proposes an efficient adaptive test case selection method based on the principle of uniform distribution of test cases called EATS. Based on the idea of adaptive testing, EATS combines the uncertainty of the model and the diversity of faults to calculate the distance of test cases and sort them, then gives priority to test cases with a higher probability of causing faults. We conduct experiments on four popular datasets and four representative DNN models. Experiment results show that, compared with the existing eight methods, EATS performs better in uniformity of test case distribution, diversity of errors found, model optimization, and optimization efficiency.",
+    "publication_type": "journal",
+    "ccf_rank": "B",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-05-09",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1016/j.jss.2025.112451",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1016%2Fj.jss.2025.112451",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.jss.2025.112451",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.jss.2025.112451",
+        "label": "Published paper front matter",
+        "supports": "原文 Date of publication / Available online 日期"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "metadts-2026",
+    "title": "MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks",
+    "venue": "JSA",
+    "venue_name": "Journal of Systems Architecture",
+    "paper_url": "https://doi.org/10.1016/j.sysarc.2025.103682",
+    "alias": "MetaDTS",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Xiang Su",
+      "Zhibin Yang",
+      "Qu Liu",
+      "Hao Liu",
+      "Yong Zhou",
+      "Zhiqiu Huang"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) are widely used in various safety-critical domains. Due to data distribution shifts, DNNs may exhibit unforeseen faults that lead to serious safety risks. To reveal potential faults within DNNs, a vast number of labeled test data are required, but the labeling process is time-consuming. To solve this problem, test input selection methods improve efficiency by selecting a subset of test inputs more likely to reveal DNN model faults. However, existing methods often focus solely on single data distribution characteristics and overlook the complex differences and diversity among test inputs. In this paper, we propose MetaDTS, a distribution difference-based adaptive test input selection method that comprehensively assesses the feature and probability distribution differences of test inputs. MetaDTS employs a meta-model to evaluate the probability of misclassification of test inputs and select them. To effectively capture the complex differences among test inputs, we introduce two novel uncertainty metrics: Feature Distribution Difference (FDD) and Probability Distribution Difference (PDD). By integrating these metrics, MetaDTS adaptively selects test inputs that can reveal diverse faults of DNN models. We conducted extensive experiments on five datasets and seven models, comparing MetaDTS with nine baseline methods. The results demonstrate that MetaDTS significantly outperforms the baseline methods in selecting test inputs with high fault-revealing capability, model optimization, and enhancing test inputs diversity.",
+    "publication_type": "journal",
+    "ccf_rank": "B",
+    "dates": {
+      "publication_year": 2026,
+      "online_year": 2026,
+      "first_public_year": 2026,
+      "first_public_date": "2026-01-03",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1016/j.sysarc.2025.103682",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1016%2Fj.sysarc.2025.103682",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、发表来源与出版时间"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.sysarc.2025.103682",
+        "label": "Published paper abstract",
+        "supports": "用户导出的原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.sysarc.2025.103682",
+        "label": "Published paper front matter",
+        "supports": "原文 Date of publication / Available online 日期"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "lbt-2025",
+    "title": "Learning-Based Testing for Deep Learning: Enhancing Model Robustness with Adversarial Input Prioritization",
+    "venue": "arXiv",
+    "venue_name": "arXiv",
+    "paper_url": "https://arxiv.org/abs/2509.23961",
+    "alias": "LBT",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Sheikh Md Mushfiqur Rahman",
+      "Nasir Eisty"
+    ],
+    "abstract": "Context: Deep Neural Networks (DNNs) are increasingly deployed in critical applications, where resilience against adversarial inputs is paramount. However, whether coverage-based or confidence-based, existing test prioritization methods often fail to efficiently identify the most fault-revealing inputs, limiting their practical effectiveness. Aims: This project aims to enhance fault detection and model robustness in DNNs by integrating Learning-Based Testing (LBT) with hypothesis and mutation testing to efficiently prioritize adversarial test cases. Methods: Our method selects a subset of adversarial inputs with a high likelihood of exposing model faults, without relying on architecture-specific characteristics or formal verification, making it adaptable across diverse DNNs. Results: Our results demonstrate that the proposed LBT method consistently surpasses baseline approaches in prioritizing fault-revealing inputs and accelerating fault detection. By efficiently organizing test permutations, it uncovers all potential faults significantly faster across various datasets, model architectures, and adversarial attack techniques. Conclusion: Beyond improving fault detection, our method preserves input diversity and provides effective guidance for model retraining, further enhancing robustness. These advantages establish our approach as a powerful and practical solution for adversarial test prioritization in real-world DNN applications.",
+    "publication_type": "preprint",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": null,
+      "online_year": null,
+      "first_public_year": 2025,
+      "first_public_date": "2025-09-28",
+      "checked_on": "2026-10-29"
+    },
+    "doi": null,
+    "arxiv_url": "https://arxiv.org/abs/2509.23961",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://arxiv.org/abs/2509.23961",
+        "label": "arXiv preprint record",
+        "supports": "题名、作者、原文摘要与首次公开日期；当前按预印本收录"
+      }
+    ],
+    "notes": "尚未核实正式发表记录。正式发表年保持 null；README 按预印本首次公开年份展示。"
+  },
+  {
+    "id": "actracer-2026",
+    "title": "AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3744340",
+    "alias": "AcTracer",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Yuheng Huang",
+      "Jiayang Song",
+      "Qiang Hu",
+      "Felix Juefei-Xu",
+      "Lei Ma"
+    ],
+    "abstract": "Performance evaluation plays a crucial role in the development lifecycle of large language models (LLMs). It estimates the model’s capability, elucidates behavior characteristics, and facilitates the identification of potential issues and limitations, thereby guiding further improvement. Given that LLMs’ diverse task-handling abilities stem from large volumes of training data, a comprehensive evaluation also necessitates abundant, well-annotated, and representative test data to assess LLM performance across various downstream tasks. However, the demand for high-quality test data often entails substantial time, computational resources, and manual efforts, sometimes causing the evaluation to be inefficient or impractical. To address these challenges, researchers propose active testing, which estimates the overall performance by selecting a subset of test data. Nevertheless, the existing active testing methods tend to be inefficient, even inapplicable, given the unique new challenges of LLMs (e.g., diverse task types, increased model complexity, and unavailability of training data). To mitigate such limitations and expedite the development cycle of LLMs, in this work, we introduce AcTracer, an active testing framework tailored for LLMs that strategically selects a small subset of test data to achieve a more accurate performance estimation for LLMs. AcTracer utilizes both internal and external information from LLMs to guide the test sampling process, reducing variance through a multi-stage pool-based active selection. Our experiment results demonstrate that AcTracer achieves state-of-the-art performance compared to existing methods across various tasks.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2026,
+      "online_year": 2026,
+      "first_public_year": 2024,
+      "first_public_date": "2024-08-07",
+      "checked_on": "2026-10-29"
+    },
+    "doi": "10.1145/3744340",
+    "arxiv_url": "https://arxiv.org/abs/2408.03573",
+    "code_url": "https://github.com/YuhengHuang42/test_selection_llm",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3744340",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、作者、期刊、原文摘要、正式卷期年和在线发表年"
+      },
+      {
+        "url": "https://arxiv.org/abs/2408.03573",
+        "label": "arXiv public record",
+        "supports": "关联预印本、作者与首次公开日期"
+      },
+      {
+        "url": "https://github.com/YuhengHuang42/test_selection_llm",
+        "label": "Author implementation repository",
+        "supports": "仓库 README 明确对应 AcTracer 论文的源代码"
+      }
+    ],
+    "notes": "面向大语言模型性能估计的主动测试，通过测试子集估计整体性能。正式卷期采用 TOSEM 2026；arXiv 的 To appear (2025) 注释不作为正式卷期年份。"
   }
 ]

@@ -17,7 +17,7 @@ This collection focuses on testing and repairing deep neural network models, wit
 
 ## Papers
 
-Within each category, papers are listed by formal publication year, newest first. Preprint and online publication dates are recorded separately in the [paper data](data/papers.json).
+Within each category, published papers are listed by formal publication year, newest first. Preprints use their first public year and are marked accordingly. Preprint and online publication dates are recorded separately in the [paper data](data/papers.json).
 
 Resource links are shown only when recorded in the paper data.
 
@@ -30,11 +30,15 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | Year | Name | Paper | Resources | Venue |
 | --- | --- | --- | --- | --- |
 | 2025 | **QuanTest** | [QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems](https://doi.org/10.1145/3688840) | [arXiv](https://arxiv.org/abs/2402.12950) | TOSEM |
+| 2024 | — | [Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study](https://doi.org/10.1145/3672446) | — | TOSEM |
+| 2023 | **ATOM** | [ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems](https://doi.org/10.1109/ase56229.2023.00156) | — | ASE' 2023 |
+| 2023 | **SA (journal-version)** | [Evaluating Surprise Adequacy for Deep Learning System Testing](https://doi.org/10.1145/3546947) | [Code](https://github.com/coinse/sadl) | TOSEM |
 | 2023 | **IDC** | [Input Distribution Coverage: Measuring Feature Interaction Adequacy in Neural Network Testing](https://doi.org/10.1145/3576040) | — | TOSEM |
 | 2022 | **testRNN** | [Coverage-Guided Testing for Recurrent Neural Networks](https://doi.org/10.1109/tr.2021.3080664) | — | TR |
 | 2022 | — | [Is Neuron Coverage Needed to Make Person Detection More Robust?](https://doi.org/10.1109/cvprw56347.2022.00326) | — | CVPRW' 2022 |
 | 2022 | **NPC** | [NPC: Neuron Path Coverage via Characterizing Decision Logic of Deep Neural Networks](https://doi.org/10.1145/3490489) | [arXiv](https://arxiv.org/abs/2203.12915) · [Code](https://github.com/ltl7155/NPC) | TOSEM |
 | 2022 | **RNN-Test** | [RNN-Test: Towards Adversarial Testing for Recurrent Neural Network Systems](https://doi.org/10.1109/tse.2021.3114353) | — | TSE |
+| 2021 | — | [A Review and Refinement of Surprise Adequacy](https://doi.org/10.1109/deeptest52559.2021.00009) | — | DeepTest (workshop)' 2021 |
 | 2021 | — | [Are Coverage Criteria Meaningful Metrics for DNNs?](https://doi.org/10.1109/ijcnn52387.2021.9533987) | — | IJCNN' 2021 |
 | 2021 | **DeepCon** | [DeepCon: Contribution Coverage Testing for Deep Learning Systems](https://doi.org/10.1109/saner50967.2021.00026) | — | SANER' 2021 |
 | 2020 | — | [An Empirical Study on Correlation between Coverage and Robustness for Deep Neural Networks](https://doi.org/10.1109/iceccs51672.2020.00016) | [arXiv](https://arxiv.org/abs/1911.05904) | ICECCS' 2020 |
@@ -43,6 +47,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2019 | **DeepCT** | [DeepCT: Tomographic Combinatorial Testing for Deep Learning Systems](https://doi.org/10.1109/saner.2019.8668044) | — | SANER' 2019 |
 | 2019 | **DeepPath** | [DeepPath: Path-Driven Testing Criteria for Deep Neural Networks](https://doi.org/10.1109/aitest.2019.00013) | — | AITest' 2019 |
 | 2019 | **DeepStellar** | [DeepStellar: model-based quantitative analysis of stateful deep learning systems](https://doi.org/10.1145/3338906.3338954) | — | ESEC/FSE' 2019 |
+| 2019 | **SA (conf-version)** | [Guiding Deep Learning System Testing Using Surprise Adequacy](https://doi.org/10.1109/icse.2019.00108) | [arXiv](https://arxiv.org/abs/1808.08444) | ICSE' 2019 |
 | 2019 | — | [Structural Coverage Criteria for Neural Networks Could Be Misleading](https://doi.org/10.1109/icse-nier.2019.00031) | — | ICSE-NIER' 2019 |
 | 2019 | — | [Structural Test Coverage Criteria for Deep Neural Networks](https://doi.org/10.1145/3358233) | [arXiv](https://arxiv.org/abs/1803.04792) | TECS |
 | 2019 | — | [Towards Improved Testing For Deep Learning](https://doi.org/10.1109/icse-nier.2019.00030) | [arXiv](https://arxiv.org/abs/1902.06320) | ICSE-NIER' 2019 |
@@ -65,8 +70,11 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2024 | **CIT4DNN** | [CIT4DNN: Generating Diverse and Rare Inputs for Neural Networks Using Latent Space Combinatorial Testing](https://doi.org/10.1145/3597503.3639106) | — | ICSE' 2024 |
 | 2024 | **SINVAD** | [Deceiving Humans and Machines Alike: Search-based Test Input Generation for DNNs Using Variational Autoencoders](https://doi.org/10.1145/3635706) | — | TOSEM |
 | 2024 | **DFuzzer** | [DFuzzer: Diversity-Driven Seed Queue Construction of Fuzzing for Deep Learning Models](https://doi.org/10.1109/tr.2023.3322406) | — | TR |
+| 2024 | **FIPSER** | [FIPSER: Improving Fairness Testing of DNN by Seed Prioritization](https://doi.org/10.1145/3691620.3695486) | [Code](https://github.com/light-chimes/FIPSER) | ASE' 2024 |
 | 2024 | **GIST** | [GIST: Generated Inputs Sets Transferability in Deep Learning](https://doi.org/10.1145/3672457) | [arXiv](https://arxiv.org/abs/2311.00801) | TOSEM |
+| 2024 | — | [Seed Selection for Testing Deep Neural Networks](https://doi.org/10.1145/3607190) | — | TOSEM |
 | 2023 | **Test4Deep (journal-version)** | [A White-Box Testing for Deep Neural Networks Based on Neuron Coverage](https://doi.org/10.1109/tnnls.2022.3156620) | — | TNNLS |
+| 2023 | **ATOM** | [ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems](https://doi.org/10.1109/ase56229.2023.00156) | — | ASE' 2023 |
 | 2023 | **CoCoFuzzing** | [CoCoFuzzing: Testing Neural Code Models With Coverage-Guided Fuzzing](https://doi.org/10.1109/tr.2022.3208239) | [arXiv](https://arxiv.org/abs/2106.09242) | TR |
 | 2023 | **DistXplore** | [DistXplore: Distribution-Guided Testing for Evaluating and Enhancing Deep Learning Systems](https://doi.org/10.1145/3611643.3616266) | — | ESEC/FSE' 2023 |
 | 2023 | **DeepSensor** | [Excitement surfeited turns to errors: Deep learning testing framework based on excitable neurons](https://doi.org/10.1016/j.ins.2023.118936) | [arXiv](https://arxiv.org/abs/2202.07464) | Information Sciences |
@@ -93,8 +101,46 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Paper | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2026 | **AcTracer** | [AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling](https://doi.org/10.1145/3744340) | [arXiv](https://arxiv.org/abs/2408.03573) · [Code](https://github.com/YuhengHuang42/test_selection_llm) | TOSEM |
+| 2026 | **MetaDTS** | [MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks](https://doi.org/10.1016/j.sysarc.2025.103682) | — | JSA |
+| 2026 | **PriCod** | [PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks](https://doi.org/10.1145/3730435) | — | TOSEM |
+| 2026 | **SETS** | [SETS: A Simple yet Effective DNN Test Selection Approach](https://doi.org/10.1145/3772084) | — | TOSEM |
+| 2025 | — | [Assessing the Robustness of Test Selection Methods for Deep Neural Networks](https://doi.org/10.1145/3715693) | — | TOSEM |
+| 2025 | **AudioTest** | [AudioTest: Prioritizing Audio Test Cases](https://doi.org/10.1145/3728907) | — | PACMSE |
+| 2025 | **DeepVec** | [DeepVec: State-Vector Aware Test Case Selection for Enhancing Recurrent Neural Network](https://doi.org/10.1109/tse.2025.3565037) | [Code](https://github.com/ZhonghaoJiang/DeepVec) | TSE |
+| 2025 | **EATS** | [Efficient adaptive test case selection for DNNs robustness enhancement](https://doi.org/10.1016/j.jss.2025.112451) | — | JSS |
+| 2025 | **LBT** | [Learning-Based Testing for Deep Learning: Enhancing Model Robustness with Adversarial Input Prioritization](https://arxiv.org/abs/2509.23961) | [arXiv](https://arxiv.org/abs/2509.23961) | arXiv (preprint) |
+| 2025 | **MetaSel** | [MetaSel: A Test Selection Approach for Fine-Tuned DNN Models](https://doi.org/10.1109/tse.2025.3612253) | [arXiv](https://arxiv.org/abs/2503.17534) | TSE |
+| 2025 | **Prophet** | [Prioritizing Speech Test Cases](https://doi.org/10.1145/3707450) | — | TOSEM |
+| 2024 | — | [Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study](https://doi.org/10.1145/3672446) | — | TOSEM |
+| 2024 | **DeepGD** | [DeepGD: A Multi-Objective Black-Box Test Selection Approach for Deep Neural Networks](https://doi.org/10.1145/3644388) | — | TOSEM |
+| 2024 | **DATIS** | [Distance-Aware Test Input Selection for Deep Neural Networks](https://doi.org/10.1145/3650212.3652125) | [Code](https://github.com/DATIS-24/DATIS) | ISSTA' 2024 |
+| 2024 | **FAST** | [FAST: Boosting Uncertainty-based Test Prioritization Methods for Neural Networks via Feature Selection](https://doi.org/10.1145/3691620.3695472) | — | ASE' 2024 |
+| 2024 | **FATS** | [FATS: Feature Distribution Analysis-Based Test Selection for Deep Learning Enhancement](https://doi.org/10.1109/tbdata.2023.3334648) | — | TBD |
+| 2024 | **GraphPrior** | [GraphPrior: Mutation-based Test Input Prioritization for Graph Neural Networks](https://doi.org/10.1145/3607191) | — | TOSEM |
+| 2024 | **NSS** | [Neuron Sensitivity-Guided Test Case Selection](https://doi.org/10.1145/3672454) | — | TOSEM |
+| 2024 | **VRank** | [Prioritizing test cases for deep learning-based video classifiers](https://doi.org/10.1007/s10664-024-10520-1) | — | EMSE |
+| 2024 | **TDPR** | [Prioritizing Test Inputs for DNNs Using Training Dynamics](https://doi.org/10.1145/3691620.3695498) | [Code](https://github.com/TDPR-24/TDPR) | ASE' 2024 |
+| 2024 | **PCPrior** | [Test Input Prioritization for 3D Point Clouds](https://doi.org/10.1145/3643676) | — | TOSEM |
+| 2024 | **NodeRank** | [Test Input Prioritization for Graph Neural Networks](https://doi.org/10.1109/tse.2024.3385538) | [Code](https://github.com/yinghuali/NodeRank) | TSE |
+| 2024 | **MLPrior** | [Test Input Prioritization for Machine Learning Classifiers](https://doi.org/10.1109/tse.2024.3350019) | — | TSE |
+| 2024 | — | [Test Selection for Deep Neural Networks using Meta-Models with Uncertainty Metrics](https://doi.org/10.1145/3650212.3680312) | — | ISSTA' 2024 |
+| 2024 | — | [Towards Exploring the Limitations of Test Selection Techniques on Graph Neural Networks: An Empirical Study](https://doi.org/10.1007/s10664-024-10515-y) | — | EMSE |
+| 2023 | **CertPri** | [CertPri: Certifiable Prioritization for Deep Neural Networks via Movement Cost in Feature Space](https://doi.org/10.1109/ase56229.2023.00126) | [arXiv](https://arxiv.org/abs/2307.09375) | ASE' 2023 |
+| 2023 | **SA (journal-version)** | [Evaluating Surprise Adequacy for Deep Learning System Testing](https://doi.org/10.1145/3546947) | [Code](https://github.com/coinse/sadl) | TOSEM |
+| 2023 | **NNS** | [In Defense of Simple Techniques for Neural Network Test Case Selection](https://doi.org/10.1145/3597926.3598073) | — | ISSTA' 2023 |
+| 2023 | **RTS** | [Robust Test Selection for Deep Neural Networks](https://doi.org/10.1109/tse.2023.3330982) | [Code](https://github.com/swf1996120/RTS) | TSE |
+| 2022 | **ATS** | [Adaptive test selection for deep neural networks](https://doi.org/10.1145/3510003.3510232) | [Code](https://github.com/SATE-Lab/ATS) | ICSE' 2022 |
+| 2022 | **DAT** | [An Empirical Study on Data Distribution-Aware Test Selection for Deep Learning Enhancement](https://doi.org/10.1145/3511598) | — | TOSEM |
 | 2022 | **DeepState** | [DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks](https://doi.org/10.1145/3510003.3510231) | — | ICSE' 2022 |
+| 2022 | — | [Simple techniques work surprisingly well for neural network test prioritization and active learning (replicability study)](https://doi.org/10.1145/3533767.3534375) | — | ISSTA' 2022 |
+| 2021 | **PRIMA** | [Prioritizing Test Inputs for Deep Neural Networks via Mutation Analysis](https://doi.org/10.1109/icse43902.2021.00046) | — | ICSE' 2021 |
 | 2021 | — | [Test Selection for Deep Learning Systems](https://doi.org/10.1145/3417330) | [arXiv](https://arxiv.org/abs/1904.13195) | TOSEM |
+| 2021 | **TestRank** | [TestRank: Bringing Order into Unlabeled Test Instances for Deep Learning Tasks](https://proceedings.neurips.cc/paper/2021/hash/ae78510109d46b0a6eef9820a4ca95d6-Abstract.html) | [Code](https://github.com/cure-lab/TestRank) | NeurIPS' 2021 |
+| 2020 | **DeepGini** | [DeepGini: prioritizing massive tests to enhance the robustness of deep neural networks](https://doi.org/10.1145/3395363.3397357) | — | ISSTA' 2020 |
+| 2020 | **MCP** | [Multiple-boundary clustering and prioritization to promote neural network retraining](https://doi.org/10.1145/3324884.3416621) | — | ASE' 2020 |
+| 2019 | **SA (conf-version)** | [Guiding Deep Learning System Testing Using Surprise Adequacy](https://doi.org/10.1109/icse.2019.00108) | [arXiv](https://arxiv.org/abs/1808.08444) | ICSE' 2019 |
+| 2019 | — | [Input Prioritization for Testing Neural Networks](https://doi.org/10.1109/aitest.2019.000-6) | — | AITest' 2019 |
 
 #### Model Repair
 
@@ -113,6 +159,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Paper | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2024 | — | [Test Optimization in DNN Testing: A Survey](https://doi.org/10.1145/3643678) | — | TOSEM |
 | 2022 | — | [Machine Learning Testing: Survey, Landscapes and Horizons](https://doi.org/10.1109/tse.2019.2962027) | [arXiv](https://arxiv.org/abs/1906.10742) | TSE |
 | 2021 | — | [神经网络验证和测试技术研究综述](https://doi.org/10.3778/j.issn.1002-8331.2106-0342) | — | 计算机工程与应用 |
 | 2020 | — | [深度神经网络测试研究综述](https://doi.org/10.13328/j.cnki.jos.005951) | — | 软件学报 |
@@ -121,7 +168,14 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Paper | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2025 | — | [Assessing the Robustness of Test Selection Methods for Deep Neural Networks](https://doi.org/10.1145/3715693) | — | TOSEM |
+| 2024 | — | [Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study](https://doi.org/10.1145/3672446) | — | TOSEM |
+| 2024 | — | [Seed Selection for Testing Deep Neural Networks](https://doi.org/10.1145/3607190) | — | TOSEM |
+| 2024 | — | [Towards Exploring the Limitations of Test Selection Techniques on Graph Neural Networks: An Empirical Study](https://doi.org/10.1007/s10664-024-10515-y) | — | EMSE |
+| 2022 | **DAT** | [An Empirical Study on Data Distribution-Aware Test Selection for Deep Learning Enhancement](https://doi.org/10.1145/3511598) | — | TOSEM |
 | 2022 | — | [Is Neuron Coverage Needed to Make Person Detection More Robust?](https://doi.org/10.1109/cvprw56347.2022.00326) | — | CVPRW' 2022 |
+| 2022 | — | [Simple techniques work surprisingly well for neural network test prioritization and active learning (replicability study)](https://doi.org/10.1145/3533767.3534375) | — | ISSTA' 2022 |
+| 2021 | — | [A Review and Refinement of Surprise Adequacy](https://doi.org/10.1109/deeptest52559.2021.00009) | — | DeepTest (workshop)' 2021 |
 | 2021 | — | [Are Coverage Criteria Meaningful Metrics for DNNs?](https://doi.org/10.1109/ijcnn52387.2021.9533987) | — | IJCNN' 2021 |
 | 2021 | — | [Test Selection for Deep Learning Systems](https://doi.org/10.1145/3417330) | [arXiv](https://arxiv.org/abs/1904.13195) | TOSEM |
 | 2020 | — | [An Empirical Study on Correlation between Coverage and Robustness for Deep Neural Networks](https://doi.org/10.1109/iceccs51672.2020.00016) | [arXiv](https://arxiv.org/abs/1911.05904) | ICECCS' 2020 |
