@@ -4318,5 +4318,1870 @@
       }
     ],
     "notes": "面向大语言模型性能估计的主动测试，通过测试子集估计整体性能。正式卷期采用 TOSEM 2026；arXiv 的 To appear (2025) 注释不作为正式卷期年份。"
+  },
+  {
+    "id": "deeppatch-2023",
+    "title": "DeepPatch: Maintaining Deep Learning Model Programs to Retain Standard Accuracy with Substantial Robustness Improvement",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3604609",
+    "alias": "DeepPatch",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Zhengyuan Wei",
+      "Haipeng Wang",
+      "Imran Ashraf",
+      "Wing-Kwong Chan"
+    ],
+    "abstract": "Maintaining a deep learning (DL) model by making the model substantially more robust through retraining with plenty of adversarial examples of non-trivial perturbation strength often reduces the model’s standard accuracy. Many existing model repair or maintenance techniques sacrifice standard accuracy to produce a large gain in robustness or vice versa. This article proposes DeepPatch, a novel technique to maintain filter-intensive DL models. To the best of our knowledge, DeepPatch is the first work to address the challenge of standard accuracy retention while substantially improving the robustness of DL models with plenty of adversarial examples of non-trivial and diverse perturbation strengths. Rather than following the conventional wisdom to generalize all the components of a DL model over the union set of clean and adversarial samples, DeepPatch formulates a novel division of labor method to adaptively activate a subset of its inserted processing units to process individual samples. Its produced model can generate the original or replacement feature maps in each forward pass of the patched model, making the patched model carry an intrinsic property of behaving like the model under maintenance on demand. The overall experimental results show that DeepPatch successfully retains the standard accuracy of all pretrained models while improving the robustness accuracy substantially. However, the models produced by the peer techniques suffer from either large standard accuracy loss or small robustness improvement compared with the models under maintenance, rendering them unsuitable in general to replace the latter.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3604609",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3604609",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      }
+    ],
+    "notes": "Bib 收录时为 Just Accepted 阶段；正式卷期为 TOSEM 2023。早期版本只确认到年份，精确首次公开日保持 null。"
+  },
+  {
+    "id": "dflare-2023",
+    "title": "Finding Deviated Behaviors of the Compressed DNN Models for Image Classifications",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3583564",
+    "alias": "DFLARE / DREPAIR",
+    "categories": [
+      "Test Generation",
+      "Model Repair"
+    ],
+    "authors": [
+      "Yongqiang Tian",
+      "Wuqi Zhang",
+      "Ming Wen",
+      "Shing-Chi Cheung",
+      "Chengnian Sun",
+      "Shiqing Ma",
+      "Yu Jiang"
+    ],
+    "abstract": "Model compression can significantly reduce the sizes of deep neural network (DNN) models and thus facilitate the dissemination of sophisticated, sizable DNN models, especially for deployment on mobile or embedded devices. However, the prediction results of compressed models may deviate from those of their original models. To help developers thoroughly understand the impact of model compression, it is essential to test these models to find those deviated behaviors before dissemination. However, this is a non-trivial task, because the architectures and gradients of compressed models are usually not available.To this end, we propose Dflare, a novel, search-based, black-box testing technique to automatically find triggering inputs that result in deviated behaviors in image classification tasks. Dflare iteratively applies a series of mutation operations to a given seed image until a triggering input is found. For better efficacy and efficiency, Dflare models the search problem as Markov Chains and leverages the Metropolis-Hasting algorithm to guide the selection of mutation operators in each iteration. Further, Dflare utilizes a novel fitness function to prioritize the mutated inputs that either cause large differences between two models’ outputs or trigger previously unobserved models’ probability vectors. We evaluated Dflare on 21 compressed models for image classification tasks with three datasets. The results show that Dflare not only constantly outperforms the baseline in terms of efficacy but also significantly improves the efficiency: Dflare is 17.84×–446.06× as fast as the baseline in terms of time; the number of queries required by Dflare to find one triggering input is only 0.186–1.937% of those issued by the baseline. We also demonstrated that the triggering inputs found by Dflare can be used to repair up to 48.48% deviated behaviors in image classification tasks and further decrease the effectiveness of Dflare on the repaired models.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2021,
+      "first_public_date": "2021-12-06",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3583564",
+    "arxiv_url": "https://arxiv.org/abs/2112.02819",
+    "code_url": "https://github.com/yqtianust/DFlare",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3583564",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      },
+      {
+        "url": "https://arxiv.org/abs/2112.02819",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      },
+      {
+        "url": "https://doi.org/10.1145/3583564",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "同时提出测试输入生成方法 DFLARE 和用于压缩模型输出修正的 DREPAIR，分别展示于测试生成与模型修复。Bib 摘要漏掉的 48.48% 百分号已依原文恢复。"
+  },
+  {
+    "id": "arachne-2023",
+    "title": "Arachne: Search-Based Repair of Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3563210",
+    "alias": "Arachne",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Jeongju Sohn",
+      "Sungmin Kang",
+      "Shin Yoo"
+    ],
+    "abstract": "The rapid and widespread adoption of Deep Neural Networks (DNNs) has called for ways to test their behaviour, and many testing approaches have successfully revealed misbehaviour of DNNs. However, it is relatively unclear what one can do to correct such behaviour after revelation, as retraining involves costly data collection and does not guarantee to fix the underlying issue. This article introduces Arachne, a novel program repair technique for DNNs, which directly repairs DNNs using their input-output pairs as a specification. Arachne localises neural weights on which it can generate effective patches and uses differential evolution to optimise the localised weights and correct the misbehaviour. An empirical study using different benchmarks shows that Arachne can fix specific misclassifications of a DNN without reducing general accuracy significantly. On average, patches generated by Arachne generalise to 61.3% of unseen misbehaviour, whereas those by a state-of-the-art DNN repair technique generalise only to 10.2% and sometimes to none while taking tens of times more than Arachne. We also show that Arachne can address fairness issues by debiasing a gender classification model. Finally, we successfully apply Arachne to a text sentiment model to show that it generalises beyond convolutional neural networks.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2019,
+      "first_public_date": "2019-12-28",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3563210",
+    "arxiv_url": "https://arxiv.org/abs/1912.12463",
+    "code_url": "https://github.com/coinse/arachne",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3563210",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      },
+      {
+        "url": "https://arxiv.org/abs/1912.12463",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      },
+      {
+        "url": "https://doi.org/10.1145/3563210",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "apricot-2019",
+    "title": "Apricot: A Weight-Adaptation Approach to Fixing Deep Learning Models",
+    "venue": "ASE",
+    "venue_name": "2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+    "paper_url": "https://doi.org/10.1109/ase.2019.00043",
+    "alias": "Apricot",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Hao Zhang",
+      "W.K. Chan"
+    ],
+    "abstract": "A deep learning (DL) model is inherently imprecise. To address this problem, existing techniques retrain a DL model over a larger training dataset or with the help of fault injected models or using the insight of failing test cases in a DL model. In this paper, we present Apricot, a novel weight-adaptation approach to fixing DL models iteratively. Our key observation is that if the deep learning architecture of a DL model is trained over many different subsets of the original training dataset, the weights in the resultant reduced DL model (rDLM) can provide insights on the adjustment direction and magnitude of the weights in the original DL model to handle the test cases that the original DL model misclassifies. Apricot generates a set of such reduced DL models from the original DL model. In each iteration, for each failing test case experienced by the input DL model (iDLM), Apricot adjusts each weight of this iDLM toward the average weight of these rDLMs correctly classifying the test case and/or away from that of these rDLMs misclassifying the same test case, followed by training the weight-adjusted iDLM over the original training dataset to generate a new iDLM for the next iteration. The experiment using five state-of-the-art DL models shows that Apricot can increase the test accuracy of these models by 0.87%-1.55% with an average of 1.08%. The experiment also reveals the complementary nature of these rDLMs in Apricot.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2019,
+      "online_year": null,
+      "first_public_year": 2019,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/ase.2019.00043",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Fase.2019.00043",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/ase.2019.00043",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "airepair-2023",
+    "title": "AIREPAIR: A Repair Platform for Neural Networks",
+    "venue": "ICSE-Companion",
+    "venue_name": "2023 IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
+    "paper_url": "https://doi.org/10.1109/icse-companion58688.2023.00033",
+    "alias": "AIREPAIR",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Xidan Song",
+      "Youcheng Sun",
+      "Mustafa A. Mustafa",
+      "Lucas C. Cordeiro"
+    ],
+    "abstract": "We present AIREPAIR, a platform for repairing neural networks. It features the integration of existing network repair tools. Based on AIREPAIR, one can run different repair methods on the same model, thus enabling the fair compari-son of different repair techniques. In this paper, we evaluate AIREPAIR with five recent repair methods on popular deep-learning datasets and models. Our evaluation confirms the utility of AIREPAIR, by comparing and analyzing the results from different repair techniques. A demonstration is available at https://youtu.be/UkKw5neeWhw",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icse-companion58688.2023.00033",
+    "arxiv_url": null,
+    "code_url": "https://github.com/theyoucheng/AIRepair",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficse-companion58688.2023.00033",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse-companion58688.2023.00033",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse-companion58688.2023.00033",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      },
+      {
+        "url": "https://conf.researchr.org/details/icse-2023/icse-2023-demonstrations/13/AIREPAIR-A-Repair-Platform-for-Neural-Networks",
+        "label": "Official conference program",
+        "supports": "ICSE 2023 Demonstrations 轨道"
+      }
+    ],
+    "notes": "ICSE 2023 Companion 的 Demonstrations 工具论文。"
+  },
+  {
+    "id": "rift-2023",
+    "title": "Improving Generalization of Adversarial Training via Robust Critical Fine-Tuning",
+    "venue": "ICCV",
+    "venue_name": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "paper_url": "https://doi.org/10.1109/iccv51070.2023.00408",
+    "alias": "RiFT",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Kaijie Zhu",
+      "Xixu Hu",
+      "Jindong Wang",
+      "Xing Xie",
+      "Ge Yang"
+    ],
+    "abstract": "Deep neural networks are susceptible to adversarial examples, posing a significant security risk in critical applications. Adversarial Training (AT) is a well-established technique to enhance adversarial robustness, but it often comes at the cost of decreased generalization ability. This paper proposes Robustness Critical Fine-Tuning (RiFT), a novel approach to enhance generalization without compromising adversarial robustness. The core idea of RiFT is to exploit the redundant capacity for robustness by fine-tuning the adversarially trained model on its non-robust-critical module. To do so, we introduce module robust criticality (MRC), a measure that evaluates the significance of a given module to model robustness under worst-case weight perturbations. Using this measure, we identify the module with the lowest MRC value as the non-robust-critical module and fine-tune its weights to obtain fine-tuned weights. Subsequently, we linearly interpolate between the adversarially trained weights and fine-tuned weights to derive the optimal fine-tuned model weights. We demonstrate the efficacy of RiFT on ResNet18, ResNet34, and WideResNet34-10 models trained on CIFAR10, CIFAR100, and Tiny-ImageNet datasets. Our experiments show that RiFT can significantly improve both generalization and out-of-distribution robustness by around 1.5% while maintaining or even slightly enhancing adversarial robustness. Code is available at https://github.com/Immortalise/RiFT.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": "2023-10-01",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/iccv51070.2023.00408",
+    "arxiv_url": null,
+    "code_url": "https://github.com/Immortalise/RiFT",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficcv51070.2023.00408",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/iccv51070.2023.00408",
+        "label": "Original paper abstract",
+        "supports": "原文摘要；已核对对应论文 PDF 的摘要页面"
+      },
+      {
+        "url": "https://doi.org/10.1109/iccv51070.2023.00408",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "针对对抗训练模型的训练后微调，归 Model Repair。摘要中的 1.5% 已对照原文核实。"
+  },
+  {
+    "id": "faire-2024",
+    "title": "Faire: Repairing Fairness of Neural Networks via Neuron Condition Synthesis",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3617168",
+    "alias": "Faire",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Tianlin Li",
+      "Xiaofei Xie",
+      "Jian Wang",
+      "Qing Guo",
+      "Aishan Liu",
+      "Lei Ma",
+      "Yang Liu"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) have achieved tremendous success in many applications, while it has been demonstrated that DNNs can exhibit some undesirable behaviors on concerns such as robustness, privacy, and other trustworthiness issues. Among them, fairness (i.e., non-discrimination) is one important property, especially when they are applied to some sensitive applications (e.g., finance and employment). However, DNNs easily learn spurious correlations between protected attributes (e.g., age, gender, race) and the classification task and develop discriminatory behaviors if the training data is imbalanced. Such discriminatory decisions in sensitive applications would introduce severe social impacts. To expose potential discrimination problems in DNNs before putting them in use, some testing techniques have been proposed to identify the discriminatory instances (i.e., instances that show defined discrimination). However, how to repair DNNs after detecting such discrimination is still challenging. Existing techniques mainly rely on retraining on a large number of discriminatory instances generated by testing methods, which requires huge time overhead and makes the repairing inefficient. In this work, we propose the method Faire to effectively and efficiently repair the fairness issues of DNNs, without using additional data (e.g., discriminatory instances). Our basic idea is inspired by the traditional program repair method that synthesizes proper condition checking. To repair traditional programs, a typical method is to localize the program defects and repair the program logic by adding condition checking. Similarly, for DNNs, we try to understand the unfair logic and reformulate it with well-designed condition checking. In this article, we synthesize the condition that can reduce the effect of features relevant to the protected attributes in the DNN. Specifically, we first perform the neuron-based analysis and check the functionalities of neurons to identify neurons whose outputs could be regarded as features relevant to protected attributes and original tasks. Then a new condition layer is added after each hidden layer to penalize neurons that are accountable for the protected features (i.e., intermediate features relevant to protected attributes) and promote neurons that are accountable for the non-protected features (i.e., intermediate features relevant to original tasks). In sum, the repair rate of Faire reaches up to more than 99%, which outperforms other methods, and the whole repairing process only takes no more than 340 s. The evaluation results demonstrate that our approach can effectively and efficiently repair the individual discriminatory instances of the target model.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3617168",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3617168",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      }
+    ],
+    "notes": "正式卷期为 TOSEM 2024；在线发表年为 2023。早期 Just Accepted 版本的精确首次公开日未确认。"
+  },
+  {
+    "id": "archrepair-2023",
+    "title": "ArchRepair: Block-Level Architecture-Oriented Repairing for Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3585005",
+    "alias": "ArchRepair",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Hua Qi",
+      "Zhijie Wang",
+      "Qing Guo",
+      "Jianlang Chen",
+      "Felix Juefei-Xu",
+      "Fuyuan Zhang",
+      "Lei Ma",
+      "Jianjun Zhao"
+    ],
+    "abstract": "Over the past few years, deep neural networks (DNNs) have achieved tremendous success and have been continuously applied in many application domains. However, during the practical deployment in industrial tasks, DNNs are found to be erroneous-prone due to various reasons such as overfitting and lacking of robustness to real-world corruptions during practical usage. To address these challenges, many recent attempts have been made to repair DNNs for version updates under practical operational contexts by updating weights (i.e., network parameters) through retraining, fine-tuning, or direct weight fixing at a neural level. Nevertheless, existing solutions often neglect the effects of neural network architecture and weight relationships across neurons and layers. In this work, as the first attempt, we initiate to repair DNNs by jointly optimizing the architecture and weights at a higher (i.e., block level). We first perform empirical studies to investigate the limitation of whole network-level and layer-level repairing, which motivates us to explore a novel repairing direction for DNN repair at the block level. To this end, we need to further consider techniques to address two key technical challenges, i.e., block localization, where we should localize the targeted block that we need to fix; and how to perform joint architecture and weight repairing. Specifically, we first propose adversarial-aware spectrum analysis for vulnerable block localization that considers the neurons’ status and weights’ gradients in blocks during the forward and backward processes, which enables more accurate candidate block localization for repairing even under a few examples. Then, we further propose the architecture-oriented search-based repairing that relaxes the targeted block to a continuous repairing search space at higher deep feature levels. By jointly optimizing the architecture and weights in that space, we can identify a much better block architecture. We implement our proposed repairing techniques as a tool, named ArchRepair, and conduct extensive experiments to validate the proposed method. The results show that our method can not only repair but also enhance accuracy and robustness, outperforming the state-of-the-art DNN repair techniques.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-07-24",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3585005",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3585005",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "vere-2024",
+    "title": "VeRe: Verification Guided Synthesis for Repairing Deep Neural Networks",
+    "venue": "ICSE",
+    "venue_name": "Proceedings of the IEEE/ACM 46th International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3597503.3623332",
+    "alias": "VeRe",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Jianan Ma",
+      "Pengfei Yang",
+      "Jingyi Wang",
+      "Youcheng Sun",
+      "Cheng-Chao Huang",
+      "Zhen Wang"
+    ],
+    "abstract": "Neural network repair aims to fix the 'bugs'1 of neural networks by modifying the model's architecture or parameters. However, due to the data-driven nature of neural networks, it is difficult to explain the relationship between the internal neurons and erroneous behaviors, making further repair challenging. While several work exists to identify responsible neurons based on gradient or causality analysis, their effectiveness heavily rely on the quality of available 'bugged' data and multiple heuristics in layer or neuron selection. In this work, we address the issue utilizing the power of formal verification (in particular for neural networks). Specifically, we propose VeRe, a verification-guided neural network repair framework that performs fault localization based on linear relaxation to symbolically calculate the repair significance of neurons and furthermore optimize the parameters of problematic neurons to repair erroneous behaviors. We evaluated VeRe on various repair tasks, and our experimental results show that VeRe can efficiently and effectively repair all neural networks without degrading the model's performance. For the task of removing backdoors, VeRe successfully reduces attack success rate from 98.47% to 0.38% on average, while causing an average performance drop of 0.9%. For the task of repairing safety properties, VeRe successfully repairs all the 36 tasks and achieves 99.87% generalization on average.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-02-06",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3597503.3623332",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3597503.3623332",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3597503.3623332",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "runner-2024",
+    "title": "RUNNER: Responsible UNfair NEuron Repair for Enhancing Deep Neural Network Fairness",
+    "venue": "ICSE",
+    "venue_name": "Proceedings of the IEEE/ACM 46th International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3597503.3623334",
+    "alias": "RUNNER",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Tianlin Li",
+      "Yue Cao",
+      "Jian Zhang",
+      "Shiqian Zhao",
+      "Yihao Huang",
+      "Aishan Liu",
+      "Qing Guo",
+      "Yang Liu"
+    ],
+    "abstract": "Deep Neural Networks (DNNs), an emerging software technology, have achieved impressive results in a variety of fields. However, the discriminatory behaviors towards certain groups (a.k.a. unfairness) of DNN models increasingly become a social concern, especially in high-stake applications such as loan approval and criminal risk assessment. Although there has been a number of works to improve model fairness, most of them adopt an adversary to either expand the model architecture or augment training data, which introduces excessive computational overhead. Recent work diagnoses responsible unfair neurons first and fixes them with selective retraining. Unfortunately, existing diagnosis process is time-consuming due to multi-step training sample analysis, and selective retraining may cause a performance bottleneck due to indirectly adjusting unfair neurons on biased samples. In this paper, we propose Responsible UNfair NEuron Repair (RUNNER) that improves existing works in three key aspects: (1) efficiency: we design the Importance-based Neuron Diagnosis that identifies responsible unfair neurons in one step with a novel importance criterion of neurons; (2) effectiveness: we design the Neuron Stabilizing Retraining by adding a loss term that measures the activation distance of responsible unfair neurons from different subgroups in all sources; (3) generalization: we investigate the effectiveness on both structured tabular data and large-scale unstructured image data, which is often ignored in prior studies. Our extensive experiments across 5 datasets show that RUUNER can effectively and efficiently diagnose and repair the DNNs regarding unfairness. On average, our approach significantly reduces computing overhead from 341.7s to 29.65s, and achieves improved fairness up to 79.3%. Besides, RUNNER also keeps state-of-the-art results on the unstructured dataset.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-02-06",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3597503.3623334",
+    "arxiv_url": null,
+    "code_url": "https://github.com/Ace0001/RUNNER",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3597503.3623334",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3597503.3623334",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1145/3597503.3623334",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "autoric-2025",
+    "title": "AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3690634",
+    "alias": "AutoRIC",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Xinyu Sun",
+      "Wanwei Liu",
+      "Shangwen Wang",
+      "Tingyu Chen",
+      "Ye Tao",
+      "Xiaoguang Mao"
+    ],
+    "abstract": "Neural networks are important computational models used in the domains of artificial intelligence and software engineering. Parameters of a neural network are obtained via training it against a specific dataset with a standard process, which guarantees each sample within that set is mapped to the correct class. In general, for a trained neural network, there is no warranty of high-level properties, such as fairness, robustness, and so forth. In this case, one need to tune the parameters in an alternative manner, and it is called repairing. In this paper, we present AutoRIC (Auto mated R epair w I th C onstraints), an analytical-approach-based white-box repairing framework against general properties that could be quantitatively measured. Our approach is mainly based on constrained optimization, namely, we treat the properties of neural network as the optimized objective described by a quadratic formula about the faulty parameters. To ensure the classification accuracy of the repaired neural network, we impose linear inequality constraints to the inputs that obtain incorrect outputs from the neural network. In general, this may generate a huge amount of constraints, resulting in the prohibitively high cost in the problem solving, or even making the problem unable to be solved by the constraint solver. To circumvent this, we present a selection strategy to diminish the restrictions, i.e., we always select the most ‘strict’ ones into the constraint set each time. Experimental results show that repairing with constraints performs efficiently and effectively. AutoRIC tends to achieve a satisfactory repairing result whereas brings in a negligible accuracy drop. AutoRIC enjoys a notable time advantage and this advantage becomes increasingly evident as the network complexity rises. Moreover, experiment results also demonstrate that repairing based on unconstrained optimizations are not stable, which embodies the necessity of constraints.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2024,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3690634",
+    "arxiv_url": null,
+    "code_url": "https://github.com/Anonymous89000/AutoRIC",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3690634",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      },
+      {
+        "url": "https://doi.org/10.1145/3690634",
+        "label": "Earlier publisher PDF",
+        "supports": "用户提供的较早出版社 PDF 年份标记，精确首次公开日未确认"
+      },
+      {
+        "url": "https://doi.org/10.1145/3690634",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "正式卷期为 TOSEM 2025。用户提供的早期出版社 PDF 页脚为 2024/9-ART，首次公开年记录为 2024，精确日保持 null。"
+  },
+  {
+    "id": "inner-2024",
+    "title": "Interpretability Based Neural Network Repair",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3650212.3680330",
+    "alias": "INNER",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Zuohui Chen",
+      "Jun Zhou",
+      "Youcheng Sun",
+      "Jingyi Wang",
+      "Qi Xuan",
+      "Xiaoniu Yang"
+    ],
+    "abstract": "Along with the prevalent use of deep neural networks (DNNs), concerns have been raised on the security threats from DNNs such as backdoors in the network. While neural network repair methods have shown to be effective for fixing the defects in DNNs, they have been also found to produce biased models, with imbalanced accuracy across different classes, or weakened adversarial robustness, allowing malicious attackers to trick the model by adding small perturbations. To address these challenges, we propose INNER, an INterpretability-based NEural Repair approach. INNER formulates the idea of neuron routing for identifying fault neurons, in which the interpretability technique model probe is used to evaluate each neuron's contribution to the undesired behaviour of the neural network. INNER then optimizes the identified neurons for repairing the neural network. We test INNER on three typical application scenarios, including backdoor attacks, adversarial attacks, and wrong predictions. Our experimental results demonstrate that INNER can effectively repair neural networks, by ensuring accuracy, fairness, and robustness. Moreover, the performance of other repair methods can be also improved by re-using the fault neurons found by INNER, justifying the generality of the proposed approach.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-09-11",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3650212.3680330",
+    "arxiv_url": null,
+    "code_url": "https://github.com/implicitDeclaration/inner",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3650212.3680330",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3650212.3680330",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1145/3650212.3680330",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "idnn-2024",
+    "title": "Isolation-Based Debugging for Neural Networks",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3650212.3652132",
+    "alias": "IDNN",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Jialuo Chen",
+      "Jingyi Wang",
+      "Youcheng Sun",
+      "Peng Cheng",
+      "Jiming Chen"
+    ],
+    "abstract": "Neural networks (NNs) are known to have diverse defects such as adversarial examples, backdoor and discrimination, raising great concerns about their reliability. While NN testing can effectively expose these defects to a significant degree, understanding their root causes within the network requires further examination. In this work, inspired by the idea of debugging in traditional software for failure isolation, we propose a novel unified neuron-isolation-based framework for debugging neural networks, shortly IDNN. Given a buggy NN that exhibits certain undesired properties (e.g., discrimination), the goal of IDNN is to identify the most critical and minimal set of neurons that are responsible for exhibiting these properties. Notably, such isolation is conducted with the objective that by simply ‘freezing’ these neurons, the model’s undesired properties can be eliminated, resulting in a much more efficient model repair compared to computationally expensive retraining or weight optimization as in existing literature. We conduct extensive experiments to evaluate IDNN across a diverse set of NN structures on five benchmark datasets, for solving three debugging tasks, including backdoor, unfairness, and weak class. As a lightweight framework, IDNN outperforms state-of-the-art baselines by successfully identifying and isolating a very small set of responsible neurons, demonstrating superior generalization performance across all tasks.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-09-11",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3650212.3652132",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3650212.3652132",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3650212.3652132",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "neufair-2024",
+    "title": "NeuFair: Neural Network Fairness Repair with Dropout",
+    "venue": "ISSTA",
+    "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
+    "paper_url": "https://doi.org/10.1145/3650212.3680380",
+    "alias": "NeuFair",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Vishnu Asutosh Dasu",
+      "Ashish Kumar",
+      "Saeid Tizpaz-Niari",
+      "Gang Tan"
+    ],
+    "abstract": "This paper investigates neuron dropout as a post-processing bias mitigation method for deep neural networks (DNNs). Neural-driven software solutions are increasingly applied in socially critical domains with significant fairness implications. While DNNs are exceptional at learning statistical patterns from data, they may encode and amplify historical biases. Existing bias mitigation algorithms often require modifying the input dataset or the learning algorithms. We posit that prevalent dropout methods may be an effective and less intrusive approach to improve fairness of pre-trained DNNs during inference. However, finding the ideal set of neurons to drop is a combinatorial problem. We propose NeuFair, a family of post-processing randomized algorithms that mitigate unfairness in pre-trained DNNs via dropouts during inference. Our randomized search is guided by an objective to minimize discrimination while maintaining the model’s utility. We show that NeuFair is efficient and effective in improving fairness (up to 69%) with minimal or no model performance degradation. We provide intuitive explanations of these phenomena and carefully examine the influence of various hyperparameters of NeuFair on the results. Finally, we empirically and conceptually compare NeuFair to different state-of-the-art bias mitigators.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-07-05",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3650212.3680380",
+    "arxiv_url": "https://arxiv.org/abs/2407.04268",
+    "code_url": "https://github.com/vdasu/neufair",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3650212.3680380",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3650212.3680380",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/2407.04268",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      },
+      {
+        "url": "https://github.com/vdasu/neufair",
+        "label": "Author implementation repository",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "dnn-repair-strategies-survey-2024",
+    "title": "深度神经网络修复策略综述",
+    "venue": "软件学报",
+    "venue_name": "Journal of Software (软件学报)",
+    "paper_url": "https://www.jos.org.cn/1000-9825/7061.htm",
+    "alias": null,
+    "categories": [
+      "Surveys"
+    ],
+    "authors": [
+      "梁震",
+      "刘万伟",
+      "吴陶然",
+      "薛白",
+      "王戟",
+      "杨文婧"
+    ],
+    "abstract": "随着智能信息时代的发展,深度神经网络在人类社会众多领域中的应用,尤其是在自动驾驶、军事国防等安全攸关系统中的部署,引起了学术界和工业界对神经网络模型可能表现出的错误行为的担忧.虽然神经网络验证和神经网络测试可以提供关于错误行为的定性或者定量结论,但这种事后分析并不能防止错误行为的发生,如何修复表现出错误行为的预训练神经网络模型依然是极具挑战性的问题.为此,深度神经网络修复这一领域应运而生,旨在消除有缺陷的神经网络产生的错误预测,使得神经网络满足特定的规约性质.目前为止,典型的神经网络修复范式有3种:重训练、无错误定位的微调和包含错误定位的微调.介绍深度神经网络的发展和神经网络修复的必要性;厘清相近概念;明确神经网络修复的挑战;详尽地调研目前已有的神经网络修复策略,并对内在联系与区别进行分析和比较;调研整理神经网络修复策略常用的评价指标和基准测试;展望未来神经网络修复领域研究中需要重点关注的可行方向.",
+    "publication_type": "journal",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-12-20",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.13328/j.cnki.jos.007061",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://www.jos.org.cn/1000-9825/7061.htm",
+        "label": "Journal of Software publication record",
+        "supports": "题名、作者、发表来源与正式发表时间"
+      },
+      {
+        "url": "https://www.jos.org.cn/1000-9825/7061.htm",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": "中文综述，保留正式中文题名和中文原文摘要。正式卷期为 2024；期刊官网及 PDF 记载在线出版日为 2023-12-20。"
+  },
+  {
+    "id": "i-repair-2022",
+    "title": "Repairing misclassifications in neural networks using limited data",
+    "venue": "SAC",
+    "venue_name": "Proceedings of the 37th ACM/SIGAPP Symposium on Applied Computing",
+    "paper_url": "https://doi.org/10.1145/3477314.3507059",
+    "alias": "I-repair",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Patrick Henriksen",
+      "Francesco Leofante",
+      "Alessio Lomuscio"
+    ],
+    "abstract": "We present a novel and computationally efficient method for repairing a feed-forward neural network with respect to a finite set of inputs that are misclassified. The method assumes no access to the training set. We present a formal characterisation for repairing the neural network and study its resulting properties in terms of soundness and minimality. We introduce a gradient-based algorithm that performs localised modifications to the network’s weights such that misclassifications are repaired while marginally affecting network accuracy on correctly classified inputs. We introduce an implementation, I-repair, and show it is able to repair neural networks while reducing accuracy drops by up to 90% when compared to other state-of-the-art approaches for repair.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-04-25",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3477314.3507059",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3477314.3507059",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3477314.3507059",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": "SAC 指 ACM/SIGAPP Symposium on Applied Computing。"
+  },
+  {
+    "id": "crosscert-2024",
+    "title": "CrossCert: A Cross-Checking Detection Approach to Patch Robustness Certification for Deep Learning Models",
+    "venue": "PACMSE",
+    "venue_name": "Proceedings of the ACM on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3660827",
+    "alias": "CrossCert",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Qilin Zhou",
+      "Zhengyuan Wei",
+      "Haipeng Wang",
+      "Bo Jiang",
+      "Wing-Kwong Chan"
+    ],
+    "abstract": "Patch robustness certification is an emerging kind of defense technique against adversarial patch attacks with provable guarantees. There are two research lines: certified recovery and certified detection. They aim to correctly label malicious samples with provable guarantees and issue warnings for malicious samples predicted to non-benign labels with provable guarantees, respectively. However, existing certified detection defenders suffer from protecting labels subject to manipulation, and existing certified recovery defenders cannot systematically warn samples about their labels. A certified defense that simultaneously offers robust labels and systematic warning protection against patch attacks is desirable. This paper proposes a novel certified defense technique called CrossCert. CrossCert formulates a novel approach by cross-checking two certified recovery defenders to provide unwavering certification and detection certification. Unwavering certification ensures that a certified sample, when subjected to a patched perturbation, will always be returned with a benign label without triggering any warnings with a provable guarantee. To our knowledge, CrossCert is the first certified detection technique to offer this guarantee. Our experiments show that, with a slightly lower performance than ViP and comparable performance with PatchCensor in terms of detection certification CrossCert certifies a significant proportion of samples with the guarantee of unwavering certification.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-07-12",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3660827",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3660827",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      }
+    ],
+    "notes": "正式载体为 PACMSE 1(FSE)，对应 FSE 2024 Research Papers。研究内容是对抗贴片攻击下的认证检测与防御，本库归 Model Repair。"
+  },
+  {
+    "id": "uncertainty-alignment-2023",
+    "title": "Lightweight Approaches to DNN Regression Error Reduction: An Uncertainty Alignment Perspective",
+    "venue": "ICSE",
+    "venue_name": "2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)",
+    "paper_url": "https://doi.org/10.1109/icse48619.2023.00106",
+    "alias": null,
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Zenan Li",
+      "Maorun Zhang",
+      "Jingwei Xu",
+      "Yuan Yao",
+      "Chun Cao",
+      "Taolue Chen",
+      "Xiaoxing Ma",
+      "Jian Lü"
+    ],
+    "abstract": "Regression errors of Deep Neural Network (DNN) models refer to the case that predictions were correct by the old-version model but wrong by the new-version model. They frequently occur when upgrading DNN models in production systems, causing disproportionate user experience degradation. In this paper, we propose a lightweight regression error reduction approach with two goals: 1) requiring no model retraining and even data, and 2) not sacrificing the accuracy. The proposed approach is built upon the key insight rooted in the unmanaged model uncertainty, which is intrinsic to DNN models, but has not been thoroughly explored especially in the context of quality assurance of DNN models. Specifically, we propose a simple yet effective ensemble strategy that estimates and aligns the two models' uncertainty. We show that a Pareto improvement that reduces the regression errors without compromising the overall accuracy can be guaranteed in theory and largely achieved in practice. Comprehensive experiments with various representative models and datasets confirm that our approaches significantly outperform the state-of-the-art alternatives.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icse48619.2023.00106",
+    "arxiv_url": null,
+    "code_url": "https://github.com/Lizn-zn/Uncertainty-Alignment",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficse48619.2023.00106",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse48619.2023.00106",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse48619.2023.00106",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "通过不确定性对齐和新旧模型集成减轻回归错误。"
+  },
+  {
+    "id": "dare-2024",
+    "title": "A Post-training Framework for Improving the Performance of Deep Learning Models via Model Transformation",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3630011",
+    "alias": "Dare (journal-version)",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Jiajun Jiang",
+      "Junjie Yang",
+      "Yingyi Zhang",
+      "Zan Wang",
+      "Hanmo You",
+      "Junjie Chen"
+    ],
+    "abstract": "Deep learning (DL) techniques have attracted much attention in recent years and have been applied to many application scenarios. To improve the performance of DL models regarding different properties, many approaches have been proposed in the past decades, such as improving the robustness and fairness of DL models to meet the requirements for practical use. Among existing approaches, post-training is an effective method that has been widely adopted in practice due to its high efficiency and good performance. Nevertheless, its performance is still limited due to the incompleteness of training data. Additionally, existing approaches are always specifically designed for certain tasks, such as improving model robustness, which cannot be used for other purposes. In this article, we aim to fill this gap and propose an effective and general post-training framework, which can be adapted to improve the model performance from different aspects. Specifically, it incorporates a novel model transformation technique that transforms a classification model into an isomorphic regression model for fine-tuning, which can effectively overcome the problem of incomplete training data by forcing the model to strengthen the memory of crucial input features and thus improve the model performance eventually. To evaluate the performance of our framework, we have adapted it to two emerging tasks for improving DL models, i.e., robustness and fairness improvement, and conducted extensive studies by comparing it with state-of-the-art approaches. The experimental results demonstrate that our framework is indeed general, as it is effective in both tasks. Specifically, in the task of robustness improvement, our approach Dare has achieved the best results on 61.1% cases (vs. 11.1% cases achieved by baselines). In the task of fairness improvement, our approach FMT can effectively improve the fairness without sacrificing the accuracy of the models.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-03-15",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3630011",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3630011",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      }
+    ],
+    "notes": "journal-version of Toward Improving the Robustness of Deep Learning Models via Model Transformation (ASE 2022)。期刊扩展将 Dare 泛化为后训练框架，并增加公平性任务 FMT；与会议版分别保留。"
+  },
+  {
+    "id": "deepfeature-2025",
+    "title": "DeepFeature: Guiding adversarial testing for deep neural network systems using robust features",
+    "venue": "JSS",
+    "venue_name": "Journal of Systems and Software",
+    "paper_url": "https://doi.org/10.1016/j.jss.2024.112201",
+    "alias": "DeepFeature",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Lichao Feng",
+      "Xingya Wang",
+      "Shiyu Zhang",
+      "Zhihong Zhao"
+    ],
+    "abstract": "With the deployment of Deep Neural Network (DNN) systems in security-critical fields, more and more researchers are concerned about DNN robustness. Unfortunately, DNNs are vulnerable to adversarial attacks and produce completely wrong outputs. This inspired numerous testing works devoted to improving the adversarial robustness of DNNs. Coverage and uncertainty criteria were proposed to guide sample selections for DNN retraining. However, they are greatly limited to evaluating DNN abnormal behaviors rather than locating the root cause of adversarial vulnerability. This work aims to bridge this gap. We propose an adversarial testing framework, DeepFeature, using robust features. DeepFeature generates robust features related to the model decision-making. It locates the weak features within these features that fail to be transformed by the DNN. They are the main culprits of vulnerability. DeepFeature selects diverse samples containing weak features for adversarial retraining. Our evaluation shows that DeepFeature significantly improves overall robustness, average improved by 77.83%, and individual robustness, average improved by 42.81‰, of the models in adversarial testing. Compared with coverage and uncertainty criteria, these two performances are improved by 3.93% and 15.00% in DeepFeature, respectively. The positive correlation coefficient between DeepFeature and improved robustness can achieve 0.858, and the p-value is 0.001.",
+    "publication_type": "journal",
+    "ccf_rank": "B",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-08-31",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1016/j.jss.2024.112201",
+    "arxiv_url": null,
+    "code_url": "https://github.com/Deepfea/DeepFeature",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1016%2Fj.jss.2024.112201",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.jss.2024.112201",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.jss.2024.112201",
+        "label": "Published paper dates",
+        "supports": "正文记载的 Available online 31 August 2024"
+      },
+      {
+        "url": "https://doi.org/10.1016/j.jss.2024.112201",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "依据弱特征和多样性筛选对抗测试样本用于局部再训练，归 Test Selection and Prioritization。正式卷期为 2025；原文记载 Available online 31 August 2024。"
+  },
+  {
+    "id": "mode-2018",
+    "title": "MODE: automated neural network model debugging via state differential analysis and input selection",
+    "venue": "ESEC/FSE",
+    "venue_name": "Proceedings of the 2018 26th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3236024.3236082",
+    "alias": "MODE",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Shiqing Ma",
+      "Yingqi Liu",
+      "Wen-Chuan Lee",
+      "Xiangyu Zhang",
+      "Ananth Grama"
+    ],
+    "abstract": "Artificial intelligence models are becoming an integral part of modern computing systems. Just like software inevitably has bugs, models have bugs too, leading to poor classification/prediction accuracy. Unlike software bugs, model bugs cannot be easily fixed by directly modifying models. Existing solutions work by providing additional training inputs. However, they have limited effectiveness due to the lack of understanding of model misbehaviors and hence the incapability of selecting proper inputs. Inspired by software debugging, we propose a novel model debugging technique that works by first conducting model state differential analysis to identify the internal features of the model that are responsible for model bugs and then performing training input selection that is similar to program input selection in regression testing. Our evaluation results on 29 different models for 6 different applications show that our technique can fix model bugs effectively and efficiently without introducing new bugs. For simple applications (e.g., digit recognition), MODE improves the test accuracy from 75% to 93% on average whereas the state-of-the-art can only improve to 85% with 11 times more training time. For complex applications and models (e.g., object recognition), MODE is able to improve the accuracy from 75% to over 91% in minutes to a few hours, whereas state-of-the-art fails to fix the bug or even degrades the test accuracy.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2018,
+      "online_year": 2018,
+      "first_public_year": 2018,
+      "first_public_date": "2018-10-26",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3236024.3236082",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3236024.3236082",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3236024.3236082",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": "训练输入选择服务于定位后的定向模型修复，归 Model Repair。"
+  },
+  {
+    "id": "sensei-2020",
+    "title": "Fuzz testing based data augmentation to improve robustness of deep neural networks",
+    "venue": "ICSE",
+    "venue_name": "Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3377811.3380415",
+    "alias": "Sensei / Sensei-SA",
+    "categories": [
+      "Test Generation"
+    ],
+    "authors": [
+      "Xiang Gao",
+      "Ripon K. Saha",
+      "Mukul R. Prasad",
+      "Abhik Roychoudhury"
+    ],
+    "abstract": "Deep neural networks (DNN) have been shown to be notoriously brittle to small perturbations in their input data. This problem is analogous to the over-fitting problem in test-based program synthesis and automatic program repair, which is a consequence of the incomplete specification, i.e., the limited tests or training examples, that the program synthesis or repair algorithm has to learn from. Recently, test generation techniques have been successfully employed to augment existing specifications of intended program behavior, to improve the generalizability of program synthesis and repair. Inspired by these approaches, in this paper, we propose a technique that re-purposes software testing methods, specifically mutation-based fuzzing, to augment the training data of DNNs, with the objective of enhancing their robustness. Our technique casts the DNN data augmentation problem as an optimization problem. It uses genetic search to generate the most suitable variant of an input data to use for training the DNN, while simultaneously identifying opportunities to accelerate training by skipping augmentation in many instances. We instantiate this technique in two tools, Sensei and Sensei-SA, and evaluate them on 15 DNN models spanning 5 popular image data-sets. Our evaluation shows that Sensei can improve the robust accuracy of the DNN, compared to the state of the art, on each of the 15 models, by upto 11.9% and 5.5% on average. Further, Sensei-SA can reduce the average DNN training time by 25%, while still improving robust accuracy.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2020,
+      "online_year": 2020,
+      "first_public_year": 2020,
+      "first_public_date": "2020-06-27",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3377811.3380415",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3377811.3380415",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3377811.3380415",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "fsgmix-2020",
+    "title": "Few-Shot Guided Mix for DNN Repairing",
+    "venue": "ICSME-NIER",
+    "venue_name": "2020 IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+    "paper_url": "https://doi.org/10.1109/icsme46990.2020.00079",
+    "alias": "FSGMix",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Xuhong Ren",
+      "Bing Yu",
+      "Hua Qi",
+      "Felix Juefei-Xu",
+      "Zhuo Li",
+      "Wanli Xue",
+      "Lei Ma",
+      "Jianjun Zhao"
+    ],
+    "abstract": "Although deep neural networks (DNNs) achieve rather high performance in many cutting-edge applications (e.g., autonomous driving, medical diagnose), their trustworthiness on real-world scenarios still posts concerns, where some specific failure examples are often encountered during the real-world operational environment. With the limited failure examples collected during the practical operation, how to effectively leverage such failure cases to repair and enhance DNN so as to generalize to more potentially suspicious samples is challenging, but of great importance. In this paper, we formulate the failure-data-driven DNN repairing as a data augmentation problem, and design a novel augmentation-based repairing method, which to the best extent leverages limited failure cases. To realize the DNN repairing effects that generalize to specific failure examples, we originally propose few-shot guided mix (FSGMix) that augments training data with the guidance of failure examples. As a result, our method is able to achieve high generalization to the collected failure examples and other similar suspicious data. The preliminary evaluation on CIFAR-10 dataset demonstrates the potential of our proposed technique, which automatically learns to resolve the potential failure patterns in the DNN operational environment.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2020,
+      "online_year": null,
+      "first_public_year": 2020,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icsme46990.2020.00079",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficsme46990.2020.00079",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icsme46990.2020.00079",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://stap.ait.kyushu-u.ac.jp/~zhao/papers-by-year.html",
+        "label": "Author publication record",
+        "supports": "ICSME 2020 NIER 轨道"
+      }
+    ],
+    "notes": "ICSME 2020 New Ideas and Emerging Results (NIER) 论文。"
+  },
+  {
+    "id": "repair-break-prediction-2025",
+    "title": "Repairs and Breaks Prediction for Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3702983",
+    "alias": "Repairs and Breaks Prediction (journal-version)",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Yuta Ishimoto",
+      "Masanari Kondo",
+      "Lei Ma",
+      "Naoyasu Ubayashi",
+      "Yasutaka Kamei"
+    ],
+    "abstract": "With the increasing prevalence of software incorporating deep neural networks (DNNs), quality assurance for these software systems has become a crucial concern. To this end, various methods have been proposed to repair the misbehavior of DNNs by modifying their weights. However, these repair methods may not meet the developer’s needs for a given dataset and model. In this study, we build prediction models for repair outcomes (i.e., repairs and breaks) to help determine whether the repair method is likely to work. By using our prediction models, developers and operators of DNNs can decide whether or not to apply a repair method, and if so, which method to use. Our prediction models utilize four metrics as explanatory metrics that represent the confidence or ambiguity in the DNN predictions. We experimented with four repair methods and 10 datasets. The experimental results demonstrate that our prediction models successfully select a repair method that meets developers’ needs in 16 out of 24 cases, resulting in an average time saving of 16.29% compared to the naive method. Based on these results, our prediction models can reduce costs for developers and operators when deciding whether to employ repair methods for real-world applications of DNNs.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2024,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3702983",
+    "arxiv_url": null,
+    "code_url": "https://github.com/posl/DNN-repair-break-prediction",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3702983",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      },
+      {
+        "url": "https://doi.org/10.1145/3702983",
+        "label": "Earlier publisher PDF",
+        "supports": "用户提供的较早出版社 PDF 年份标记，精确首次公开日未确认"
+      },
+      {
+        "url": "https://doi.org/10.1145/3702983",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "journal-version of An Initial Analysis of Repair and Side-effect Prediction for Neural Networks (CAIN 2023)。研究修复结果与副作用预测。正式卷期为 TOSEM 2025；早期出版社 PDF 页脚为 2024/11-ART，首次公开年为 2024，精确日未确认。"
+  },
+  {
+    "id": "feaprotect-2025",
+    "title": "Mitigating Regression Faults Induced by Feature Evolution in Deep Learning Systems",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3712199",
+    "alias": "FeaProtect",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Hanmo You",
+      "Zan Wang",
+      "Xuyang Chen",
+      "Junjie Chen",
+      "Jun Sun",
+      "Shuang Liu",
+      "Zishuo Dong"
+    ],
+    "abstract": "Deep learning (DL) systems have been widely utilized across various domains. However, the evolution of DL systems can result in regression faults. In addition to the evolution of DL systems through the incorporation of new data, feature evolution, such as the addition of new features, is also common and can introduce regression faults. In this work, we first investigate the underlying factors that are correlated with regression faults in feature evolution scenarios, i.e., redundancy and contribution shift. Based on our investigation, we propose a novel mitigation approach called FeaProtect, which aims to minimize the impact of these two factors. To evaluate the performance of FeaProtect, we conducted an extensive study comparing it with state-of-the-art approaches. The results show that FeaProtect outperforms the in-processing baseline approaches, with an average improvement of 50.6%–56.4% in terms of regression fault mitigation. We also show that FeaProtect can further enhance the effectiveness of mitigating regression faults by integrating with state-of-the-art post-processing approaches.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": 2025,
+      "first_public_year": 2025,
+      "first_public_date": "2025-07-31",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3712199",
+    "arxiv_url": null,
+    "code_url": "https://github.com/youhanmo/FeaProtect",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3712199",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      },
+      {
+        "url": "https://doi.org/10.1145/3712199",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "autotrainer-2021",
+    "title": "AUTOTRAINER: An Automatic DNN Training Problem Detection and Repair System",
+    "venue": "ICSE",
+    "venue_name": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
+    "paper_url": "https://doi.org/10.1109/icse43902.2021.00043",
+    "alias": "AUTOTRAINER",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Xiaoyu Zhang",
+      "Juan Zhai",
+      "Shiqing Ma",
+      "Chao Shen"
+    ],
+    "abstract": "With machine learning models especially Deep Neural Network (DNN) models becoming an integral part of the new intelligent software, new tools to support their engineering process are in high demand. Existing DNN debugging tools are either post-training which wastes a lot of time training a buggy model and requires expertises, or limited on collecting training logs without analyzing the problem not even fixing them. In this paper, we propose AUTOTRAINER, a DNN training monitoring and automatic repairing tool which supports detecting and auto repairing five commonly seen training problems. During training, it periodically checks the training status and detects potential problems. Once a problem is found, AUTOTRAINER tries to fix it by using built-in state-of-the-art solutions. It supports various model structures and input data types, such as Convolutional Neural Networks (CNNs) for image and Recurrent Neural Networks (RNNs) for texts. Our evaluation on 6 datasets, 495 models show that AUTOTRAINER can effectively detect all potential problems with 100% detection rate and no false positives. Among all models with problems, it can fix 97.33% of them, increasing the accuracy by 47.08% on average.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2021,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icse43902.2021.00043",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficse43902.2021.00043",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse43902.2021.00043",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": "检测与自动修复 DNN 训练过程中的问题，归 Model Repair。"
+  },
+  {
+    "id": "care-2022",
+    "title": "Causality-based neural network repair",
+    "venue": "ICSE",
+    "venue_name": "Proceedings of the 44th International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3510003.3510080",
+    "alias": "CARE",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Bing Sun",
+      "Jun Sun",
+      "Long H. Pham",
+      "Jie Shi"
+    ],
+    "abstract": "Neural networks have had discernible achievements in a wide range of applications. The wide-spread adoption also raises the concern of their dependability and reliability. Similar to traditional decision-making programs, neural networks can have defects that need to be repaired. The defects may cause unsafe behaviors, raise security concerns or unjust societal impacts. In this work, we address the problem of repairing a neural network for desirable properties such as fairness and the absence of backdoor. The goal is to construct a neural network that satisfies the property by (minimally) adjusting the given neural network’s parameters (i.e., weights). Specifically, we propose CARE (CAusality-based REpair), a causality-based neural network repair technique that 1) performs causality-based fault localization to identify the ‘guilty’ neurons and 2) optimizes the parameters of the identified neurons to reduce the misbehavior. We have empirically evaluated CARE on various tasks such as backdoor removal, neural network repair for fairness and safety properties. Our experiment results show that CARE is able to repair all neural networks efficiently and effectively. For fairness repair tasks, CARE successfully improves fairness by 61.91% on average. For backdoor removal tasks, CARE reduces the attack success rate from over 98% to less than 1%. For safety property repair tasks, CARE reduces the property violation rate to less than 1%. Results also show that thanks to the causality-based fault localization, CARE’s repair focuses on the misbehavior and preserves the accuracy of the neural networks.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-05-21",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3510003.3510080",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3510003.3510080",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3510003.3510080",
+        "label": "Original paper abstract",
+        "supports": "原文摘要；已核对对应论文 PDF 的摘要页面"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "neurecover-2022",
+    "title": "NeuRecover: Regression-Controlled Repair of Deep Neural Networks with Training History",
+    "venue": "SANER",
+    "venue_name": "2022 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+    "paper_url": "https://doi.org/10.1109/saner53432.2022.00128",
+    "alias": "NeuRecover",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Shogo Tokui",
+      "Susumu Tokumoto",
+      "Akihito Yoshii",
+      "Fuyuki Ishikawa",
+      "Takao Nakagawa",
+      "Kazuki Munakata",
+      "Shinji Kikuchi"
+    ],
+    "abstract": "Systematic techniques to improve quality of deep neural networks (DNNs) are critical given the increasing demand for practical applications including safety-critical ones. The key challenge comes from the little controllability in updating DNNs. Retraining to fix some behavior often has a destructive impact on other behavior, causing regressions, i.e., the updated DNN fails with inputs correctly handled by the original one. This problem is crucial when engineers are required to investigate failures in intensive assurance activities for safety or trust. Search-based repair techniques for DNNs have potentials to tackle this challenge by enabling localized updates only on “responsible parameters” inside the DNN. However, the potentials have not been explored to realize sufficient controllability to suppress regressions in DNN repair tasks. In this paper, we propose a novel DNN repair method that makes use of the training history for judging which DNN parameters should be changed or not to suppress regressions. We implemented the method into a tool called Neurecover and evaluated it with three datasets. Our method outperformed the existing method by achieving often less than a quarter, even a tenth in some cases, number of regressions. Our method is especially effective when the repair requirements are tight to fix specific failure types. In such cases, our method showed stably low rates (<2%) of regressions, which were in many cases a tenth of regressions caused by retraining.",
+    "publication_type": "conference",
+    "ccf_rank": "B",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2022,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/saner53432.2022.00128",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Fsaner53432.2022.00128",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/saner53432.2022.00128",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "adrep-2023",
+    "title": "Adaptive Search-based Repair of Deep Neural Networks",
+    "venue": "GECCO",
+    "venue_name": "Proceedings of the Genetic and Evolutionary Computation Conference",
+    "paper_url": "https://doi.org/10.1145/3583131.3590477",
+    "alias": "AdRep",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Davide Li Calsi",
+      "Matias Duran",
+      "Thomas Laurent",
+      "Xiao-Yi Zhang",
+      "Paolo Arcaini",
+      "Fuyuki Ishikawa"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) are finding a place at the heart of more and more critical systems, and it is necessary to ensure they perform in as correct a way as possible. Search-based repair methods, that search for new values for target neuron weights in the network to better process fault-inducing inputs, have shown promising results. These methods rely on fault localisation to determine what weights the search should target. However, as the search progresses and the network evolves, the weights responsible for the faults in the system will change, and the search will lose in effectiveness. In this work, we propose an adaptive search method for DNN repair that adaptively updates the target weights during the search by performing fault localisation on the current state of the model. We propose and implement two methods to decide when to update the target weights, based on the progress of the search’s fitness value or on the evolution of fault localisation results. We apply our technique to two image classification DNN architectures against a dataset of autonomous driving images, and compare it with a state-of-the art search-based DNN repair approach.",
+    "publication_type": "conference",
+    "ccf_rank": "C",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-07-12",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3583131.3590477",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3583131.3590477",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3583131.3590477",
+        "label": "Original paper abstract",
+        "supports": "原文摘要；已核对对应论文 PDF 的摘要页面"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "deepfault-2019",
+    "title": "DeepFault: Fault Localization for Deep Neural Networks",
+    "venue": "FASE",
+    "venue_name": "Fundamental Approaches to Software Engineering",
+    "paper_url": "https://doi.org/10.1007/978-3-030-16722-6_10",
+    "alias": "DeepFault",
+    "categories": [
+      "Test Generation"
+    ],
+    "authors": [
+      "Hasan Ferit Eniser",
+      "Simos Gerasimou",
+      "Alper Sen"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) are increasingly deployed in safety-critical applications including autonomous vehicles and medical diagnostics. To reduce the residual risk for unexpected DNN behaviour and provide evidence for their trustworthy operation, DNNs should be thoroughly tested. The DeepFault whitebox DNN testing approach presented in our paper addresses this challenge by employing suspiciousness measures inspired by fault localization to establish the hit spectrum of neurons and identify suspicious neurons whose weights have not been calibrated correctly and thus are considered responsible for inadequate DNN performance. DeepFault also uses a suspiciousness-guided algorithm to synthesize new inputs, from correctly classified inputs, that increase the activation values of suspicious neurons. Our empirical evaluation on several DNN instances trained on MNIST and CIFAR-10 datasets shows that DeepFault is effective in identifying suspicious neurons. Also, the inputs synthesized by DeepFault closely resemble the original inputs, exercise the identified suspicious neurons and are highly adversarial.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2019,
+      "online_year": 2019,
+      "first_public_year": 2019,
+      "first_public_date": "2019-02-15",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1007/978-3-030-16722-6_10",
+    "arxiv_url": "https://arxiv.org/abs/1902.05974",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1007%2F978-3-030-16722-6_10",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1007/978-3-030-16722-6_10",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/1902.05974",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      }
+    ],
+    "notes": "主要贡献为故障定位和可疑神经元引导的测试输入合成，归 Test Generation。FASE 2019 会议论文以 LNCS 章节形式出版。"
+  },
+  {
+    "id": "distrrep-2023",
+    "title": "Distributed Repair of Deep Neural Networks",
+    "venue": "ICST",
+    "venue_name": "2023 IEEE Conference on Software Testing, Verification and Validation (ICST)",
+    "paper_url": "https://doi.org/10.1109/icst57152.2023.00017",
+    "alias": "DISTRREP",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Davide Li Calsi",
+      "Matias Duran",
+      "Xiao-Yi Zhang",
+      "Paolo Arcaini",
+      "Fuyuki Ishikawa"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) are applied in several safety-critical domains and their trustworthiness is of paramount importance. For example, DNNs used in autonomous driving as classifiers should not misclassify detected objects; however, since obtaining perfect accuracy is not possible, special attention should be given to the most critical cases, e.g., pedestrians. This has been confirmed by the consortium of our partners from the automotive domain that provided us with specific risk levels for different misclassifications. A recent approach to improve DNN performance is to localise DNN weights responsible for the misclassifications and then adjust (repair) them to improve the misclassifications. However, they under-perform when they need to consider multiple misclassifications, and they do not consider the risk levels of the different misclassifications. To tackle this, we propose DISTRREP, a distributed repair approach that first finds the best fixes for each critical misclassification, and then integrates them in a single repaired DNN model, by considering the risk levels. We assess DISTRREP over three DNN models and a dataset of autonomous driving images, by considering requirements specified by our industrial partners. Experiments show that DISTRREP is more effective than baseline approaches based on retraining, and other risk-unaware repair approaches.",
+    "publication_type": "conference",
+    "ccf_rank": "C",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icst57152.2023.00017",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficst57152.2023.00017",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icst57152.2023.00017",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "aprnn-2023",
+    "title": "Architecture-Preserving Provable Repair of Deep Neural Networks",
+    "venue": "PACMPL",
+    "venue_name": "Proceedings of the ACM on Programming Languages",
+    "paper_url": "https://doi.org/10.1145/3591238",
+    "alias": "APRNN",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Zhe Tao",
+      "Stephanie Nawas",
+      "Jacqueline Mitchell",
+      "Aditya V. Thakur"
+    ],
+    "abstract": "Deep neural networks (DNNs) are becoming increasingly important components of software, and are considered the state-of-the-art solution for a number of problems, such as image recognition. However, DNNs are far from infallible, and incorrect behavior of DNNs can have disastrous real-world consequences. This paper addresses the problem of architecture-preserving V-polytope provable repair of DNNs. A V-polytope defines a convex bounded polytope using its vertex representation. V-polytope provable repair guarantees that the repaired DNN satisfies the given specification on the infinite set of points in the given V-polytope. An architecture-preserving repair only modifies the parameters of the DNN, without modifying its architecture. The repair has the flexibility to modify multiple layers of the DNN, and runs in polynomial time. It supports DNNs with activation functions that have some linear pieces, as well as fully-connected, convolutional, pooling and residual layers. To the best our knowledge, this is the first provable repair approach that has all of these features. We implement our approach in a tool called APRNN. Using MNIST, ImageNet, and ACAS Xu DNNs, we show that it has better efficiency, scalability, and generalization compared to PRDNN and REASSURE, prior provable repair methods that are not architecture preserving.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2023,
+      "online_year": 2023,
+      "first_public_year": 2023,
+      "first_public_date": "2023-06-06",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3591238",
+    "arxiv_url": null,
+    "code_url": "https://github.com/95616ARG/APRNN",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3591238",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）、出版社原文摘要"
+      },
+      {
+        "url": "https://doi.org/10.1145/3591238",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "PACMPL 7(PLDI) 的 PLDI 2023 Research Paper。按对应 PLDI 正式会议长文口径记录评级；仅保留一条正式发表记录。"
+  },
+  {
+    "id": "regression-free-repair-experience-2023",
+    "title": "An Experience Report on Regression-Free Repair of Deep Neural Network Model",
+    "venue": "SANER (Industry)",
+    "venue_name": "2023 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+    "paper_url": "https://doi.org/10.1109/saner56733.2023.00090",
+    "alias": "NeuRecoverLite",
+    "categories": [
+      "Model Repair",
+      "Empirical Studies"
+    ],
+    "authors": [
+      "Takao Nakagawa",
+      "Susumu Tokumoto",
+      "Shogo Tokui",
+      "Fuyuki Ishikawa"
+    ],
+    "abstract": "Systems based on Deep Neural Networks (DNNs) are increasingly being used in industry. In the process of system operation, DNNs need to be updated in order to improve their performance. When updating DNNs, systems used in companies that require high reliability must have as few regressions as possible. Since the update of DNNs has a data-driven nature, it is difficult to suppress regressions as expected by developers. This paper identifies the requirements for DNN updating in industry and presents a case study using techniques to meet those requirements. In the case study, we worked on satisfying the requirement to update models trained on car images collected in Fujitsu assuming security applications without regression for a specific class. We were able to suppress regression by customizing the objective function based on NeuRecover, a DNN repair technique. Moreover, we discuss some of the challenges identified in the case study.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/saner56733.2023.00090",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Fsaner56733.2023.00090",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/saner56733.2023.00090",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://www.nii.ac.jp/en/news/release/2023/0317.html",
+        "label": "Author institute publication record",
+        "supports": "SANER 2023 Industry Track"
+      }
+    ],
+    "notes": "SANER 2023 Industry Track 经验报告，使用 NeuRecoverLite，归 Model Repair + Empirical Studies。"
+  },
+  {
+    "id": "metarepair-2024",
+    "title": "MetaRepair: Learning to Repair Deep Neural Networks from Repairing Experiences",
+    "venue": "ACM MM",
+    "venue_name": "Proceedings of the 32nd ACM International Conference on Multimedia",
+    "paper_url": "https://doi.org/10.1145/3664647.3680638",
+    "alias": "MetaRepair",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Yun Xing",
+      "Qing Guo",
+      "Xiaofeng Cao",
+      "Ivor W. Tsang",
+      "Lei Ma"
+    ],
+    "abstract": "Repairing deep neural networks (DNNs) to maintain its performance during deployment presents significant challenges due to the potential occurrence of unknown but common environmental corruptions. Most existing DNN repair methods only focus on repairing DNN for each corruption separately, lacking the ability of generalizing to the myriad corruptions from the ever-changing deploying environment. In this work, we propose to repair DNN from a novel perspective, i.e. Learning to Repair (L2R), where the repairing of target DNN is realized as a general learning-to-learn, a.k.a. meta-learning, process. In specific, observing different corruptions are correlated on their data distributions, we propose to utilize previous DNN repair experiences as tasks for meta-learning how to repair the target corruption. With the meta-learning from different tasks, L2R learns a meta-knowledge that summarizes how the DNN is repaired under various environmental corruptions. The meta-knowledge essentially serves as a general repairing prior which enables the DNN quickly adapt to unknown corruptions, thus making our method generalizable to different type of corruptions. Practically, L2R benefits DNN repair with a general pipeline yet tailoring meta-learning for repairing DNN is not trivial. By re-designing the meta-learning components under DNN repair context, we further instantiate the proposed L2R strategy into a concrete model named MetaRepair with pragmatic assumption of experience availability. We conduct comprehensive experiments on the corrupted CIFAR-10 and tiny -ImageNet by applying MetaRepair to repair DenseNet, ConvNeXt and VAN. The experimental results confirmed the superior repairing and generalization capability of our proposed L2R strategy under various environmental corruptions.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2024,
+      "online_year": 2024,
+      "first_public_year": 2024,
+      "first_public_date": "2024-10-28",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3664647.3680638",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3664647.3680638",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3664647.3680638",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "patchpro-2025",
+    "title": "Patch Synthesis for Property Repair of Deep Neural Networks",
+    "venue": "ICSE",
+    "venue_name": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
+    "paper_url": "https://doi.org/10.1109/icse55347.2025.00181",
+    "alias": "PatchPro",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Zhiming Chi",
+      "Jianan Ma",
+      "Pengfei Yang",
+      "Cheng-Chao Huang",
+      "Renjue Li",
+      "Jingyi Wang",
+      "Xiaowei Huang",
+      "Lijun Zhang"
+    ],
+    "abstract": "Deep neural networks (DNNs) are prone to various dependability issues, such as adversarial attacks, which hinder their adoption in safety-critical domains. Recently, NN repair techniques have been proposed to address these issues while preserving original performance by locating and modifying guilty neurons and their parameters. However, existing repair approaches are often limited to specific data sets and do not provide theoretical guarantees for the effectiveness of the repairs. To address these limitations, we introduce PatchPro, a novel patch-based approach for property-level repair of DNNs, focusing on local robustness. The key idea behind PatchPro is to construct patch modules that, when integrated with the original network, provide specialized repairs for all samples within the robustness neighborhood while maintaining the network's original performance. Our method incorporates formal verification and a heuristic mechanism for allocating patch modules, enabling it to defend against adversarial attacks and generalize to other inputs. PatchPro demonstrates superior efficiency, scalability, and repair success rates compared to existing DNN repair methods, i.e., realizing provable property-level repair for 100% cases across multiple high-dimensional datasets.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": null,
+      "first_public_year": 2024,
+      "first_public_date": "2024-04-02",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icse55347.2025.00181",
+    "arxiv_url": "https://arxiv.org/abs/2404.01642",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficse55347.2025.00181",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse55347.2025.00181",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/2404.01642",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      },
+      {
+        "url": "https://tis.ios.ac.cn/publications/chimyhl0h025.html",
+        "label": "Author institute publication record",
+        "supports": "正式 ICSE 2025 版本的八位作者，核对 Jingyi Wang 与 Xiaowei Huang"
+      }
+    ],
+    "notes": "按 ICSE 2025 正式版本收录；arXiv 为关联预印本。正式版有八位作者，包含 Jingyi Wang；Xiaowei Huang 的姓名按作者机构正式记录核对。重复导出的 arXiv 条目不另计。"
+  },
+  {
+    "id": "default-2025",
+    "title": "Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification",
+    "venue": "ICSE",
+    "venue_name": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
+    "paper_url": "https://doi.org/10.1109/icse55347.2025.00224",
+    "alias": "DEFault",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Sigma Jahan",
+      "Mehil B Shah",
+      "Parvez Mahbub",
+      "Mohammad Masudur Rahman"
+    ],
+    "abstract": "Deep Neural Networks (DNN) have found numerous applications in various domains, including fraud detection, medical diagnosis, facial recognition, and autonomous driving. However, DNN-based systems often suffer from reliability issues due to their inherent complexity and the stochastic nature of their underlying models. Unfortunately, existing techniques to detect faults in DNN programs are either limited by the types of faults (e.g., hyperparameter or layer) they support or the kind of information (e.g., dynamic or static) they use. As a result, they might fall short of comprehensively detecting and diagnosing the faults. In this paper, we present DEFault (Detect and Explain Fault) -- a novel technique to detect and diagnose faults in DNN programs. It first captures dynamic (i.e., runtime) features during model training and leverages a hierarchical classification approach to detect all major fault categories from the literature. Then, it captures static features (e.g., layer types) from DNN programs and leverages explainable AI methods (e.g., SHAP) to narrow down the root cause of the fault. We train and evaluate DEFault on a large, diverse dataset of ~14.5K DNN programs and further validate our technique using a benchmark dataset of 52 real-life faulty DNN programs. Our approach achieves ~94% recall in detecting real-world faulty DNN programs and ~63% recall in diagnosing the root causes of the faults, demonstrating 3.92% - 11.54% higher performance than that of state-of-the-art techniques. Thus, DEFault has the potential to significantly improve the reliability of DNN programs by effectively detecting and diagnosing the faults.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2025,
+      "online_year": null,
+      "first_public_year": 2025,
+      "first_public_date": "2025-01-22",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/icse55347.2025.00224",
+    "arxiv_url": "https://arxiv.org/abs/2501.12560",
+    "code_url": "https://github.com/SigmaJahan/DEFault-DNN-Debugging",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Ficse55347.2025.00224",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1109/icse55347.2025.00224",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/2501.12560",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      },
+      {
+        "url": "https://github.com/SigmaJahan/DEFault-DNN-Debugging",
+        "label": "Author implementation repository",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "按 ICSE 2025 正式版本收录；arXiv 为关联预印本。研究 DNN 程序故障检测与根因诊断，本库归 Model Repair。"
+  },
+  {
+    "id": "pr-dnn-2021",
+    "title": "Provable repair of deep neural networks",
+    "venue": "PLDI",
+    "venue_name": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
+    "paper_url": "https://doi.org/10.1145/3453483.3454064",
+    "alias": "PRDNN",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Matthew Sotoudeh",
+      "Aditya V. Thakur"
+    ],
+    "abstract": "Deep Neural Networks (DNNs) have grown in popularity over the past decade and are now being used in safety-critical domains such as aircraft collision avoidance. This has motivated a large number of techniques for finding unsafe behavior in DNNs. In contrast, this paper tackles the problem of correcting a DNN once unsafe behavior is found. We introduce the provable repair problem, which is the problem of repairing a network N to construct a new network N′ that satisfies a given specification. If the safety specification is over a finite set of points, our Provable Point Repair algorithm can find a provably minimal repair satisfying the specification, regardless of the activation functions used. For safety specifications addressing convex polytopes containing infinitely many points, our Provable Polytope Repair algorithm can find a provably minimal repair satisfying the specification for DNNs using piecewise-linear activation functions. The key insight behind both of these algorithms is the introduction of a Decoupled DNN architecture, which allows us to reduce provable repair to a linear programming problem. Our experimental results demonstrate the efficiency and effectiveness of our Provable Repair algorithms on a variety of challenging tasks.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2021,
+      "online_year": 2021,
+      "first_public_year": 2021,
+      "first_public_date": "2021-04-09",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3453483.3454064",
+    "arxiv_url": "https://arxiv.org/abs/2104.04413",
+    "code_url": "https://github.com/95616ARG/PRDNN",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3453483.3454064",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3453483.3454064",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://arxiv.org/abs/2104.04413",
+        "label": "arXiv public record",
+        "supports": "关联预印本与首次公开日期"
+      },
+      {
+        "url": "https://doi.org/10.1145/3453483.3454064",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": null
+  },
+  {
+    "id": "reachability-repair-2022",
+    "title": "Neural Network Repair with Reachability Analysis",
+    "venue": "FORMATS",
+    "venue_name": "Formal Modeling and Analysis of Timed Systems",
+    "paper_url": "https://doi.org/10.1007/978-3-031-15839-1_13",
+    "alias": null,
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Xiaodong Yang",
+      "Tom Yamaguchi",
+      "Hoang-Dung Tran",
+      "Bardh Hoxha",
+      "Taylor T. Johnson",
+      "Danil Prokhorov"
+    ],
+    "abstract": "Safety is a critical concern for the next generation of autonomy that is likely to rely heavily on deep neural networks for perception and control. This paper proposes a method to repair unsafe ReLU DNNs in safety-critical systems using reachability analysis. Our repair method uses reachability analysis to calculate the unsafe reachable domain of a DNN, and then uses a novel loss function to construct its distance to the safe domain during the retraining process. Since subtle changes of the DNN parameters can cause unexpected performance degradation, we also present a minimal repair approach where the DNN deviation is minimized. Furthermore, we explore applications of our method to repair DNN agents in deep reinforcement learning (DRL) with seamless integration with learning algorithms. Our method is evaluated on the ACAS Xu benchmark and a rocket lander system against the state-of-the-art method ART. Experimental results show that our repair approach can generate provably safe DNNs on multiple safety specifications with negligible performance degradation, even in the absence of training data (Code is available online at https://github.com/Shaddadi/veritex.git).",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2022,
+      "first_public_year": 2022,
+      "first_public_date": "2022-08-29",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1007/978-3-031-15839-1_13",
+    "arxiv_url": null,
+    "code_url": "https://github.com/Shaddadi/veritex",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1007%2F978-3-031-15839-1_13",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1007/978-3-031-15839-1_13",
+        "label": "Published paper abstract (DOI-matched PDF)",
+        "supports": "用户 BibTeX 原文摘要，已核对对应论文 PDF"
+      },
+      {
+        "url": "https://doi.org/10.1007/978-3-031-15839-1_13",
+        "label": "Implementation link in paper",
+        "supports": "论文实现链接；作者仓库说明或论文正文明确关联"
+      }
+    ],
+    "notes": "FORMATS 2022 会议论文，LNCS 章节形式；不是独立期刊版。"
+  },
+  {
+    "id": "dare-2022",
+    "title": "Toward Improving the Robustness of Deep Learning Models via Model Transformation",
+    "venue": "ASE",
+    "venue_name": "Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3551349.3556920",
+    "alias": "Dare (conf-version)",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Yingyi Zhang",
+      "Zan Wang",
+      "Jiajun Jiang",
+      "Hanmo You",
+      "Junjie Chen"
+    ],
+    "abstract": "Deep learning (DL) techniques have attracted much attention in recent years, and have been applied to many application scenarios, including those that are safety-critical. Improving the universal robustness of DL models is vital and many approaches have been proposed in the last decades aiming at such a purpose. Among existing approaches, adversarial training is the most representative. It advocates a post model tuning process via incorporating adversarial samples. Although successful, they still suffer from the challenge of generalizability issues in the face of various attacks with unsatisfactory effectiveness. Targeting this problem, in this paper we propose a novel model training framework, which aims at improving the universal robustness of DL models via model transformation incorporated with a data augmentation strategy in a delta debugging fashion. We have implemented our approach in a tool, called Dare, and conducted an extensive evaluation on 9 DL models. The results show that our approach significantly outperforms existing adversarial training techniques. Specifically, Dare has achieved the highest Empirical Robustness in 29 of 45 testing scenarios under various attacks, while the number drops to 5 of 45 for the best baseline approach.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2022,
+      "online_year": 2023,
+      "first_public_year": 2022,
+      "first_public_date": "2022-10-10",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3551349.3556920",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145%2F3551349.3556920",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://doi.org/10.1145/3551349.3556920",
+        "label": "Original paper abstract",
+        "supports": "原文摘要；已核对对应论文 PDF 的摘要页面"
+      }
+    ],
+    "notes": "conf-version，期刊扩展为 A Post-training Framework for Improving the Performance of Deep Learning Models via Model Transformation (TOSEM 2024)。会议正式年为 2022，DOI 记录中的后续在线年为 2023。"
+  },
+  {
+    "id": "repair-side-effect-prediction-2023",
+    "title": "An Initial Analysis of Repair and Side-effect Prediction for Neural Networks",
+    "venue": "CAIN",
+    "venue_name": "2023 IEEE/ACM 2nd International Conference on AI Engineering – Software Engineering for AI (CAIN)",
+    "paper_url": "https://doi.org/10.1109/cain58948.2023.00017",
+    "alias": "Repair and Side-effect Prediction (conf-version)",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Yuta Ishimoto",
+      "Ken Matsui",
+      "Masanari Kondo",
+      "Naoyasu Ubayashi",
+      "Yasutaka Kamei"
+    ],
+    "abstract": "With the prevalence of software systems adopting neural network models, the quality assurance of these systems has become crucial. Hence, various studies have proposed repairing methods for neural network models so far to improve the quality of the models. While these methods are evaluated by researchers, it is difficult to tell whether they succeed in all models and datasets (i.e., all developers’ environments). Because these methods require many resources, such as execution times, failing to repair neural networks would cost developers their resources. Hence, if developers can know whether repairing methods succeed before adopting them, they could avoid wasting their resources. This paper proposes prediction models that predict whether repairing methods succeed in repairing neural networks using a small resource. Our prediction models predict repairs and side-effects of repairing methods, respectively. We evaluated our prediction models on a state-of-the-art repairing method Arachne on three datasets, Fashion-MNIST, CIFAR-10, and GTSRB, and found our prediction models achieved high performance, an average ROC-AUC of 0.931 and an average f1-score of 0.880 for the side-effects and an average ROC-AUC of 0.768 and an average f1-score of 0.725 for the repairs.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2023,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/cain58948.2023.00017",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109%2Fcain58948.2023.00017",
+        "label": "Crossref DOI record",
+        "supports": "题名、作者、发表来源、正式卷期年与在线发表年（若已登记）"
+      },
+      {
+        "url": "https://posl.ait.kyushu-u.ac.jp/~ishimoto/pdfs/cain_short_paper.pdf",
+        "label": "Original paper abstract",
+        "supports": "原文摘要；已核对对应论文 PDF 的摘要页面"
+      }
+    ],
+    "notes": "conf-version，CAIN 2023 短文；期刊扩展为 Repairs and Breaks Prediction for Deep Neural Networks (TOSEM 2025)。"
   }
 ]

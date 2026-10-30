@@ -78,6 +78,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2023 | **CoCoFuzzing** | [CoCoFuzzing: Testing Neural Code Models With Coverage-Guided Fuzzing](https://doi.org/10.1109/tr.2022.3208239) | [arXiv](https://arxiv.org/abs/2106.09242) | TR |
 | 2023 | **DistXplore** | [DistXplore: Distribution-Guided Testing for Evaluating and Enhancing Deep Learning Systems](https://doi.org/10.1145/3611643.3616266) | — | ESEC/FSE' 2023 |
 | 2023 | **DeepSensor** | [Excitement surfeited turns to errors: Deep learning testing framework based on excitable neurons](https://doi.org/10.1016/j.ins.2023.118936) | [arXiv](https://arxiv.org/abs/2202.07464) | Information Sciences |
+| 2023 | **DFLARE / DREPAIR** | [Finding Deviated Behaviors of the Compressed DNN Models for Image Classifications](https://doi.org/10.1145/3583564) | [arXiv](https://arxiv.org/abs/2112.02819) · [Code](https://github.com/yqtianust/DFlare) | TOSEM |
 | 2023 | **QuoTe (journal-version)** | [QuoTe: Quality-oriented Testing for Deep Learning Systems](https://doi.org/10.1145/3582573) | — | TOSEM |
 | 2022 | **CAGFuzz** | [CAGFuzz: Coverage-Guided Adversarial Generative Fuzzing Testing for Image-Based Deep Learning Systems](https://doi.org/10.1109/tse.2021.3124006) | — | TSE |
 | 2022 | **testRNN** | [Coverage-Guided Testing for Recurrent Neural Networks](https://doi.org/10.1109/tr.2021.3080664) | — | TR |
@@ -85,9 +86,11 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2021 | **DLFuzz (journal-version)** | [Coverage Guided Differential Adversarial Testing of Deep Learning Systems](https://doi.org/10.1109/tnse.2020.2997359) | — | TNSE |
 | 2021 | **DeepCon** | [DeepCon: Contribution Coverage Testing for Deep Learning Systems](https://doi.org/10.1109/saner50967.2021.00026) | — | SANER' 2021 |
 | 2021 | **RobOT (conf-version)** | [RobOT: Robustness-Oriented Testing for Deep Learning Systems](https://doi.org/10.1109/icse43902.2021.00038) | — | ICSE' 2021 |
+| 2020 | **Sensei / Sensei-SA** | [Fuzz testing based data augmentation to improve robustness of deep neural networks](https://doi.org/10.1145/3377811.3380415) | — | ICSE' 2020 |
 | 2020 | **DeepJanus** | [Model-based exploration of the frontier of behaviours for deep learning system testing](https://doi.org/10.1145/3368089.3409730) | — | ESEC/FSE' 2020 |
 | 2020 | — | [Towards Characterizing Adversarial Defects of Deep Learning Software from the Lens of Uncertainty](https://doi.org/10.1145/3377811.3380368) | [arXiv](https://arxiv.org/abs/2004.11573) | ICSE' 2020 |
 | 2019 | **DeepCT** | [DeepCT: Tomographic Combinatorial Testing for Deep Learning Systems](https://doi.org/10.1109/saner.2019.8668044) | — | SANER' 2019 |
+| 2019 | **DeepFault** | [DeepFault: Fault Localization for Deep Neural Networks](https://doi.org/10.1007/978-3-030-16722-6_10) | [arXiv](https://arxiv.org/abs/1902.05974) | FASE' 2019 |
 | 2019 | **DeepHunter** | [DeepHunter: A Coverage-Guided Fuzz Testing Framework for Deep Neural Networks](https://doi.org/10.1145/3293882.3330579) | [arXiv](https://arxiv.org/abs/1809.01266) | ISSTA' 2019 |
 | 2019 | **DeepStellar** | [DeepStellar: model-based quantitative analysis of stateful deep learning systems](https://doi.org/10.1145/3338906.3338954) | — | ESEC/FSE' 2019 |
 | 2019 | — | [Structural Test Coverage Criteria for Deep Neural Networks](https://doi.org/10.1145/3358233) | [arXiv](https://arxiv.org/abs/1803.04792) | TECS |
@@ -107,6 +110,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2026 | **SETS** | [SETS: A Simple yet Effective DNN Test Selection Approach](https://doi.org/10.1145/3772084) | — | TOSEM |
 | 2025 | — | [Assessing the Robustness of Test Selection Methods for Deep Neural Networks](https://doi.org/10.1145/3715693) | — | TOSEM |
 | 2025 | **AudioTest** | [AudioTest: Prioritizing Audio Test Cases](https://doi.org/10.1145/3728907) | — | PACMSE |
+| 2025 | **DeepFeature** | [DeepFeature: Guiding adversarial testing for deep neural network systems using robust features](https://doi.org/10.1016/j.jss.2024.112201) | [Code](https://github.com/Deepfea/DeepFeature) | JSS |
 | 2025 | **DeepVec** | [DeepVec: State-Vector Aware Test Case Selection for Enhancing Recurrent Neural Network](https://doi.org/10.1109/tse.2025.3565037) | [Code](https://github.com/ZhonghaoJiang/DeepVec) | TSE |
 | 2025 | **EATS** | [Efficient adaptive test case selection for DNNs robustness enhancement](https://doi.org/10.1016/j.jss.2025.112451) | — | JSS |
 | 2025 | **LBT** | [Learning-Based Testing for Deep Learning: Enhancing Model Robustness with Adversarial Input Prioritization](https://arxiv.org/abs/2509.23961) | [arXiv](https://arxiv.org/abs/2509.23961) | arXiv (preprint) |
@@ -146,8 +150,44 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Paper | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2025 | **AutoRIC** | [AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization](https://doi.org/10.1145/3690634) | [Code](https://github.com/Anonymous89000/AutoRIC) | TOSEM |
+| 2025 | **DEFault** | [Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification](https://doi.org/10.1109/icse55347.2025.00224) | [arXiv](https://arxiv.org/abs/2501.12560) · [Code](https://github.com/SigmaJahan/DEFault-DNN-Debugging) | ICSE' 2025 |
+| 2025 | **FeaProtect** | [Mitigating Regression Faults Induced by Feature Evolution in Deep Learning Systems](https://doi.org/10.1145/3712199) | [Code](https://github.com/youhanmo/FeaProtect) | TOSEM |
+| 2025 | **PatchPro** | [Patch Synthesis for Property Repair of Deep Neural Networks](https://doi.org/10.1109/icse55347.2025.00181) | [arXiv](https://arxiv.org/abs/2404.01642) | ICSE' 2025 |
+| 2025 | **Repairs and Breaks Prediction (journal-version)** | [Repairs and Breaks Prediction for Deep Neural Networks](https://doi.org/10.1145/3702983) | [Code](https://github.com/posl/DNN-repair-break-prediction) | TOSEM |
+| 2024 | **Dare (journal-version)** | [A Post-training Framework for Improving the Performance of Deep Learning Models via Model Transformation](https://doi.org/10.1145/3630011) | — | TOSEM |
+| 2024 | **CrossCert** | [CrossCert: A Cross-Checking Detection Approach to Patch Robustness Certification for Deep Learning Models](https://doi.org/10.1145/3660827) | — | PACMSE |
+| 2024 | **Faire** | [Faire: Repairing Fairness of Neural Networks via Neuron Condition Synthesis](https://doi.org/10.1145/3617168) | — | TOSEM |
+| 2024 | **INNER** | [Interpretability Based Neural Network Repair](https://doi.org/10.1145/3650212.3680330) | [Code](https://github.com/implicitDeclaration/inner) | ISSTA' 2024 |
+| 2024 | **IDNN** | [Isolation-Based Debugging for Neural Networks](https://doi.org/10.1145/3650212.3652132) | — | ISSTA' 2024 |
+| 2024 | **MetaRepair** | [MetaRepair: Learning to Repair Deep Neural Networks from Repairing Experiences](https://doi.org/10.1145/3664647.3680638) | — | ACM MM' 2024 |
+| 2024 | **NeuFair** | [NeuFair: Neural Network Fairness Repair with Dropout](https://doi.org/10.1145/3650212.3680380) | [arXiv](https://arxiv.org/abs/2407.04268) · [Code](https://github.com/vdasu/neufair) | ISSTA' 2024 |
+| 2024 | **RUNNER** | [RUNNER: Responsible UNfair NEuron Repair for Enhancing Deep Neural Network Fairness](https://doi.org/10.1145/3597503.3623334) | [Code](https://github.com/Ace0001/RUNNER) | ICSE' 2024 |
+| 2024 | **VeRe** | [VeRe: Verification Guided Synthesis for Repairing Deep Neural Networks](https://doi.org/10.1145/3597503.3623332) | — | ICSE' 2024 |
+| 2023 | **AdRep** | [Adaptive Search-based Repair of Deep Neural Networks](https://doi.org/10.1145/3583131.3590477) | — | GECCO' 2023 |
+| 2023 | **AIREPAIR** | [AIREPAIR: A Repair Platform for Neural Networks](https://doi.org/10.1109/icse-companion58688.2023.00033) | [Code](https://github.com/theyoucheng/AIRepair) | ICSE-Companion' 2023 |
+| 2023 | **NeuRecoverLite** | [An Experience Report on Regression-Free Repair of Deep Neural Network Model](https://doi.org/10.1109/saner56733.2023.00090) | — | SANER (Industry)' 2023 |
+| 2023 | **Repair and Side-effect Prediction (conf-version)** | [An Initial Analysis of Repair and Side-effect Prediction for Neural Networks](https://doi.org/10.1109/cain58948.2023.00017) | — | CAIN' 2023 |
+| 2023 | **Arachne** | [Arachne: Search-Based Repair of Deep Neural Networks](https://doi.org/10.1145/3563210) | [arXiv](https://arxiv.org/abs/1912.12463) · [Code](https://github.com/coinse/arachne) | TOSEM |
+| 2023 | **APRNN** | [Architecture-Preserving Provable Repair of Deep Neural Networks](https://doi.org/10.1145/3591238) | [Code](https://github.com/95616ARG/APRNN) | PACMPL |
+| 2023 | **ArchRepair** | [ArchRepair: Block-Level Architecture-Oriented Repairing for Deep Neural Networks](https://doi.org/10.1145/3585005) | — | TOSEM |
+| 2023 | **DeepPatch** | [DeepPatch: Maintaining Deep Learning Model Programs to Retain Standard Accuracy with Substantial Robustness Improvement](https://doi.org/10.1145/3604609) | — | TOSEM |
+| 2023 | **DISTRREP** | [Distributed Repair of Deep Neural Networks](https://doi.org/10.1109/icst57152.2023.00017) | — | ICST' 2023 |
+| 2023 | **DFLARE / DREPAIR** | [Finding Deviated Behaviors of the Compressed DNN Models for Image Classifications](https://doi.org/10.1145/3583564) | [arXiv](https://arxiv.org/abs/2112.02819) · [Code](https://github.com/yqtianust/DFlare) | TOSEM |
+| 2023 | **RiFT** | [Improving Generalization of Adversarial Training via Robust Critical Fine-Tuning](https://doi.org/10.1109/iccv51070.2023.00408) | [Code](https://github.com/Immortalise/RiFT) | ICCV' 2023 |
+| 2023 | — | [Lightweight Approaches to DNN Regression Error Reduction: An Uncertainty Alignment Perspective](https://doi.org/10.1109/icse48619.2023.00106) | [Code](https://github.com/Lizn-zn/Uncertainty-Alignment) | ICSE' 2023 |
+| 2022 | **CARE** | [Causality-based neural network repair](https://doi.org/10.1145/3510003.3510080) | — | ICSE' 2022 |
+| 2022 | — | [Neural Network Repair with Reachability Analysis](https://doi.org/10.1007/978-3-031-15839-1_13) | [Code](https://github.com/Shaddadi/veritex) | FORMATS' 2022 |
+| 2022 | **NeuRecover** | [NeuRecover: Regression-Controlled Repair of Deep Neural Networks with Training History](https://doi.org/10.1109/saner53432.2022.00128) | — | SANER' 2022 |
+| 2022 | **I-repair** | [Repairing misclassifications in neural networks using limited data](https://doi.org/10.1145/3477314.3507059) | — | SAC' 2022 |
+| 2022 | **Dare (conf-version)** | [Toward Improving the Robustness of Deep Learning Models via Model Transformation](https://doi.org/10.1145/3551349.3556920) | — | ASE' 2022 |
 | 2021 | **AI-Lancet** | [AI-Lancet: Locating Error-inducing Neurons to Optimize Neural Networks](https://doi.org/10.1145/3460120.3484818) | — | CCS' 2021 |
+| 2021 | **AUTOTRAINER** | [AUTOTRAINER: An Automatic DNN Training Problem Detection and Repair System](https://doi.org/10.1109/icse43902.2021.00043) | — | ICSE' 2021 |
+| 2021 | **PRDNN** | [Provable repair of deep neural networks](https://doi.org/10.1145/3453483.3454064) | [arXiv](https://arxiv.org/abs/2104.04413) · [Code](https://github.com/95616ARG/PRDNN) | PLDI' 2021 |
+| 2020 | **FSGMix** | [Few-Shot Guided Mix for DNN Repairing](https://doi.org/10.1109/icsme46990.2020.00079) | — | ICSME-NIER' 2020 |
+| 2019 | **Apricot** | [Apricot: A Weight-Adaptation Approach to Fixing Deep Learning Models](https://doi.org/10.1109/ase.2019.00043) | — | ASE' 2019 |
 | 2019 | **DeepCorrect** | [DeepCorrect: Correcting DNN Models Against Image Distortions](https://doi.org/10.1109/tip.2019.2924172) | [arXiv](https://arxiv.org/abs/1705.02406) | TIP |
+| 2018 | **MODE** | [MODE: automated neural network model debugging via state differential analysis and input selection](https://doi.org/10.1145/3236024.3236082) | — | ESEC/FSE' 2018 |
 
 #### Other
 
@@ -160,6 +200,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | Year | Name | Paper | Resources | Venue |
 | --- | --- | --- | --- | --- |
 | 2024 | — | [Test Optimization in DNN Testing: A Survey](https://doi.org/10.1145/3643678) | — | TOSEM |
+| 2024 | — | [深度神经网络修复策略综述](https://www.jos.org.cn/1000-9825/7061.htm) | — | 软件学报 |
 | 2022 | — | [Machine Learning Testing: Survey, Landscapes and Horizons](https://doi.org/10.1109/tse.2019.2962027) | [arXiv](https://arxiv.org/abs/1906.10742) | TSE |
 | 2021 | — | [神经网络验证和测试技术研究综述](https://doi.org/10.3778/j.issn.1002-8331.2106-0342) | — | 计算机工程与应用 |
 | 2020 | — | [深度神经网络测试研究综述](https://doi.org/10.13328/j.cnki.jos.005951) | — | 软件学报 |
@@ -172,6 +213,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2024 | — | [Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study](https://doi.org/10.1145/3672446) | — | TOSEM |
 | 2024 | — | [Seed Selection for Testing Deep Neural Networks](https://doi.org/10.1145/3607190) | — | TOSEM |
 | 2024 | — | [Towards Exploring the Limitations of Test Selection Techniques on Graph Neural Networks: An Empirical Study](https://doi.org/10.1007/s10664-024-10515-y) | — | EMSE |
+| 2023 | **NeuRecoverLite** | [An Experience Report on Regression-Free Repair of Deep Neural Network Model](https://doi.org/10.1109/saner56733.2023.00090) | — | SANER (Industry)' 2023 |
 | 2022 | **DAT** | [An Empirical Study on Data Distribution-Aware Test Selection for Deep Learning Enhancement](https://doi.org/10.1145/3511598) | — | TOSEM |
 | 2022 | — | [Is Neuron Coverage Needed to Make Person Detection More Robust?](https://doi.org/10.1109/cvprw56347.2022.00326) | — | CVPRW' 2022 |
 | 2022 | — | [Simple techniques work surprisingly well for neural network test prioritization and active learning (replicability study)](https://doi.org/10.1145/3533767.3534375) | — | ISSTA' 2022 |
