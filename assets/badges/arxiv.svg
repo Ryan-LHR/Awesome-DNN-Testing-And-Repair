@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="20" viewBox="0 0 65 20" role="img" aria-label="arXiv">
+  <title>arXiv</title>
+  <rect width="65" height="20" rx="3" fill="#b31b1b"/>
+  <g transform="translate(6 4)" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 2.2C4.4 .5 2.4 .5 .8 .8v9.4C2.5 9.8 4.5 10.1 6 11.3c1.6-1.2 3.5-1.5 5.2-1.1V.8C9.6 .5 7.6 .5 6 2.2Z"/>
+    <path d="M6 2.2v9.1"/>
+  </g>
+  <text x="23" y="14" fill="#fff" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11">arXiv</text>
+</svg>
