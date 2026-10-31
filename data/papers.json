@@ -6183,5 +6183,156 @@
       }
     ],
     "notes": "conf-version，CAIN 2023 短文；期刊扩展为 Repairs and Breaks Prediction for Deep Neural Networks (TOSEM 2025)。"
+  },
+  {
+    "id": "smir-2026",
+    "title": "SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks",
+    "venue": "TOSEM",
+    "venue_name": "ACM Transactions on Software Engineering and Methodology",
+    "paper_url": "https://doi.org/10.1145/3771545",
+    "alias": "SMiR",
+    "categories": [
+      "Model Repair"
+    ],
+    "authors": [
+      "Haoran Li",
+      "Shihai Wang",
+      "Bin Liu",
+      "Tengfei Shi",
+      "Wentao Wu",
+      "Yu Liu"
+    ],
+    "abstract": "Although Deep Neural Networks (DNNs) have achieved significant success across various industries, their erroneous behaviors have raised widespread concerns. In safety-critical domains where DNNs are deployed, certain types of specific misclassifications (i.e., instances of one specific class being misclassified as another) can lead to catastrophic consequences and urgently need to be corrected. However, existing repair approaches often neglect the adverse impact of general feature extraction patterns on distinguishing specific classes, resulting in limited correction of specific misclassifications. Furthermore, most approaches correct errors by directly adjusting the global decision boundary, which inevitably disturbs the well-trained boundaries and leads to significant accuracy loss. In this article, we propose SMiR, an effective repair framework for addressing specific misclassifications with marginal accuracy loss. Rather than patching the original model, our method localizes and recovers the distorted feature dimensions to mitigate their negative impact on the distinction between specific classes. Moreover, SMiR narrows the scope of repair to the filtered suspect set, protecting other well-trained decision boundaries from disturbance. On average, our approach repairs 27% ∼ 36.2% more specific misclassifications than the baselines, while introducing only 7.8% ∼ 70.9% as many new errors. Besides, SMiR maintains state-of-the-art performance on safety-critical datasets.",
+    "publication_type": "journal",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2026,
+      "online_year": 2026,
+      "first_public_year": 2026,
+      "first_public_date": "2026-07-10",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3771545",
+    "arxiv_url": null,
+    "code_url": "https://github.com/AnonymousSE4AI/SMiR",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3771545",
+        "label": "Crossref DOI record",
+        "supports": "出版社登记的正式题名、六位作者、TOSEM 35(7) 卷期、正式年与在线发表日期，以及完整原文摘要；仅去除 JATS 标签并统一公式字符"
+      },
+      {
+        "url": "https://ryan-lhr.github.io/",
+        "label": "First-author publication page",
+        "supports": "确认用户一作论文身份、2025 年接收记录与对应的公开代码链接"
+      },
+      {
+        "url": "https://github.com/AnonymousSE4AI/SMiR",
+        "label": "Author implementation repository",
+        "supports": "作者主页关联的 SMiR 实现；仓库包含方法代码和运行说明"
+      }
+    ],
+    "notes": "作者主页记载 2025 年接收；按出版社当前登记的正式卷期 TOSEM 35(7)、在线发表日期 2026-07-10 收录为 2026 年。Crossref 的 2025 年 DOI 创建时间不视为发表日期。题名采用出版社登记的 Side Effects，不沿用主页的 Side-Effects。"
+  },
+  {
+    "id": "dufp-2026",
+    "title": "When Ambiguity Meets Atypicality: Dual-Perspective Test Input Prioritization for DNNs",
+    "venue": "ASE",
+    "venue_name": "41st IEEE/ACM International Conference on Automated Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3832783.3834351",
+    "alias": "DuFP",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "authors": [
+      "Haoran Li",
+      "Shihai Wang",
+      "Bin Liu",
+      "Jialuo Chen",
+      "Wenjing Zhu",
+      "Yu Liu",
+      "Tengfei Shi",
+      "Shudi Guo"
+    ],
+    "abstract": "While Deep Neural Networks (DNNs) have achieved remarkable progress in cutting-edge domains, their inherent brittleness has become a growing concern. To ensure the reliability and safety of DNN-enabled software, DNN testing has emerged as an indispensable practice. Within this context, test input prioritization is essential for early fault detection and reducing labeling costs. However, it remains challenging to accurately identify failure-inducing inputs. Although decision ambiguity and distributional atypicality are two widely adopted perspectives for characterizing inter-class competition and intra-class typicality respectively, relying on either perspective in isolation inevitably introduces blind spots. In this paper, we propose DuFP (Dual perspective Feature space Prioritization), a KNN density-based test input prioritization approach for DNNs that jointly incorporates both inter-class and intra-class perspectives. The prioritization framework of DuFP is built upon class-conditional density estimation. Based on the estimation results, prediction correctness is characterized by an ambiguity score and an atypicality score, with the former reflecting decision ambiguity and the latter quantifying distributional atypicality. A hybrid uncertainty score is then constructed by integrating both scores to guide the final prioritization. We evaluate DuFP on prioritization and selection tasks across image and text datasets under clean, corrupted, and adversarial scenarios. Experimental results demonstrate that DuFP effectively and efficiently prioritizes fault-inducing inputs and outperforms state-of-the-art approaches.",
+    "publication_type": "conference",
+    "ccf_rank": "A",
+    "dates": {
+      "publication_year": 2026,
+      "online_year": 2026,
+      "first_public_year": 2026,
+      "first_public_date": "2026-09-28",
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1145/3832783.3834351",
+    "arxiv_url": "https://arxiv.org/abs/2609.34703",
+    "code_url": "https://github.com/Ryan-LHR/DuFP",
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1145/3832783.3834351",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、八位作者、ASE 2026 正式会议出版信息与在线发表日期；正式版本采用论文 DOI，不把预印本另计为论文"
+      },
+      {
+        "url": "https://arxiv.org/abs/2609.34703",
+        "label": "arXiv author manuscript",
+        "supports": "作者稿原文摘要与 2026-09-28 首发日期；作者 HTML 稿明确关联正式论文 DOI，采用 CC BY 4.0 许可"
+      },
+      {
+        "url": "https://conf.researchr.org/details/ase-2026/ase-2026-research-track/21/When-Ambiguity-Meets-Atypicality-Dual-Perspective-Test-Input-Prioritization-for-DNNs",
+        "label": "ASE 2026 official research program",
+        "supports": "核对研究论文录用、作者顺序、测试输入排序方向及会议原文摘要"
+      },
+      {
+        "url": "https://github.com/Ryan-LHR/DuFP",
+        "label": "Author implementation repository",
+        "supports": "仓库明确说明为该论文的官方实现，含测试排序与选择实验代码"
+      }
+    ],
+    "notes": "按 ASE 2026 正式会议论文收录。采用 arXiv 作者稿原文摘要，并与会议官网摘要核对；正文和代码仓库均支持测试选择与排序分类。"
+  },
+  {
+    "id": "tsdtest-2022",
+    "title": "TSDTest: A Efficient Coverage Guided Two-Stage Testing for Deep Learning Systems",
+    "venue": "QRS-C",
+    "venue_name": "IEEE International Conference on Software Quality, Reliability, and Security Companion",
+    "paper_url": "https://doi.org/10.1109/qrs-c57518.2022.00033",
+    "alias": "TSDTest",
+    "categories": [
+      "Test Generation"
+    ],
+    "authors": [
+      "Haoran Li",
+      "Shihai Wang",
+      "Tengfei Shi",
+      "Xinyue Fang",
+      "Jian Chen"
+    ],
+    "abstract": "In recent years, Deep Learning systems have been applied to face recognition, autonomous vehicles and other safety-critical fields. Testing Deep Learning systems effectively and adequately is increasingly significant. In this paper, we proposed and implemented TSDTest, a coverage guided two-stage testing framework for deep learning systems. To test more logic for Deep Neuron Network (DNN), TSDTest generates highly diverse test cases with as high neuron coverage as possible during its two stages. Compared with DLFuzz, TSDTest achieved an average 1.75% improvement in neuron coverage and 80.3% more adversarial test inputs on MNIST and Fashion-MNIST. And the step dynamical adjustment also effectively reduces l₂ distance and avoids the manual identification of test oracle. The implementation of TSDTest shows its effectiveness and superiority in generating diverse test cases and improving the robustness of DNN.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2022,
+      "first_public_date": null,
+      "checked_on": "2026-10-30"
+    },
+    "doi": "10.1109/qrs-c57518.2022.00033",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://api.crossref.org/works/10.1109/qrs-c57518.2022.00033",
+        "label": "Crossref DOI record",
+        "supports": "正式题名、五位作者、QRS-C 2022 会议出版记录、173–178 页与论文 DOI"
+      },
+      {
+        "url": "https://ieeexplore.ieee.org/document/10077070",
+        "label": "Original paper abstract (author-provided PDF)",
+        "supports": "摘要直接取自用户提供的六页论文 PDF；已目视核对首页标题、五位作者和完整原文摘要，并与 Crossref 书目记录匹配。在线 IEEE 页面本次未能读取，不声称摘要取自该网页"
+      }
+    ],
+    "notes": "基于既有 neuron coverage 的两阶段测试生成框架，归 Test Generation，不因使用覆盖度量增加 Coverage Metrics。标题采用 PDF 与 Crossref 一致的 A Efficient，保留原文；摘要仅合并断行、恢复 two-stage 并统一 l₂ 排版。QRS-C 为 Companion 出版记录，不套用 QRS 主会等级，CCF 评级保持 null。在线发表时间和精确首发日期尚未独立核实，保持 null，不使用本地 PDF 创建时间作为发表时间。"
   }
 ]

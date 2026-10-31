@@ -85,6 +85,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2022 | **CAGFuzz** | CAGFuzz: Coverage-Guided Adversarial Generative Fuzzing Testing for Image-Based Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2021.3124006) | TSE |
 | 2022 | **testRNN** | Coverage-Guided Testing for Recurrent Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tr.2021.3080664) | TR |
 | 2022 | **RNN-Test** | RNN-Test: Towards Adversarial Testing for Recurrent Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2021.3114353) | TSE |
+| 2022 | **TSDTest** | TSDTest: A Efficient Coverage Guided Two-Stage Testing for Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/qrs-c57518.2022.00033) | QRS-C' 2022 |
 | 2021 | **DLFuzz (journal-version)** | Coverage Guided Differential Adversarial Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tnse.2020.2997359) | TNSE |
 | 2021 | **DeepCon** | DeepCon: Contribution Coverage Testing for Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/saner50967.2021.00026) | SANER' 2021 |
 | 2021 | **RobOT (conf-version)** | RobOT: Robustness-Oriented Testing for Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse43902.2021.00038) | ICSE' 2021 |
@@ -110,6 +111,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2026 | **MetaDTS** | MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.sysarc.2025.103682) | JSA |
 | 2026 | **PriCod** | PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3730435) | TOSEM |
 | 2026 | **SETS** | SETS: A Simple yet Effective DNN Test Selection Approach | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3772084) | TOSEM |
+| 2026 | **DuFP** | When Ambiguity Meets Atypicality: Dual-Perspective Test Input Prioritization for DNNs | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3832783.3834351) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2609.34703) [![Code](assets/badges/code.svg)](https://github.com/Ryan-LHR/DuFP) | ASE' 2026 |
 | 2025 | — | Assessing the Robustness of Test Selection Methods for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3715693) | TOSEM |
 | 2025 | **AudioTest** | AudioTest: Prioritizing Audio Test Cases | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3728907) | PACMSE |
 | 2025 | **DeepFeature** | DeepFeature: Guiding adversarial testing for deep neural network systems using robust features | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.jss.2024.112201) [![Code](assets/badges/code.svg)](https://github.com/Deepfea/DeepFeature) | JSS |
@@ -152,6 +154,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2026 | **SMiR** | SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3771545) [![Code](assets/badges/code.svg)](https://github.com/AnonymousSE4AI/SMiR) | TOSEM |
 | 2025 | **AutoRIC** | AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3690634) [![Code](assets/badges/code.svg)](https://github.com/Anonymous89000/AutoRIC) | TOSEM |
 | 2025 | **DEFault** | Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse55347.2025.00224) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2501.12560) [![Code](assets/badges/code.svg)](https://github.com/SigmaJahan/DEFault-DNN-Debugging) | ICSE' 2025 |
 | 2025 | **FeaProtect** | Mitigating Regression Faults Induced by Feature Evolution in Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3712199) [![Code](assets/badges/code.svg)](https://github.com/youhanmo/FeaProtect) | TOSEM |
