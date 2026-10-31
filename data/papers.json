@@ -28,7 +28,7 @@
     },
     "doi": "10.1109/tr.2022.3208239",
     "arxiv_url": "https://arxiv.org/abs/2106.09242",
-    "code_url": null,
+    "code_url": "https://doi.org/10.5281/zenodo.4000441",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109/tr.2022.3208239",
@@ -77,7 +77,7 @@
     },
     "doi": "10.1145/3705301",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/samxrl/IATT",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3705301",
@@ -224,7 +224,7 @@
     },
     "doi": "10.1145/3368089.3409671",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/RU-System-Software-and-Security/CovTesting",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3368089.3409671",
@@ -694,7 +694,7 @@
     },
     "doi": "10.1145/3510003.3510231",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/SATE-Lab/DeepState",
     "evidence": [
       {
         "url": "https://conf.researchr.org/details/icse-2022/icse-2022-papers/181/DeepState-Selecting-Test-Suites-to-Enhance-the-Robustness-of-Recurrent-Neural-Networ",
@@ -731,7 +731,7 @@
     },
     "doi": "10.1145/3672457",
     "arxiv_url": "https://arxiv.org/abs/2311.00801",
-    "code_url": null,
+    "code_url": "https://github.com/FlowSs/GIST",
     "evidence": [
       {
         "url": "https://arxiv.org/abs/2311.00801",
@@ -811,7 +811,7 @@
     },
     "doi": "10.1145/3236024.3264835",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/turned2670/DLFuzz",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3236024.3264835",
@@ -1130,7 +1130,7 @@
     },
     "doi": "10.1145/3576040",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/less-lab-uva/InputDistributionCoverage",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3576040",
@@ -1171,7 +1171,7 @@
     },
     "doi": "10.1145/3582573",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/Testing4AI/QuoTe",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3582573",
@@ -1218,7 +1218,7 @@
     },
     "doi": "10.1016/j.ins.2023.118936",
     "arxiv_url": "https://arxiv.org/abs/2202.07464",
-    "code_url": null,
+    "code_url": "https://github.com/Allen-piexl/DeepSensor/",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1016/j.ins.2023.118936",
@@ -1269,7 +1269,7 @@
     },
     "doi": "10.1109/icse43902.2021.00038",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/SmallkeyChen/RobOT",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109/ICSE43902.2021.00038",
@@ -1487,7 +1487,7 @@
     },
     "doi": "10.1109/tnse.2020.2997359",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/turned2670/DLFuzz",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109/tnse.2020.2997359",
@@ -1539,7 +1539,7 @@
     },
     "doi": "10.1109/tr.2021.3080664",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/TrustAI/testRNN",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109/TR.2021.3080664",
@@ -1618,7 +1618,7 @@
     },
     "doi": "10.1145/3597503.3639106",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/less-lab-uva/CIT4DNN",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3597503.3639106",
@@ -1659,7 +1659,7 @@
     },
     "doi": "10.1145/3611643.3616266",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/l1lk/DistXplore",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3611643.3616266",
@@ -1701,7 +1701,7 @@
     },
     "doi": "10.1145/3635706",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/coinse/SINVAD",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3635706",
@@ -1779,7 +1779,7 @@
     },
     "doi": "10.1145/3688835",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/unknownhl/NSGen",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3688835",
@@ -1820,7 +1820,7 @@
     },
     "doi": "10.1145/3358233",
     "arxiv_url": "https://arxiv.org/abs/1803.04792",
-    "code_url": null,
+    "code_url": "https://github.com/TrustAI/DeepConcolic",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3358233",
@@ -1865,7 +1865,7 @@
     },
     "doi": "10.1145/3368089.3409754",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://doi.org/10.5281/zenodo.4021473",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3368089.3409754",
@@ -1944,7 +1944,7 @@
     },
     "doi": "10.1145/3417330",
     "arxiv_url": "https://arxiv.org/abs/1904.13195",
-    "code_url": null,
+    "code_url": "https://github.com/TestSelection/TestSelection",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3417330",
@@ -1987,7 +1987,7 @@
     },
     "doi": "10.1145/3680464",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/PapRep/Clover",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3680464",
@@ -2029,7 +2029,7 @@
     },
     "doi": "10.1145/3691631",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/SSCT-Lab/NLPLego",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3691631",
@@ -2066,7 +2066,7 @@
     },
     "doi": "10.1109/tse.2025.3540549",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://doi.org/10.5281/zenodo.14535408",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109/TSE.2025.3540549",
@@ -2107,7 +2107,7 @@
     },
     "doi": "10.1145/3714463",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://anonymous.4open.science/r/TAEFuzz-4575",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3714463",
@@ -2143,7 +2143,7 @@
     },
     "doi": "10.1145/3368089.3409730",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/testingautomated-usi/DeepJanus",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3368089.3409730",
@@ -2219,7 +2219,7 @@
     },
     "doi": "10.1145/3736305",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/TestingAIGroup/SUNTest",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3736305",
@@ -2305,7 +2305,7 @@
     },
     "doi": "10.1109/tip.2019.2924172",
     "arxiv_url": "https://arxiv.org/abs/1705.02406",
-    "code_url": null,
+    "code_url": "https://github.com/tsborkar/DeepCorrect",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109/TIP.2019.2924172",
@@ -2350,7 +2350,7 @@
     },
     "doi": "10.1145/3688840",
     "arxiv_url": "https://arxiv.org/abs/2402.12950",
-    "code_url": null,
+    "code_url": "https://github.com/am0x00/QuanTest",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145/3688840",
@@ -2537,7 +2537,7 @@
     },
     "doi": "10.1145/3607191",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/yinghuali/GraphPrior",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3607191",
@@ -2630,7 +2630,7 @@
     },
     "doi": "10.1145/3650212.3680312",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/DNNTestingMeta/MetaModelTesting",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3650212.3680312",
@@ -2716,7 +2716,7 @@
     },
     "doi": "10.1145/3533767.3534375",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/testingautomated-usi/simple-tip",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3533767.3534375",
@@ -2761,7 +2761,7 @@
     },
     "doi": "10.1145/3395363.3397357",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/deepgini/deepgini",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3395363.3397357",
@@ -2804,7 +2804,7 @@
     },
     "doi": "10.1145/3644388",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/ZOE-CA/DeepGD",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3644388",
@@ -2889,7 +2889,7 @@
     },
     "doi": "10.1109/ase56229.2023.00126",
     "arxiv_url": "https://arxiv.org/abs/2307.09375",
-    "code_url": null,
+    "code_url": "https://github.com/haibinzheng/CertPri",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2FASE56229.2023.00126",
@@ -2988,7 +2988,7 @@
     },
     "doi": "10.1145/3691620.3695472",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/Testing4AI/FAST",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3691620.3695472",
@@ -3176,7 +3176,7 @@
     },
     "doi": "10.1109/tse.2024.3350019",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/yinghuali/MLPrior",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2FTSE.2024.3350019",
@@ -3455,7 +3455,7 @@
     },
     "doi": "10.1109/icse43902.2021.00046",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/sail-repos/PRIMA",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2FICSE43902.2021.00046",
@@ -3500,7 +3500,7 @@
     },
     "doi": "10.1145/3324884.3416621",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/actionabletest/MCP",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3324884.3416621",
@@ -3544,7 +3544,7 @@
     },
     "doi": "10.1109/aitest.2019.000-6",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "http://www.github.com/bntejn/keras-prioritizer",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2FAITest.2019.000-6",
@@ -3587,7 +3587,7 @@
     },
     "doi": "10.1109/deeptest52559.2021.00009",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/testingautomated-usi/surprise-adequacy",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2FDeepTest52559.2021.00009",
@@ -3632,7 +3632,7 @@
     },
     "doi": "10.1145/3643676",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/yinghuali/PCPrior",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3643676",
@@ -3675,7 +3675,7 @@
     },
     "doi": "10.1007/s10664-024-10515-y",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/BlueBerry-xueqi/graph_testing",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1007%2Fs10664-024-10515-y",
@@ -3714,7 +3714,7 @@
     },
     "doi": "10.1007/s10664-024-10520-1",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/yinghuali/VRank",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1007%2Fs10664-024-10520-1",
@@ -3755,7 +3755,7 @@
     },
     "doi": "10.1145/3707450",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/yangzhou6666/ASRProphet",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3707450",
@@ -3798,7 +3798,7 @@
     },
     "doi": "10.1145/3715693",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://anonymous.4open.science/r/Robust-testing-test-selection-3F83/",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3715693",
@@ -3893,7 +3893,7 @@
     },
     "doi": "10.1145/3728907",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://zenodo.org/records/13961855",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3728907",
@@ -3937,7 +3937,7 @@
     },
     "doi": "10.1109/tbdata.2023.3334648",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/smile-ya/FATS",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2FTBDATA.2023.3334648",
@@ -3989,7 +3989,7 @@
     },
     "doi": "10.1145/3511598",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/code4papers/DAT",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3511598",
@@ -4033,7 +4033,7 @@
     },
     "doi": "10.1145/3730435",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/yinghuali/PriCod",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3730435",
@@ -4120,7 +4120,7 @@
     },
     "doi": "10.1145/3772084",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/GIST-NJU/SETS",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3772084",
@@ -4347,7 +4347,7 @@
     },
     "doi": "10.1145/3604609",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/Wsine/deeppatch",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3604609",
@@ -4712,7 +4712,7 @@
     },
     "doi": "10.1145/3597503.3623332",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/nninjn/VeRe",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3597503.3623332",
@@ -4908,7 +4908,7 @@
     },
     "doi": "10.1145/3650212.3652132",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/Testing4AI/IDNN",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3650212.3652132",
@@ -5092,7 +5092,7 @@
     },
     "doi": "10.1145/3660827",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/kio-cs/CrossCert",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3660827",
@@ -5184,7 +5184,7 @@
     },
     "doi": "10.1145/3630011",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://doi.org/10.5281/zenodo.10009069",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3630011",
@@ -5276,7 +5276,7 @@
     },
     "doi": "10.1145/3236024.3236082",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/dnnmode/buggymodels",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3236024.3236082",
@@ -5509,7 +5509,7 @@
     },
     "doi": "10.1109/icse43902.2021.00043",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/shiningrain/AUTOTRAINER",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2Ficse43902.2021.00043",
@@ -5643,7 +5643,7 @@
     },
     "doi": "10.1145/3583131.3590477",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://github.com/jst-qaml/adaptiveRepair",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3583131.3590477",
@@ -6125,7 +6125,7 @@
     },
     "doi": "10.1145/3551349.3556920",
     "arxiv_url": null,
-    "code_url": null,
+    "code_url": "https://doi.org/10.5281/zenodo.7018397",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1145%2F3551349.3556920",
