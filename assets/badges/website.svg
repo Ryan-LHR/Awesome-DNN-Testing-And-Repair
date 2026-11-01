@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="20" viewBox="0 0 80 20" role="img" aria-label="Website">
+  <title>Website</title>
+  <rect width="80" height="20" rx="3" fill="#0d9488"/>
+  <g transform="translate(6 4)" fill="none" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="6" cy="6" r="5"/>
+    <path d="M1 6h10M6 1c-3 3-3 7 0 10M6 1c3 3 3 7 0 10"/>
+  </g>
+  <text x="23" y="14" fill="#fff" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11">Website</text>
+</svg>

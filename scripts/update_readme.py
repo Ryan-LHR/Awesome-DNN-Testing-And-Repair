@@ -18,15 +18,22 @@ CATEGORIES = {
     "Test Generation": 4,
     "Test Selection and Prioritization": 4,
     "Model Repair": 4,
+    "DNN Verification": 4,
     "Other": 4,
     "Surveys": 3,
     "Empirical Studies": 3,
+}
+TARGET_MODEL_TYPES = {
+    "Non-LLM DNN": "Non-LLM DNNs",
+    "LLM": "LLMs",
+    "QNN": "QNNs",
 }
 PUBLICATION_TYPES = ("conference", "journal", "preprint")
 BADGES = {
     "Paper": "assets/badges/paper.svg",
     "arXiv": "assets/badges/arxiv.svg",
     "Code": "assets/badges/code.svg",
+    "Website": "assets/badges/website.svg",
 }
 BEGIN_MARKER = "<!-- BEGIN GENERATED PAPERS -->"
 END_MARKER = "<!-- END GENERATED PAPERS -->"
@@ -55,7 +62,7 @@ def validate_papers(papers):
                 errors.append(f"{label}: duplicate id.")
             seen_ids.add(paper_id)
 
-        for field in ("alias", "doi", "arxiv_url", "code_url"):
+        for field in ("alias", "doi", "arxiv_url", "code_url", "website_url"):
             value = paper.get(field)
             if value is not None and (not isinstance(value, str) or not value.strip()):
                 errors.append(f"{label}: {field} must be null or a non-empty string.")
@@ -74,6 +81,14 @@ def validate_papers(papers):
             errors.append(f"{label}: categories contains an unknown category.")
         elif len(categories) != len(set(categories)):
             errors.append(f"{label}: categories contains duplicates.")
+
+        target_model_types = paper.get("target_model_types")
+        if not isinstance(target_model_types, list) or not target_model_types:
+            errors.append(f"{label}: target_model_types must be a non-empty array.")
+        elif any(not isinstance(model_type, str) or model_type not in TARGET_MODEL_TYPES for model_type in target_model_types):
+            errors.append(f"{label}: target_model_types contains an unknown model type.")
+        elif len(target_model_types) != len(set(target_model_types)):
+            errors.append(f"{label}: target_model_types contains duplicates.")
 
         publication_type = paper.get("publication_type")
         if publication_type not in PUBLICATION_TYPES:
@@ -109,31 +124,35 @@ def paper_link(label, url):
 def render_tables(papers):
     lines = ["### Research Papers", ""]
     for category, level in CATEGORIES.items():
-        lines.extend([
-            f"{'#' * level} {category}", "",
-            "| Year | Name | Title | Resources | Venue |",
-            "| --- | --- | --- | --- | --- |",
-        ])
-        matches = sorted(
-            (paper for paper in papers if category in paper["categories"]),
-            key=lambda paper: (-paper_year(paper), paper["title"].casefold()),
-        )
-        for paper in matches:
-            year = paper_year(paper)
-            alias = f"**{escape_cell(paper['alias'])}**" if paper.get("alias") else "—"
-            resource_links = {paper["paper_url"]: "Paper"}
-            for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code")):
-                if paper.get(field):
-                    resource_links.setdefault(paper[field], label)
-            resources = " ".join(paper_link(label, url) for url, label in resource_links.items())
-            venue = escape_cell(paper["venue"])
-            if paper["publication_type"] == "conference":
-                venue += f"' {year}"
-            elif paper["publication_type"] == "preprint":
-                venue += " (preprint)"
-            title = escape_cell(paper["title"])
-            lines.append(f"| {year} | {alias} | {title} | {resources} | {venue} |")
-        lines.append("")
+        lines.extend([f"{'#' * level} {category}", ""])
+        for target_model_type, heading in TARGET_MODEL_TYPES.items():
+            matches = sorted(
+                (paper for paper in papers if category in paper["categories"] and target_model_type in paper["target_model_types"]),
+                key=lambda paper: (-paper_year(paper), paper["title"].casefold()),
+            )
+            if not matches:
+                continue
+            lines.extend([
+                f"{'#' * (level + 1)} {heading}", "",
+                "| Year | Name | Title | Resources | Venue |",
+                "| --- | --- | --- | --- | --- |",
+            ])
+            for paper in matches:
+                year = paper_year(paper)
+                alias = f"**{escape_cell(paper['alias'])}**" if paper.get("alias") else "—"
+                resource_links = {paper["paper_url"]: "Paper"}
+                for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code"), ("website_url", "Website")):
+                    if paper.get(field):
+                        resource_links.setdefault(paper[field], label)
+                resources = " ".join(paper_link(label, url) for url, label in resource_links.items())
+                venue = escape_cell(paper["venue"])
+                if paper["publication_type"] == "conference":
+                    venue += f"' {year}"
+                elif paper["publication_type"] == "preprint":
+                    venue += " (preprint)"
+                title = escape_cell(paper["title"])
+                lines.append(f"| {year} | {alias} | {title} | {resources} | {venue} |")
+            lines.append("")
     return "\n".join(lines).rstrip()
 
 

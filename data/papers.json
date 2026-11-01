@@ -9,6 +9,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Moshi Wei",
       "Yuchao Huang",
@@ -58,6 +61,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Ruilin Xie",
       "Xiang Chen",
@@ -96,6 +102,9 @@
     "alias": "NPC",
     "categories": [
       "Coverage Metrics"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xiaofei Xie",
@@ -147,6 +156,9 @@
     "alias": "DeepHunter",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xiaofei Xie",
@@ -203,6 +215,9 @@
       "Coverage Metrics",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Shenao Yan",
       "Guanhong Tao",
@@ -254,6 +269,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jing Yu",
       "Shukai Duan",
@@ -295,6 +313,9 @@
     "alias": "Test4Deep (conf-version)",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jing Yu",
@@ -339,6 +360,9 @@
     "alias": null,
     "categories": [
       "Surveys"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jie M. Zhang",
@@ -388,6 +412,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Mengshi Zhang",
       "Yuqun Zhang",
@@ -432,6 +459,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Pengcheng Zhang",
       "Bin Ren",
@@ -475,6 +505,9 @@
     "categories": [
       "Test Generation",
       "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xiyue Zhang",
@@ -528,6 +561,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yue Zhao",
       "Hong Zhu",
@@ -571,6 +607,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zhiyang Zhou",
@@ -617,6 +656,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Kexin Pei",
@@ -676,6 +718,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Zixi Liu",
       "Yang Feng",
@@ -714,6 +759,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Florian Tambon",
       "Foutse Khomh",
@@ -751,6 +799,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jianmin Guo",
@@ -791,6 +842,9 @@
     "alias": "DLFuzz (conf-version)",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jianmin Guo",
@@ -841,6 +895,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yuchi Tian",
       "Kexin Pei",
@@ -889,6 +946,9 @@
     "categories": [
       "Surveys"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "李舵",
       "董超群",
@@ -927,6 +987,9 @@
     "alias": null,
     "categories": [
       "Surveys"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "王赞",
@@ -970,6 +1033,9 @@
       "Coverage Metrics",
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Lei Ma",
       "Felix Juefei-Xu",
@@ -1010,6 +1076,9 @@
     "alias": "DeepGauge",
     "categories": [
       "Coverage Metrics"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Lei Ma",
@@ -1067,6 +1136,9 @@
     "categories": [
       "Coverage Metrics"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jasmine Sekhon",
       "Cody Fleming"
@@ -1113,6 +1185,9 @@
     "categories": [
       "Coverage Metrics"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Swaroopa Dola",
       "Matthew B. Dwyer",
@@ -1149,6 +1224,9 @@
     "alias": "QuoTe (journal-version)",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jialuo Chen",
@@ -1195,6 +1273,9 @@
     "alias": "DeepSensor",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Haibo Jin",
@@ -1248,6 +1329,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jingyi Wang",
       "Jialuo Chen",
@@ -1295,6 +1379,9 @@
       "Coverage Metrics",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Svetlana Pavlitskaya",
       "Siyar Yikmis",
@@ -1332,6 +1419,9 @@
     "categories": [
       "Coverage Metrics",
       "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Yizhen Dong",
@@ -1388,6 +1478,9 @@
       "Coverage Metrics",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Weidi Sun",
       "Yuteng Lu",
@@ -1431,6 +1524,9 @@
       "Coverage Metrics",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Zenan Li",
       "Xiaoxing Ma",
@@ -1468,6 +1564,9 @@
     "alias": "DLFuzz (journal-version)",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jianmin Guo",
@@ -1518,6 +1617,9 @@
       "Coverage Metrics",
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Wei Huang",
       "Youcheng Sun",
@@ -1560,6 +1662,9 @@
       "Coverage Metrics",
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Xiaoning Du",
       "Xiaofei Xie",
@@ -1600,6 +1705,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Swaroopa Dola",
       "Rory McDaniel",
@@ -1637,6 +1745,9 @@
     "alias": "DistXplore",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Longtian Wang",
@@ -1684,6 +1795,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Sungmin Kang",
       "Robert Feldt",
@@ -1720,6 +1834,9 @@
     "alias": "DFuzzer",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Hepeng Dai",
@@ -1758,6 +1875,9 @@
     "alias": "NSGen",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Li Huang",
@@ -1799,6 +1919,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Youcheng Sun",
@@ -1846,6 +1969,9 @@
       "Coverage Metrics",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Fabrice Harel-Canada",
       "Lingxiao Wang",
@@ -1884,6 +2010,9 @@
     "alias": "DeepPath",
     "categories": [
       "Coverage Metrics"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Dong Wang",
@@ -1924,6 +2053,9 @@
     "categories": [
       "Test Selection and Prioritization",
       "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Wei Ma",
@@ -1969,6 +2101,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Haipeng Wang",
       "Zhengyuan Wei",
@@ -2006,6 +2141,10 @@
     "alias": "NLPLego",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN",
+      "LLM"
     ],
     "authors": [
       "Pin Ji",
@@ -2049,6 +2188,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Mohammed Oualid Attaoui",
       "Fabrizio Pastore",
@@ -2085,6 +2227,9 @@
     "alias": "TAEFuzz",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Shunhui Ji",
@@ -2127,6 +2272,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Vincenzo Riccio",
       "Paolo Tonella"
@@ -2162,6 +2310,9 @@
     "alias": "DiffGAN",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zohreh Aghababaeyan",
@@ -2201,6 +2352,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Hongjing Guo",
       "Chuanqi Tao",
@@ -2238,6 +2392,9 @@
     "alias": "DeepMutation",
     "categories": [
       "Other"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Lei Ma",
@@ -2289,6 +2446,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Tejas S. Borkar",
       "Lina J. Karam"
@@ -2330,6 +2490,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Generation"
+    ],
+    "target_model_types": [
+      "QNN"
     ],
     "authors": [
       "Jinjing Shi",
@@ -2376,6 +2539,9 @@
       "Test Generation",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yuhan Zhi",
       "Xiaofei Xie",
@@ -2416,6 +2582,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jinhan Kim",
@@ -2464,6 +2633,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jinhan Kim",
@@ -2517,6 +2689,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Xueqi Dang",
       "Yinghua Li",
@@ -2561,6 +2736,9 @@
     "alias": "DATIS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zhong Li",
@@ -2613,6 +2791,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Demet Demir",
       "Aysu Betin Can",
@@ -2654,6 +2835,9 @@
     "alias": "NNS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Shenglin Bao",
@@ -2700,6 +2884,9 @@
       "Test Selection and Prioritization",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Michael Weiss",
       "Paolo Tonella"
@@ -2740,6 +2927,9 @@
     "alias": "DeepGini",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Yang Feng",
@@ -2786,6 +2976,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Zohreh Aghababaeyan",
       "Manel Abdellatif",
@@ -2824,6 +3017,9 @@
     "categories": [
       "Coverage Metrics",
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Shengyou Hu",
@@ -2872,6 +3068,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Haibin Zheng",
       "Jinyin Chen",
@@ -2918,6 +3117,9 @@
     "alias": "TDPR",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jian Shen",
@@ -2967,6 +3169,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jialuo Chen",
       "Jingyi Wang",
@@ -3012,6 +3217,9 @@
     "alias": "FIPSER",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Junwei Chen",
@@ -3063,6 +3271,9 @@
     "alias": "ATS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xinyu Gao",
@@ -3116,6 +3327,9 @@
       "Test Selection and Prioritization",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Zhiyu Wang",
       "Sihan Xu",
@@ -3155,6 +3369,9 @@
     "alias": "MLPrior",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xueqi Dang",
@@ -3200,6 +3417,9 @@
     "alias": "NodeRank",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Yinghua Li",
@@ -3256,6 +3476,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Dong Huang",
       "Qingwen Bu",
@@ -3296,6 +3519,9 @@
     "alias": "RTS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Weifeng Sun",
@@ -3350,6 +3576,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yu Li",
       "Min Li",
@@ -3394,6 +3623,9 @@
     "categories": [
       "Surveys"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Qiang Hu",
       "Yuejun Guo",
@@ -3434,6 +3666,9 @@
     "alias": "PRIMA",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zan Wang",
@@ -3480,6 +3715,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Weijun Shen",
       "Yanhui Li",
@@ -3524,6 +3762,9 @@
     "alias": null,
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Taejoon Byun",
@@ -3570,6 +3811,9 @@
       "Coverage Metrics",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Michael Weiss",
       "Rwiddhi Chakraborty",
@@ -3612,6 +3856,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yinghua Li",
       "Xueqi Dang",
@@ -3652,6 +3899,9 @@
     "categories": [
       "Test Selection and Prioritization",
       "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xueqi Dang",
@@ -3695,6 +3945,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yinghua Li",
       "Xueqi Dang",
@@ -3733,6 +3986,9 @@
     "alias": "Prophet",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zhou Yang",
@@ -3776,6 +4032,9 @@
       "Test Selection and Prioritization",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Qiang Hu",
       "Yuejun Guo",
@@ -3817,6 +4076,9 @@
     "alias": "DeepVec",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zhonghao Jiang",
@@ -3874,6 +4136,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yinghua Li",
       "Xueqi Dang",
@@ -3917,6 +4182,9 @@
     "alias": "FATS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Li Li",
@@ -3968,6 +4236,9 @@
       "Test Selection and Prioritization",
       "Empirical Studies"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Qiang Hu",
       "Yuejun Guo",
@@ -4014,6 +4285,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yinghua Li",
       "Xueqi Dang",
@@ -4052,6 +4326,9 @@
     "alias": "MetaSel",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Amin Abbasishahkoo",
@@ -4101,6 +4378,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jingling Wang",
       "Huayao Wu",
@@ -4144,6 +4424,9 @@
     "alias": "EATS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zhiyi Zhang",
@@ -4193,6 +4476,9 @@
     "alias": "MetaDTS",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xiang Su",
@@ -4244,6 +4530,9 @@
     "categories": [
       "Test Selection and Prioritization"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Sheikh Md Mushfiqur Rahman",
       "Nasir Eisty"
@@ -4279,6 +4568,9 @@
     "alias": "AcTracer",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "LLM"
     ],
     "authors": [
       "Yuheng Huang",
@@ -4329,6 +4621,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Zhengyuan Wei",
       "Haipeng Wang",
@@ -4367,6 +4662,9 @@
     "categories": [
       "Test Generation",
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Yongqiang Tian",
@@ -4419,6 +4717,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jeongju Sohn",
       "Sungmin Kang",
@@ -4466,6 +4767,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Hao Zhang",
       "W.K. Chan"
@@ -4506,6 +4810,9 @@
     "alias": "AIREPAIR",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xidan Song",
@@ -4560,6 +4867,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Kaijie Zhu",
       "Xixu Hu",
@@ -4609,6 +4919,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Tianlin Li",
       "Xiaofei Xie",
@@ -4649,6 +4962,9 @@
     "alias": "ArchRepair",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Hua Qi",
@@ -4691,6 +5007,9 @@
     "alias": "VeRe",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Jianan Ma",
@@ -4736,6 +5055,9 @@
     "alias": "RUNNER",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Tianlin Li",
@@ -4789,6 +5111,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Xinyu Sun",
       "Wanwei Liu",
@@ -4838,6 +5163,9 @@
     "alias": "INNER",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zuohui Chen",
@@ -4889,6 +5217,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jialuo Chen",
       "Jingyi Wang",
@@ -4932,6 +5263,9 @@
     "alias": "NeuFair",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Vishnu Asutosh Dasu",
@@ -4986,6 +5320,9 @@
     "categories": [
       "Surveys"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "梁震",
       "刘万伟",
@@ -5031,6 +5368,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Patrick Henriksen",
       "Francesco Leofante",
@@ -5073,6 +5413,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Qilin Zhou",
       "Zhengyuan Wei",
@@ -5111,6 +5454,9 @@
     "alias": null,
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zenan Li",
@@ -5164,6 +5510,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Jiajun Jiang",
       "Junjie Yang",
@@ -5203,6 +5552,9 @@
     "alias": "DeepFeature",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Lichao Feng",
@@ -5257,6 +5609,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Shiqing Ma",
       "Yingqi Liu",
@@ -5301,6 +5656,9 @@
     "categories": [
       "Test Generation"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Xiang Gao",
       "Ripon K. Saha",
@@ -5343,6 +5701,9 @@
     "alias": "FSGMix",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Xuhong Ren",
@@ -5396,6 +5757,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yuta Ishimoto",
       "Masanari Kondo",
@@ -5445,6 +5809,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Hanmo You",
       "Zan Wang",
@@ -5491,6 +5858,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Xiaoyu Zhang",
       "Juan Zhai",
@@ -5534,6 +5904,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Bing Sun",
       "Jun Sun",
@@ -5576,6 +5949,9 @@
     "alias": "NeuRecover",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Shogo Tokui",
@@ -5623,6 +5999,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Davide Li Calsi",
       "Matias Duran",
@@ -5667,6 +6046,9 @@
     "alias": "DeepFault",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Hasan Ferit Eniser",
@@ -5715,6 +6097,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Davide Li Calsi",
       "Matias Duran",
@@ -5759,6 +6144,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Zhe Tao",
       "Stephanie Nawas",
@@ -5802,6 +6190,9 @@
     "categories": [
       "Model Repair",
       "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Takao Nakagawa",
@@ -5851,6 +6242,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yun Xing",
       "Qing Guo",
@@ -5894,6 +6288,9 @@
     "alias": "PatchPro",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Zhiming Chi",
@@ -5952,6 +6349,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Sigma Jahan",
       "Mehil B Shah",
@@ -5971,6 +6371,7 @@
     "doi": "10.1109/icse55347.2025.00224",
     "arxiv_url": "https://arxiv.org/abs/2501.12560",
     "code_url": "https://github.com/SigmaJahan/DEFault-DNN-Debugging",
+    "website_url": "https://default-ai.com/",
     "evidence": [
       {
         "url": "https://api.crossref.org/works/10.1109%2Ficse55347.2025.00224",
@@ -6004,6 +6405,9 @@
     "alias": "PRDNN",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Matthew Sotoudeh",
@@ -6056,6 +6460,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Xiaodong Yang",
       "Tom Yamaguchi",
@@ -6106,6 +6513,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yingyi Zhang",
       "Zan Wang",
@@ -6150,6 +6560,9 @@
     "categories": [
       "Model Repair"
     ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
     "authors": [
       "Yuta Ishimoto",
       "Ken Matsui",
@@ -6193,6 +6606,9 @@
     "alias": "SMiR",
     "categories": [
       "Model Repair"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Haoran Li",
@@ -6243,6 +6659,9 @@
     "alias": "DuFP",
     "categories": [
       "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Haoran Li",
@@ -6300,6 +6719,9 @@
     "alias": "TSDTest",
     "categories": [
       "Test Generation"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
     ],
     "authors": [
       "Haoran Li",

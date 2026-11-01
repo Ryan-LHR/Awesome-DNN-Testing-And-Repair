@@ -1,0 +1,2347 @@
+{
+  "scope": {
+    "revision": 1,
+    "start_year": 2017,
+    "end_year": 2026,
+    "venues": [
+      "ICSE",
+      "FSE",
+      "ASE",
+      "ISSTA",
+      "TSE",
+      "TOSEM"
+    ],
+    "categories": [
+      "Coverage Metrics",
+      "Test Generation",
+      "Test Selection and Prioritization",
+      "Model Repair",
+      "DNN Verification",
+      "Other",
+      "Surveys",
+      "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN",
+      "LLM",
+      "QNN"
+    ],
+    "topic": "Testing, formal verification, and repair of DNN models. Adding verification does not automatically reclassify existing papers.",
+    "conference_tracks": [
+      "Research / Technical"
+    ],
+    "separate_review_tracks": [
+      "Tools / Demonstrations",
+      "NIER",
+      "Industry"
+    ],
+    "excluded_topics": [
+      "Framework, library, compiler, or operator implementation testing",
+      "Standalone agent-system safety or application testing",
+      "Standalone attacks without a model testing, verification, or repair contribution"
+    ],
+    "deferred_sources": [
+      {
+        "source": "arXiv",
+        "start_after": "Six-venue historical baseline",
+        "changes_to_check": [
+          "New submissions",
+          "Revisions of existing preprints",
+          "Formal-publication associations"
+        ]
+      }
+    ],
+    "version_policy": "Keep distinct conference and journal extensions; associate preprints and journal-first presentations without duplicate publication records.",
+    "code_sources": [
+      "Formal paper",
+      "Publisher page"
+    ],
+    "code_preference": "GitHub when both GitHub and another replication package are available."
+  },
+  "scans": [
+    {
+      "id": "04-01",
+      "venue": "ICSE",
+      "year": 2026,
+      "track": "Research Track",
+      "sources": [
+        {
+          "url": "https://conf.researchr.org/track/icse-2026/icse-2026-research-track#event-overview",
+          "kind": "official_accepted_papers",
+          "entry_count": 321
+        },
+        {
+          "url": "https://dl.acm.org/doi/proceedings/10.1145/3744916",
+          "kind": "publisher_proceedings",
+          "entry_count": 321,
+          "sections_checked": 59
+        }
+      ],
+      "checked_on": "2026-10-31",
+      "coverage_through": "2026-10-31",
+      "scope_revision": 1,
+      "directory_status": "complete_as_of_cutoff",
+      "screening_stage": "title_only",
+      "title_screen_status": "complete",
+      "pending": [
+        "Abstract screening of candidate and boundary entries",
+        "Metadata and Code checks for retained candidates",
+        "User approval before adding or changing paper records"
+      ],
+      "entries": [
+        {
+          "source_id": "c36cdfb7-43e0-4081-8064-93c746b9e2e1",
+          "title": "3D Software Synthesis Driven by Constraint-Expressive Intermediate Representation",
+          "doi": "10.1145/3744916.3787812",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "075c0caf-f9fb-494f-bf01-98f80403d647",
+          "title": "A Causal Perspective on Measuring, Explaining and Mitigating Smells in LLM-Generated Code",
+          "doi": "10.1145/3744916.3773164",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9eac6975-7930-467a-ba85-d11f54621d34",
+          "title": "Accelerating IC3 Verification by Exploiting Unsatisfiable Cores and Satisfying Models",
+          "doi": "10.1145/3744916.3787819",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "95dc972c-d693-4d07-b1bf-4e354f25ee53",
+          "title": "Accurate Inference of Termination Conditions",
+          "doi": "10.1145/3744916.3764568",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "aa929fb7-eb35-4638-88ec-46fbe7a672b2",
+          "title": "A Comparison of Conversational Models and Humans in Answering Technical Questions: the Firefox Case",
+          "doi": "10.1145/3744916.3773170",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3cf27bae-13f8-431f-adff-b21e7c4e1f1f",
+          "title": "A Comprehensive Study of Concurrency Bugs in the Linux Kernel",
+          "doi": "10.1145/3744916.3787790",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4c3779e3-539f-4813-a693-6b1b1855815a",
+          "title": "A Comprehensive Study of Deep Learning Model Fixing Approaches",
+          "doi": "10.1145/3744916.3764528",
+          "decision": "candidate",
+          "reason": "直接研究深度学习模型修复方法，留待摘要筛选。"
+        },
+        {
+          "source_id": "d9b912a7-88ff-4060-bfe2-2a8eb7d66ac2",
+          "title": "Actionable Warning Is Not Enough: Recommending Valid Actionable Warnings with Weak Supervision",
+          "doi": "10.1145/3744916.3773133",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "61b425a7-76f5-4068-af45-294c0fa37e07",
+          "title": "AdapTrack: Constrained Decoding without Distorting LLM's Output Intent",
+          "doi": "10.1145/3744916.3773144",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f5358e8f-874a-46cc-b345-0a4315f9fcb7",
+          "title": "ADARULE: LLM-Driven Natural Language to LTL Conversion via Pattern-Adaptive Rule Induction",
+          "doi": "10.1145/3744916.3787821",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "83ce94ea-1087-45b5-b15f-23726fcf8523",
+          "title": "A First Look at Model Supply Chain: From the Risk Perspective",
+          "doi": "10.1145/3744916.3773171",
+          "decision": "boundary",
+          "reason": "需区分模型测试与更广的模型供应链安全。"
+        },
+        {
+          "source_id": "1cf85769-6612-4215-a06f-cdd2a4fc2a6c",
+          "title": "Agent-Based Ensemble Reasoning for Repository-Level Issue Resolution",
+          "doi": "10.1145/3744916.3787761",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ea824b23-9911-4788-97cd-1c332df869be",
+          "title": "Locus: Agentic Predicate Synthesis for Directed Fuzzing",
+          "doi": "10.1145/3744916.3773102",
+          "program_title": "Agentic Predicates Reasoning for Directed Fuzzing",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c21ffb94-0491-4559-baae-3d6c98f91b1a",
+          "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+          "doi": "10.1145/3744916.3764546",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "2bebdc06-49d0-48a7-9295-3f3040515c30",
+          "title": "A Large-Scale Empirical Study of Secret Key Leakage in Hugging Face Spaces",
+          "doi": "10.1145/3744916.3773117",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "cbc302b5-2c55-4a7e-883d-9440ee209c32",
+          "title": "Aligning Requirement for Large Language Model's Code Generation",
+          "doi": "10.1145/3744916.3764572",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b952ad6f-218a-4819-ac62-b59d8d5594cd",
+          "title": "AnchorDiff: Binary OSS Version Identification Method Based on Anchor Node Slicing",
+          "doi": "10.1145/3744916.3787772",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c55dd666-a1b4-424e-903a-85eb8576222d",
+          "title": "An empirical Analysis of Community and Coding Patterns in OSS4SG vs. Conventional OSS",
+          "doi": "10.1145/3744916.3787782",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "85e9dac4-305f-4a20-8aa9-c489f1252f6b",
+          "title": "An Empirical Study of Fine-Grained Entity Relationships for Tracing Natural Language and Code Vulnerability Artifacts",
+          "doi": "10.1145/3744916.3787831",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d87bb7da-aefe-42fd-8aec-d79bccb896ec",
+          "title": "An Empirical Study of Knowledge Distillation for Code Understanding Tasks",
+          "doi": "10.1145/3744916.3764547",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "18120c98-8352-4d87-871b-586d69f9fcc9",
+          "title": "An Empirical Study of WebAssembly Usage in Node.js",
+          "doi": "10.1145/3744916.3764533",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "87fcbe5d-eb0f-407d-843f-cc99121ae862",
+          "title": "An Empirical Study on Static Application Security Testing (SAST) Tools for Python",
+          "doi": "10.1145/3744916.3773110",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "e33abe55-3351-4bcb-8095-718655d3f144",
+          "title": "An Empirical Study on the Robustness of Android Third-Party Library Detection Tools Against Advanced Obfuscation",
+          "doi": "10.1145/3744916.3773231",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "00f4b5d1-923f-48ff-8eed-78872784c8cd",
+          "title": "An Eye for AI: Eye-Tracking the Micro-Interruptions of GenAI Code Suggestions",
+          "doi": "10.1145/3744916.3773132",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6d73a0f0-ea5c-4410-8ac0-777f4bf8c825",
+          "title": "An LLM Agentic Approach for Legal-Critical Software: A Case Study for Tax Prep Software",
+          "doi": "10.1145/3744916.3764575",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "13dd9926-7650-46b4-bfe0-64d557387fe8",
+          "title": "Are Humans and LLMs Confused by the Same Code? An Empirical Study on Fixation-Related Potentials and LLM Perplexity",
+          "doi": "10.1145/3744916.3773219",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6aa55b46-6431-42bd-9d9f-1a4a30e8288a",
+          "title": "Are “Solved Issues” in SWE-bench Really Solved Correctly? An Empirical Study",
+          "doi": "10.1145/3744916.3764576",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "33d34d79-be9c-48ee-ba72-73204672b175",
+          "title": "Argus: A Multi-agent Sensitive Information Leakage Detection Framework Based on Hierarchical Reference Relationships",
+          "doi": "10.1145/3744916.3773208",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b80d6b8c-2ad5-4bcd-bbff-249ef0a16b79",
+          "title": "A Semantic-based Optimization Approach for Repairing LLMs: Case Study on Code Generation",
+          "doi": "10.1145/3744916.3773262",
+          "decision": "candidate",
+          "reason": "题名明确涉及LLM修复，需核实修复对象和方法。"
+        },
+        {
+          "source_id": "0dac2f28-5886-450b-affc-da4827cfbf5b",
+          "title": "AssertFlip: Reproducing Bugs via Inversion of LLM-Generated Passing Tests",
+          "doi": "10.1145/3744916.3773127",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "11a3f235-4d7b-4f87-ac16-0e34cecb5e2d",
+          "title": "Assessing Coherency and Consistency of Code Execution Reasoning by Large Language Models",
+          "doi": "10.1145/3744916.3773272",
+          "decision": "boundary",
+          "reason": "需区分模型测试方法与一般代码推理能力评测。"
+        },
+        {
+          "source_id": "860ec6b8-0d27-4f0b-83dc-55232327aebc",
+          "title": "Atomizer: An LLM-based Collaborative Multi-Agent Framework for Intent-Driven Commit Untangling",
+          "doi": "10.1145/3744916.3787773",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "429134c3-918c-4ecc-a46b-7184b3911c58",
+          "title": "AtPatch: Debugging Transformers via Hot-Fixing Over-Attention",
+          "doi": "10.1145/3744916.3764559",
+          "decision": "candidate",
+          "reason": "Transformer热修复可能属于模型修复，需摘要确认。"
+        },
+        {
+          "source_id": "8603d57d-1be0-473d-a36d-e09c70fc2108",
+          "title": "Attention Distance: A Novel Metric for Directed Fuzzing with Large Language Models",
+          "doi": "10.1145/3744916.3787818",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1d143728-07ea-4561-9d2e-81943c4b4841",
+          "title": "Attention Pruning: Automated Fairness Repair of Language Models via Surrogate Simulated Annealing",
+          "doi": "10.1145/3744916.3773115",
+          "decision": "candidate",
+          "reason": "题名明确涉及语言模型公平性修复。"
+        },
+        {
+          "source_id": "3a9fe93c-01ef-46b8-87f0-d4d09e568ee0",
+          "title": "Automated Network-Level Fault Injection Testing of Microservice Architectures",
+          "doi": "10.1145/3744916.3773193",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "367b4464-5415-431c-8a17-c21ce5684ea5",
+          "title": "Automatic Dockerfile Generation with Large Language Models",
+          "doi": "10.1145/3744916.3773162",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6706f66c-2dde-4e0b-b273-f93ff98b1286",
+          "title": "Automating API Documentation from Crowdsourced Knowledge",
+          "doi": "10.1145/3744916.3773130",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3698b24e-7a9e-4236-af63-c4b5689a1a5a",
+          "title": "Automating Just-In-Time Python Type Annotation Updating",
+          "doi": "10.1145/3744916.3764565",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4c47acb2-027b-4001-afbf-1b6fdda81ede",
+          "title": "Automating Requirements Formalization: Using LLMs and Low-Complexity Distinguishing Traces for Semantic Validation",
+          "doi": "10.1145/3744916.3787815",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6989b8db-3805-47cc-a70f-0fc8ee0bd3ea",
+          "title": "Back to the Basics: Rethinking Issue-Commit Linking with LLM-Assisted Retrieval",
+          "doi": "10.1145/3744916.3764530",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8f9d0a56-bb5a-487f-836d-26390cf644c3",
+          "title": "Bayesian Multi-Level Performance Models for Multi-Factor Variability of Configurable Software Systems",
+          "doi": "10.1145/3744916.3773131",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ac96770d-5bdb-400d-a16a-898789587b2e",
+          "title": "Beyond Adoption: Examining the Evolution and Impact of Code of Conduct on Open Source Communities",
+          "doi": "10.1145/3744916.3773268",
+          "program_title": "Beyond Adoption: Examining the Evolution and Impact of Codes of Conduct on Open-Source Communities",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "88a7acab-b41a-40f4-958b-c57500c7efd7",
+          "title": "Beyond Correctness: Exposing LLM-generated Logical Flaws in Reasoning via Multi-step Automated Theorem Proving",
+          "doi": "10.1145/3744916.3787820",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "70c3fe1e-0989-4c5f-bcac-bfe17001c8a5",
+          "title": "Beyond Final Code: A Process-Oriented Error Analysis of Software Development Agents in Real-World GitHub Scenarios",
+          "doi": "10.1145/3744916.3773140",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1270bb89-8f56-410f-ba9a-7e6466726fd6",
+          "title": "Beyond Fuzzy Matching: Constraint-Guided Patch Presence Testing for Obfuscated Java Binaries",
+          "doi": "10.1145/3744916.3787802",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "29f6bfa1-2a7a-4731-9896-16e6e6f1f8bf",
+          "title": "BFix: Automated Safe Memory-Leak Fixing for Binary Code",
+          "doi": "10.1145/3744916.3773234",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ddf52fbb-1895-4109-becb-5dd71d30cc4d",
+          "title": "Boosting Gas Revenues of Ethereum Miners",
+          "doi": "10.1145/3744916.3787770",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5d276233-c286-47b9-99f0-08f188bbe372",
+          "title": "Bounded Exhaustive Random Program Generation for Testing Solidity Compilers",
+          "doi": "10.1145/3744916.3773237",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "40a022a6-f5ff-48b8-b3d0-569e2ac09a86",
+          "title": "Breaking Single-Tester Limits: Multi-Agent LLMs for Multi-User Feature Testing",
+          "doi": "10.1145/3744916.3764535",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4cdd849d-c527-4941-8ec1-723821ca9566",
+          "title": "Breaking Strong Encapsulation: A Comprehensive Study of Java Module Abuse",
+          "doi": "10.1145/3744916.3764526",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b1291a90-a0e8-4091-ac22-9c67b7dc5dce",
+          "title": "Breaking the Alphabet: Rethinking File Ordering in Code Review",
+          "doi": "10.1145/3744916.3787838",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c92b834f-59c3-438c-b7df-137540a50c86",
+          "title": "BTreeFuzz: Enhanced Feedback Mechanism for ROS Program Fuzzer Based on Behavior Tree",
+          "doi": "10.1145/3744916.3773261",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a4f841cf-a2de-40c9-b7f1-15e30b4c0498",
+          "title": "Bytecode-centric Detection of Known-to-be-vulnerable Dependencies in Java Projects",
+          "doi": "10.1145/3744916.3773151",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "cac038b7-10c1-4635-87d8-b8fb6efc46e1",
+          "title": "Can SAT Solvers Keep Up With the Linux Kernel's Feature Model?",
+          "doi": "10.1145/3744916.3787823",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "25e04c86-150b-4564-8e25-3c309f54b247",
+          "title": "Causal or Correlational? A Cohort Study on the Effects of Code Smells on Class Change- and Fault-Proneness",
+          "doi": "10.1145/3744916.3787786",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "71441856-4452-44b9-b9f8-56116ba38790",
+          "title": "CCLInsight: Unveiling Insights in GPU Collective Communication Libraries via Primitive-Centric Analysis",
+          "doi": "10.1145/3744916.3773105",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a9543a9b-45cb-4cd9-880e-4b5036fca1d8",
+          "title": "Change And Cover: Last-Mile, Pull Request-Based Regression Test Augmentation",
+          "doi": "10.1145/3744916.3787768",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f14a2956-0460-4370-9c59-a2b5ab00ec2c",
+          "title": "Characterizing GPU-accelerated Web Applications in Browsers",
+          "doi": "10.1145/3744916.3787824",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b6d1a3d4-cc8c-4b06-a882-312a93231920",
+          "title": "Characterizing Regression Bug‑Inducing Changes and Improving LLM‑Based Regression Bug Detection",
+          "doi": "10.1145/3744916.3773182",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "73dd6e4d-c904-4b14-9710-8f8c8aa549c6",
+          "title": "Checking Unsupervised Learning for Nondeterminism and Inconsistency via SMT Solving",
+          "doi": "10.1145/3744916.3787844",
+          "decision": "boundary",
+          "reason": "SMT检查涉及验证，但需确认被验证的学习器是否为DNN。"
+        },
+        {
+          "source_id": "3f0f9e71-d6fb-473e-bba2-40e77ed41859",
+          "title": "Closing the Chain: How to reduce your risk of being SolarWinds, Log4j, or XZ Utils",
+          "doi": "10.1145/3744916.3773194",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ab7fda84-35ae-423b-9a53-b90479d65c5f",
+          "title": "Cobblestone: A Divide-and-Conquer Approach for Automating Formal Verification",
+          "doi": "10.1145/3744916.3773178",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6fc6d697-9aff-4456-9dec-3008b66e67d9",
+          "title": "CoBrA: Context-, Branch-sensitive Static Analysis for Detecting Taint-style Vulnerabilities in PHP Web Applications",
+          "doi": "10.1145/3744916.3773195",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4be66046-1b92-4be6-821c-905cc5e3dfd2",
+          "title": "CodeMapper: A Language-Agnostic Approach to Mapping Code Regions Across Commits",
+          "doi": "10.1145/3744916.3773267",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "50d8aaa4-b516-4349-ab5b-07c94c4bec0e",
+          "title": "Cognitive Biases in LLM-Assisted Software Development",
+          "doi": "10.1145/3744916.3773104",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c95969f6-653c-44b4-9ae5-16a09dd6f8f8",
+          "title": "CombCT: Compiler Testing via Combinatorial Testing",
+          "doi": "10.1145/3744916.3764548",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6a5ad965-e808-4d7f-a978-c069ed49b7f4",
+          "title": "Comfrey: Mitigating Integration Failures in LLM-enabled Software at Run-Time",
+          "doi": "10.1145/3744916.3787847",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "151b26f4-496c-4c4a-928b-791760ad95ac",
+          "title": "Configuration-Sensitive Linux Kernel Fuzzing",
+          "doi": "10.1145/3744916.3773136",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "44ea8460-6355-4db6-b5f4-6c7dbdd266dd",
+          "title": "ConfLogger: Enhance Systems' Configuration Diagnosability through Configuration Logging",
+          "doi": "10.1145/3744916.3764570",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "633e05d4-5e15-4a7c-b9a4-52844c402924",
+          "title": "ConfuGuard: Using Metadata to Detect Active and Stealthy Package Confusion Attacks Accurately and at Scale",
+          "doi": "10.1145/3744916.3773229",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b1ef22df-f50e-4cd2-bf3f-57c622d6168c",
+          "title": "Connected to Stay: Gender Homophily and Its Role in Open-Source Software Developer Retention",
+          "doi": "10.1145/3744916.3773181",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "be353e26-edf7-4696-a967-6c696af9d2cb",
+          "title": "Context-Free Grammar Inference for Complex Programming Languages in Black Box Settings",
+          "doi": "10.1145/3744916.3773147",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5c9296df-d7e1-44c9-8a0e-693d25c835a1",
+          "title": "Context-Free Property Oriented Fuzzing",
+          "doi": "10.1145/3744916.3773273",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "50c13174-4d21-44ac-b0c4-be8e3db0efea",
+          "title": "CoReX: Context-Aware Refinement-Based Slicing for Debugging Regression Failures",
+          "doi": "10.1145/3744916.3764577",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c2cf7556-7e19-40d0-a6dd-85e56b043458",
+          "title": "CREME: Robustness Enhancement of Code LLMs via Layer-Aware Model Editing",
+          "doi": "10.1145/3744916.3773111",
+          "decision": "candidate",
+          "reason": "题名明确通过模型编辑改善鲁棒性。"
+        },
+        {
+          "source_id": "2bec0c91-6422-4f1b-ad0b-db52bcf847d0",
+          "title": "CRUDinfer: Automated CRUD Semantics Inference for REST APIs Through Black-box Testing",
+          "doi": "10.1145/3744916.3787826",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "65aaea53-331d-499f-92ed-6fe649559cf4",
+          "title": "D-BUNDLR: Destructing JavaScript Bundles for Effective Static Analysis",
+          "doi": "10.1145/3744916.3764564",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d159816f-0078-4f9e-a2ca-1116ec61d767",
+          "title": "Debugging Performance Issues in WebAssembly Runtimes via Mutation-based Inference",
+          "doi": "10.1145/3744916.3773141",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d13f2db3-f683-4b4a-a9bf-658039119e68",
+          "title": "Decades of GNU Patch and Git Cherry-Pick: Can We Do Better?",
+          "doi": "10.1145/3744916.3764537",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "02216176-a55d-473e-9837-647ea5909d75",
+          "title": "Defects4REST: A Benchmark of Real-World Defects to Enable Controlled Testing and Debugging Studies for REST APIs",
+          "doi": "10.1145/3744916.3787787",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f4005691-2b1f-4ac7-9b7e-b4653513c1f1",
+          "title": "DeFT: Maintaining Determinism and Extracting Unit Tests for Autonomous Driving Planning",
+          "doi": "10.1145/3744916.3773252",
+          "decision": "boundary",
+          "reason": "需确认自动驾驶规划测试是否针对DNN组件。"
+        },
+        {
+          "source_id": "c503ac3e-ce2b-4623-a70c-908e2926bc17",
+          "title": "Demystifying the CVE Ecosystem: Community-Perceived Impacts and Problems",
+          "doi": "10.1145/3744916.3773241",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "696019f3-88ef-4fbd-80ef-51ccd534ddce",
+          "title": "Dependency-aware Residual Risk Analysis",
+          "doi": "10.1145/3744916.3773180",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5f73a33c-e327-441c-a9dd-776432d3733c",
+          "title": "Depradar: Agentic Coordination for Context-Aware Defect Impact Analysis in Deep Learning Libraries",
+          "doi": "10.1145/3744916.3787763",
+          "decision": "out_of_scope",
+          "reason": "深度学习库缺陷分析属于相邻实现方向，当前不自动纳入模型测试。"
+        },
+        {
+          "source_id": "519b7e86-1dd5-4d24-9590-fb77713b1067",
+          "title": "Designing Abandabot: When Does Open Source Dependency Abandonment Matter?",
+          "doi": "10.1145/3744916.3764519",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ae8fe307-1f6e-46e7-b3e4-c85bdd01b9e6",
+          "title": "Diffploit: Facilitating Cross-Version Exploit Migration for Open Source Library Vulnerabilities",
+          "doi": "10.1145/3744916.3773205",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "861f2b91-f056-48ac-9abc-8f29c1d01ad1",
+          "title": "Distance-Guided Search in Program Synthesis with Imperfect LLM Solutions",
+          "doi": "10.1145/3744916.3787779",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "47661b39-c761-4e41-b58e-f7926c9a9ff1",
+          "title": "DNN Modularization via Activation-Driven Training",
+          "doi": "10.1145/3744916.3773190",
+          "decision": "boundary",
+          "reason": "需区分模型修复与一般模型模块化、复用及训练。"
+        },
+        {
+          "source_id": "a97e870d-0f26-4752-a479-445235b3a669",
+          "title": "Do Unit Proofs Work? An Empirical Study of Compositional Bounded Model Checking for Memory Safety Verification",
+          "doi": "10.1145/3744916.3764525",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c28465ae-8e09-410e-9780-36dbd253dde1",
+          "title": "Dually Hierarchical Drift Adaptation for Online Configuration Performance Learning",
+          "doi": "10.1145/3744916.3764542",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bffbd011-50f0-4bd8-89c6-bfc71ac992f1",
+          "title": "DyMA-Fuzz: Dynamic Direct Memory Access Abstraction for Re-hosted Monolithic Firmware Fuzzing",
+          "doi": "10.1145/3744916.3787828",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "0be6c02f-f643-4cd5-b8b6-2eb9e1baa13a",
+          "title": "EchoFuzz: Empowering Smart Contract Fuzzing with Large Language Models",
+          "doi": "10.1145/3744916.3773166",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b7e9a305-99ed-4102-9032-8e8312657cd2",
+          "title": "Efficient Build Dependency Verification Using eBPF and Incremental Analysis",
+          "doi": "10.1145/3744916.3773204",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6b0d22ff-54ff-41c0-9332-41d6dbcd47fc",
+          "title": "Efficient Strong Updates For Path Sensitive Data Dependence Analysis",
+          "doi": "10.1145/3744916.3773183",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fd80219c-42ec-4bd0-860b-581366a3e3f5",
+          "title": "EmbedAgent: Benchmarking Large Language Models in Embedded System Development",
+          "doi": "10.1145/3744916.3787788",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "137ca41a-6975-49b6-80d1-674f244eafca",
+          "title": "EMC: A Semantic-Enhanced Malware Classification Method with Robustness and Scalability",
+          "doi": "10.1145/3744916.3773123",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b92c6b51-5357-4b2a-9b56-22b0724d2556",
+          "title": "Enabling Global, Human-Centered Explanations for LLMs: From Tokens to Interpretable Code and Test Generation",
+          "doi": "10.1145/3744916.3787764",
+          "decision": "boundary",
+          "reason": "需确认测试生成的被测对象是模型还是普通软件。"
+        },
+        {
+          "source_id": "a2789214-281c-4edc-baa1-41eb1ff4f108",
+          "title": "End-to-End Model Generation with Large Language Models for Adaptive IoT Application Deployment",
+          "doi": "10.1145/3744916.3787771",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4f660b8f-ae62-4501-b5c6-b633d1e76b1f",
+          "title": "Energy-Efficient Software Development: A Multi-dimensional Empirical Analysis of Stack Overflow",
+          "doi": "10.1145/3744916.3773177",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8410ede7-1063-4d80-a0f0-d62644c9aec3",
+          "title": "Enforcing Control Flow Integrity on DeFi Smart Contracts",
+          "doi": "10.1145/3744916.3773266",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ec43a996-6785-4654-b53a-0844b57569a1",
+          "title": "Enhancing Issue Localization Agent with Tool-Interactive Training",
+          "doi": "10.1145/3744916.3773137",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3ba49a21-72d3-4607-b242-3479eaec0866",
+          "title": "Enhancing LLM Code Generation with Ensembles: A Similarity-Based Selection Approach",
+          "doi": "10.1145/3744916.3773143",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bfa8b459-2043-463a-9798-6560739a8679",
+          "title": "Enhancing Symbolic Execution with Self-Configuring Parameters",
+          "doi": "10.1145/3744916.3773264",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c45f3368-29b3-43a4-8aaa-d415ff484161",
+          "title": "Environment-Aware Code Generation: How far are We?",
+          "doi": "10.1145/3744916.3787784",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "031ce758-7578-4572-8255-973201bd5be6",
+          "title": "E-Test: E'er-Improving Test Suites",
+          "doi": "10.1145/3744916.3773126",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fee502f5-b4bd-44e0-afd2-1fc544553e98",
+          "title": "Evaluating and Improving Automated Repository-Level Rust Issue Resolution with LLM-based Agents",
+          "doi": "10.1145/3744916.3773108",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "cff26cf6-e13c-454d-957a-ea264c5ce760",
+          "title": "Evaluating Generated Commit Messages with Large Language Models",
+          "doi": "10.1145/3744916.3764569",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ae7a4563-3f39-4a8c-ab75-d39ecc1a9f4d",
+          "title": "Evaluating the effectiveness of LLM-based interoperability",
+          "doi": "10.1145/3744916.3773251",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "13f78f5a-b815-462e-bdd7-43fa0c401ec7",
+          "title": "Evolving Trends, Patterns, and Hidden Pitfalls: Unveiling JavaScript Feature Usage in the Wild",
+          "doi": "10.1145/3744916.3764521",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "446bd896-fe39-438b-b88c-113ffa9f5271",
+          "title": "Evolving with AI: A Longitudinal Analysis of Developer Logs",
+          "doi": "10.1145/3744916.3787811",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "e45542b1-0776-4927-8b80-29cfb0ee98e1",
+          "title": "Exploring and Improving Real-World Vulnerability Data Generation via Prompting Large Language Models",
+          "doi": "10.1145/3744916.3773176",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b5c0652b-ea41-4789-be70-a593e8e42c37",
+          "title": "Fairness Is Not Just Ethical: Performance Trade-Off via Data Correlation Tuning to Mitigate Bias in ML Software",
+          "doi": "10.1145/3744916.3787794",
+          "decision": "boundary",
+          "reason": "需确认模型类型及公平性缓解是否构成模型修复。"
+        },
+        {
+          "source_id": "92b30a13-a58b-4c76-a246-8a29cb625cf6",
+          "title": "Fast Flow-Sensitive C Program Partitioning via Iterative Value-Flow Refinement",
+          "doi": "10.1145/3744916.3787840",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d6486e5a-6456-4ba4-80b1-0d0f7bcb7f47",
+          "title": "Filtering before Tuning: Robust Fine-Tuning of Large Code Models under Noisy Labels",
+          "doi": "10.1145/3744916.3787785",
+          "decision": "boundary",
+          "reason": "需区分针对模型缺陷的修复与一般鲁棒训练。"
+        },
+        {
+          "source_id": "0137abcb-f5c4-418d-a10d-6f02d1325095",
+          "title": "Fine-Grained Analyses for Evolution-Aware Runtime Verification",
+          "doi": "10.1145/3744916.3787833",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c3e508cf-7e03-4e4c-8dd9-693d571fff1e",
+          "title": "FlipFlop: A Static Analysis-based Energy Optimization Framework for GPU Kernels",
+          "doi": "10.1145/3744916.3787793",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "13580329-45c5-483a-a25b-6c4ec4b160c4",
+          "title": "FlowScope: Non-Intrusive Distributed Tracing with Method-Level Delay Estimation for Microservices Troubleshooting",
+          "doi": "10.1145/3744916.3764518",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "34768a8b-7bb9-40f8-9466-c0361a941669",
+          "title": "FM4MC: Improving Feature Models for Microservice Chains—Towards More Efficient Configuration and Validation",
+          "doi": "10.1145/3744916.3764544",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f73e137a-a17b-4572-ad25-0e64d7dfc6fe",
+          "title": "FORGE: An LLM-driven Framework for Large-Scale Smart Contract Vulnerability Dataset Construction",
+          "doi": "10.1145/3744916.3764529",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "11c1b6b8-717b-4808-8fbc-65053a690445",
+          "title": "FoundRoot: Towards Foundation Model for Root Cause Analysis via Structured Deep Thinking",
+          "doi": "10.1145/3744916.3787814",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5015e248-d9f2-4b43-938a-0a8a2518518b",
+          "title": "FrameShift: Resizing Fuzzer Inputs Without Breaking Them",
+          "doi": "10.1145/3744916.3787765",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9e919a21-3735-40b6-bf3e-7cb93c9840c2",
+          "title": "FreshBrew: A Benchmark for Evaluating AI Agents on Java Code Migration",
+          "doi": "10.1145/3744916.3773214",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6c1d2289-3703-4191-9d0d-f4c5c53769a3",
+          "title": "From Code Changes to Quality Gains: An Empirical Study in Python ML Systems with PyQu",
+          "doi": "10.1145/3744916.3773258",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "aa41ec53-36fb-4777-a0ef-e9b308559c4b",
+          "title": "From Code to Correctness: Closing the Last Mile of Code Generation with Hierarchical Debugging",
+          "doi": "10.1145/3744916.3773255",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "849bf7fd-362a-4ae8-833a-e8683bd21ee8",
+          "title": "From Seed to Scope: Reasoning to Identify Change Impact Sets",
+          "doi": "10.1145/3744916.3773265",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c27af6e4-6751-4800-ba47-880a22e33fca",
+          "title": "Fuzzing Java Optimizing Compilers with Complex Inter-Class Structures Guided by Heterogeneous Program Graphs",
+          "doi": "10.1145/3744916.3773212",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9cda1796-1522-4c45-9605-09ecbedc2363",
+          "title": "Fuzzing JavaScript Engines by Fusing JavaScript and WebAssembly",
+          "doi": "10.1145/3744916.3764551",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "29b0a81e-980c-45f1-92d1-dc6b295a1326",
+          "title": "\"Game Changer\" or \"Overenthusiastic Drunk Acquaintance\"? Generative AI Use by Blind and Low Vision Software Professionals in the Workplace",
+          "doi": "10.1145/3744916.3773172",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "29613e2f-5ae0-4a99-ac96-3bf4d23cb3c5",
+          "title": "GenDetect: Generalizing Reactive Detection for Resilience Against Imitative DeFi Attack Cascade",
+          "doi": "10.1145/3744916.3787799",
+          "program_doi_url": "https://doi.org/10.1145/3744916.3787799.",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9b06a98c-7195-4bc2-b1da-fe0462b68289",
+          "title": "Generating Energy-Efficient Code via Large-Language Models - Where are we now?",
+          "doi": "10.1145/3744916.3764522",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b69d0a6f-3db8-494c-ba05-b3ccb53881c5",
+          "title": "Generator Solving for Symbolic Execution",
+          "doi": "10.1145/3744916.3764561",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fe0c3857-48dc-4426-9527-6112c1f5e0b0",
+          "title": "GPTrace: Effective Crash Deduplication Using LLM Embeddings",
+          "doi": "10.1145/3744916.3773161",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "cc30c15b-2ca7-4156-99a8-9b56be963528",
+          "title": "Hallucinating Certificates: Differential Testing of TLS Certificate Validation Using Generative Language Models",
+          "doi": "10.1145/3744916.3773203",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8f26c913-0823-4a10-8eea-198634d2eee6",
+          "title": "HarnessLLM: Rust Verification Harness Generation with Large Language Models",
+          "doi": "10.1145/3744916.3773122",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "132552a3-84ed-4589-8ddd-32d6f488fa6e",
+          "title": "Heterogeneous Prompting and Execution Feedback for SWE Issue Test Generation and Selection",
+          "doi": "10.1145/3744916.3787837",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4052e80f-8085-4e1e-ac3a-f5711c3aa7fc",
+          "title": "Hey, ChatGPT, Look at My Work: Using Conversational AI in Requirements Engineering Education",
+          "doi": "10.1145/3744916.3773112",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1cee4580-28bf-446c-8410-494caee2b762",
+          "title": "HistoryFinder: Advancing Method-Level Source Code History Generation with Accurate Oracles and Enhanced Algorithm",
+          "doi": "10.1145/3744916.3773238",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5b8e13be-8732-42de-b600-0dd2e4465717",
+          "title": "HoarePrompt: Structural Reasoning About Program Correctness in Natural Language",
+          "doi": "10.1145/3744916.3773206",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9b53de83-8ef0-4b9b-a986-92f237faf4ca",
+          "title": "How Does Core Contributor Disengagement Impact Open Source Project Activity? A Quasi-Experiment",
+          "doi": "10.1145/3744916.3773135",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f0c53d33-4203-4b00-954e-f5cfa939503c",
+          "title": "How Do Semantically Equivalent Code Transformations Impact Membership Inference on LLMs for Code?",
+          "doi": "10.1145/3744916.3787843",
+          "decision": "boundary",
+          "reason": "需区分DNN测试方法与独立的成员推断攻击研究。"
+        },
+        {
+          "source_id": "dd1c6f6d-3559-40d7-811d-fae71e9f7c9b",
+          "title": "How Good are Input Grammar Miners? An Empirical Study",
+          "doi": "10.1145/3744916.3773156",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fd50692e-5f46-4da7-b0fc-52812ccb1b7b",
+          "title": "Hybrid Fault-Driven Mutation Testing for Python",
+          "doi": "10.1145/3744916.3787804",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b512b32e-a719-48a2-bb90-f0c38a9cac81",
+          "title": "Imitation Game: Reproducing Deep Learning Bugs Leveraging an Intelligent Agent",
+          "doi": "10.1145/3744916.3787795",
+          "decision": "out_of_scope",
+          "reason": "深度学习程序缺陷复现属于相邻实现方向，不自动归模型测试。"
+        },
+        {
+          "source_id": "ba132704-c687-4a65-8a49-0fd1646f8cbb",
+          "title": "Improving Code Generation via Small Language Model-as-a-judge",
+          "doi": "10.1145/3744916.3787822",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bccdbf9e-0eef-4270-b3f2-dc7a23f48e86",
+          "title": "“I need to learn better searching tactics for privacy policy laws.” Investigating Software Developers’ Behavior When Using Sources on Privacy Issues",
+          "doi": "10.1145/3744916.3773150",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "14d6d83b-5066-44dc-8942-bc6c902c8bcf",
+          "title": "InferLog: Accelerating LLM Inference for Online Log Parsing via ICL-oriented Prefix Caching",
+          "doi": "10.1145/3744916.3764523",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9d3f369e-36b9-4998-88bf-89b04f1944aa",
+          "title": "Input Reduction Enhanced LLM-based Program Repair",
+          "doi": "10.1145/3744916.3787760",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a9592c7d-40bd-4686-910c-1e524fbbc1c5",
+          "title": "Insecure Ingredients? Exploring Dependency Update Patterns of Bundled JavaScript Packages on the Web",
+          "doi": "10.1145/3744916.3787780",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1b8359f5-f2ec-478f-b0f9-e3078a35b3ae",
+          "title": "Inside Out: Uncovering How Comment Internalization Steers LLMs for Better or Worse",
+          "doi": "10.1145/3744916.3787776",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "82fe3789-f74c-4b0c-8a8f-4f0a86a9f010",
+          "title": "IntelliRadar: A Comprehensive Platform to Pinpoint Malicious Packages from Cyber Intelligence",
+          "doi": "10.1145/3744916.3773113",
+          "program_title": "IntelliRadar: A Comprehensive Platform to Pinpoint Malicious Package Information from Cyber Intelligence",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3bf1693f-15c1-4c0a-859a-a6c788876983",
+          "title": "INTENTFIX: Automated Logic Vulnerability Repair via LLM-Driven Intent Modeling",
+          "doi": "10.1145/3744916.3773260",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "912a2d79-e59d-43de-99b2-67d5042df6aa",
+          "title": "Is Call Graph Pruning Really Effective? An Empirical Re-evaluation",
+          "doi": "10.1145/3744916.3773247",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "e070aaa0-58fd-410d-a84b-1f3c69678986",
+          "title": "Is My RPC Response Reliable? Detecting RPC Bugs in Blockchain Client under Context",
+          "doi": "10.1145/3744916.3773103",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8d34f29d-9ec6-4234-8679-8f0ec7abb99d",
+          "title": "Issue2Test: Generating Reproducing Test Cases from Issue Reports",
+          "doi": "10.1145/3744916.3773129",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "be4c30e9-b2e5-44ac-8077-c553d0efdb3b",
+          "title": "JEDI: Java Evaluation of Declarative and Imperative Queries - Benchmarking the Java Stream API",
+          "doi": "10.1145/3744916.3773165",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "65e92f79-a428-49e1-8e37-acf4cb8eb4c8",
+          "title": "Knowledge-Augmented Log Anomaly Detection with Large Language Models",
+          "doi": "10.1145/3744916.3773248",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a62ebf23-2794-4f69-8312-febad4f3041b",
+          "title": "Knowledge Matters: Injecting Project and Testing Knowledge into LLM-based Unit Test Generation",
+          "doi": "10.1145/3744916.3787769",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "63b76d85-9251-464e-8fae-8cd995c94259",
+          "title": "Large Language Model-Aided Partial Program Dependence Analysis",
+          "doi": "10.1145/3744916.3773119",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a1d8ebb9-4234-46b5-afd4-83733817fd8e",
+          "title": "Learning From Software Failures: A Case Study at a National Space Research Center",
+          "doi": "10.1145/3744916.3773149",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8d133be6-9657-4e5c-ba76-99c992d42ff6",
+          "title": "Learning without Forgetting: Towards Continual learning of Fault Localization Models in Industrial Software Systems",
+          "doi": "10.1145/3744916.3787809",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f37b9811-9ad0-4e32-b5a7-8cfa00f3434a",
+          "title": "Let the Trial Begin: A Mock-Court Approach to Vulnerability Detection using LLM-Based Agents",
+          "doi": "10.1145/3744916.3773256",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "2956f2de-dab1-4bd0-afec-e3b731684328",
+          "title": "Light over Heavy: Automated Performance Requirements Quantification with Linguistic Inducement",
+          "doi": "10.1145/3744916.3773107",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "034793fc-33d7-447a-b823-122a7150d75b",
+          "title": "LikeThis! Empowering App Users to Submit UI Improvement Suggestions Instead of Complaints",
+          "doi": "10.1145/3744916.3787834",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "770b0323-b408-41fd-b3a9-77c245bfa05a",
+          "title": "LLM4JMH: Studying the Use of LLMs for Generating Java Performance Microbenchmarks",
+          "doi": "10.1145/3744916.3787777",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f0c97865-3cec-4db9-8c3d-833fe1059c82",
+          "title": "LLM4Perf: Large Language Models Are Effective Samplers for Multi-Objective Performance Modeling",
+          "doi": "10.1145/3744916.3787774",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "beeaa93b-e892-46f5-bbb8-2c29db0fa49a",
+          "title": "LLM-based Agents for Automated Bug Fixing: How Far Are We?",
+          "doi": "10.1145/3744916.3773269",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a4cceb3f-a9a3-44e3-96e2-4c64e566c6c7",
+          "title": "LLM-based API Argument Completion with Knowledge-Augmented Prompts",
+          "doi": "10.1145/3744916.3773158",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "aa1d373f-0c96-4d96-a88f-2c6da4fcb107",
+          "title": "LLM-based Vulnerability Discovery through the Lens of Code Metrics",
+          "doi": "10.1145/3744916.3764574",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f254852a-33ec-4a5e-bb50-7817205a1902",
+          "title": "LLM Test Generation via Iterative Hybrid Program Analysis",
+          "doi": "10.1145/3744916.3764553",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ceee9011-9ed8-4165-9d1d-5be9fdc893a8",
+          "title": "LogFold: Compressing Logs with Structured Tokens and Hybrid Encoding",
+          "doi": "10.1145/3744916.3787801",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "707e5b13-8bc6-4019-86f5-845551be6045",
+          "title": "LoopSCC: Summarizing Complex Multi-branch Nested Loops via Periodic Oscillation Interval",
+          "doi": "10.1145/3744916.3773169",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f286a9d5-4ee0-4022-a9bc-b26c03012ad2",
+          "title": "LSPRAG: LSP-Guided RAG for Language-Agnostic Real-Time Unit Test Generation",
+          "doi": "10.1145/3744916.3773189",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fd0112b4-f909-4f1a-b17a-5167c4b5b164",
+          "title": "MaCTG: Multi-Agent Collaborative Thought Graph for Automatic Programming",
+          "doi": "10.1145/3744916.3773221",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "85efce6b-334a-40ef-8292-df4dbfa0b4bd",
+          "title": "\"Making Our Life Less Monotonous\" or \"Just Tick Things Off\": An Exploratory Multi-Method Study of Toil",
+          "doi": "10.1145/3744916.3764540",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ecfe8648-a164-4d25-b6bd-25cb8d7a1555",
+          "title": "\"Maybe We Need Some More Examples:\" Individual and Team Drivers of Developer GenAI Tool Use",
+          "doi": "10.1145/3744916.3773155",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "60e1a0ff-6bb3-42ec-9474-3993c0dc2b02",
+          "title": "MazeBreaker: Multi-Agent Reinforcement Learning for Dynamic Jailbreaking of LLM Security Defenses",
+          "doi": "10.1145/3744916.3764558",
+          "decision": "out_of_scope",
+          "reason": "独立越狱攻击研究不自动归入当前测试、形式化验证与修复范围。"
+        },
+        {
+          "source_id": "d6b73f56-eca2-476d-b957-505c111a1b35",
+          "title": "Measuring the Influence of Incorrect Code on Test Generation",
+          "doi": "10.1145/3744916.3764532",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "459eba9f-43b2-4f93-8252-2c331dc7367f",
+          "title": "Memory-Efficient Large Language Models for Program Repair with Semantic-Guided Patch Generation",
+          "doi": "10.1145/3744916.3773240",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a9e484ce-daeb-44cf-b08a-76c7fe89a487",
+          "title": "Metamorphic Fuzzing for Multi-Agent Path Finding Algorithms",
+          "doi": "10.1145/3744916.3787841",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9505e0c9-5b2b-47c8-9892-ba9b693fe957",
+          "title": "META²V2V: Revealing Behavioural Deviations under Mutual Perception in Multi-Vehicle Autonomous Driving",
+          "doi": "10.1145/3744916.3787808",
+          "decision": "candidate",
+          "reason": "自动驾驶行为偏差测试可能相关，需确认DNN被测对象。"
+        },
+        {
+          "source_id": "ebc776dd-7a00-4e28-a5ef-4f9d6ee7e010",
+          "title": "Metronome: Differentiated Delay Scheduling for Serverless Functions",
+          "doi": "10.1145/3744916.3773239",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a6f57e2f-422e-4bd2-8204-23f4ecf83d8c",
+          "title": "MINES: Explainable Anomaly Detection through Web API Invariant Inference",
+          "doi": "10.1145/3744916.3773160",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "686ab1a6-56a4-41c5-b56a-9578a2221603",
+          "title": "Minimizing Breaking Changes and Redundancy in Mitigating Technical Lag for Java Projects",
+          "doi": "10.1145/3744916.3773233",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "2a81cf3b-1610-405e-821f-acd01c369209",
+          "title": "MioHint: LLM-Assisted Request Mutation for Whitebox REST API Testing",
+          "doi": "10.1145/3744916.3773228",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "aa250ee5-8791-44c3-b1a0-74e9502a9383",
+          "title": "Misbehavior Forecasting for Focused Autonomous Driving Systems Testing",
+          "doi": "10.1145/3744916.3787829",
+          "decision": "candidate",
+          "reason": "自动驾驶测试预测或选择可能相关，需确认DNN被测对象。"
+        },
+        {
+          "source_id": "39462670-c8ed-4ae1-b518-44ca269a4e80",
+          "title": "Modeling Like Peeling an Onion: Layerwise Analysis-Driven Automatic Behavioral Model Generation",
+          "doi": "10.1145/3744916.3787806",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "eaa67190-c6ee-4aa1-9293-36dbd4a1b85b",
+          "title": "ModularEvo: Evolving Multi-Task Models via Neural Network Modularization and Composition",
+          "doi": "10.1145/3744916.3773134",
+          "decision": "boundary",
+          "reason": "需区分模型修复与一般模块化、模型组合。"
+        },
+        {
+          "source_id": "1a5ab5e1-bb15-4512-aed5-93b59393220e",
+          "title": "More with Less: An Empirical Study of Turn-Control Strategies for Efficient Coding Agents",
+          "doi": "10.1145/3744916.3773250",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d679fff6-741d-4271-8dbd-12bbbc971b1e",
+          "title": "Multi-Location Software Model Completion",
+          "doi": "10.1145/3744916.3787798",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f4dc6071-ec91-4192-b787-89d177ad976a",
+          "title": "MutDafny: A Mutation-Based Approach to Assess Dafny Specifications",
+          "doi": "10.1145/3744916.3787816",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3992898b-a090-4e28-835f-3be784ad4275",
+          "title": "NB2P: Generating Data Science Pipelines from Computational Notebooks",
+          "doi": "10.1145/3744916.3773200",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d23615ec-2af5-4867-a0f2-f924acce7a0a",
+          "title": "No Shot in the Dark: Efficient Context-Free Language Reachability via Context-Aware Tabulation",
+          "doi": "10.1145/3744916.3773222",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "19143bda-e27e-413d-bb67-85c174632b09",
+          "title": "NotDec: WebAssembly Decompilation With Inter-Procedural Type Recovery",
+          "doi": "10.1145/3744916.3787762",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b8eb3900-eec0-49a3-be73-16817b9d5544",
+          "title": "OctopusGuard: K-Line Enhanced Token Scam Detector Powered by Multimodal LLMs",
+          "doi": "10.1145/3744916.3787845",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "45eda9df-6418-47c0-8b40-9899705fd63c",
+          "title": "One Signature, Multiple Payments: Demystifying and Detecting Signature Replay Vulnerabilities in Smart Contracts",
+          "doi": "10.1145/3744916.3773198",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "045f9966-cdbb-4d7a-87d5-1197fc61560c",
+          "title": "One Size Does Fit All: Kernel-Assisted Fine-Grained Debloating and Layout Randomization for Shared Libraries",
+          "doi": "10.1145/3744916.3773152",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "83f93199-bf93-44d7-a9f1-ae8931f651c8",
+          "title": "On Interaction Effects in Greybox Fuzzing",
+          "doi": "10.1145/3744916.3773128",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9bf1329c-a3ec-499c-bfd7-b9fcc9d71f2e",
+          "title": "Online and Interactive Bayesian Inference Debugging",
+          "doi": "10.1145/3744916.3773215",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "feb1e4f3-e26e-45a7-bf07-b61c0023252d",
+          "title": "On LLMs’ Internal Representation of Code Correctness",
+          "doi": "10.1145/3744916.3787846",
+          "decision": "boundary",
+          "reason": "需确认是否提供模型测试贡献，而非仅研究内部表征。"
+        },
+        {
+          "source_id": "b4d456bf-1f1c-4da6-bf5b-ebd4a1a76bfc",
+          "title": "On the Robustness of Fairness Practices: A Causal Framework for Systematic Evaluation",
+          "doi": "10.1145/3744916.3773175",
+          "decision": "boundary",
+          "reason": "需确认DNN适用性，以及与公平性测试、修复的关系。"
+        },
+        {
+          "source_id": "660462e0-ff5e-4662-839f-54b144cd0e9c",
+          "title": "Optimization-Aware Test Generation for Deep Learning Compilers",
+          "doi": "10.1145/3744916.3773216",
+          "decision": "out_of_scope",
+          "reason": "深度学习编译器测试保持为相邻方向。"
+        },
+        {
+          "source_id": "2b3fa853-4736-4395-828e-d44a70f4a183",
+          "title": "Order Matters! An Empirical Study on Large Language Models' Input Order Bias in Software Fault Localization",
+          "doi": "10.1145/3744916.3764524",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "78fb8f9b-7a90-4d18-9d0b-d7fd1e7db460",
+          "title": "Out of Distribution, Out of Luck: How Well Can LLMs Trained on Vulnerability Datasets Detect Top 25 CWE Weaknesses?",
+          "doi": "10.1145/3744916.3787830",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "918900df-732d-471c-86b6-fcbe349ef958",
+          "title": "Panoptes: A Profile Clustering Framework for Context-Aware Binary Optimization",
+          "doi": "10.1145/3744916.3787767",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "350dc6b9-958b-4480-b278-e891600055da",
+          "title": "Parse this! Summoning Context-Sensitive Inputs with Goblin",
+          "doi": "10.1145/3744916.3773270",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "01b13b19-bf51-4ce7-8738-7728e943096d",
+          "title": "Perspective-Taking in Software Engineering: A Study on its Relationship to Team Performance",
+          "doi": "10.1145/3744916.3773196",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "431292de-06e5-400d-a90b-ab9f72676718",
+          "title": "Portable Power Modeling with Transfer Learning on JVM-Based Applications",
+          "doi": "10.1145/3744916.3764567",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d49b0253-869b-4e62-81fb-d46946379ae1",
+          "title": "Practitioner Views on Mobile App Accessibility: Practices and Challenges",
+          "doi": "10.1145/3744916.3787791",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "21880790-bf87-4a5a-91c6-cf6dc819149a",
+          "title": "Precise Static Identification of Ethereum Storage Variables",
+          "doi": "10.1145/3744916.3773121",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "050374a4-7122-4361-a648-f36e7c552441",
+          "title": "PredicateFix: Repairing Static Analysis Alerts with Bridging Predicates",
+          "doi": "10.1145/3744916.3773159",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3303abe8-4937-48ce-9560-695879b1ef0a",
+          "title": "Predicting Failures in Smart Human-Centric EcoSystems",
+          "doi": "10.1145/3744916.3764539",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "7f7b110d-5aab-4d18-b370-c6d7e824a9d1",
+          "title": "PreServe: Intelligent Management for LMaaS Systems via Hierarchical Prediction",
+          "doi": "10.1145/3744916.3773173",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "aabe162e-c4bb-47bd-b90b-ec9cb2d6eccf",
+          "title": "Project-Level Resource Leak Detection through Agent-based Ownership Analysis and Repair Pattern Verification",
+          "doi": "10.1145/3744916.3773243",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1e80e13c-4e21-4985-bd3b-bdbe1733bf49",
+          "title": "PromiseTune: Unveiling Causally Promising and Explainable Configuration Tuning",
+          "doi": "10.1145/3744916.3764552",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a10ae980-4667-4403-9832-8fdc47d41482",
+          "title": "ProofCoop: Collaborative Automated Formal Verification",
+          "doi": "10.1145/3744916.3787783",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3017a37f-db54-4591-afe6-657fa394a710",
+          "title": "ProxyWar: Dynamic Assessment of LLM Code Generation in Game Arenas",
+          "doi": "10.1145/3744916.3773220",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "da59e91f-8a46-4293-90fc-26fda3ca638e",
+          "title": "PTV: Scalable Version Detection of Web Libraries and its Security Application",
+          "doi": "10.1145/3744916.3773146",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "00c491a7-b7fb-4783-b4a4-0cc2b7ed566f",
+          "title": "PyXray: Practical Cross-Language Call Graph Construction through Object Layout Analysis",
+          "doi": "10.1145/3744916.3764555",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "66d3d30a-4c90-45ac-bf78-209e0d2ed15f",
+          "title": "Quantifying Memorization Advantage in Code LLMs",
+          "doi": "10.1145/3744916.3764554",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b3d13509-2b92-4cbb-981f-0afcb99cd909",
+          "title": "RBCTest: Leveraging LLMs to Mine and Verify Oracles of API Response Bodies for RESTful API Testing",
+          "doi": "10.1145/3744916.3787775",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fc492e2a-84dd-47fe-ac50-3a505d44f59d",
+          "title": "RealityCraft: Automated Synthesis of Extended Reality Device Interaction Scripts from Natural Language Instructions",
+          "doi": "10.1145/3744916.3764549",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c3506e64-0887-4692-8460-98aed760a65a",
+          "title": "RefAgent: A Multi-agent LLM-based Framework for Automatic Software Refactoring",
+          "doi": "10.1145/3744916.3773153",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "e27ce9f6-bac5-4ba7-ac06-5cea632737cf",
+          "title": "Reflections on the Reproducibility of Commercial LLM Performance in Empirical Software Engineering Studies",
+          "doi": "10.1145/3744916.3773207",
+          "decision": "boundary",
+          "reason": "需区分DNN测试可复现性研究与一般实证软工方法论。"
+        },
+        {
+          "source_id": "e914a618-0e7e-4dac-91c5-8d970117dc5c",
+          "title": "Remediating Superfluous Re-Rendering in React Applications",
+          "doi": "10.1145/3744916.3773235",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "09d253a5-b2eb-42d2-a1f2-cc99a72a4153",
+          "title": "Repairing LLM Executions for Secure Automatic Programming",
+          "doi": "10.1145/3744916.3773210",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a2ca8b54-6bfb-49ec-ad33-25591fcabf7b",
+          "title": "Repair Ingredients Are All You Need: Improving Large Language Model-Based Program Repair via Repair Ingredients Search",
+          "doi": "10.1145/3744916.3764534",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5917e835-2582-495d-8d09-2c64a86c15b1",
+          "title": "RepoScope: Leveraging Call Chain-Aware Multi-View Context for Repository-Level Code Generation",
+          "doi": "10.1145/3744916.3773211",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a1b6db11-b088-4ed7-8606-22ed08ac2d00",
+          "title": "Rethinking the Capability of Fine-Tuned Language Models for Automated Vulnerability Repair",
+          "doi": "10.1145/3744916.3773167",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "7c019e71-14c9-4a78-b7d3-6d8e1b66854b",
+          "title": "Rethinking the Evaluation of Secure Code Generation",
+          "doi": "10.1145/3744916.3773217",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "10da7a5d-b106-4404-9dce-b87dd7bc969d",
+          "title": "Retrieval-Augmented Test Generation: How Far Are We?",
+          "doi": "10.1145/3744916.3773163",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3b6fcae3-e994-47aa-80cc-bab4e8c61789",
+          "title": "Revisiting \"Revisiting Neuron Coverage for DNN Testing: A Layer-Wise and Distribution-Aware Criterion\": A Critical Review and Implications on DNN Coverage Testing",
+          "doi": "10.1145/3744916.3773148",
+          "decision": "candidate",
+          "reason": "直接评估DNN覆盖准则，留待摘要筛选。"
+        },
+        {
+          "source_id": "277296c7-bbd2-434e-beff-aee5e2bd8c98",
+          "title": "RISE: Rule-Driven SQL Dialect Translation via Query Reduction",
+          "doi": "10.1145/3744916.3773257",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "571cbc18-eb35-4a0c-a95d-a8992eb5638b",
+          "title": "RulePilot: An LLM-Powered Agent for Security Rule Generation",
+          "doi": "10.1145/3744916.3773249",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bbea2682-251a-4054-be73-e109b5044bfd",
+          "title": "Rusted Types: Static Detection of Rust Type Confusion Bugs",
+          "doi": "10.1145/3744916.3764571",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8f1c68d8-d361-479a-8b86-78cf9b940ad4",
+          "title": "RusyFuzz: Unhandled Exception Guided Fuzzing for Rust OS Kernel",
+          "doi": "10.1145/3744916.3773138",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5b127bb3-3aa0-4f25-ad80-1cf446c167da",
+          "title": "SAFE: Harnessing LLM for Scenario-Driven ADS Testing from Multimodal Crash Data",
+          "doi": "10.1145/3744916.3773232",
+          "decision": "candidate",
+          "reason": "场景驱动自动驾驶测试可能相关，需确认DNN被测对象。"
+        },
+        {
+          "source_id": "b2656c63-9e52-4b30-953d-f91b6e6af6f3",
+          "title": "SAINT: Service-level Integration Test Generation with Program Analysis and LLM-based Agents",
+          "doi": "10.1145/3744916.3773185",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d18dee3a-bd1b-403e-8b1f-52e0cabec5b7",
+          "title": "Same Same But Different: Preventing Refactoring Attacks on Software Plagiarism Detection",
+          "doi": "10.1145/3744916.3773225",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9e6c664c-b90d-487e-ac6f-98a998138246",
+          "title": "Sapling: Quantifying and Measuring the Maturity of the RISC-V Software Ecosystem",
+          "doi": "10.1145/3744916.3773168",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9851cc89-4a45-4d3b-9eb0-9b0384c43762",
+          "title": "Scaling Security Testing by Addressing the Reachability Gap",
+          "doi": "10.1145/3744916.3773116",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a52c64a8-9709-4780-a3cd-d7295a8423be",
+          "title": "Scalpel: Automotive Deep Learning Framework Testing via Assembling Model Components",
+          "doi": "10.1145/3744916.3773242",
+          "decision": "out_of_scope",
+          "reason": "深度学习框架实现测试保持为相邻方向。"
+        },
+        {
+          "source_id": "c9da49e5-e308-4d97-9d93-339a9ae96464",
+          "title": "Scrub It Out! Erasing Sensitive Memorization in Code Language Models via Machine Unlearning",
+          "doi": "10.1145/3744916.3764573",
+          "decision": "boundary",
+          "reason": "需判断机器遗忘是否构成本库口径下的针对性模型修复。"
+        },
+        {
+          "source_id": "da77c2fa-8ecd-4783-880b-75828c4cdf5b",
+          "title": "SEAlign: Alignment Training for Software Engineering Agent",
+          "doi": "10.1145/3744916.3764563",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bb637d08-3254-460d-b5ed-4042d9f45c4e",
+          "title": "SecureReviewer: Enhancing Large Language Models for Secure Code Review through Secure-Aware Fine-Tuning",
+          "doi": "10.1145/3744916.3773191",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "2a64f05b-a76a-4d24-8342-fea4eccedab8",
+          "title": "Securing the AI Supply Chain: What Can We Learn From Developer-Reported Security Issues and Solutions of AI Projects?",
+          "doi": "10.1145/3744916.3787796",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1e0b18b0-e544-4025-861c-53fa56169820",
+          "title": "SEER: Enhancing Chain-of-Thought Code Generation through Self-Exploring Deep Reasoning",
+          "doi": "10.1145/3744916.3773197",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3517d2e5-108f-4c04-8ded-0de5e316a0c0",
+          "title": "Semantic-Enhanced Automatic Refinement of Architecture Recovery Results Using LLMs",
+          "doi": "10.1145/3744916.3773114",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "05c47aca-34d0-4e27-bb54-32ddbf9141af",
+          "title": "SeRe: A Security-Related Code Review Dataset Aligned with Real-World Review Activities",
+          "doi": "10.1145/3744916.3764557",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f72b595d-1ab3-4df6-87ec-6eaba67e9468",
+          "title": "Six Million (Suspected) Fake Stars on GitHub: A Growing Spiral of Popularity Contests, Spams, and Malware",
+          "doi": "10.1145/3744916.3764531",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a12815d9-e871-43f4-a682-09d8cd33223a",
+          "title": "Small Changes, Big Trouble: Demystifying and Parsing License Variants for Incompatibility Detection in the PyPI Ecosystem",
+          "doi": "10.1145/3744916.3773157",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ecec2e42-d09f-4336-813b-d0ef03b18e05",
+          "title": "SmartC2Rust: Iterative, Feedback-Driven C-to-Rust Translation via Large Language Models for Safety and Equivalence",
+          "doi": "10.1145/3744916.3773259",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b613a2ad-20df-48d2-a9fc-835b4d10578a",
+          "title": "Smoke and Mirrors: Jailbreaking LLM-based Code Generation via Implicit Malicious Prompts",
+          "doi": "10.1145/3744916.3764566",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "0646dc6e-a117-4948-9bab-fda0b1128548",
+          "title": "Software Vulnerability Management in the Era of Artificial Intelligence: An Industry Perspective",
+          "doi": "10.1145/3744916.3787781",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5d3563da-2a70-4ca9-8425-f00dac02b083",
+          "title": "SpecGuru: Hierarchical LLM-Driven API Points-to Specification Generation with Self-Validation",
+          "doi": "10.1145/3744916.3773209",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bef99733-fb10-48d8-9efe-cf2742e34caf",
+          "title": "SpecOps: A Fully Automated AI Agent Testing Framework in Real-World GUI Environments",
+          "doi": "10.1145/3744916.3787778",
+          "decision": "out_of_scope",
+          "reason": "Agent系统GUI测试不自动扩展为当前DNN模型测试范围。"
+        },
+        {
+          "source_id": "a2ddba51-24c7-4fd7-9f0e-4fb2b49563f1",
+          "title": "SSAR: A Novel Software Architecture Recovery Approach Enhancing Accuracy and Scalability",
+          "doi": "10.1145/3744916.3773263",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3f8ec072-3635-4bfa-8a79-f542a73a09e8",
+          "title": "Staying or Leaving? How Job Satisfaction, Embeddedness and Antecedents Predict Turnover Intentions of Software Professionals",
+          "doi": "10.1145/3744916.3773124",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d7eb7059-ffa5-4818-8e8b-a6567c525d76",
+          "title": "STEM-EF: A Scrum Teamwork Effectiveness Model Based on Emotional Factors",
+          "doi": "10.1145/3744916.3773246",
+          "program_title": "STEM-EF: A Model for Assessing Scrum Team Effectiveness Based on Emotional Factors",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1973cd8d-82a3-40bf-9bf5-36f26d65f10b",
+          "title": "StorFuzz: Using Data Diversity to Overcome Fuzzing Plateaus",
+          "doi": "10.1145/3744916.3773179",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9a98b14d-4891-4aa9-b76a-1abf80a4ec14",
+          "title": "SustainDiffusion: Optimising the Social and Environmental Sustainability of Stable Diffusion Models",
+          "doi": "10.1145/3744916.3773174",
+          "decision": "boundary",
+          "reason": "需区分模型缺陷修复与一般可持续性优化。"
+        },
+        {
+          "source_id": "71853d10-c1ca-4f58-9adc-76123202756c",
+          "title": "SWE-Debate: Competitive Multi-Agent Debate for Software Issue Resolution",
+          "doi": "10.1145/3744916.3787810",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "3a95a357-ab4b-4ad7-aad4-cf5f063cb42b",
+          "title": "SymRadar: PoC-Centered Bounded Verification for Vulnerability Repair",
+          "doi": "10.1145/3744916.3787825",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "48340f52-e68e-43a6-8b8f-e9bee14be42e",
+          "title": "Synthesizing Hardware-Specific Instructions for Efficient Code Generation of Simulink",
+          "doi": "10.1145/3744916.3764536",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "165f63ea-9247-4dfc-bc0f-76b8c40ff5b9",
+          "title": "Synthetic Repo-level Bug Dataset for Training Automated Program Repair Models",
+          "doi": "10.1145/3744916.3764562",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "17ad9fb6-9545-43da-b5f2-71283f73ba7a",
+          "title": "TAAF: A Trace Abstraction and Analysis Framework Synergizing Knowledge Graphs and LLMs",
+          "doi": "10.1145/3744916.3787832",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "7e48580a-32bc-4262-b1fe-5c469787b1d9",
+          "title": "TaCoS: Generated Context Summaries for Task Resumption",
+          "doi": "10.1145/3744916.3773226",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "138438b5-3224-499a-a7fe-c7b186a1fd3a",
+          "title": "TACO: Trust Assessment of Large Language Models in Coding Assistance Tasks",
+          "doi": "10.1145/3744916.3787835",
+          "decision": "boundary",
+          "reason": "需区分测试方法贡献与一般应用能力基准。"
+        },
+        {
+          "source_id": "7f8bb933-b0db-4654-af84-68c31dfa0511",
+          "title": "TaintP2X: Detecting Taint-Style Prompt-to-Anything Injection Vulnerabilities in LLM-Integrated Applications",
+          "doi": "10.1145/3744916.3773199",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fb5e249c-b476-4413-b839-edbe3f90d217",
+          "title": "TARIPlay: A Test Framework for AR Applications based on Interactive Area Detection in Playback Videos",
+          "doi": "10.1145/3744916.3787817",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "bda58b45-6dad-4ed5-880e-b4d8b397f292",
+          "title": "Temporal Specification Oriented Fuzzing for Trigger-Action-Programming Smart Home Integrations",
+          "doi": "10.1145/3744916.3764543",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "667c0576-88ca-4121-8011-a9109fa64f72",
+          "title": "Test Flimsiness: Characterizing Flakiness Induced by Mutation to the Code Under Test",
+          "doi": "10.1145/3744916.3773125",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "5f1830e9-725e-430f-9270-1f2236d792d5",
+          "title": "TestifAI: Tomography-Based Testing for Deep Learning Systems",
+          "doi": "10.1145/3744916.3787842",
+          "decision": "candidate",
+          "reason": "直接涉及深度学习测试，具体方法和类别待摘要确认。"
+        },
+        {
+          "source_id": "af3174b4-51d7-466e-b45f-3fca3804333c",
+          "title": "Testing Deep Learning Libraries via Neurosymbolic Constraint Learning",
+          "doi": "10.1145/3744916.3787800",
+          "decision": "out_of_scope",
+          "reason": "深度学习库实现测试保持为相邻方向。"
+        },
+        {
+          "source_id": "f48a0964-9d12-45b6-b825-bd74f3c35910",
+          "title": "Testora: Using Natural Language Intent to Detect Behavioral Regressions",
+          "doi": "10.1145/3744916.3764527",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c4cf5977-4ab4-4301-b5e6-b33e02808cfe",
+          "title": "TestWeaver: Execution-aware, Feedback-driven Regression Testing Generation with Large Language Models",
+          "doi": "10.1145/3744916.3787805",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "d42070c1-ce99-408c-b4f6-a3708def5f4b",
+          "title": "The Cost vs the Benefit of Adding an Extra Code Reviewer to Mitigate Developer Turnover through Reviewer Recommenders",
+          "doi": "10.1145/3744916.3764545",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4b32730c-92e2-4748-8117-e3758057f7ad",
+          "title": "The Hidden Cost of Readability: How Code Formatting Silently Consumes Your LLM Budget",
+          "doi": "10.1145/3744916.3764556",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "eaca7a3c-9e8f-4d5f-a247-a0313bfe30b0",
+          "title": "The Software Infrastructure Attitude Scale (SIAS): A Questionnaire Instrument for Measuring Professionals’ Attitudes Toward Technical and Sociotechnical Infrastructure",
+          "doi": "10.1145/3744916.3773106",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "986007f4-9a95-4902-a756-cf4572bfcf9a",
+          "title": "The State of Open Science in Software Engineering Research: A Case Study of ICSE Artifacts",
+          "doi": "10.1145/3744916.3787813",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ba078b91-c6a2-4e15-8b45-416d4f5e72a5",
+          "title": "Think Like Human Developers: Harnessing Community Knowledge for Structured Code Reasoning",
+          "doi": "10.1145/3744916.3764550",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "ebce9e86-ae55-4b6e-a8ad-337ce97bc984",
+          "title": "Think Outside the Box: Automating Inter-App Functionality Testing via Memory Implanting and Reasoning",
+          "doi": "10.1145/3744916.3764538",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a43fb35a-c6cc-42ee-9ab4-94d4addbd3de",
+          "title": "Top General Performance = Top Domain Performance? DomainCodeBench: A Multi-domain Code Generation Benchmark",
+          "doi": "10.1145/3744916.3773271",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8a5ea7bd-adfd-45ca-9e00-6aa0f577b611",
+          "title": "Toward Efficient Package Maintenance: An Empirical Study of Patch Sharing across Four Linux Distributions",
+          "doi": "10.1145/3744916.3787836",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1e334622-84b8-4f13-a247-45b5d0b9645e",
+          "title": "Towards Better Linux Kernel Fault Localization: Leveraging Contrastive Reasoning and Hierarchical Context Analysis",
+          "doi": "10.1145/3744916.3787792",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "63bf00b0-d592-4bd8-be01-b31674ec9b26",
+          "title": "Towards Global Matches for Third-Party Library Detection in Android",
+          "doi": "10.1145/3744916.3764541",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "54367ee1-eb68-410d-8e99-77c823fe05f1",
+          "title": "Towards Scalable and Interpretable Mobile App Risk Analysis via Large Language Models",
+          "doi": "10.1145/3744916.3773184",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "f867ff67-d3ae-40f5-86b2-7edfe3f290cf",
+          "title": "Towards Supporting Open Source Library Maintainers with Community-Based Analytics",
+          "doi": "10.1145/3744916.3773244",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9adaa2b1-45e4-46e5-a258-90f19effdd7b",
+          "title": "Towards Understanding and Characterizing Vulnerabilities in Intelligent Connected Vehicles through Real-World Exploits",
+          "doi": "10.1145/3744916.3773223",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "793cdf1e-4767-4203-ba5e-588451c82c81",
+          "title": "Toward Systematic Counterfactual Fairness Evaluation of Large Language Models: The CAFFE Framework",
+          "doi": "10.1145/3744916.3787848",
+          "decision": "boundary",
+          "reason": "需确认公平性评估框架与当前模型测试口径的关系。"
+        },
+        {
+          "source_id": "a96f5496-3c38-4852-8f1c-b72e8f60cf33",
+          "title": "Toxicity Ahead: Forecasting Conversational Derailment on GitHub",
+          "doi": "10.1145/3744916.3787839",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "8b0f9926-8131-4d52-a0a8-650e06fb61e2",
+          "title": "TraceCoder: A Trace-Driven Multi-Agent Framework for Automated Debugging of LLM-Generated Code",
+          "doi": "10.1145/3744916.3773187",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9d5ccadb-dd3f-464e-a991-50a668ba6036",
+          "title": "Training on Clean Data but Getting Backdoored Models! A Poisoning Attack on Code Encoders",
+          "doi": "10.1145/3744916.3773236",
+          "decision": "boundary",
+          "reason": "需区分模型测试方法与独立的投毒攻击研究。"
+        },
+        {
+          "source_id": "84c7a2d4-097f-4617-8698-9425f8e12f0d",
+          "title": "TypeCare: Boosting Python Type Inference Models via Context-Aware Re-Ranking and Augmentation",
+          "doi": "10.1145/3744916.3773213",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "89805c82-574e-4594-a0cb-8cd0ca90feb3",
+          "title": "Uncovering Failures in Cyber-Physical System State Transitions: A Fuzzing-Based Approach Applied to sUAS",
+          "doi": "10.1145/3744916.3787797",
+          "decision": "boundary",
+          "reason": "需确认被测无人机控制器中是否包含DNN。"
+        },
+        {
+          "source_id": "0eaaa6ee-3c07-4d78-a941-5d8b184317ae",
+          "title": "Understanding DevOps Security of Google Workspace Apps",
+          "doi": "10.1145/3744916.3773245",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "e8641bd2-3acb-44c3-82c6-56e765cd5205",
+          "title": "UniCoR: Modality Collaboration for Robust Cross-Language Hybrid Code Retrieval",
+          "doi": "10.1145/3744916.3773201",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6a33e70e-d779-4404-b4de-52eb4563174e",
+          "title": "Unified Software Engineering agent as AI Software Engineer",
+          "doi": "10.1145/3744916.3773202",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1b552822-6e30-443d-90d8-af556f8cdd4c",
+          "title": "Unlocking LLM Repair Capabilities Through Cross-Language Translation and Multi-Agent Refinement",
+          "doi": "10.1145/3744916.3773227",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "c59eae9e-d0cf-4eff-a5ef-951a2cfe0d83",
+          "title": "Unlocking the Silent Needs: Business-Logic-Driven Iterative Requirements Auto-completion",
+          "doi": "10.1145/3744916.3773109",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "05922d75-a979-44d3-b924-af9abef6d9ef",
+          "title": "Using a Sledgehammer to Crack a Nut? Revisiting Automated Compiler Fault Isolation",
+          "doi": "10.1145/3744916.3773254",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4434873e-0cca-4f95-950a-9693cb98d6c1",
+          "title": "VADA: A Multicultural Benchmark for Value-Aware Data Generation and Alignment Evaluation in LLMs",
+          "doi": "10.1145/3744916.3787807",
+          "decision": "boundary",
+          "reason": "需确认价值对齐基准是否包含本库范围内的模型测试贡献。"
+        },
+        {
+          "source_id": "c151183f-1793-4ac1-8e55-a061d83ee0ea",
+          "title": "Validating Mixed-Integer Programming Solvers",
+          "doi": "10.1145/3744916.3787827",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "e7c90df2-dc2b-4dab-a39d-ae6b57ed0afe",
+          "title": "Variability-Aware Fuzzing",
+          "doi": "10.1145/3744916.3773230",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "07fe0814-e641-4772-8b4c-64104aa97a2b",
+          "title": "VDBFuzz: Understanding and Detecting Crash Bugs in Vector Database Management Systems",
+          "doi": "10.1145/3744916.3773139",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "b07535bf-c1d2-48e3-b01f-f3cf822733c5",
+          "title": "Verification of Multi-Model Stochastic Systems",
+          "doi": "10.1145/3744916.3773253",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "9d2cb5ae-9cce-4afd-b126-b231a959334b",
+          "title": "Views on Internal and External Validity in Empirical Software Engineering: 10 Years Later and Beyond",
+          "doi": "10.1145/3744916.3764520",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "1ae204a5-6f97-4ebb-9580-c39f14621e62",
+          "title": "Weak Programmers Need Not Apply, LLMs Welcome! Survey Screening in the AI Era",
+          "doi": "10.1145/3744916.3787789",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "290e0d62-8399-423e-8919-e950f21dc12c",
+          "title": "Well Begun is Half Done: Location-Aware and Trace-Guided Iterative Automated Vulnerability Repair",
+          "doi": "10.1145/3744916.3773218",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "0fbacc25-7bb1-4a8d-a8d0-a378e6c44d12",
+          "title": "What Makes Code Generation Ethically Sourced?",
+          "doi": "10.1145/3744916.3773192",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "094b56d2-d600-4453-83f7-87301fcb14a7",
+          "title": "What’s in a Software Engineering Job Posting?",
+          "doi": "10.1145/3744916.3773188",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "7a3723d7-29ab-420f-875f-d751f6f72b41",
+          "title": "What to Retrieve for Effective Retrieval-Augmented Code Generation? An Empirical Study and Beyond",
+          "doi": "10.1145/3744916.3773224",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "2e1c86fc-d438-455a-8af1-4e8eb490cd50",
+          "title": "When AI Takes the Wheel: Security Analysis of Framework-Constrained Program Generation",
+          "doi": "10.1145/3744916.3773142",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "876e0e56-5bc9-4bd0-ac1c-26766e607019",
+          "title": "When Prompts Go Wrong: Evaluating Code Model Robustness to Ambiguous, Contradictory, and Incomplete Task Descriptions",
+          "doi": "10.1145/3744916.3773186",
+          "decision": "candidate",
+          "reason": "直接研究代码模型对输入描述的鲁棒性。"
+        },
+        {
+          "source_id": "52070d88-f3d5-49b3-952c-6832adb73392",
+          "title": "WhisperCatcher: Demystifying Unauthorized and Encrypted Private Data Transmission in Android Applications",
+          "doi": "10.1145/3744916.3773154",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "a1f5d4e1-0889-4ddd-a3f8-2268d5e9de65",
+          "title": "Why Attention Fails: A Taxonomy of Faults in Attention-Based Neural Networks",
+          "doi": "10.1145/3744916.3773118",
+          "decision": "candidate",
+          "reason": "直接研究注意力网络故障，按实证研究待筛，不新增调试分类。"
+        },
+        {
+          "source_id": "5c617d3b-38d4-4d23-a80d-68f200d6e75f",
+          "title": "WhyFlow: Interrogative Debugger for Sensemaking Taint Analysis",
+          "doi": "10.1145/3744916.3773145",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "6cdfca3d-1b26-4251-bac5-b8ebea1837eb",
+          "title": "Women’s Career Paths in the Nordic Software Industry: A Narrative Analysis Through Gender-Switched Personas",
+          "doi": "10.1145/3744916.3787803",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "4a781237-3ce3-44e8-ba5e-6d0b91254cff",
+          "title": "“Write in English, Nobody Understands Your Language Here”: A Study of Non-English Trends in Open-Source Repositories",
+          "doi": "10.1145/3744916.3787766",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "fe805b96-fc03-48bf-b5ae-17d07dcb2dc1",
+          "title": "Write Your Own Code Checker: An Automated Test-Driven Checker Development Approach with LLMs",
+          "doi": "10.1145/3744916.3764560",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        },
+        {
+          "source_id": "703b0cfe-da21-48f0-adbe-11d492a499ef",
+          "title": "XRFix: Exploring Performance Bug Repair of Extended Reality Applications with Large Language Models",
+          "doi": "10.1145/3744916.3773120",
+          "decision": "not_selected_at_title_screen",
+          "reason": "题名未显示DNN模型测试、形式化验证或修复贡献；仅为题名阶段决定。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,26 @@
 # Awesome DNN Testing and Repair
 
-A collection of papers on deep neural network testing and repair.
+A collection of papers on deep neural network testing, verification, and repair.
 
 ## Overview
 
-This collection focuses on testing and repairing deep neural network models, with publication details and links to papers, preprints, and code where available.
+This collection focuses on testing, verifying, and repairing deep neural network models, with publication details and links to papers, preprints, and code where available.
 
 - [Research Papers](#research-papers)
   - [Coverage Metrics](#coverage-metrics)
   - [Test Generation](#test-generation)
   - [Test Selection and Prioritization](#test-selection-and-prioritization)
   - [Model Repair](#model-repair)
+  - [DNN Verification](#dnn-verification)
   - [Other](#other)
 - [Surveys](#surveys)
 - [Empirical Studies](#empirical-studies)
 
 ## Papers
 
-Within each category, published papers are listed by formal publication year, newest first. Preprints use their first public year and are marked accordingly. Preprint and online publication dates are recorded separately in the [paper data](data/papers.json).
+Within each category, papers are grouped by target model type: Non-LLM DNNs, LLMs, and QNNs (quantum neural networks). Target types describe the models being tested, verified, repaired, or reviewed. Papers covering multiple target types appear in each applicable group.
+
+Within each group, published papers are listed by formal publication year, newest first. Preprints use their first public year and are marked accordingly. Preprint and online publication dates are recorded separately in the [paper data](data/papers.json).
 
 Resource links are shown only when recorded in the paper data.
 
@@ -29,9 +32,10 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 #### Coverage Metrics
 
+##### Non-LLM DNNs
+
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
-| 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950) [![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2023 | **ATOM** | ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/ase56229.2023.00156) | ASE' 2023 |
 | 2023 | **SA (journal-version)** | Evaluating Surprise Adequacy for Deep Learning System Testing | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3546947) [![Code](assets/badges/code.svg)](https://github.com/coinse/sadl) | TOSEM |
@@ -56,7 +60,15 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2018 | **DeepGauge** | DeepGauge: multi-granularity testing criteria for deep learning systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3238147.3238202) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1803.07519) | ASE' 2018 |
 | 2017 | **DeepXplore** | DeepXplore: Automated Whitebox Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3132747.3132785) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1705.06640) [![Code](assets/badges/code.svg)](https://github.com/peikexin9/deepxplore) | SOSP' 2017 |
 
+##### QNNs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950) [![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
+
 #### Test Generation
+
+##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
@@ -66,7 +78,6 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2025 | **IATT** | IATT: Interpretation Analysis-based Transferable Test Generation for Convolutional Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3705301) [![Code](assets/badges/code.svg)](https://github.com/samxrl/IATT) | TOSEM |
 | 2025 | **NSGen** | Neuron Semantic-Guided Test Generation for Deep Neural Networks Fuzzing | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688835) [![Code](assets/badges/code.svg)](https://github.com/unknownhl/NSGen) | TOSEM |
 | 2025 | **NLPLego** | NLPLego: Assembling Test Generation for Natural Language Processing Applications | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691631) [![Code](assets/badges/code.svg)](https://github.com/SSCT-Lab/NLPLego) | TOSEM |
-| 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950) [![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 | 2025 | — | Search-Based DNN Testing and Retraining With GAN-Enhanced Simulations | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2025.3540549) [![Code](assets/badges/code.svg)](https://doi.org/10.5281/zenodo.14535408) | TSE |
 | 2025 | **TAEFuzz** | TAEFuzz: Automatic Fuzzing for Image-based Deep Learning Systems via Transferable Adversarial Examples | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3714463) [![Code](assets/badges/code.svg)](https://anonymous.4open.science/r/TAEFuzz-4575) | TOSEM |
 | 2024 | **CIT4DNN** | CIT4DNN: Generating Diverse and Rare Inputs for Neural Networks Using Latent Space Combinatorial Testing | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3597503.3639106) [![Code](assets/badges/code.svg)](https://github.com/less-lab-uva/CIT4DNN) | ICSE' 2024 |
@@ -103,11 +114,24 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2018 | **DLFuzz (conf-version)** | DLFuzz: differential fuzzing testing of deep learning systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3236024.3264835) [![Code](assets/badges/code.svg)](https://github.com/turned2670/DLFuzz) | ESEC/FSE' 2018 |
 | 2017 | **DeepXplore** | DeepXplore: Automated Whitebox Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3132747.3132785) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1705.06640) [![Code](assets/badges/code.svg)](https://github.com/peikexin9/deepxplore) | SOSP' 2017 |
 
-#### Test Selection and Prioritization
+##### LLMs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
-| 2026 | **AcTracer** | AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3744340) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2408.03573) [![Code](assets/badges/code.svg)](https://github.com/YuhengHuang42/test_selection_llm) | TOSEM |
+| 2025 | **NLPLego** | NLPLego: Assembling Test Generation for Natural Language Processing Applications | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691631) [![Code](assets/badges/code.svg)](https://github.com/SSCT-Lab/NLPLego) | TOSEM |
+
+##### QNNs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950) [![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
+
+#### Test Selection and Prioritization
+
+##### Non-LLM DNNs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
 | 2026 | **MetaDTS** | MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.sysarc.2025.103682) | JSA |
 | 2026 | **PriCod** | PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3730435) [![Code](assets/badges/code.svg)](https://github.com/yinghuali/PriCod) | TOSEM |
 | 2026 | **SETS** | SETS: A Simple yet Effective DNN Test Selection Approach | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3772084) [![Code](assets/badges/code.svg)](https://github.com/GIST-NJU/SETS) | TOSEM |
@@ -150,13 +174,21 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2019 | **SA (conf-version)** | Guiding Deep Learning System Testing Using Surprise Adequacy | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse.2019.00108) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1808.08444) | ICSE' 2019 |
 | 2019 | — | Input Prioritization for Testing Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/aitest.2019.000-6) [![Code](assets/badges/code.svg)](http://www.github.com/bntejn/keras-prioritizer) | AITest' 2019 |
 
+##### LLMs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2026 | **AcTracer** | AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3744340) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2408.03573) [![Code](assets/badges/code.svg)](https://github.com/YuhengHuang42/test_selection_llm) | TOSEM |
+
 #### Model Repair
+
+##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
 | 2026 | **SMiR** | SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3771545) [![Code](assets/badges/code.svg)](https://github.com/AnonymousSE4AI/SMiR) | TOSEM |
 | 2025 | **AutoRIC** | AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3690634) [![Code](assets/badges/code.svg)](https://github.com/Anonymous89000/AutoRIC) | TOSEM |
-| 2025 | **DEFault** | Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse55347.2025.00224) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2501.12560) [![Code](assets/badges/code.svg)](https://github.com/SigmaJahan/DEFault-DNN-Debugging) | ICSE' 2025 |
+| 2025 | **DEFault** | Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse55347.2025.00224) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2501.12560) [![Code](assets/badges/code.svg)](https://github.com/SigmaJahan/DEFault-DNN-Debugging) [![Website](assets/badges/website.svg)](https://default-ai.com/) | ICSE' 2025 |
 | 2025 | **FeaProtect** | Mitigating Regression Faults Induced by Feature Evolution in Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3712199) [![Code](assets/badges/code.svg)](https://github.com/youhanmo/FeaProtect) | TOSEM |
 | 2025 | **PatchPro** | Patch Synthesis for Property Repair of Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse55347.2025.00181) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2404.01642) | ICSE' 2025 |
 | 2025 | **Repairs and Breaks Prediction (journal-version)** | Repairs and Breaks Prediction for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3702983) [![Code](assets/badges/code.svg)](https://github.com/posl/DNN-repair-break-prediction) | TOSEM |
@@ -194,13 +226,19 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2019 | **DeepCorrect** | DeepCorrect: Correcting DNN Models Against Image Distortions | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tip.2019.2924172) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1705.02406) [![Code](assets/badges/code.svg)](https://github.com/tsborkar/DeepCorrect) | TIP |
 | 2018 | **MODE** | MODE: automated neural network model debugging via state differential analysis and input selection | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3236024.3236082) [![Code](assets/badges/code.svg)](https://github.com/dnnmode/buggymodels) | ESEC/FSE' 2018 |
 
+#### DNN Verification
+
 #### Other
+
+##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
 | 2018 | **DeepMutation** | DeepMutation: Mutation Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/issre.2018.00021) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1805.05206) | ISSRE' 2018 |
 
 ### Surveys
+
+#### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
@@ -211,6 +249,8 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2020 | — | 深度神经网络测试研究综述 | [![Paper](assets/badges/paper.svg)](https://doi.org/10.13328/j.cnki.jos.005951) | 软件学报 |
 
 ### Empirical Studies
+
+#### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
