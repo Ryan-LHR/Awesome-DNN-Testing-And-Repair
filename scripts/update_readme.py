@@ -157,6 +157,7 @@ def render_tables(papers):
             for paper in matches:
                 year = paper_year(paper)
                 alias = f"**{escape_cell(paper['alias'])}**" if paper.get("alias") else "—"
+                alias = re.sub(r" \((conf-version|journal-version)\)\*\*$", r"**<br>(\1)", alias)
                 resource_links = {paper["paper_url"]: "Paper"}
                 for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code"), ("website_url", "Website")):
                     if paper.get(field):
