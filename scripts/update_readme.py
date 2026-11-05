@@ -168,8 +168,22 @@ def replace_tables(readme, tables):
     return readme[:start] + newline * 2 + tables + newline * 2 + readme[end:]
 
 
+def replace_badge_counts(readme, papers):
+    counts = {
+        "Papers": len(papers),
+        "With%20code": sum(bool(paper.get("code_url")) for paper in papers),
+    }
+    for label, count in counts.items():
+        readme = re.sub(
+            rf"(https://img\.shields\.io/badge/{label}-)\d+(-)",
+            rf"\g<1>{count}\2",
+            readme,
+        )
+    return readme
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Validate papers.json and update README paper tables.")
+    parser = argparse.ArgumentParser(description="Validate papers.json and update README paper tables and badge counts.")
     parser.add_argument("--check", action="store_true", help="Check data and README without writing files.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
@@ -186,6 +200,7 @@ def main():
     path = root / "README.md"
     readme = path.read_bytes().decode("utf-8")
     updated = replace_tables(readme, render_tables(papers))
+    updated = replace_badge_counts(updated, papers)
     if updated == readme:
         print(f"Validated {len(papers)} papers; README.md is up to date.")
         return 0

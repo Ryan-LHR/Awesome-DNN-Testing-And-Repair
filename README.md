@@ -1,4 +1,12 @@
-# Awesome DNN Testing and Repair
+<h1 align="center">Awesome DNN Testing and Repair</h1>
+
+<p align="center">
+<a href="#papers"><img alt="Papers" src="https://img.shields.io/badge/Papers-140-00629B?style=flat" /></a> <a href="data/papers.json"><img alt="With code" src="https://img.shields.io/badge/With%20code-88-B45309?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Last%20commit&amp;color=087CA7" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Stars&amp;color=E2BF46" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/forks"><img alt="Forks" src="https://img.shields.io/github/forks/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Forks&amp;color=00629B" /></a> <a href="data/papers.json"><img alt="Data" src="https://img.shields.io/badge/Data-JSON-087CA7?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-21865B?style=flat" /></a> <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-E2BF46?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair"><img alt="Visitors" src="https://komarev.com/ghpvc/?username=Ryan-LHR-awesome-dnn-testing-and-repair&amp;label=Visitors&amp;color=1283c3&amp;style=flat" /></a>
+</p>
+
+<p align="center">
+<a href="README.md" aria-current="page"><img alt="English" src="https://img.shields.io/badge/English-00629B?style=flat" /></a> <a href="README.zh-Hans.md"><img alt="简体中文" src="https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-d9d9d9?style=flat" /></a> <a href="README.zh-Hant.md"><img alt="繁體中文" src="https://img.shields.io/badge/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-d9d9d9?style=flat" /></a>
+</p>
 
 A collection of papers on deep neural network testing, verification, and repair.
 
@@ -276,3 +284,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/chart?repos=Ryan-LHR/awesome-dnn-testing-and-repair&type=date&legend=top-left)](https://www.star-history.com/?repos=Ryan-LHR%2Fawesome-dnn-testing-and-repair&type=date&legend=top-left)
+
+## License
+
+This project's original content and code are licensed under the [MIT License](LICENSE). Third-party papers, abstracts, and other materials retain their original rights and licenses.
