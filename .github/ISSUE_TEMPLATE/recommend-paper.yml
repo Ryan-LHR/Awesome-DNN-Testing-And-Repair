@@ -1,0 +1,44 @@
+name: Recommend a paper
+description: Suggest a paper for the collection.
+title: '[Paper]: '
+body:
+  - type: markdown
+    attributes:
+      value: Use the paper title as the issue title. Categories, extra links, and additional notes are optional.
+  - type: input
+    id: paper-link
+    attributes:
+      label: Paper link
+      description: DOI, publisher page, or arXiv URL.
+      placeholder: https://doi.org/...
+    validations:
+      required: true
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Suggested categories
+      description: Select any that apply, or leave blank if unsure.
+      multiple: true
+      options:
+        - Coverage Metrics
+        - Test Generation
+        - Test Selection and Prioritization
+        - Model Repair
+        - DNN Verification
+        - Other
+        - Surveys
+        - Empirical Studies
+  - type: textarea
+    id: resource-links
+    attributes:
+      label: Additional resource links
+      description: Code, replication package, arXiv, or project website, if available.
+      placeholder: Add any relevant links here.
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional notes
+      description: Add any additional context, details, or examples.
+      placeholder: Provide any further explanation here.
+    validations:
+      required: false

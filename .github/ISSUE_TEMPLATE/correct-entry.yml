@@ -1,0 +1,34 @@
+name: Correct an entry
+description: Report an error or suggest a correction.
+title: '[Correction]: '
+body:
+  - type: input
+    id: paper
+    attributes:
+      label: Paper
+      description: Paper title, alias, or link to the existing entry.
+      placeholder: Paper title or URL
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Correction
+      description: Describe what should be corrected.
+      placeholder: What should be updated?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Supporting source
+      description: A paper, publisher page, or author source supporting the update, if available.
+      placeholder: Supporting URL or explanation
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional notes
+      description: Add any additional context, details, or examples.
+      placeholder: Provide any further explanation here.
+    validations:
+      required: false
