@@ -147,6 +147,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2025 | **Prophet** | Prioritizing Speech Test Cases | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3707450) [![Code](assets/badges/code.svg)](https://github.com/yangzhou6666/ASRProphet) | TOSEM |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2024 | **DeepGD** | DeepGD: A Multi-Objective Black-Box Test Selection Approach for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3644388) [![Code](assets/badges/code.svg)](https://github.com/ZOE-CA/DeepGD) | TOSEM |
+| 2024 | **DeepSample** | DeepSample: DNN sampling-based testing for operational accuracy assessment | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3597503.3639584) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2403.19271) | ICSE' 2024 |
 | 2024 | **DATIS** | Distance-Aware Test Input Selection for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3650212.3652125) [![Code](assets/badges/code.svg)](https://github.com/DATIS-24/DATIS) | ISSTA' 2024 |
 | 2024 | **FAST** | FAST: Boosting Uncertainty-based Test Prioritization Methods for Neural Networks via Feature Selection | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691620.3695472) [![Code](assets/badges/code.svg)](https://github.com/Testing4AI/FAST) | ASE' 2024 |
 | 2024 | **FATS** | FATS: Feature Distribution Analysis-Based Test Selection for Deep Learning Enhancement | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tbdata.2023.3334648) [![Code](assets/badges/code.svg)](https://github.com/smile-ya/FATS) | TBD |
@@ -234,6 +235,14 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2022 | **ROME** | Locating and Editing Factual Associations in GPT | [![Paper](assets/badges/paper.svg)](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2202.05262) [![Code](assets/badges/code.svg)](https://github.com/kmeng01/rome) | NeurIPS' 2022 |
 
 #### DNN Verification
+
+##### Non-LLM DNNs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2022 | **DeepPAC** | Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning | [![Paper](assets/badges/paper.svg)](https://conf.researchr.org/details/icse-2022/icse-2022-papers/106/Towards-Practical-Robustness-Analysis-for-DNNs-based-on-PAC-Model-Learning) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2101.10102) | ICSE' 2022 |
+| 2019 | — | Robustness Verification of Classification Deep Neural Networks via Linear Programming | [![Paper](assets/badges/paper.svg)](https://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Robustness_Verification_of_Classification_Deep_Neural_Networks_via_Linear_Programming_CVPR_2019_paper.html) | CVPR' 2019 |
+| 2017 | **Reluplex** | Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://link.springer.com/chapter/10.1007/978-3-319-63387-9_5) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1702.01135) | CAV' 2017 |
 
 #### Other
 
