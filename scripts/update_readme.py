@@ -1,4 +1,4 @@
-"""Validate paper data and update the README overview and tables using Python's standard library.
+"""Validate paper data and update English and Simplified Chinese READMEs using Python's standard library.
 
 Usage:
     python3 scripts/update_readme.py
@@ -27,6 +27,27 @@ TARGET_MODEL_TYPES = {
     "Non-LLM DNN": "Non-LLM DNNs",
     "LLM": "LLMs",
     "QNN": "QNNs",
+}
+ZH_HANS_LABELS = {
+    "Research Papers": "研究论文",
+    "Coverage Metrics": "覆盖度量",
+    "Test Generation": "测试生成",
+    "Test Selection and Prioritization": "测试选择与排序",
+    "Model Repair": "模型修复",
+    "DNN Verification": "DNN 验证",
+    "Other": "其他",
+    "Surveys": "综述",
+    "Empirical Studies": "实证研究",
+    "Non-LLM DNNs": "非 LLM 深度神经网络",
+    "LLMs": "大语言模型（LLM）",
+    "QNNs": "量子神经网络（QNN）",
+    "Year": "年份",
+    "Name": "简称",
+    "Title": "论文标题",
+    "Resources": "资源<br>Resources",
+    "Venue": "会议／期刊",
+    "A paper may appear in more than one category.": "同一篇论文可能归入多个类别。",
+    " (preprint)": "（预印本）",
 }
 PUBLICATION_TYPES = ("conference", "journal", "preprint")
 BADGES = {
@@ -123,25 +144,34 @@ def paper_link(label, url):
     return f"[![{escape_cell(label)}]({BADGES[label]})]({url})"
 
 
-def render_overview(papers):
+def render_overview(papers, language="en"):
+    labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
     research_count = sum(
         any(CATEGORIES[category] == 4 for category in paper["categories"])
         for paper in papers
     )
-    lines = [f"- **[Research Papers](#research-papers)** ({research_count})"]
+    research_label = labels.get("Research Papers", "Research Papers")
+    lines = [f"- **[{research_label}](#research-papers)** ({research_count})"]
     for category, level in CATEGORIES.items():
         count = sum(category in paper["categories"] for paper in papers)
-        link = f"[{category}](#{category.lower().replace(' ', '-')})"
+        link = f"[{labels.get(category, category)}](#{category.lower().replace(' ', '-')})"
         label = f"  - {link}" if level == 4 else f"- **{link}**"
         lines.append(f"{label} ({count})")
-    lines.extend(["", "A paper may appear in more than one category."])
+    note = "A paper may appear in more than one category."
+    lines.extend(["", labels.get(note, note)])
     return "\n".join(lines)
 
 
-def render_tables(papers):
-    lines = ["### Research Papers", ""]
+def render_tables(papers, language="en"):
+    labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
+    lines = []
+    if language == "zh-Hans":
+        lines.extend(['<a name="research-papers"></a>', ""])
+    lines.extend([f"### {labels.get('Research Papers', 'Research Papers')}", ""])
     for category, level in CATEGORIES.items():
-        lines.extend([f"{'#' * level} {category}", ""])
+        if language == "zh-Hans":
+            lines.extend([f'<a name="{category.lower().replace(" ", "-")}"></a>', ""])
+        lines.extend([f"{'#' * level} {labels.get(category, category)}", ""])
         for target_model_type, heading in TARGET_MODEL_TYPES.items():
             matches = sorted(
                 (paper for paper in papers if category in paper["categories"] and target_model_type in paper["target_model_types"]),
@@ -150,8 +180,8 @@ def render_tables(papers):
             if not matches:
                 continue
             lines.extend([
-                f"{'#' * (level + 1)} {heading}", "",
-                "| Year | Name | Title | Resources | Venue |",
+                f"{'#' * (level + 1)} {labels.get(heading, heading)}", "",
+                "| " + " | ".join(labels.get(column, column) for column in ("Year", "Name", "Title", "Resources", "Venue")) + " |",
                 "| --- | --- | --- | --- | --- |",
             ])
             for paper in matches:
@@ -162,12 +192,12 @@ def render_tables(papers):
                 for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code"), ("website_url", "Website")):
                     if paper.get(field):
                         resource_links.setdefault(paper[field], label)
-                resources = " ".join(paper_link(label, url) for url, label in resource_links.items())
+                resources = "<br>".join(paper_link(label, url) for url, label in resource_links.items())
                 venue = escape_cell(paper["venue"])
                 if paper["publication_type"] == "conference":
-                    venue += f"' {year}"
+                    venue += f"<br>{year}"
                 elif paper["publication_type"] == "preprint":
-                    venue += " (preprint)"
+                    venue += labels.get(" (preprint)", " (preprint)")
                 title = escape_cell(paper["title"])
                 lines.append(f"| {year} | {alias} | {title} | {resources} | {venue} |")
             lines.append("")
@@ -176,11 +206,11 @@ def render_tables(papers):
 
 def replace_tables(readme, tables, begin_marker=BEGIN_MARKER, end_marker=END_MARKER):
     if readme.count(begin_marker) != 1 or readme.count(end_marker) != 1:
-        raise ValueError(f"README.md must contain exactly one {begin_marker} and {end_marker} marker.")
+        raise ValueError(f"README must contain exactly one {begin_marker} and {end_marker} marker.")
     start = readme.index(begin_marker) + len(begin_marker)
     end = readme.index(end_marker)
     if end < start:
-        raise ValueError("README.md generated-table markers are in the wrong order.")
+        raise ValueError("README generated-table markers are in the wrong order.")
     newline = "\r\n" if "\r\n" in readme else "\n"
     tables = tables.replace("\n", newline)
     return readme[:start] + newline * 2 + tables + newline * 2 + readme[end:]
@@ -201,7 +231,7 @@ def replace_badge_counts(readme, papers):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate papers.json and update README overview, paper tables, and badge counts.")
+    parser = argparse.ArgumentParser(description="Validate papers.json and update English and Simplified Chinese README overviews, paper tables, and badge counts.")
     parser.add_argument("--check", action="store_true", help="Check data and README without writing files.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
@@ -215,19 +245,28 @@ def main():
         if not (root / badge).is_file():
             raise FileNotFoundError(f"Missing badge asset: {badge}")
 
-    path = root / "README.md"
-    readme = path.read_bytes().decode("utf-8")
-    updated = replace_tables(readme, render_overview(papers), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)
-    updated = replace_tables(updated, render_tables(papers))
-    updated = replace_badge_counts(updated, papers)
-    if updated == readme:
-        print(f"Validated {len(papers)} papers; README.md is up to date.")
+    updates = []
+    for filename, language in (("README.md", "en"), ("README.zh-Hans.md", "zh-Hans")):
+        visible_papers = papers
+        if language == "en":
+            visible_papers = [paper for paper in papers if not re.search(r"[\u3400-\u9fff]", paper["title"])]
+        path = root / filename
+        readme = path.read_bytes().decode("utf-8")
+        updated = replace_tables(readme, render_overview(visible_papers, language), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)
+        updated = replace_tables(updated, render_tables(visible_papers, language))
+        updated = replace_badge_counts(updated, papers)
+        if updated != readme:
+            updates.append((path, updated))
+    if not updates:
+        print(f"Validated {len(papers)} papers; README.md and README.zh-Hans.md are up to date.")
         return 0
+    filenames = ", ".join(path.name for path, _ in updates)
     if args.check:
-        print("README.md is out of date. Run python3 scripts/update_readme.py.", file=sys.stderr)
+        print(f"Out of date: {filenames}. Run python3 scripts/update_readme.py.", file=sys.stderr)
         return 1
-    path.write_bytes(updated.encode("utf-8"))
-    print(f"Validated {len(papers)} papers; updated README.md.")
+    for path, updated in updates:
+        path.write_bytes(updated.encode("utf-8"))
+    print(f"Validated {len(papers)} papers; updated {filenames}.")
     return 0
 
 
