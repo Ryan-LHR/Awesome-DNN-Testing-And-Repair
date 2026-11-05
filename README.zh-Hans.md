@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome DNN Testing and Repair — Testing, Verification, Repair" width="100%" />
+</p>
+
 <h1 align="center">Awesome DNN Testing and Repair</h1>
 
 <p align="center">
