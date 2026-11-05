@@ -1,53 +1,5 @@
 [
   {
-    "id": "llm-fuzzer-2024",
-    "title": "LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks",
-    "venue": "USENIX Security",
-    "venue_name": "33rd USENIX Security Symposium",
-    "paper_url": "https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao",
-    "alias": "LLM-Fuzzer",
-    "categories": ["Test Generation"],
-    "target_model_types": ["LLM"],
-    "authors": ["Jiahao Yu", "Xingwei Lin", "Zheng Yu", "Xinyu Xing"],
-    "abstract": "The jailbreak threat poses a significant concern for Large Language Models (LLMs), primarily due to their potential to generate content at scale. If not properly controlled, LLMs can be exploited to produce undesirable outcomes, including the dissemination of misinformation, offensive content, and other forms of harmful or unethical behavior. To tackle this pressing issue, researchers and developers often rely on red-team efforts to manually create adversarial inputs and prompts designed to push LLMs into generating harmful, biased, or inappropriate content. However, this approach encounters serious scalability challenges. To address these scalability issues, we introduce an automated solution for large-scale LLM jailbreak susceptibility assessment called LLM-Fuzzer. Inspired by fuzz testing, LLM-Fuzzer uses human-crafted jailbreak prompts as starting points. By employing carefully customized seed selection strategies and mutation mechanisms, LLM-Fuzzer generates additional jailbreak prompts tailored to specific LLMs. Our experiments show that LLM-Fuzzer-generated jailbreak prompts demonstrate significantly increased exploitability and transferability. This highlights that many open-source and commercial LLMs suffer from severe jailbreak issues, even after safety fine-tuning.",
-    "publication_type": "conference",
-    "ccf_rank": null,
-    "dates": {"publication_year": 2024, "online_year": null, "first_public_year": 2023, "first_public_date": "2023-09-19", "checked_on": "2026-11-05"},
-    "doi": null,
-    "arxiv_url": "https://arxiv.org/abs/2309.10253",
-    "code_url": "https://github.com/hubertyoo/GPTFuzz",
-    "evidence": [
-      {"url": "https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao", "label": "USENIX Security 2024 publication page", "supports": "正式标题、作者、发表年份与正式摘要"},
-      {"url": "https://arxiv.org/abs/2309.10253", "label": "arXiv preprint", "supports": "GPTFUZZER 预印本标题、相同作者及 2023-09-19 首发日期"},
-      {"url": "https://github.com/hubertyoo/GPTFuzz", "label": "Author code repository", "supports": "GPTFUZZER 官方代码仓库"}
-    ],
-    "notes": "GPTFUZZER 预印本与正式发表的 LLM-Fuzzer 为同一项工作，仅收录一条；正式发表年 2024，预印本首发年 2023。"
-  },
-  {
-    "id": "rome-2022",
-    "title": "Locating and Editing Factual Associations in GPT",
-    "venue": "NeurIPS",
-    "venue_name": "Advances in Neural Information Processing Systems 35",
-    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html",
-    "alias": "ROME",
-    "categories": ["Model Repair"],
-    "target_model_types": ["LLM"],
-    "authors": ["Kevin Meng", "David Bau", "Alex Andonian", "Yonatan Belinkov"],
-    "abstract": "We analyze the storage and recall of factual associations in autoregressive transformer language models, finding evidence that these associations correspond to localized, directly-editable computations. We first develop a causal intervention for identifying neuron activations that are decisive in a model's factual predictions. This reveals a distinct set of steps in middle-layer feed-forward modules that mediate factual predictions while processing subject tokens. To test our hypothesis that these computations correspond to factual association recall, we modify feed-forward weights to update specific factual associations using Rank-One Model Editing (ROME). We find that ROME is effective on a standard zero-shot relation extraction (zsRE) model-editing task, comparable to existing methods. To perform a more sensitive evaluation, we also evaluate ROME on a new dataset of counterfactual assertions, on which it simultaneously maintains both specificity and generalization, whereas other methods sacrifice one or another. Our results confirm an important role for mid-layer feed-forward modules in storing factual associations and suggest that direct manipulation of computational mechanisms may be a feasible approach for model editing. The code, dataset, visualizations, and an interactive demo notebook are available in the supplemental materials.",
-    "publication_type": "conference",
-    "ccf_rank": null,
-    "dates": {"publication_year": 2022, "online_year": null, "first_public_year": 2022, "first_public_date": "2022-02-10", "checked_on": "2026-11-05"},
-    "doi": "10.52202/068431-1262",
-    "arxiv_url": "https://arxiv.org/abs/2202.05262",
-    "code_url": "https://github.com/kmeng01/rome",
-    "evidence": [
-      {"url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html", "label": "NeurIPS 2022 proceedings", "supports": "正式标题、作者、年份、摘要及 DOI"},
-      {"url": "https://arxiv.org/abs/2202.05262", "label": "arXiv preprint", "supports": "2022-02-10 首发日期及作者"},
-      {"url": "https://github.com/kmeng01/rome", "label": "Author code repository", "supports": "ROME 代码仓库"}
-    ],
-    "notes": "ROME 属于事实知识编辑，通过修改模型权重更新特定事实关联；归入 Model Repair。正式发表年与预印本首发年均为 2022，分别记录。"
-  },
-  {
     "id": "cocofuzzing-2023",
     "title": "CoCoFuzzing: Testing Neural Code Models With Coverage-Guided Fuzzing",
     "venue": "TR",
@@ -6988,5 +6940,107 @@
       }
     ],
     "notes": "Springer 正式 DOI 的书号末位为 -9；源 BibTeX 中的 -3 为错误变体。"
+  },
+  {
+    "id": "llm-fuzzer-2024",
+    "title": "LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks",
+    "venue": "USENIX Security",
+    "venue_name": "33rd USENIX Security Symposium",
+    "paper_url": "https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao",
+    "alias": "LLM-Fuzzer",
+    "categories": [
+      "Test Generation"
+    ],
+    "target_model_types": [
+      "LLM"
+    ],
+    "authors": [
+      "Jiahao Yu",
+      "Xingwei Lin",
+      "Zheng Yu",
+      "Xinyu Xing"
+    ],
+    "abstract": "The jailbreak threat poses a significant concern for Large Language Models (LLMs), primarily due to their potential to generate content at scale. If not properly controlled, LLMs can be exploited to produce undesirable outcomes, including the dissemination of misinformation, offensive content, and other forms of harmful or unethical behavior. To tackle this pressing issue, researchers and developers often rely on red-team efforts to manually create adversarial inputs and prompts designed to push LLMs into generating harmful, biased, or inappropriate content. However, this approach encounters serious scalability challenges. To address these scalability issues, we introduce an automated solution for large-scale LLM jailbreak susceptibility assessment called LLM-Fuzzer. Inspired by fuzz testing, LLM-Fuzzer uses human-crafted jailbreak prompts as starting points. By employing carefully customized seed selection strategies and mutation mechanisms, LLM-Fuzzer generates additional jailbreak prompts tailored to specific LLMs. Our experiments show that LLM-Fuzzer-generated jailbreak prompts demonstrate significantly increased exploitability and transferability. This highlights that many open-source and commercial LLMs suffer from severe jailbreak issues, even after safety fine-tuning.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2024,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": "2023-09-19",
+      "checked_on": "2026-11-06"
+    },
+    "doi": null,
+    "arxiv_url": "https://arxiv.org/abs/2309.10253",
+    "code_url": "https://github.com/hubertyoo/GPTFuzz",
+    "evidence": [
+      {
+        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao",
+        "label": "USENIX Security 2024 publication page",
+        "supports": "正式标题、作者、发表年份与摘要"
+      },
+      {
+        "url": "https://arxiv.org/abs/2309.10253",
+        "label": "arXiv preprint",
+        "supports": "GPTFUZZER 预印本标题及 2023-09-19 首发日期"
+      },
+      {
+        "url": "https://github.com/hubertyoo/GPTFuzz",
+        "label": "Author code repository",
+        "supports": "作者代码仓库"
+      }
+    ],
+    "notes": "GPTFUZZER 预印本与正式发表的 LLM-Fuzzer 为同一项工作，仅收录一条；正式发表年 2024，预印本首发年 2023。"
+  },
+  {
+    "id": "rome-2022",
+    "title": "Locating and Editing Factual Associations in GPT",
+    "venue": "NeurIPS",
+    "venue_name": "Advances in Neural Information Processing Systems 35",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html",
+    "alias": "ROME",
+    "categories": [
+      "Model Repair"
+    ],
+    "target_model_types": [
+      "LLM"
+    ],
+    "authors": [
+      "Kevin Meng",
+      "David Bau",
+      "Alex Andonian",
+      "Yonatan Belinkov"
+    ],
+    "abstract": "We analyze the storage and recall of factual associations in autoregressive transformer language models, finding evidence that these associations correspond to localized, directly-editable computations. We first develop a causal intervention for identifying neuron activations that are decisive in a model's factual predictions. This reveals a distinct set of steps in middle-layer feed-forward modules that mediate factual predictions while processing subject tokens. To test our hypothesis that these computations correspond to factual association recall, we modify feed-forward weights to update specific factual associations using Rank-One Model Editing (ROME). We find that ROME is effective on a standard zero-shot relation extraction (zsRE) model-editing task, comparable to existing methods. To perform a more sensitive evaluation, we also evaluate ROME on a new dataset of counterfactual assertions, on which it simultaneously maintains both specificity and generalization, whereas other methods sacrifice one or another. Our results confirm an important role for mid-layer feed-forward modules in storing factual associations and suggest that direct manipulation of computational mechanisms may be a feasible approach for model editing. The code, dataset, visualizations, and an interactive demo notebook are available in the supplemental materials.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2022,
+      "first_public_date": "2022-02-10",
+      "checked_on": "2026-11-06"
+    },
+    "doi": "10.52202/068431-1262",
+    "arxiv_url": "https://arxiv.org/abs/2202.05262",
+    "code_url": "https://github.com/kmeng01/rome",
+    "evidence": [
+      {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html",
+        "label": "NeurIPS 2022 proceedings",
+        "supports": "正式标题、作者、年份、摘要及 DOI"
+      },
+      {
+        "url": "https://arxiv.org/abs/2202.05262",
+        "label": "arXiv preprint",
+        "supports": "2022-02-10 首发日期"
+      },
+      {
+        "url": "https://github.com/kmeng01/rome",
+        "label": "Author code repository",
+        "supports": "作者代码仓库"
+      }
+    ],
+    "notes": "ROME 属于事实知识编辑，通过修改模型权重更新特定事实关联；归入 Model Repair。"
   }
 ]
