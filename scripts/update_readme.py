@@ -9,6 +9,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 from urllib.parse import quote
 
@@ -83,6 +84,16 @@ def validate_papers(papers):
         if paper.get("language") not in ("en", "zh"):
             errors.append(f"{label}: language must be en or zh.")
 
+        authors = paper.get("authors")
+        if authors is not None and (
+            not isinstance(authors, list)
+            or any(not isinstance(author, str) or not author.strip() for author in authors)
+        ):
+            errors.append(f"{label}: authors must be null or an array of non-empty strings.")
+
+        if paper.get("ccf_rank") not in (None, "A", "B", "C"):
+            errors.append(f"{label}: ccf_rank must be null, A, B or C.")
+
         if isinstance(paper_id, str):
             if paper_id in seen_ids:
                 errors.append(f"{label}: duplicate id.")
@@ -122,11 +133,25 @@ def validate_papers(papers):
         dates = paper.get("dates")
         if not isinstance(dates, dict):
             errors.append(f"{label}: dates must be an object.")
-        elif publication_type in PUBLICATION_TYPES:
-            field = "first_public_year" if publication_type == "preprint" else "publication_year"
-            year = dates.get(field)
-            if type(year) is not int or not 1000 <= year <= 9999:
-                errors.append(f"{label}: dates.{field} must be a four-digit integer.")
+        else:
+            required_year = "first_public_year" if publication_type == "preprint" else "publication_year"
+            for field in ("publication_year", "online_year", "first_public_year"):
+                year = dates.get(field)
+                if year is None and (field != required_year or publication_type not in PUBLICATION_TYPES):
+                    continue
+                if type(year) is not int or not 1000 <= year <= 9999:
+                    errors.append(f"{label}: dates.{field} must be a four-digit integer.")
+            for field in ("first_public_date", "checked_on"):
+                value = dates.get(field)
+                if value is None:
+                    continue
+                if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+                    errors.append(f"{label}: dates.{field} must use YYYY-MM-DD format.")
+                    continue
+                try:
+                    date.fromisoformat(value)
+                except ValueError:
+                    errors.append(f"{label}: dates.{field} must be a valid calendar date.")
     return errors
 
 

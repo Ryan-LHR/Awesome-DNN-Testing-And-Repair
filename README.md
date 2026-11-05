@@ -308,6 +308,13 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 This project's original content and code are licensed under the [MIT License](LICENSE). Third-party papers, abstracts, and other materials retain their original rights and licenses.
 
+<a name="tips"></a>
+
+## 💡 Tips
+
+- The English README lists English-language papers. The [Simplified Chinese README](README.zh-Hans.md#papers) includes both English- and Chinese-language papers.
+- The **Papers** and **With code** badges count the entire collection in both versions. Category counts reflect the papers displayed in each version.
+
 <a name="contributing"></a>
 
 ## 🙌 Contributing
