@@ -1,4 +1,4 @@
-"""Validate paper data and update README tables using Python's standard library.
+"""Validate paper data and update the README overview and tables using Python's standard library.
 
 Usage:
     python3 scripts/update_readme.py
@@ -35,6 +35,8 @@ BADGES = {
     "Code": "assets/badges/code.svg",
     "Website": "assets/badges/website.svg",
 }
+OVERVIEW_BEGIN_MARKER = "<!-- BEGIN GENERATED OVERVIEW -->"
+OVERVIEW_END_MARKER = "<!-- END GENERATED OVERVIEW -->"
 BEGIN_MARKER = "<!-- BEGIN GENERATED PAPERS -->"
 END_MARKER = "<!-- END GENERATED PAPERS -->"
 
@@ -121,6 +123,21 @@ def paper_link(label, url):
     return f"[![{escape_cell(label)}]({BADGES[label]})]({url})"
 
 
+def render_overview(papers):
+    research_count = sum(
+        any(CATEGORIES[category] == 4 for category in paper["categories"])
+        for paper in papers
+    )
+    lines = [f"- **[Research Papers](#research-papers)** ({research_count})"]
+    for category, level in CATEGORIES.items():
+        count = sum(category in paper["categories"] for paper in papers)
+        link = f"[{category}](#{category.lower().replace(' ', '-')})"
+        label = f"  - {link}" if level == 4 else f"- **{link}**"
+        lines.append(f"{label} ({count})")
+    lines.extend(["", "A paper may appear in more than one category."])
+    return "\n".join(lines)
+
+
 def render_tables(papers):
     lines = ["### Research Papers", ""]
     for category, level in CATEGORIES.items():
@@ -156,13 +173,13 @@ def render_tables(papers):
     return "\n".join(lines).rstrip()
 
 
-def replace_tables(readme, tables):
-    if readme.count(BEGIN_MARKER) != 1 or readme.count(END_MARKER) != 1:
-        raise ValueError("README.md must contain exactly one BEGIN and END GENERATED PAPERS marker.")
-    start = readme.index(BEGIN_MARKER) + len(BEGIN_MARKER)
-    end = readme.index(END_MARKER)
+def replace_tables(readme, tables, begin_marker=BEGIN_MARKER, end_marker=END_MARKER):
+    if readme.count(begin_marker) != 1 or readme.count(end_marker) != 1:
+        raise ValueError(f"README.md must contain exactly one {begin_marker} and {end_marker} marker.")
+    start = readme.index(begin_marker) + len(begin_marker)
+    end = readme.index(end_marker)
     if end < start:
-        raise ValueError("README.md generated-paper markers are in the wrong order.")
+        raise ValueError("README.md generated-table markers are in the wrong order.")
     newline = "\r\n" if "\r\n" in readme else "\n"
     tables = tables.replace("\n", newline)
     return readme[:start] + newline * 2 + tables + newline * 2 + readme[end:]
@@ -183,7 +200,7 @@ def replace_badge_counts(readme, papers):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate papers.json and update README paper tables and badge counts.")
+    parser = argparse.ArgumentParser(description="Validate papers.json and update README overview, paper tables, and badge counts.")
     parser.add_argument("--check", action="store_true", help="Check data and README without writing files.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
@@ -199,7 +216,8 @@ def main():
 
     path = root / "README.md"
     readme = path.read_bytes().decode("utf-8")
-    updated = replace_tables(readme, render_tables(papers))
+    updated = replace_tables(readme, render_overview(papers), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)
+    updated = replace_tables(updated, render_tables(papers))
     updated = replace_badge_counts(updated, papers)
     if updated == readme:
         print(f"Validated {len(papers)} papers; README.md is up to date.")

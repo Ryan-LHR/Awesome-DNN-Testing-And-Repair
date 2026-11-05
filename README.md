@@ -18,15 +18,21 @@ A collection of papers on deep neural network testing, verification, and repair.
 
 This collection focuses on testing, verifying, and repairing deep neural network models, with publication details and links to papers, preprints, and code where available.
 
-- [Research Papers](#research-papers)
-  - [Coverage Metrics](#coverage-metrics)
-  - [Test Generation](#test-generation)
-  - [Test Selection and Prioritization](#test-selection-and-prioritization)
-  - [Model Repair](#model-repair)
-  - [DNN Verification](#dnn-verification)
-  - [Other](#other)
-- [Surveys](#surveys)
-- [Empirical Studies](#empirical-studies)
+<!-- BEGIN GENERATED OVERVIEW -->
+
+- **[Research Papers](#research-papers)** (135)
+  - [Coverage Metrics](#coverage-metrics) (24)
+  - [Test Generation](#test-generation) (42)
+  - [Test Selection and Prioritization](#test-selection-and-prioritization) (42)
+  - [Model Repair](#model-repair) (39)
+  - [DNN Verification](#dnn-verification) (0)
+  - [Other](#other) (1)
+- **[Surveys](#surveys)** (5)
+- **[Empirical Studies](#empirical-studies)** (16)
+
+A paper may appear in more than one category.
+
+<!-- END GENERATED OVERVIEW -->
 
 ## Papers
 
