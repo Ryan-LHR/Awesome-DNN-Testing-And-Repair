@@ -333,7 +333,7 @@
 
 ## 🙌 欢迎贡献
 
-欢迎贡献！你可以通过 [Issue](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues) 或 [Pull Request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls) 推荐论文、补充资源链接或修正已有条目。推荐论文时，请提供论文标题、论文链接和建议分类。
+欢迎贡献！你可以[推荐论文](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=01-recommend-paper.yml)、[提交纠错](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=02-correct-entry.yml)，或提交 [Pull Request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls)。推荐论文只需提供标题和论文链接，建议分类、其他链接和补充说明均为选填。直接修改数据时，请参考[数据填写说明与 DeepXplore 示例](data/README.md#简体中文)。
 
 感谢每一位为本合集作出贡献的朋友！
 

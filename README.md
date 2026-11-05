@@ -312,7 +312,7 @@ This project's original content and code are licensed under the [MIT License](LI
 
 ## 🙌 Contributing
 
-Contributions are welcome! Open an [issue](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues) or submit a [pull request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls) to suggest papers, add resource links, or correct existing entries. When suggesting a paper, please include its title, a paper link, and a suggested category.
+Contributions are welcome! [Recommend a paper](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=01-recommend-paper.yml), [suggest a correction](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=02-correct-entry.yml), or submit a [pull request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls). Paper recommendations need a title and paper link; suggested categories, extra links, and additional notes are optional. For data contributions, see the [data guide and DeepXplore example](data/README.md#english).
 
 Thanks to everyone who contributes to this collection!
 
