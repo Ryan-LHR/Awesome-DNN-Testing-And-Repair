@@ -119,6 +119,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
 | 2025 | **NLPLego** | NLPLego: Assembling Test Generation for Natural Language Processing Applications | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691631) [![Code](assets/badges/code.svg)](https://github.com/SSCT-Lab/NLPLego) | TOSEM |
+| 2024 | **LLM-Fuzzer** | LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks | [![Paper](assets/badges/paper.svg)](https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2309.10253) [![Code](assets/badges/code.svg)](https://github.com/hubertyoo/GPTFuzz) | USENIX Security' 2024 |
 
 ##### QNNs
 
@@ -225,6 +226,12 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2019 | **Apricot** | Apricot: A Weight-Adaptation Approach to Fixing Deep Learning Models | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/ase.2019.00043) | ASE' 2019 |
 | 2019 | **DeepCorrect** | DeepCorrect: Correcting DNN Models Against Image Distortions | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tip.2019.2924172) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1705.02406) [![Code](assets/badges/code.svg)](https://github.com/tsborkar/DeepCorrect) | TIP |
 | 2018 | **MODE** | MODE: automated neural network model debugging via state differential analysis and input selection | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3236024.3236082) [![Code](assets/badges/code.svg)](https://github.com/dnnmode/buggymodels) | ESEC/FSE' 2018 |
+
+##### LLMs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2022 | **ROME** | Locating and Editing Factual Associations in GPT | [![Paper](assets/badges/paper.svg)](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2202.05262) [![Code](assets/badges/code.svg)](https://github.com/kmeng01/rome) | NeurIPS' 2022 |
 
 #### DNN Verification
 
