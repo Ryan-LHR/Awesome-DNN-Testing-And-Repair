@@ -80,6 +80,9 @@ def validate_papers(papers):
             if not isinstance(value, str) or not value.strip():
                 errors.append(f"{label}: {field} must be a non-empty string.")
 
+        if paper.get("language") not in ("en", "zh"):
+            errors.append(f"{label}: language must be en or zh.")
+
         if isinstance(paper_id, str):
             if paper_id in seen_ids:
                 errors.append(f"{label}: duplicate id.")
@@ -249,7 +252,7 @@ def main():
     for filename, language in (("README.md", "en"), ("README.zh-Hans.md", "zh-Hans")):
         visible_papers = papers
         if language == "en":
-            visible_papers = [paper for paper in papers if not re.search(r"[\u3400-\u9fff]", paper["title"])]
+            visible_papers = [paper for paper in papers if paper["language"] == "en"]
         path = root / filename
         readme = path.read_bytes().decode("utf-8")
         updated = replace_tables(readme, render_overview(visible_papers, language), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)

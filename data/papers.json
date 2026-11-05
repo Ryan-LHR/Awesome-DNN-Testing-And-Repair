@@ -2,6 +2,7 @@
   {
     "id": "cocofuzzing-2023",
     "title": "CoCoFuzzing: Testing Neural Code Models With Coverage-Guided Fuzzing",
+    "language": "en",
     "venue": "TR",
     "venue_name": "IEEE Transactions on Reliability",
     "paper_url": "https://doi.org/10.1109/tr.2022.3208239",
@@ -54,6 +55,7 @@
   {
     "id": "iatt-2025",
     "title": "IATT: Interpretation Analysis-based Transferable Test Generation for Convolutional Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3705301",
@@ -96,6 +98,7 @@
   {
     "id": "npc-2022",
     "title": "NPC: Neuron Path Coverage via Characterizing Decision Logic of Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3490489",
@@ -150,6 +153,7 @@
   {
     "id": "deephunter-2019",
     "title": "DeepHunter: A Coverage-Guided Fuzz Testing Framework for Deep Neural Networks",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3293882.3330579",
@@ -207,6 +211,7 @@
   {
     "id": "coverage-quality-2020",
     "title": "Correlations between Deep Neural Network Model Coverage Criteria and Model Quality",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3368089.3409671",
@@ -262,6 +267,7 @@
   {
     "id": "test4deep-journal-2023",
     "title": "A White-Box Testing for Deep Neural Networks Based on Neuron Coverage",
+    "language": "en",
     "venue": "TNNLS",
     "venue_name": "IEEE Transactions on Neural Networks and Learning Systems",
     "paper_url": "https://doi.org/10.1109/tnnls.2022.3156620",
@@ -307,6 +313,7 @@
   {
     "id": "test4deep-2019",
     "title": "Test4Deep: an Effective White-Box Testing for Deep Neural Networks",
+    "language": "en",
     "venue": "CSE/EUC",
     "venue_name": "2019 IEEE International Conference on Computational Science and Engineering (CSE) and IEEE International Conference on Embedded and Ubiquitous Computing (EUC)",
     "paper_url": "https://doi.org/10.1109/cse/euc.2019.00013",
@@ -354,6 +361,7 @@
   {
     "id": "ml-testing-survey-2022",
     "title": "Machine Learning Testing: Survey, Landscapes and Horizons",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2019.2962027",
@@ -405,6 +413,7 @@
   {
     "id": "deeproad-2018",
     "title": "DeepRoad: GAN-Based Metamorphic Testing and Input Validation Framework for Autonomous Driving Systems",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3238147.3238187",
@@ -452,6 +461,7 @@
   {
     "id": "cagfuzz-2022",
     "title": "CAGFuzz: Coverage-Guided Adversarial Generative Fuzzing Testing for Image-Based Deep Learning Systems",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2021.3124006",
@@ -498,6 +508,7 @@
   {
     "id": "uncertainty-2020",
     "title": "Towards Characterizing Adversarial Defects of Deep Learning Software from the Lens of Uncertainty",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3377811.3380368",
@@ -554,6 +565,7 @@
   {
     "id": "ai-lancet-2021",
     "title": "AI-Lancet: Locating Error-inducing Neurons to Optimize Neural Networks",
+    "language": "en",
     "venue": "CCS",
     "venue_name": "Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security",
     "paper_url": "https://doi.org/10.1145/3460120.3484818",
@@ -600,6 +612,7 @@
   {
     "id": "deepcon-2021",
     "title": "DeepCon: Contribution Coverage Testing for Deep Learning Systems",
+    "language": "en",
     "venue": "SANER",
     "venue_name": "2021 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
     "paper_url": "https://doi.org/10.1109/saner50967.2021.00026",
@@ -649,6 +662,7 @@
   {
     "id": "deepxplore-2017",
     "title": "DeepXplore: Automated Whitebox Testing of Deep Learning Systems",
+    "language": "en",
     "venue": "SOSP",
     "venue_name": "Proceedings of the 26th Symposium on Operating Systems Principles",
     "paper_url": "https://doi.org/10.1145/3132747.3132785",
@@ -711,6 +725,7 @@
   {
     "id": "deepstate-2022",
     "title": "DeepState: Selecting Test Suites to Enhance the Robustness of Recurrent Neural Networks",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the 44th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3510003.3510231",
@@ -752,6 +767,7 @@
   {
     "id": "gist-2024",
     "title": "GIST: Generated Inputs Sets Transferability in Deep Learning",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3672457",
@@ -792,6 +808,7 @@
   {
     "id": "rnn-test-2022",
     "title": "RNN-Test: Towards Adversarial Testing for Recurrent Neural Network Systems",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2021.3114353",
@@ -836,6 +853,7 @@
   {
     "id": "dlfuzz-conf-2018",
     "title": "DLFuzz: differential fuzzing testing of deep learning systems",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 2018 26th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3236024.3264835",
@@ -888,6 +906,7 @@
   {
     "id": "deeptest-2018",
     "title": "DeepTest: automated testing of deep-neural-network-driven autonomous cars",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the 40th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3180155.3180220",
@@ -939,6 +958,7 @@
   {
     "id": "nn-verification-testing-survey-2021",
     "title": "神经网络验证和测试技术研究综述",
+    "language": "zh",
     "venue": "计算机工程与应用",
     "venue_name": "计算机工程与应用",
     "paper_url": "https://doi.org/10.3778/j.issn.1002-8331.2106-0342",
@@ -981,6 +1001,7 @@
   {
     "id": "dnn-testing-survey-2020",
     "title": "深度神经网络测试研究综述",
+    "language": "zh",
     "venue": "软件学报",
     "venue_name": "软件学报",
     "paper_url": "https://doi.org/10.13328/j.cnki.jos.005951",
@@ -1025,6 +1046,7 @@
   {
     "id": "deepct-2019",
     "title": "DeepCT: Tomographic Combinatorial Testing for Deep Learning Systems",
+    "language": "en",
     "venue": "SANER",
     "venue_name": "2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER)",
     "paper_url": "https://doi.org/10.1109/saner.2019.8668044",
@@ -1070,6 +1092,7 @@
   {
     "id": "deepgauge-2018",
     "title": "DeepGauge: multi-granularity testing criteria for deep learning systems",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3238147.3238202",
@@ -1129,6 +1152,7 @@
   {
     "id": "improved-dl-testing-2019",
     "title": "Towards Improved Testing For Deep Learning",
+    "language": "en",
     "venue": "ICSE-NIER",
     "venue_name": "2019 IEEE/ACM 41st International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "paper_url": "https://doi.org/10.1109/icse-nier.2019.00030",
@@ -1178,6 +1202,7 @@
   {
     "id": "idc-2023",
     "title": "Input Distribution Coverage: Measuring Feature Interaction Adequacy in Neural Network Testing",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3576040",
@@ -1218,6 +1243,7 @@
   {
     "id": "quote-2023",
     "title": "QuoTe: Quality-oriented Testing for Deep Learning Systems",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3582573",
@@ -1267,6 +1293,7 @@
   {
     "id": "deepsensor-2023",
     "title": "Excitement surfeited turns to errors: Deep learning testing framework based on excitable neurons",
+    "language": "en",
     "venue": "Information Sciences",
     "venue_name": "Information Sciences",
     "paper_url": "https://doi.org/10.1016/j.ins.2023.118936",
@@ -1322,6 +1349,7 @@
   {
     "id": "robot-2021",
     "title": "RobOT: Robustness-Oriented Testing for Deep Learning Systems",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse43902.2021.00038",
@@ -1371,6 +1399,7 @@
   {
     "id": "neuron-coverage-person-detection-2022",
     "title": "Is Neuron Coverage Needed to Make Person Detection More Robust?",
+    "language": "en",
     "venue": "CVPRW",
     "venue_name": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
     "paper_url": "https://doi.org/10.1109/cvprw56347.2022.00326",
@@ -1412,6 +1441,7 @@
   {
     "id": "coverage-robustness-2020",
     "title": "An Empirical Study on Correlation between Coverage and Robustness for Deep Neural Networks",
+    "language": "en",
     "venue": "ICECCS",
     "venue_name": "2020 25th International Conference on Engineering of Complex Computer Systems (ICECCS)",
     "paper_url": "https://doi.org/10.1109/iceccs51672.2020.00016",
@@ -1470,6 +1500,7 @@
   {
     "id": "coverage-criteria-meaningful-2021",
     "title": "Are Coverage Criteria Meaningful Metrics for DNNs?",
+    "language": "en",
     "venue": "IJCNN",
     "venue_name": "2021 International Joint Conference on Neural Networks (IJCNN)",
     "paper_url": "https://doi.org/10.1109/ijcnn52387.2021.9533987",
@@ -1516,6 +1547,7 @@
   {
     "id": "structural-coverage-misleading-2019",
     "title": "Structural Coverage Criteria for Neural Networks Could Be Misleading",
+    "language": "en",
     "venue": "ICSE-NIER",
     "venue_name": "2019 IEEE/ACM 41st International Conference on Software Engineering: New Ideas and Emerging Results (ICSE-NIER)",
     "paper_url": "https://doi.org/10.1109/icse-nier.2019.00031",
@@ -1558,6 +1590,7 @@
   {
     "id": "dlfuzz-journal-2021",
     "title": "Coverage Guided Differential Adversarial Testing of Deep Learning Systems",
+    "language": "en",
     "venue": "TNSE",
     "venue_name": "IEEE Transactions on Network Science and Engineering",
     "paper_url": "https://doi.org/10.1109/tnse.2020.2997359",
@@ -1609,6 +1642,7 @@
   {
     "id": "testrnn-2022",
     "title": "Coverage-Guided Testing for Recurrent Neural Networks",
+    "language": "en",
     "venue": "TR",
     "venue_name": "IEEE Transactions on Reliability",
     "paper_url": "https://doi.org/10.1109/tr.2021.3080664",
@@ -1654,6 +1688,7 @@
   {
     "id": "deepstellar-2019",
     "title": "DeepStellar: model-based quantitative analysis of stateful deep learning systems",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 2019 27th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3338906.3338954",
@@ -1698,6 +1733,7 @@
   {
     "id": "cit4dnn-2024",
     "title": "CIT4DNN: Generating Diverse and Rare Inputs for Neural Networks Using Latent Space Combinatorial Testing",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the IEEE/ACM 46th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3597503.3639106",
@@ -1739,6 +1775,7 @@
   {
     "id": "distxplore-2023",
     "title": "DistXplore: Distribution-Guided Testing for Evaluating and Enhancing Deep Learning Systems",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3611643.3616266",
@@ -1788,6 +1825,7 @@
   {
     "id": "sinvad-2024",
     "title": "Deceiving Humans and Machines Alike: Search-based Test Input Generation for DNNs Using Variational Autoencoders",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3635706",
@@ -1828,6 +1866,7 @@
   {
     "id": "dfuzzer-2024",
     "title": "DFuzzer: Diversity-Driven Seed Queue Construction of Fuzzing for Deep Learning Models",
+    "language": "en",
     "venue": "TR",
     "venue_name": "IEEE Transactions on Reliability",
     "paper_url": "https://doi.org/10.1109/tr.2023.3322406",
@@ -1869,6 +1908,7 @@
   {
     "id": "nsgen-2025",
     "title": "Neuron Semantic-Guided Test Generation for Deep Neural Networks Fuzzing",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3688835",
@@ -1912,6 +1952,7 @@
   {
     "id": "structural-test-coverage-2019",
     "title": "Structural Test Coverage Criteria for Deep Neural Networks",
+    "language": "en",
     "venue": "TECS",
     "venue_name": "ACM Transactions on Embedded Computing Systems",
     "paper_url": "https://doi.org/10.1145/3358233",
@@ -1961,6 +2002,7 @@
   {
     "id": "neuron-coverage-meaningful-2020",
     "title": "Is neuron coverage a meaningful measure for testing deep neural networks?",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3368089.3409754",
@@ -2004,6 +2046,7 @@
   {
     "id": "deeppath-2019",
     "title": "DeepPath: Path-Driven Testing Criteria for Deep Neural Networks",
+    "language": "en",
     "venue": "AITest",
     "venue_name": "2019 IEEE International Conference On Artificial Intelligence Testing (AITest)",
     "paper_url": "https://doi.org/10.1109/aitest.2019.00013",
@@ -2046,6 +2089,7 @@
   {
     "id": "test-selection-dl-2021",
     "title": "Test Selection for Deep Learning Systems",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3417330",
@@ -2094,6 +2138,7 @@
   {
     "id": "clover-2025",
     "title": "Context-Aware Fuzzing for Robustness Enhancement of Deep Learning Models",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3680464",
@@ -2135,6 +2180,7 @@
   {
     "id": "nlplego-2025",
     "title": "NLPLego: Assembling Test Generation for Natural Language Processing Applications",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3691631",
@@ -2181,6 +2227,7 @@
   {
     "id": "gan-simulation-testing-2025",
     "title": "Search-Based DNN Testing and Retraining With GAN-Enhanced Simulations",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2025.3540549",
@@ -2221,6 +2268,7 @@
   {
     "id": "taefuzz-2025",
     "title": "TAEFuzz: Automatic Fuzzing for Image-based Deep Learning Systems via Transferable Adversarial Examples",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3714463",
@@ -2265,6 +2313,7 @@
   {
     "id": "deepjanus-2020",
     "title": "Model-based exploration of the frontier of behaviours for deep learning system testing",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3368089.3409730",
@@ -2304,6 +2353,7 @@
   {
     "id": "diffgan-2025",
     "title": "DiffGAN: A Test Generation Approach for Differential Testing of Deep Neural Networks for Image Analysis",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2025.3611329",
@@ -2345,6 +2395,7 @@
   {
     "id": "suntest-2026",
     "title": "White-Box Test Input Generation for Enhancing Deep Neural Network Models through Suspicious Neuron Awareness",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3736305",
@@ -2386,6 +2437,7 @@
   {
     "id": "deepmutation-2018",
     "title": "DeepMutation: Mutation Testing of Deep Learning Systems",
+    "language": "en",
     "venue": "ISSRE",
     "venue_name": "2018 IEEE 29th International Symposium on Software Reliability Engineering (ISSRE)",
     "paper_url": "https://doi.org/10.1109/issre.2018.00021",
@@ -2439,6 +2491,7 @@
   {
     "id": "deepcorrect-2019",
     "title": "DeepCorrect: Correcting DNN Models Against Image Distortions",
+    "language": "en",
     "venue": "TIP",
     "venue_name": "IEEE Transactions on Image Processing",
     "paper_url": "https://doi.org/10.1109/tip.2019.2924172",
@@ -2483,6 +2536,7 @@
   {
     "id": "quantest-2025",
     "title": "QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3688840",
@@ -2531,6 +2585,7 @@
   {
     "id": "seed-selection-2024",
     "title": "Seed Selection for Testing Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3607190",
@@ -2575,6 +2630,7 @@
   {
     "id": "surprise-adequacy-journal-2023",
     "title": "Evaluating Surprise Adequacy for Deep Learning System Testing",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3546947",
@@ -2626,6 +2682,7 @@
   {
     "id": "surprise-adequacy-2019",
     "title": "Guiding Deep Learning System Testing Using Surprise Adequacy",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse.2019.00108",
@@ -2682,6 +2739,7 @@
   {
     "id": "graphprior-2024",
     "title": "GraphPrior: Mutation-based Test Input Prioritization for Graph Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3607191",
@@ -2730,6 +2788,7 @@
   {
     "id": "datis-2024",
     "title": "Distance-Aware Test Input Selection for Deep Neural Networks",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3650212.3652125",
@@ -2784,6 +2843,7 @@
   {
     "id": "meta-model-test-selection-2024",
     "title": "Test Selection for Deep Neural Networks using Meta-Models with Uncertainty Metrics",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3650212.3680312",
@@ -2829,6 +2889,7 @@
   {
     "id": "nns-2023",
     "title": "In Defense of Simple Techniques for Neural Network Test Case Selection",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3597926.3598073",
@@ -2876,6 +2937,7 @@
   {
     "id": "simple-techniques-replication-2022",
     "title": "Simple techniques work surprisingly well for neural network test prioritization and active learning (replicability study)",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 31st ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3533767.3534375",
@@ -2921,6 +2983,7 @@
   {
     "id": "deepgini-2020",
     "title": "DeepGini: prioritizing massive tests to enhance the robustness of deep neural networks",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 29th ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3395363.3397357",
@@ -2969,6 +3032,7 @@
   {
     "id": "deepgd-2024",
     "title": "DeepGD: A Multi-Objective Black-Box Test Selection Approach for Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3644388",
@@ -3010,6 +3074,7 @@
   {
     "id": "atom-2023",
     "title": "ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "paper_url": "https://doi.org/10.1109/ase56229.2023.00156",
@@ -3061,6 +3126,7 @@
   {
     "id": "certpri-2023",
     "title": "CertPri: Certifiable Prioritization for Deep Neural Networks via Movement Cost in Feature Space",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "paper_url": "https://doi.org/10.1109/ase56229.2023.00126",
@@ -3111,6 +3177,7 @@
   {
     "id": "tdpr-2024",
     "title": "Prioritizing Test Inputs for DNNs Using Training Dynamics",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3691620.3695498",
@@ -3162,6 +3229,7 @@
   {
     "id": "fast-2024",
     "title": "FAST: Boosting Uncertainty-based Test Prioritization Methods for Neural Networks via Feature Selection",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3691620.3695472",
@@ -3211,6 +3279,7 @@
   {
     "id": "fipser-2024",
     "title": "FIPSER: Improving Fairness Testing of DNN by Seed Prioritization",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3691620.3695486",
@@ -3265,6 +3334,7 @@
   {
     "id": "ats-2022",
     "title": "Adaptive test selection for deep neural networks",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the 44th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3510003.3510232",
@@ -3318,6 +3388,7 @@
   {
     "id": "coverage-failure-discovery-2024",
     "title": "Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3672446",
@@ -3363,6 +3434,7 @@
   {
     "id": "mlprior-2024",
     "title": "Test Input Prioritization for Machine Learning Classifiers",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2024.3350019",
@@ -3411,6 +3483,7 @@
   {
     "id": "noderank-2024",
     "title": "Test Input Prioritization for Graph Neural Networks",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2024.3385538",
@@ -3469,6 +3542,7 @@
   {
     "id": "nss-2024",
     "title": "Neuron Sensitivity-Guided Test Case Selection",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3672454",
@@ -3513,6 +3587,7 @@
   {
     "id": "rts-2023",
     "title": "Robust Test Selection for Deep Neural Networks",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2023.3330982",
@@ -3569,6 +3644,7 @@
   {
     "id": "testrank-2021",
     "title": "TestRank: Bringing Order into Unlabeled Test Instances for Deep Learning Tasks",
+    "language": "en",
     "venue": "NeurIPS",
     "venue_name": "Advances in Neural Information Processing Systems",
     "paper_url": "https://proceedings.neurips.cc/paper/2021/hash/ae78510109d46b0a6eef9820a4ca95d6-Abstract.html",
@@ -3616,6 +3692,7 @@
   {
     "id": "dnn-test-optimization-survey-2024",
     "title": "Test Optimization in DNN Testing: A Survey",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3643678",
@@ -3660,6 +3737,7 @@
   {
     "id": "prima-2021",
     "title": "Prioritizing Test Inputs for Deep Neural Networks via Mutation Analysis",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse43902.2021.00046",
@@ -3708,6 +3786,7 @@
   {
     "id": "mcp-2020",
     "title": "Multiple-boundary clustering and prioritization to promote neural network retraining",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3324884.3416621",
@@ -3756,6 +3835,7 @@
   {
     "id": "input-prioritization-2019",
     "title": "Input Prioritization for Testing Neural Networks",
+    "language": "en",
     "venue": "AITest",
     "venue_name": "2019 IEEE International Conference On Artificial Intelligence Testing (AITest)",
     "paper_url": "https://doi.org/10.1109/aitest.2019.000-6",
@@ -3803,6 +3883,7 @@
   {
     "id": "surprise-adequacy-refinement-2021",
     "title": "A Review and Refinement of Surprise Adequacy",
+    "language": "en",
     "venue": "DeepTest (workshop)",
     "venue_name": "2021 IEEE/ACM Third International Workshop on Deep Learning for Testing and Testing for Deep Learning (DeepTest)",
     "paper_url": "https://doi.org/10.1109/deeptest52559.2021.00009",
@@ -3849,6 +3930,7 @@
   {
     "id": "pcprior-2024",
     "title": "Test Input Prioritization for 3D Point Clouds",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3643676",
@@ -3892,6 +3974,7 @@
   {
     "id": "gnn-test-selection-study-2024",
     "title": "Towards Exploring the Limitations of Test Selection Techniques on Graph Neural Networks: An Empirical Study",
+    "language": "en",
     "venue": "EMSE",
     "venue_name": "Empirical Software Engineering",
     "paper_url": "https://doi.org/10.1007/s10664-024-10515-y",
@@ -3938,6 +4021,7 @@
   {
     "id": "vrank-2024",
     "title": "Prioritizing test cases for deep learning-based video classifiers",
+    "language": "en",
     "venue": "EMSE",
     "venue_name": "Empirical Software Engineering",
     "paper_url": "https://doi.org/10.1007/s10664-024-10520-1",
@@ -3980,6 +4064,7 @@
   {
     "id": "prophet-2025",
     "title": "Prioritizing Speech Test Cases",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3707450",
@@ -4024,6 +4109,7 @@
   {
     "id": "test-selection-robustness-2025",
     "title": "Assessing the Robustness of Test Selection Methods for Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3715693",
@@ -4070,6 +4156,7 @@
   {
     "id": "deepvec-2025",
     "title": "DeepVec: State-Vector Aware Test Case Selection for Enhancing Recurrent Neural Network",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2025.3565037",
@@ -4129,6 +4216,7 @@
   {
     "id": "audiotest-2025",
     "title": "AudioTest: Prioritizing Audio Test Cases",
+    "language": "en",
     "venue": "PACMSE",
     "venue_name": "Proceedings of the ACM on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3728907",
@@ -4176,6 +4264,7 @@
   {
     "id": "fats-2024",
     "title": "FATS: Feature Distribution Analysis-Based Test Selection for Deep Learning Enhancement",
+    "language": "en",
     "venue": "TBD",
     "venue_name": "IEEE Transactions on Big Data",
     "paper_url": "https://doi.org/10.1109/tbdata.2023.3334648",
@@ -4228,6 +4317,7 @@
   {
     "id": "dat-2022",
     "title": "An Empirical Study on Data Distribution-Aware Test Selection for Deep Learning Enhancement",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3511598",
@@ -4278,6 +4368,7 @@
   {
     "id": "pricod-2026",
     "title": "PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3730435",
@@ -4320,6 +4411,7 @@
   {
     "id": "metasel-2025",
     "title": "MetaSel: A Test Selection Approach for Fine-Tuned DNN Models",
+    "language": "en",
     "venue": "TSE",
     "venue_name": "IEEE Transactions on Software Engineering",
     "paper_url": "https://doi.org/10.1109/tse.2025.3612253",
@@ -4371,6 +4463,7 @@
   {
     "id": "sets-2026",
     "title": "SETS: A Simple yet Effective DNN Test Selection Approach",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3772084",
@@ -4418,6 +4511,7 @@
   {
     "id": "eats-2025",
     "title": "Efficient adaptive test case selection for DNNs robustness enhancement",
+    "language": "en",
     "venue": "JSS",
     "venue_name": "Journal of Systems and Software",
     "paper_url": "https://doi.org/10.1016/j.jss.2025.112451",
@@ -4470,6 +4564,7 @@
   {
     "id": "metadts-2026",
     "title": "MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks",
+    "language": "en",
     "venue": "JSA",
     "venue_name": "Journal of Systems Architecture",
     "paper_url": "https://doi.org/10.1016/j.sysarc.2025.103682",
@@ -4523,6 +4618,7 @@
   {
     "id": "lbt-2025",
     "title": "Learning-Based Testing for Deep Learning: Enhancing Model Robustness with Adversarial Input Prioritization",
+    "language": "en",
     "venue": "arXiv",
     "venue_name": "arXiv",
     "paper_url": "https://arxiv.org/abs/2509.23961",
@@ -4562,6 +4658,7 @@
   {
     "id": "actracer-2026",
     "title": "AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3744340",
@@ -4614,6 +4711,7 @@
   {
     "id": "deeppatch-2023",
     "title": "DeepPatch: Maintaining Deep Learning Model Programs to Retain Standard Accuracy with Substantial Robustness Improvement",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3604609",
@@ -4655,6 +4753,7 @@
   {
     "id": "dflare-2023",
     "title": "Finding Deviated Behaviors of the Compressed DNN Models for Image Classifications",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3583564",
@@ -4710,6 +4809,7 @@
   {
     "id": "arachne-2023",
     "title": "Arachne: Search-Based Repair of Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3563210",
@@ -4760,6 +4860,7 @@
   {
     "id": "apricot-2019",
     "title": "Apricot: A Weight-Adaptation Approach to Fixing Deep Learning Models",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
     "paper_url": "https://doi.org/10.1109/ase.2019.00043",
@@ -4804,6 +4905,7 @@
   {
     "id": "airepair-2023",
     "title": "AIREPAIR: A Repair Platform for Neural Networks",
+    "language": "en",
     "venue": "ICSE-Companion",
     "venue_name": "2023 IEEE/ACM 45th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
     "paper_url": "https://doi.org/10.1109/icse-companion58688.2023.00033",
@@ -4860,6 +4962,7 @@
   {
     "id": "rift-2023",
     "title": "Improving Generalization of Adversarial Training via Robust Critical Fine-Tuning",
+    "language": "en",
     "venue": "ICCV",
     "venue_name": "2023 IEEE/CVF International Conference on Computer Vision (ICCV)",
     "paper_url": "https://doi.org/10.1109/iccv51070.2023.00408",
@@ -4912,6 +5015,7 @@
   {
     "id": "faire-2024",
     "title": "Faire: Repairing Fairness of Neural Networks via Neuron Condition Synthesis",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3617168",
@@ -4956,6 +5060,7 @@
   {
     "id": "archrepair-2023",
     "title": "ArchRepair: Block-Level Architecture-Oriented Repairing for Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3585005",
@@ -5001,6 +5106,7 @@
   {
     "id": "vere-2024",
     "title": "VeRe: Verification Guided Synthesis for Repairing Deep Neural Networks",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the IEEE/ACM 46th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3597503.3623332",
@@ -5049,6 +5155,7 @@
   {
     "id": "runner-2024",
     "title": "RUNNER: Responsible UNfair NEuron Repair for Enhancing Deep Neural Network Fairness",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the IEEE/ACM 46th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3597503.3623334",
@@ -5104,6 +5211,7 @@
   {
     "id": "autoric-2025",
     "title": "AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3690634",
@@ -5157,6 +5265,7 @@
   {
     "id": "inner-2024",
     "title": "Interpretability Based Neural Network Repair",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3650212.3680330",
@@ -5210,6 +5319,7 @@
   {
     "id": "idnn-2024",
     "title": "Isolation-Based Debugging for Neural Networks",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3650212.3652132",
@@ -5257,6 +5367,7 @@
   {
     "id": "neufair-2024",
     "title": "NeuFair: Neural Network Fairness Repair with Dropout",
+    "language": "en",
     "venue": "ISSTA",
     "venue_name": "Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis",
     "paper_url": "https://doi.org/10.1145/3650212.3680380",
@@ -5313,6 +5424,7 @@
   {
     "id": "dnn-repair-strategies-survey-2024",
     "title": "深度神经网络修复策略综述",
+    "language": "zh",
     "venue": "软件学报",
     "venue_name": "Journal of Software (软件学报)",
     "paper_url": "https://www.jos.org.cn/1000-9825/7061.htm",
@@ -5361,6 +5473,7 @@
   {
     "id": "i-repair-2022",
     "title": "Repairing misclassifications in neural networks using limited data",
+    "language": "en",
     "venue": "SAC",
     "venue_name": "Proceedings of the 37th ACM/SIGAPP Symposium on Applied Computing",
     "paper_url": "https://doi.org/10.1145/3477314.3507059",
@@ -5406,6 +5519,7 @@
   {
     "id": "crosscert-2024",
     "title": "CrossCert: A Cross-Checking Detection Approach to Patch Robustness Certification for Deep Learning Models",
+    "language": "en",
     "venue": "PACMSE",
     "venue_name": "Proceedings of the ACM on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3660827",
@@ -5448,6 +5562,7 @@
   {
     "id": "uncertainty-alignment-2023",
     "title": "Lightweight Approaches to DNN Regression Error Reduction: An Uncertainty Alignment Perspective",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2023 IEEE/ACM 45th International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse48619.2023.00106",
@@ -5503,6 +5618,7 @@
   {
     "id": "dare-2024",
     "title": "A Post-training Framework for Improving the Performance of Deep Learning Models via Model Transformation",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3630011",
@@ -5546,6 +5662,7 @@
   {
     "id": "deepfeature-2025",
     "title": "DeepFeature: Guiding adversarial testing for deep neural network systems using robust features",
+    "language": "en",
     "venue": "JSS",
     "venue_name": "Journal of Systems and Software",
     "paper_url": "https://doi.org/10.1016/j.jss.2024.112201",
@@ -5602,6 +5719,7 @@
   {
     "id": "mode-2018",
     "title": "MODE: automated neural network model debugging via state differential analysis and input selection",
+    "language": "en",
     "venue": "ESEC/FSE",
     "venue_name": "Proceedings of the 2018 26th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
     "paper_url": "https://doi.org/10.1145/3236024.3236082",
@@ -5649,6 +5767,7 @@
   {
     "id": "sensei-2020",
     "title": "Fuzz testing based data augmentation to improve robustness of deep neural networks",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3377811.3380415",
@@ -5695,6 +5814,7 @@
   {
     "id": "fsgmix-2020",
     "title": "Few-Shot Guided Mix for DNN Repairing",
+    "language": "en",
     "venue": "ICSME-NIER",
     "venue_name": "2020 IEEE International Conference on Software Maintenance and Evolution (ICSME)",
     "paper_url": "https://doi.org/10.1109/icsme46990.2020.00079",
@@ -5750,6 +5870,7 @@
   {
     "id": "repair-break-prediction-2025",
     "title": "Repairs and Breaks Prediction for Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3702983",
@@ -5802,6 +5923,7 @@
   {
     "id": "feaprotect-2025",
     "title": "Mitigating Regression Faults Induced by Feature Evolution in Deep Learning Systems",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3712199",
@@ -5851,6 +5973,7 @@
   {
     "id": "autotrainer-2021",
     "title": "AUTOTRAINER: An Automatic DNN Training Problem Detection and Repair System",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse43902.2021.00043",
@@ -5897,6 +6020,7 @@
   {
     "id": "care-2022",
     "title": "Causality-based neural network repair",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "Proceedings of the 44th International Conference on Software Engineering",
     "paper_url": "https://doi.org/10.1145/3510003.3510080",
@@ -5943,6 +6067,7 @@
   {
     "id": "neurecover-2022",
     "title": "NeuRecover: Regression-Controlled Repair of Deep Neural Networks with Training History",
+    "language": "en",
     "venue": "SANER",
     "venue_name": "2022 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
     "paper_url": "https://doi.org/10.1109/saner53432.2022.00128",
@@ -5992,6 +6117,7 @@
   {
     "id": "adrep-2023",
     "title": "Adaptive Search-based Repair of Deep Neural Networks",
+    "language": "en",
     "venue": "GECCO",
     "venue_name": "Proceedings of the Genetic and Evolutionary Computation Conference",
     "paper_url": "https://doi.org/10.1145/3583131.3590477",
@@ -6040,6 +6166,7 @@
   {
     "id": "deepfault-2019",
     "title": "DeepFault: Fault Localization for Deep Neural Networks",
+    "language": "en",
     "venue": "FASE",
     "venue_name": "Fundamental Approaches to Software Engineering",
     "paper_url": "https://doi.org/10.1007/978-3-030-16722-6_10",
@@ -6090,6 +6217,7 @@
   {
     "id": "distrrep-2023",
     "title": "Distributed Repair of Deep Neural Networks",
+    "language": "en",
     "venue": "ICST",
     "venue_name": "2023 IEEE Conference on Software Testing, Verification and Validation (ICST)",
     "paper_url": "https://doi.org/10.1109/icst57152.2023.00017",
@@ -6137,6 +6265,7 @@
   {
     "id": "aprnn-2023",
     "title": "Architecture-Preserving Provable Repair of Deep Neural Networks",
+    "language": "en",
     "venue": "PACMPL",
     "venue_name": "Proceedings of the ACM on Programming Languages",
     "paper_url": "https://doi.org/10.1145/3591238",
@@ -6183,6 +6312,7 @@
   {
     "id": "regression-free-repair-experience-2023",
     "title": "An Experience Report on Regression-Free Repair of Deep Neural Network Model",
+    "language": "en",
     "venue": "SANER (Industry)",
     "venue_name": "2023 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
     "paper_url": "https://doi.org/10.1109/saner56733.2023.00090",
@@ -6235,6 +6365,7 @@
   {
     "id": "metarepair-2024",
     "title": "MetaRepair: Learning to Repair Deep Neural Networks from Repairing Experiences",
+    "language": "en",
     "venue": "ACM MM",
     "venue_name": "Proceedings of the 32nd ACM International Conference on Multimedia",
     "paper_url": "https://doi.org/10.1145/3664647.3680638",
@@ -6282,6 +6413,7 @@
   {
     "id": "patchpro-2025",
     "title": "Patch Synthesis for Property Repair of Deep Neural Networks",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse55347.2025.00181",
@@ -6342,6 +6474,7 @@
   {
     "id": "default-2025",
     "title": "Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification",
+    "language": "en",
     "venue": "ICSE",
     "venue_name": "2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE)",
     "paper_url": "https://doi.org/10.1109/icse55347.2025.00224",
@@ -6399,6 +6532,7 @@
   {
     "id": "pr-dnn-2021",
     "title": "Provable repair of deep neural networks",
+    "language": "en",
     "venue": "PLDI",
     "venue_name": "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation",
     "paper_url": "https://doi.org/10.1145/3453483.3454064",
@@ -6453,6 +6587,7 @@
   {
     "id": "reachability-repair-2022",
     "title": "Neural Network Repair with Reachability Analysis",
+    "language": "en",
     "venue": "FORMATS",
     "venue_name": "Formal Modeling and Analysis of Timed Systems",
     "paper_url": "https://doi.org/10.1007/978-3-031-15839-1_13",
@@ -6506,6 +6641,7 @@
   {
     "id": "dare-2022",
     "title": "Toward Improving the Robustness of Deep Learning Models via Model Transformation",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3551349.3556920",
@@ -6553,6 +6689,7 @@
   {
     "id": "repair-side-effect-prediction-2023",
     "title": "An Initial Analysis of Repair and Side-effect Prediction for Neural Networks",
+    "language": "en",
     "venue": "CAIN",
     "venue_name": "2023 IEEE/ACM 2nd International Conference on AI Engineering – Software Engineering for AI (CAIN)",
     "paper_url": "https://doi.org/10.1109/cain58948.2023.00017",
@@ -6600,6 +6737,7 @@
   {
     "id": "smir-2026",
     "title": "SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks",
+    "language": "en",
     "venue": "TOSEM",
     "venue_name": "ACM Transactions on Software Engineering and Methodology",
     "paper_url": "https://doi.org/10.1145/3771545",
@@ -6653,6 +6791,7 @@
   {
     "id": "dufp-2026",
     "title": "When Ambiguity Meets Atypicality: Dual-Perspective Test Input Prioritization for DNNs",
+    "language": "en",
     "venue": "ASE",
     "venue_name": "41st IEEE/ACM International Conference on Automated Software Engineering",
     "paper_url": "https://doi.org/10.1145/3832783.3834351",
@@ -6713,6 +6852,7 @@
   {
     "id": "tsdtest-2022",
     "title": "TSDTest: A Efficient Coverage Guided Two-Stage Testing for Deep Learning Systems",
+    "language": "en",
     "venue": "QRS-C",
     "venue_name": "IEEE International Conference on Software Quality, Reliability, and Security Companion",
     "paper_url": "https://doi.org/10.1109/qrs-c57518.2022.00033",
