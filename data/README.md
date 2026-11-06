@@ -50,6 +50,18 @@ python3 scripts/update_readme.py
 python3 scripts/update_readme.py --check
 ```
 
+Both commands validate paper data and the scan log offline. Resource URLs must be absolute HTTP(S) URLs with a valid host, without whitespace, embedded credentials, or malformed percent escapes. Optional links remain optional.
+
+Scan checks cover scope revisions, venue/year ranges, dates, source records, and the existing status vocabulary. Scan IDs and scope/cutoff combinations must be unique; source IDs and DOIs must be unique within each scan. The same paper may appear in later scan batches. Extend `SCAN_STATES` in the script when a new screening stage or decision has been reviewed; validation does not infer or change screening decisions.
+
+For a separate network availability report:
+
+```sh
+python3 scripts/check_links.py --output work/link-check.json
+```
+
+This checks recorded Paper, arXiv, Code, and Website URLs once per distinct URL. It reports redirects, HTTP errors, and transport failures without changing data or READMEs. HTTP 401/403/429/451 responses indicate restricted access, not a confirmed dead link; even 404/410 responses need review. A successful response does not verify paper identity or full-text access. Reports belong in the ignored `work/` directory; no scheduled workflow is enabled.
+
 ## 简体中文
 
 [papers.json](papers.json) 是一个 JSON 数组，每条记录对应一次发表。新增或纠正论文时修改该文件，README 的目录、论文表格和计数由脚本生成。会议版与期刊扩展版分别保留，使用不同的 `id`，适用时在 `alias` 后标注 `(conf-version)` 或 `(journal-version)`。
@@ -71,6 +83,12 @@ python3 scripts/update_readme.py --check
 可选字段缺失时可省略，未知的可选标量元数据可填 `null`。新增前按标题和 DOI 查重。英文 README 只展示 `en` 论文，简体中文版展示全部论文；两版顶部 Papers 和 With code 徽章都统计全库。
 
 修改后在仓库根目录运行上面的两条命令，再审核生成的差异。[下方 DeepXplore 示例](#deepxplore-example) 同时属于覆盖度量和测试生成，展示了多分类的填写方式。
+
+这两条命令均离线校验论文数据和扫描台账。资源链接必须是带有效主机名的完整 HTTP(S) URL，不含空白、内嵌账号密码或错误的百分号转义；可选链接仍可省略或填 `null`。
+
+台账校验覆盖范围版本、来源与年份范围、日期、来源记录及现有状态用语。扫描 ID 和范围／截止日期组合不能重复；同一批次内的来源 ID 和 DOI 不能重复，同篇论文可以出现在后续扫描批次。新增筛选阶段或决定经审核后，再扩展脚本中的 `SCAN_STATES`；校验不会推断或修改收录决定。
+
+联网巡检单独使用上面的 `scripts/check_links.py` 命令，对已有 Paper、arXiv、Code 和 Website 链接去重访问，报告重定向、HTTP 错误及网络故障，不修改数据或 README。401/403/429/451 表示访问受限，不能据此判断链接失效；404/410 也需复核。响应成功不代表已核实论文身份或取得全文。报告保存在已忽略的 `work/` 目录，目前不启用定时工作流。
 
 <a name="deepxplore-example"></a>
 

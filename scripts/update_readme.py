@@ -10,8 +10,9 @@ import json
 import re
 import sys
 from datetime import date
+from ipaddress import ip_address
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 
 CATEGORIES = {
@@ -61,6 +62,53 @@ OVERVIEW_BEGIN_MARKER = "<!-- BEGIN GENERATED OVERVIEW -->"
 OVERVIEW_END_MARKER = "<!-- END GENERATED OVERVIEW -->"
 BEGIN_MARKER = "<!-- BEGIN GENERATED PAPERS -->"
 END_MARKER = "<!-- END GENERATED PAPERS -->"
+RESOURCE_FIELDS = ("paper_url", "arxiv_url", "code_url", "website_url")
+SCAN_STATES = {
+    "directory_status": ("complete_as_of_cutoff",),
+    "screening_stage": ("title_only",),
+    "title_screen_status": ("complete",),
+    "decision": ("candidate", "boundary", "not_selected_at_title_screen", "out_of_scope"),
+}
+
+
+def url_error(value):
+    if not isinstance(value, str) or not value:
+        return "must be a non-empty HTTP(S) URL."
+    if re.search(r"[\s\x00-\x1f\x7f\\]", value):
+        return "must not contain whitespace, control characters or backslashes."
+    if re.search(r"%(?![0-9A-Fa-f]{2})", value):
+        return "contains an invalid percent escape."
+    try:
+        parts = urlsplit(value)
+        if parts.scheme not in ("http", "https") or not parts.hostname:
+            return "must be an absolute HTTP(S) URL with a host."
+        if parts.username is not None or parts.password is not None:
+            return "must not contain embedded credentials."
+        if parts.port is not None and not 1 <= parts.port <= 65535:
+            return "has an invalid port."
+        host = parts.hostname.encode("idna").decode("ascii")
+        try:
+            ip_address(host)
+        except ValueError:
+            labels = host.rstrip(".").split(".")
+            if len(host) > 253 or len(labels) < 2 or any(
+                not re.fullmatch(r"[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?", label)
+                for label in labels
+            ):
+                return "has an invalid domain name."
+    except (ValueError, UnicodeError):
+        return "has an invalid host or port."
+    return None
+
+
+def date_error(value):
+    if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+        return "must use YYYY-MM-DD format."
+    try:
+        date.fromisoformat(value)
+    except ValueError:
+        return "must be a valid calendar date."
+    return None
 
 
 def validate_papers(papers):
@@ -103,6 +151,12 @@ def validate_papers(papers):
             value = paper.get(field)
             if value is not None and (not isinstance(value, str) or not value.strip()):
                 errors.append(f"{label}: {field} must be null or a non-empty string.")
+        for field in RESOURCE_FIELDS:
+            value = paper.get(field)
+            if isinstance(value, str) and value:
+                error = url_error(value)
+                if error:
+                    errors.append(f"{label}: {field} {error}")
         doi = paper.get("doi")
         if isinstance(doi, str) and doi.strip():
             doi = re.sub(r"^(https?://(dx\.)?doi\.org/|doi:\s*)", "", doi.strip(), flags=re.I)
@@ -145,13 +199,127 @@ def validate_papers(papers):
                 value = dates.get(field)
                 if value is None:
                     continue
-                if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
-                    errors.append(f"{label}: dates.{field} must use YYYY-MM-DD format.")
+                error = date_error(value)
+                if error:
+                    errors.append(f"{label}: dates.{field} {error}")
+    return errors
+
+
+def validate_scan_log(log):
+    if not isinstance(log, dict) or not isinstance(log.get("scope"), dict) or not isinstance(log.get("scans"), list):
+        return ["scan-log.json: must contain a scope object and a scans array."]
+    errors = []
+    scope = log["scope"]
+    revision = scope.get("revision")
+    if type(revision) is not int or revision < 1:
+        errors.append("scan-log.json: scope.revision must be a positive integer.")
+    for field in ("start_year", "end_year"):
+        value = scope.get(field)
+        if type(value) is not int or not 1000 <= value <= 9999:
+            errors.append(f"scan-log.json: scope.{field} must be a four-digit integer.")
+    start, end = scope.get("start_year"), scope.get("end_year")
+    if type(start) is int and type(end) is int and start > end:
+        errors.append("scan-log.json: scope.start_year must not exceed scope.end_year.")
+    for field, allowed in (("venues", None), ("categories", CATEGORIES), ("target_model_types", TARGET_MODEL_TYPES)):
+        values = scope.get(field)
+        if not isinstance(values, list) or not values or any(not isinstance(v, str) or not v.strip() for v in values):
+            errors.append(f"scan-log.json: scope.{field} must be a non-empty array of non-empty strings.")
+        elif len(values) != len(set(values)) or (allowed is not None and any(v not in allowed for v in values)):
+            errors.append(f"scan-log.json: scope.{field} contains duplicate or unknown values.")
+    scan_ids = set()
+    batches = set()
+    for index, scan in enumerate(log["scans"], 1):
+        label = f"Scan #{index} ({scan.get('id') if isinstance(scan, dict) else '?'})"
+        if not isinstance(scan, dict):
+            errors.append(f"{label}: must be an object.")
+            continue
+        for field in ("id", "venue", "track"):
+            if not isinstance(scan.get(field), str) or not scan[field].strip():
+                errors.append(f"{label}: {field} must be a non-empty string.")
+        scan_id = scan.get("id")
+        if isinstance(scan_id, str):
+            if scan_id in scan_ids:
+                errors.append(f"{label}: duplicate scan id.")
+            scan_ids.add(scan_id)
+        year = scan.get("year")
+        if type(year) is not int or not 1000 <= year <= 9999:
+            errors.append(f"{label}: year must be a four-digit integer.")
+        scope_revision = scan.get("scope_revision")
+        if type(scope_revision) is not int or scope_revision < 1 or (type(revision) is int and scope_revision > revision):
+            errors.append(f"{label}: scope_revision must reference an existing scope revision.")
+        if scope_revision == revision:
+            if isinstance(scope.get("venues"), list) and scan.get("venue") not in scope["venues"]:
+                errors.append(f"{label}: venue is outside the current scope.")
+            if all(type(v) is int for v in (year, start, end)) and not start <= year <= end:
+                errors.append(f"{label}: year is outside the current scope.")
+        for field in ("checked_on", "coverage_through"):
+            error = date_error(scan.get(field))
+            if error:
+                errors.append(f"{label}: {field} {error}")
+        if not date_error(scan.get("checked_on")) and not date_error(scan.get("coverage_through")):
+            if scan["coverage_through"] > scan["checked_on"]:
+                errors.append(f"{label}: coverage_through must not be later than checked_on.")
+        for field in ("directory_status", "screening_stage", "title_screen_status"):
+            if scan.get(field) not in SCAN_STATES[field]:
+                errors.append(f"{label}: unknown {field}; update the reviewed workflow vocabulary first.")
+        batch = tuple(scan.get(k) for k in ("venue", "year", "track", "coverage_through", "scope_revision"))
+        if all(isinstance(v, (str, int)) for v in batch):
+            if batch in batches:
+                errors.append(f"{label}: duplicate scan scope and cutoff.")
+            batches.add(batch)
+        sources = scan.get("sources")
+        if not isinstance(sources, list) or not sources:
+            errors.append(f"{label}: sources must be a non-empty array.")
+        else:
+            source_urls = set()
+            for number, source in enumerate(sources, 1):
+                prefix = f"{label}: source #{number}"
+                if not isinstance(source, dict):
+                    errors.append(f"{prefix} must be an object.")
                     continue
-                try:
-                    date.fromisoformat(value)
-                except ValueError:
-                    errors.append(f"{label}: dates.{field} must be a valid calendar date.")
+                url = source.get("url")
+                error = url_error(url)
+                if error:
+                    errors.append(f"{prefix} url {error}")
+                elif url in source_urls:
+                    errors.append(f"{prefix} duplicate source URL.")
+                else:
+                    source_urls.add(url)
+                if not isinstance(source.get("kind"), str) or not source["kind"].strip():
+                    errors.append(f"{prefix} kind must be a non-empty string.")
+                for field in ("entry_count", "sections_checked"):
+                    value = source.get(field)
+                    if value is not None and (type(value) is not int or value < 0):
+                        errors.append(f"{prefix} {field} must be a non-negative integer.")
+        entries = scan.get("entries")
+        if not isinstance(entries, list):
+            errors.append(f"{label}: entries must be an array.")
+            continue
+        seen = {"source_id": set(), "doi": set()}
+        for number, entry in enumerate(entries, 1):
+            prefix = f"{label}: entry #{number}"
+            if not isinstance(entry, dict):
+                errors.append(f"{prefix} must be an object.")
+                continue
+            for field in ("source_id", "title", "reason"):
+                if not isinstance(entry.get(field), str) or not entry[field].strip():
+                    errors.append(f"{prefix} {field} must be a non-empty string.")
+            if entry.get("decision") not in SCAN_STATES["decision"]:
+                errors.append(f"{prefix} unknown decision; update the reviewed workflow vocabulary first.")
+            for field in seen:
+                value = entry.get(field)
+                if value is None and field == "doi":
+                    continue
+                if not isinstance(value, str) or not value.strip():
+                    if field == "doi":
+                        errors.append(f"{prefix} doi must be null or a non-empty string.")
+                    continue
+                key = value.strip().casefold()
+                if field == "doi":
+                    key = re.sub(r"^(https?://(dx\.)?doi\.org/|doi:\s*)", "", key)
+                if key in seen[field]:
+                    errors.append(f"{prefix} duplicate {field} within this scan.")
+                seen[field].add(key)
     return errors
 
 
@@ -264,7 +432,8 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
     papers = json.loads((root / "data/papers.json").read_text(encoding="utf-8"))
-    errors = validate_papers(papers)
+    scan_log = json.loads((root / "data/scan-log.json").read_text(encoding="utf-8"))
+    errors = validate_papers(papers) + validate_scan_log(scan_log)
     if errors:
         print("Validation failed:\n" + "\n".join(f"- {error}" for error in errors), file=sys.stderr)
         return 1
@@ -286,7 +455,7 @@ def main():
         if updated != readme:
             updates.append((path, updated))
     if not updates:
-        print(f"Validated {len(papers)} papers; README.md and README.zh-Hans.md are up to date.")
+        print(f"Validated {len(papers)} papers and scan-log.json; README.md and README.zh-Hans.md are up to date.")
         return 0
     filenames = ", ".join(path.name for path, _ in updates)
     if args.check:
