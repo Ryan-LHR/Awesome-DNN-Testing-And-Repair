@@ -6896,5 +6896,297 @@
       }
     ],
     "notes": "基于既有 neuron coverage 的两阶段测试生成框架，归 Test Generation，不因使用覆盖度量增加 Coverage Metrics。标题采用 PDF 与 Crossref 一致的 A Efficient，保留原文；摘要仅合并断行、恢复 two-stage 并统一 l₂ 排版。QRS-C 为 Companion 出版记录，不套用 QRS 主会等级，CCF 评级保持 null。在线发表时间和精确首发日期尚未独立核实，保持 null，不使用本地 PDF 创建时间作为发表时间。"
+  },
+  {
+    "id": "deepsample-2024",
+    "title": "DeepSample: DNN sampling-based testing for operational accuracy assessment",
+    "language": "en",
+    "venue": "ICSE",
+    "venue_name": "International Conference on Software Engineering",
+    "paper_url": "https://doi.org/10.1145/3597503.3639584",
+    "alias": "DeepSample",
+    "categories": [
+      "Test Selection and Prioritization"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
+    "authors": [
+      "Antonio Guerriero",
+      "Roberto Pietrantuono",
+      "Stefano Russo"
+    ],
+    "abstract": "Deep Neural Networks (DNN) are core components for classification and regression tasks of many software systems. Companies incur in high costs for testing DNN with datasets representative of the inputs expected in operation, as these need to be manually labelled. The challenge is to select a representative set of test inputs as small as possible to reduce the labelling cost, while sufficing to yield unbiased high-confidence estimates of the expected DNN accuracy. At the same time, testers are interested in exposing as many DNN mispredictions as possible to improve the DNN, ending up in the need for techniques pursuing a threefold aim: small dataset size, trustworthy estimates, mispredictions exposure. This study presents DeepSample, a family of DNN testing techniques for cost-effective accuracy assessment based on probabilistic sampling. We investigate whether, to what extent, and under which conditions probabilistic sampling can help to tackle the outlined challenge. We implement five new sampling-based testing techniques, and perform a comprehensive comparison of such techniques and of three further state-of-the-art techniques for bothDNN classification and regression tasks. Results serve as guidance for best use of sampling-based testing for faithful and high-confidence estimates of DNN accuracy in operation at low cost.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2024,
+      "online_year": null,
+      "first_public_year": 2024,
+      "first_public_date": "2024-03-28",
+      "checked_on": "2026-11-05"
+    },
+    "doi": "10.1145/3597503.3639584",
+    "arxiv_url": "https://arxiv.org/abs/2403.19271",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://doi.org/10.1145/3597503.3639584",
+        "label": "Official conference or publisher record",
+        "supports": "正式题名、作者、年份及研究内容"
+      },
+      {
+        "url": "https://arxiv.org/abs/2403.19271",
+        "label": "arXiv preprint",
+        "supports": "预印本身份及首发日期"
+      }
+    ],
+    "notes": "代表性抽样用于运行准确率估计，并兼顾发现错误预测；不是以错误发现优先排序为唯一目标。"
+  },
+  {
+    "id": "deeppac-2022",
+    "title": "Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning",
+    "language": "en",
+    "venue": "ICSE",
+    "venue_name": "International Conference on Software Engineering",
+    "paper_url": "https://conf.researchr.org/details/icse-2022/icse-2022-papers/106/Towards-Practical-Robustness-Analysis-for-DNNs-based-on-PAC-Model-Learning",
+    "alias": "DeepPAC",
+    "categories": [
+      "DNN Verification"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
+    "authors": [
+      "Renjue Li",
+      "Pengfei Yang",
+      "Cheng-Chao Huang",
+      "Youcheng Sun",
+      "Bai Xue",
+      "Lijun Zhang"
+    ],
+    "abstract": "To analyse local robustness properties of deep neural networks (DNNs), we present a practical framework from a model learning perspective. Based on black-box model learning with scenario optimisation, we abstract the local behaviour of a DNN via an affine model with the probably approximately correct (PAC) guarantee. From the learned model, we can infer the corresponding PAC-model robustness property. The innovation of our work is the integration of model learning into PAC robustness analysis: that is, we construct a PAC guarantee on the model level instead of sample distribution, which induces a more faithful and accurate robustness evaluation. This is in contrast to existing statistical methods without model learning. We implement our method in a prototypical tool named DeepPAC. As a black-box method, DeepPAC is scalable and efficient, especially when DNNs have complex structures or high-dimensional inputs. We extensively evaluate DeepPAC, with 4 baselines (using formal verification, statistical methods, testing and adversarial attack) and 20 DNN models across 3 datasets, including MNIST, CIFAR-10, and ImageNet. It is shown that DeepPAC outperforms the state-of-the-art statistical method PROVERO, and it achieves more practical robustness analysis than the formal verification tool ERAN. Also, its results are consistent with existing DNN testing work like DeepGini.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2021,
+      "first_public_date": "2021-01-25",
+      "checked_on": "2026-11-05"
+    },
+    "doi": "10.1145/3510003.3510143",
+    "arxiv_url": "https://arxiv.org/abs/2101.10102",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://conf.researchr.org/details/icse-2022/icse-2022-papers/106/Towards-Practical-Robustness-Analysis-for-DNNs-based-on-PAC-Model-Learning",
+        "label": "Official conference or publisher record",
+        "supports": "正式题名、作者、年份及研究内容"
+      },
+      {
+        "url": "https://arxiv.org/abs/2101.10102",
+        "label": "arXiv preprint",
+        "supports": "预印本身份及首发日期"
+      }
+    ],
+    "notes": "ICSE 2022 Technical Track；PAC 保证的局部鲁棒性分析，归 DNN Verification。"
+  },
+  {
+    "id": "linear-programming-verification-2019",
+    "title": "Robustness Verification of Classification Deep Neural Networks via Linear Programming",
+    "language": "en",
+    "venue": "CVPR",
+    "venue_name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "paper_url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Robustness_Verification_of_Classification_Deep_Neural_Networks_via_Linear_Programming_CVPR_2019_paper.html",
+    "alias": null,
+    "categories": [
+      "DNN Verification"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
+    "authors": [
+      "Wang Lin",
+      "Zhengfeng Yang",
+      "Xin Chen",
+      "Qingye Zhao",
+      "Xiangkun Li",
+      "Zhiming Liu",
+      "Jifeng He"
+    ],
+    "abstract": "There is a pressing need to verify robustness of classification deep neural networks (CDNNs) as they are embedded in many safety-critical applications. Existing robustness verification approaches rely on computing the over-approximation of the output set, and can hardly scale up to practical CDNNs, as the result of error accumulation accompanied with approximation. In this paper, we develop a novel method for robustness verification of CDNNs with sigmoid activation functions. It converts the robustness verification problem into an equivalent problem of inspecting the most suspected point in the input region which constitutes a nonlinear optimization problem. To make it amenable, by relaxing the nonlinear constraints into the linear inclusions, it is further refined as a linear programming problem. We conduct comparison experiments on a few CDNNs trained for classifying images in some state-of-the-art benchmarks, showing our advantages of precision and scalability that enable effective verification of practical CDNNs.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2019,
+      "online_year": null,
+      "first_public_year": null,
+      "first_public_date": null,
+      "checked_on": "2026-11-05"
+    },
+    "doi": "10.1109/CVPR.2019.01168",
+    "arxiv_url": null,
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Robustness_Verification_of_Classification_Deep_Neural_Networks_via_Linear_Programming_CVPR_2019_paper.html",
+        "label": "Official conference or publisher record",
+        "supports": "正式题名、作者、年份及研究内容"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "id": "reluplex-2017",
+    "title": "Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks",
+    "language": "en",
+    "venue": "CAV",
+    "venue_name": "International Conference on Computer Aided Verification",
+    "paper_url": "https://link.springer.com/chapter/10.1007/978-3-319-63387-9_5",
+    "alias": "Reluplex",
+    "categories": [
+      "DNN Verification"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN"
+    ],
+    "authors": [
+      "Guy Katz",
+      "Clark Barrett",
+      "David L. Dill",
+      "Kyle Julian",
+      "Mykel J. Kochenderfer"
+    ],
+    "abstract": "Deep neural networks have emerged as a widely used and effective means for tackling complex, real-world problems. However, a major obstacle in applying them to safety-critical systems is the great difficulty in providing formal guarantees about their behavior. We present a novel, scalable, and efficient technique for verifying properties of deep neural networks (or providing counter-examples). The technique is based on the simplex method, extended to handle the non-convex Rectified Linear Unit (ReLU) activation function, which is a crucial ingredient in many modern neural networks. The verification procedure tackles neural networks as a whole, without making any simplifying assumptions. We evaluated our technique on a prototype deep neural network implementation of the next-generation airborne collision avoidance system for unmanned aircraft (ACAS Xu). Results show that our technique can successfully prove properties of networks that are an order of magnitude larger than the largest networks verified using existing methods.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2017,
+      "online_year": null,
+      "first_public_year": 2017,
+      "first_public_date": "2017-02-03",
+      "checked_on": "2026-11-05"
+    },
+    "doi": "10.1007/978-3-319-63387-9_5",
+    "arxiv_url": "https://arxiv.org/abs/1702.01135",
+    "code_url": null,
+    "evidence": [
+      {
+        "url": "https://link.springer.com/chapter/10.1007/978-3-319-63387-9_5",
+        "label": "Official conference or publisher record",
+        "supports": "正式题名、作者、年份及研究内容"
+      },
+      {
+        "url": "https://arxiv.org/abs/1702.01135",
+        "label": "arXiv preprint",
+        "supports": "预印本身份及首发日期"
+      }
+    ],
+    "notes": "Springer 正式 DOI 的书号末位为 -9；源 BibTeX 中的 -3 为错误变体。"
+  },
+  {
+    "id": "llm-fuzzer-2024",
+    "title": "LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks",
+    "language": "en",
+    "venue": "USENIX Security",
+    "venue_name": "33rd USENIX Security Symposium",
+    "paper_url": "https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao",
+    "alias": "LLM-Fuzzer",
+    "categories": [
+      "Test Generation"
+    ],
+    "target_model_types": [
+      "LLM"
+    ],
+    "authors": [
+      "Jiahao Yu",
+      "Xingwei Lin",
+      "Zheng Yu",
+      "Xinyu Xing"
+    ],
+    "abstract": "The jailbreak threat poses a significant concern for Large Language Models (LLMs), primarily due to their potential to generate content at scale. If not properly controlled, LLMs can be exploited to produce undesirable outcomes, including the dissemination of misinformation, offensive content, and other forms of harmful or unethical behavior. To tackle this pressing issue, researchers and developers often rely on red-team efforts to manually create adversarial inputs and prompts designed to push LLMs into generating harmful, biased, or inappropriate content. However, this approach encounters serious scalability challenges. To address these scalability issues, we introduce an automated solution for large-scale LLM jailbreak susceptibility assessment called LLM-Fuzzer. Inspired by fuzz testing, LLM-Fuzzer uses human-crafted jailbreak prompts as starting points. By employing carefully customized seed selection strategies and mutation mechanisms, LLM-Fuzzer generates additional jailbreak prompts tailored to specific LLMs. Our experiments show that LLM-Fuzzer-generated jailbreak prompts demonstrate significantly increased exploitability and transferability. This highlights that many open-source and commercial LLMs suffer from severe jailbreak issues, even after safety fine-tuning.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2024,
+      "online_year": null,
+      "first_public_year": 2023,
+      "first_public_date": "2023-09-19",
+      "checked_on": "2026-11-06"
+    },
+    "doi": null,
+    "arxiv_url": "https://arxiv.org/abs/2309.10253",
+    "code_url": "https://github.com/hubertyoo/GPTFuzz",
+    "evidence": [
+      {
+        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao",
+        "label": "USENIX Security 2024 publication page",
+        "supports": "正式标题、作者、发表年份与摘要"
+      },
+      {
+        "url": "https://arxiv.org/abs/2309.10253",
+        "label": "arXiv preprint",
+        "supports": "GPTFUZZER 预印本标题及 2023-09-19 首发日期"
+      },
+      {
+        "url": "https://github.com/hubertyoo/GPTFuzz",
+        "label": "Author code repository",
+        "supports": "作者代码仓库"
+      }
+    ],
+    "notes": "GPTFUZZER 预印本与正式发表的 LLM-Fuzzer 为同一项工作，仅收录一条；正式发表年 2024，预印本首发年 2023。"
+  },
+  {
+    "id": "rome-2022",
+    "title": "Locating and Editing Factual Associations in GPT",
+    "language": "en",
+    "venue": "NeurIPS",
+    "venue_name": "Advances in Neural Information Processing Systems 35",
+    "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html",
+    "alias": "ROME",
+    "categories": [
+      "Model Repair"
+    ],
+    "target_model_types": [
+      "LLM"
+    ],
+    "authors": [
+      "Kevin Meng",
+      "David Bau",
+      "Alex Andonian",
+      "Yonatan Belinkov"
+    ],
+    "abstract": "We analyze the storage and recall of factual associations in autoregressive transformer language models, finding evidence that these associations correspond to localized, directly-editable computations. We first develop a causal intervention for identifying neuron activations that are decisive in a model's factual predictions. This reveals a distinct set of steps in middle-layer feed-forward modules that mediate factual predictions while processing subject tokens. To test our hypothesis that these computations correspond to factual association recall, we modify feed-forward weights to update specific factual associations using Rank-One Model Editing (ROME). We find that ROME is effective on a standard zero-shot relation extraction (zsRE) model-editing task, comparable to existing methods. To perform a more sensitive evaluation, we also evaluate ROME on a new dataset of counterfactual assertions, on which it simultaneously maintains both specificity and generalization, whereas other methods sacrifice one or another. Our results confirm an important role for mid-layer feed-forward modules in storing factual associations and suggest that direct manipulation of computational mechanisms may be a feasible approach for model editing. The code, dataset, visualizations, and an interactive demo notebook are available in the supplemental materials.",
+    "publication_type": "conference",
+    "ccf_rank": null,
+    "dates": {
+      "publication_year": 2022,
+      "online_year": null,
+      "first_public_year": 2022,
+      "first_public_date": "2022-02-10",
+      "checked_on": "2026-11-06"
+    },
+    "doi": "10.52202/068431-1262",
+    "arxiv_url": "https://arxiv.org/abs/2202.05262",
+    "code_url": "https://github.com/kmeng01/rome",
+    "evidence": [
+      {
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html",
+        "label": "NeurIPS 2022 proceedings",
+        "supports": "正式标题、作者、年份、摘要及 DOI"
+      },
+      {
+        "url": "https://arxiv.org/abs/2202.05262",
+        "label": "arXiv preprint",
+        "supports": "2022-02-10 首发日期"
+      },
+      {
+        "url": "https://github.com/kmeng01/rome",
+        "label": "Author code repository",
+        "supports": "作者代码仓库"
+      }
+    ],
+    "notes": "ROME 属于事实知识编辑，通过修改模型权重更新特定事实关联；归入 Model Repair。"
   }
 ]
