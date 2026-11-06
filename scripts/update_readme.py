@@ -9,7 +9,7 @@ import argparse
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, timedelta
 from ipaddress import ip_address
 from pathlib import Path
 from urllib.parse import quote, urlsplit
@@ -44,6 +44,8 @@ ZH_HANS_LABELS = {
     "LLMs": "大语言模型（LLM）",
     "QNNs": "量子神经网络（QNN）",
     "Year": "年份",
+    "Date": "日期",
+    "Paper": "论文",
     "Name": "简称",
     "Title": "论文标题",
     "Resources": "资源<br>Resources",
@@ -60,6 +62,8 @@ BADGES = {
 }
 OVERVIEW_BEGIN_MARKER = "<!-- BEGIN GENERATED OVERVIEW -->"
 OVERVIEW_END_MARKER = "<!-- END GENERATED OVERVIEW -->"
+RECENT_BEGIN_MARKER = "<!-- BEGIN GENERATED RECENT PAPERS -->"
+RECENT_END_MARKER = "<!-- END GENERATED RECENT PAPERS -->"
 BEGIN_MARKER = "<!-- BEGIN GENERATED PAPERS -->"
 END_MARKER = "<!-- END GENERATED PAPERS -->"
 RESOURCE_FIELDS = ("paper_url", "arxiv_url", "code_url", "website_url")
@@ -195,7 +199,7 @@ def validate_papers(papers):
                     continue
                 if type(year) is not int or not 1000 <= year <= 9999:
                     errors.append(f"{label}: dates.{field} must be a four-digit integer.")
-            for field in ("first_public_date", "checked_on"):
+            for field in ("publication_date", "first_public_date", "checked_on"):
                 value = dates.get(field)
                 if value is None:
                     continue
@@ -340,6 +344,59 @@ def paper_link(label, url):
     return f"[![{escape_cell(label)}]({BADGES[label]})]({url})"
 
 
+def render_resources(paper):
+    paper_host = urlsplit(paper["paper_url"]).hostname
+    label = "arXiv" if paper_host == "arxiv.org" or paper_host.endswith(".arxiv.org") else "Paper"
+    resource_links = {paper["paper_url"]: label}
+    for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code"), ("website_url", "Website")):
+        if paper.get(field):
+            resource_links.setdefault(paper[field], label)
+    return "<br>".join(paper_link(label, url) for url, label in resource_links.items())
+
+
+def render_venue(paper, language="en"):
+    labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
+    venue = escape_cell(paper["venue"])
+    if paper["publication_type"] == "conference":
+        venue += f"<br>{paper_year(paper)}"
+    elif paper["publication_type"] == "preprint":
+        venue += labels.get(" (preprint)", " (preprint)")
+    return venue
+
+
+def render_recent_papers(papers, end, language="en"):
+    labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
+    previous_month = end.replace(day=1) - timedelta(days=1)
+    start = previous_month.replace(day=min(end.day, previous_month.day))
+    matches = []
+    for paper in papers:
+        field = "first_public_date" if paper["publication_type"] == "preprint" else "publication_date"
+        value = paper["dates"].get(field)
+        if value:
+            published = date.fromisoformat(value)
+            if start <= published <= end:
+                matches.append((published, paper))
+    matches.sort(key=lambda item: (-item[0].toordinal(), item[1]["title"].casefold()))
+    lines = [f"*{start.isoformat()} — {end.isoformat()}*", ""]
+    if not matches:
+        lines.append(
+            "当前收录中暂无日期已确认且位于此时间范围内的论文。"
+            if language == "zh-Hans"
+            else "No papers in the collection have a confirmed publication or first preprint date within this window."
+        )
+        return "\n".join(lines)
+    lines.extend([
+        "| " + " | ".join(labels.get(column, column) for column in ("Date", "Paper", "Venue", "Resources")) + " |",
+        "| --- | --- | --- | --- |",
+    ])
+    for published, paper in matches:
+        title = escape_cell(paper["title"])
+        if paper.get("alias"):
+            title = f"**{escape_cell(paper['alias'])}** — {title}"
+        lines.append(f"| {published.isoformat()} | {title} | {render_venue(paper, language)} | {render_resources(paper)} |")
+    return "\n".join(lines)
+
+
 def render_overview(papers, language="en"):
     labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
     research_count = sum(
@@ -384,16 +441,8 @@ def render_tables(papers, language="en"):
                 year = paper_year(paper)
                 alias = f"**{escape_cell(paper['alias'])}**" if paper.get("alias") else "—"
                 alias = re.sub(r" \((conf-version|journal-version)\)\*\*$", r"**<br>(\1)", alias)
-                resource_links = {paper["paper_url"]: "Paper"}
-                for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code"), ("website_url", "Website")):
-                    if paper.get(field):
-                        resource_links.setdefault(paper[field], label)
-                resources = "<br>".join(paper_link(label, url) for url, label in resource_links.items())
-                venue = escape_cell(paper["venue"])
-                if paper["publication_type"] == "conference":
-                    venue += f"<br>{year}"
-                elif paper["publication_type"] == "preprint":
-                    venue += labels.get(" (preprint)", " (preprint)")
+                resources = render_resources(paper)
+                venue = render_venue(paper, language)
                 title = escape_cell(paper["title"])
                 lines.append(f"| {year} | {alias} | {title} | {resources} | {venue} |")
             lines.append("")
@@ -427,7 +476,7 @@ def replace_badge_counts(readme, papers):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate papers.json and update English and Simplified Chinese README overviews, paper tables, and badge counts.")
+    parser = argparse.ArgumentParser(description="Validate papers.json and update English and Simplified Chinese README overviews, recent papers, paper tables, and badge counts.")
     parser.add_argument("--check", action="store_true", help="Check data and README without writing files.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
@@ -443,6 +492,7 @@ def main():
             raise FileNotFoundError(f"Missing badge asset: {badge}")
 
     updates = []
+    today = date.today()
     for filename, language in (("README.md", "en"), ("README.zh-Hans.md", "zh-Hans")):
         visible_papers = papers
         if language == "en":
@@ -450,6 +500,7 @@ def main():
         path = root / filename
         readme = path.read_bytes().decode("utf-8")
         updated = replace_tables(readme, render_overview(visible_papers, language), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)
+        updated = replace_tables(updated, render_recent_papers(visible_papers, today, language), RECENT_BEGIN_MARKER, RECENT_END_MARKER)
         updated = replace_tables(updated, render_tables(visible_papers, language))
         updated = replace_badge_counts(updated, papers)
         if updated != readme:

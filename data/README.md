@@ -33,6 +33,10 @@ Use these category values exactly: `Coverage Metrics`, `Test Generation`, `Test 
 
 `dates.publication_year` is the formal publication year; `online_year` is the online publication year; `first_public_year` and `first_public_date` record the first public release; `checked_on` records when the metadata was checked. Years must be four-digit integers; date strings must be valid calendar dates in `YYYY-MM-DD` format. Leave unavailable optional dates as `null` or omit them.
 
+`dates.publication_date` is optional and records the first formal online publication date reported by the publisher for a conference or journal paper, including online-first publication. It is not the acceptance date or a later issue-assignment date, and may differ in year from `publication_year`. Do not infer it from a year alone.
+
+Recent Papers uses `publication_date` for conference/journal papers and `first_public_date` for preprints; a revised preprint does not reset its date. Entries without the relevant exact date remain in the category tables but are excluded from Recent Papers. Each generation uses the previous month's same day through today, inclusive, clamping the start to that month's last day when needed. Matching entries appear once, newest first, without a count limit. The displayed range is a snapshot refreshed only when the generator runs.
+
 | Optional field | How to fill it |
 | --- | --- |
 | `alias`, `venue_name`, `authors` | Paper/method name, full venue name, and an array of non-empty author names in publication order. `authors` may be omitted, `null`, or `[]`. |
@@ -77,6 +81,9 @@ This checks recorded Paper, arXiv, Code, and Website URLs once per distinct URL.
 - 覆盖度量可以包含指标评估；模糊测试中的种子选择本身不归入测试选择与排序。
 - `publication_type` 取 `conference`、`journal` 或 `preprint`。`dates` 将时间字段放在同一个对象内：会议／期刊必填正式发表年 `publication_year`，预印本必填首次公开年 `first_public_year`，年份使用整数。
 - `dates.online_year` 表示在线发表年，`first_public_date` 表示首次公开日期，`checked_on` 表示元数据核查日期。年份必须为四位整数，日期字符串使用 `YYYY-MM-DD` 且必须是实际存在的日期；未知的可选时间字段可填 `null` 或省略。
+- 可选的 `dates.publication_date` 保存出版方公布的会议／期刊论文首次正式在线发表日期，包含 online-first；不使用录用日期或后续编入卷期的日期，其年份可能与 `publication_year` 不同。不能仅凭年份推算，未知时省略或填 `null`。
+
+近期论文栏目对会议／期刊使用 `publication_date`，对预印本使用 `first_public_date`，预印本修订不重置日期。缺少相应精确日期的论文仍保留在分类正文中，不进入近期栏目。每次生成使用上月同日至当天的闭区间；上月没有对应日期时取其最后一天。匹配论文按日期降序展示，每篇只出现一次，不限制条数。展示的时间范围是快照，仅在运行生成脚本时刷新。
 
 其余字段均为可选：`alias` 是论文／方法简称，`venue_name` 是来源全称，`authors` 按原文顺序保存作者姓名数组，每个姓名必须是非空字符串，字段可省略、填 `null` 或空数组 `[]`；`doi` 保存 DOI 本身，`arxiv_url` 保存完整链接，不另存 arXiv ID。`code_url` 可指向作者代码或正式复现包，同时有 GitHub 和其他复现包时优先 GitHub；`website_url` 指论文项目网站。`ccf_rank` 保存已核实的来源评级 `A`、`B` 或 `C`，未核实或无对应评级时填 `null`。`evidence` 可记录包含 `url`、`label`、`supports` 的来源对象，`notes` 用于必要的文字补充。
 

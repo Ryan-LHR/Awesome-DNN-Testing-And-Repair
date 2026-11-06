@@ -36,6 +36,22 @@ A paper may appear in more than one category.
 
 <!-- END GENERATED OVERVIEW -->
 
+<a name="recent-papers"></a>
+
+## 🆕 Recent Papers
+
+Papers in this collection published within the past month, including preprints. Dates refer to the first formal online publication or, for preprints, the first public release. Only entries with confirmed dates are shown; the window is refreshed when this README is generated.
+
+<!-- BEGIN GENERATED RECENT PAPERS -->
+
+*2026-10-06 — 2026-11-06*
+
+| Date | Paper | Venue | Resources |
+| --- | --- | --- | --- |
+| 2026-11-04 | **Orbit Audits** — Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | arXiv (preprint) | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) |
+
+<!-- END GENERATED RECENT PAPERS -->
+
 <a name="papers"></a>
 
 ## 📄 Papers
@@ -164,7 +180,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2025 | **DeepFeature** | DeepFeature: Guiding adversarial testing for deep neural network systems using robust features | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.jss.2024.112201)<br>[![Code](assets/badges/code.svg)](https://github.com/Deepfea/DeepFeature) | JSS |
 | 2025 | **DeepVec** | DeepVec: State-Vector Aware Test Case Selection for Enhancing Recurrent Neural Network | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2025.3565037)<br>[![Code](assets/badges/code.svg)](https://github.com/ZhonghaoJiang/DeepVec) | TSE |
 | 2025 | **EATS** | Efficient adaptive test case selection for DNNs robustness enhancement | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.jss.2025.112451) | JSS |
-| 2025 | **LBT** | Learning-Based Testing for Deep Learning: Enhancing Model Robustness with Adversarial Input Prioritization | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2509.23961) | arXiv (preprint) |
+| 2025 | **LBT** | Learning-Based Testing for Deep Learning: Enhancing Model Robustness with Adversarial Input Prioritization | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2509.23961) | arXiv (preprint) |
 | 2025 | **MetaSel** | MetaSel: A Test Selection Approach for Fine-Tuned DNN Models | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2025.3612253)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2503.17534) | TSE |
 | 2025 | **Prophet** | Prioritizing Speech Test Cases | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3707450)<br>[![Code](assets/badges/code.svg)](https://github.com/yangzhou6666/ASRProphet) | TOSEM |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
@@ -272,14 +288,14 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
-| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2018 | **DeepMutation** | DeepMutation: Mutation Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/issre.2018.00021)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1805.05206) | ISSRE<br>2018 |
 
 ##### LLMs
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
-| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
 ### Surveys
 
@@ -296,7 +312,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
-| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2025 | — | Assessing the Robustness of Test Selection Methods for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3715693)<br>[![Code](assets/badges/code.svg)](https://anonymous.4open.science/r/Robust-testing-test-selection-3F83/) | TOSEM |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2024 | — | Seed Selection for Testing Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3607190) | TOSEM |
@@ -318,7 +334,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
-| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
 <!-- END GENERATED PAPERS -->
 
