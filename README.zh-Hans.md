@@ -9,7 +9,11 @@
 </p>
 
 <p align="center">
-<a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-d9d9d9?style=flat" /></a> <a href="README.zh-Hans.md" aria-current="page"><img alt="简体中文" src="https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-00629B?style=flat" /></a> <a href="README.zh-Hant.md"><img alt="繁體中文" src="https://img.shields.io/badge/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-d9d9d9?style=flat" /></a>
+<a href="README.md"><img alt="English" src="https://img.shields.io/badge/English-d9d9d9?style=flat-square" /></a> <a href="README.zh-Hans.md" aria-current="page"><img alt="简体中文" src="https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-00629B?style=flat-square" /></a> <a href="README.zh-Hant.md"><img alt="繁體中文" src="https://img.shields.io/badge/%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87-d9d9d9?style=flat-square" /></a>
+</p>
+
+<p align="center">
+<a href="assets/wechat.jpg"><img alt="Chat on WeChat" src="https://img.shields.io/badge/Chat_on_WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" /></a> <a href="mailto:Li_Haoran@buaa.edu.cn"><img alt="Contact by Email" src="https://img.shields.io/badge/Contact_by_Email-00629B?style=for-the-badge&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjUiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cGF0aCBkPSJtMyA2IDkgNyA5LTciLz48L3N2Zz4%3D" /></a>
 </p>
 
 深度神经网络测试、验证与修复相关论文合集。
@@ -44,7 +48,7 @@
 
 <!-- BEGIN GENERATED RECENT PAPERS -->
 
-*2026-10-06 — 2026-11-06*
+*2026-10-07 — 2026-11-07*
 
 | 日期 | 论文 | 会议／期刊 | 资源<br>Resources |
 | --- | --- | --- | --- |
