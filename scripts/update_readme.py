@@ -1,4 +1,4 @@
-"""Validate paper data and update README tables using Python's standard library.
+"""Validate paper data and update English and Simplified Chinese READMEs using Python's standard library.
 
 Usage:
     python3 scripts/update_readme.py
@@ -9,6 +9,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import date
 from pathlib import Path
 from urllib.parse import quote
 
@@ -28,6 +29,27 @@ TARGET_MODEL_TYPES = {
     "LLM": "LLMs",
     "QNN": "QNNs",
 }
+ZH_HANS_LABELS = {
+    "Research Papers": "研究论文",
+    "Coverage Metrics": "覆盖度量",
+    "Test Generation": "测试生成",
+    "Test Selection and Prioritization": "测试选择与排序",
+    "Model Repair": "模型修复",
+    "DNN Verification": "DNN 验证",
+    "Other": "其他",
+    "Surveys": "综述",
+    "Empirical Studies": "实证研究",
+    "Non-LLM DNNs": "非 LLM 深度神经网络",
+    "LLMs": "大语言模型（LLM）",
+    "QNNs": "量子神经网络（QNN）",
+    "Year": "年份",
+    "Name": "简称",
+    "Title": "论文标题",
+    "Resources": "资源<br>Resources",
+    "Venue": "会议／期刊",
+    "A paper may appear in more than one category.": "同一篇论文可能归入多个类别。",
+    " (preprint)": "（预印本）",
+}
 PUBLICATION_TYPES = ("conference", "journal", "preprint")
 BADGES = {
     "Paper": "assets/badges/paper.svg",
@@ -35,6 +57,8 @@ BADGES = {
     "Code": "assets/badges/code.svg",
     "Website": "assets/badges/website.svg",
 }
+OVERVIEW_BEGIN_MARKER = "<!-- BEGIN GENERATED OVERVIEW -->"
+OVERVIEW_END_MARKER = "<!-- END GENERATED OVERVIEW -->"
 BEGIN_MARKER = "<!-- BEGIN GENERATED PAPERS -->"
 END_MARKER = "<!-- END GENERATED PAPERS -->"
 
@@ -56,6 +80,19 @@ def validate_papers(papers):
             value = paper.get(field)
             if not isinstance(value, str) or not value.strip():
                 errors.append(f"{label}: {field} must be a non-empty string.")
+
+        if paper.get("language") not in ("en", "zh"):
+            errors.append(f"{label}: language must be en or zh.")
+
+        authors = paper.get("authors")
+        if authors is not None and (
+            not isinstance(authors, list)
+            or any(not isinstance(author, str) or not author.strip() for author in authors)
+        ):
+            errors.append(f"{label}: authors must be null or an array of non-empty strings.")
+
+        if paper.get("ccf_rank") not in (None, "A", "B", "C"):
+            errors.append(f"{label}: ccf_rank must be null, A, B or C.")
 
         if isinstance(paper_id, str):
             if paper_id in seen_ids:
@@ -96,11 +133,25 @@ def validate_papers(papers):
         dates = paper.get("dates")
         if not isinstance(dates, dict):
             errors.append(f"{label}: dates must be an object.")
-        elif publication_type in PUBLICATION_TYPES:
-            field = "first_public_year" if publication_type == "preprint" else "publication_year"
-            year = dates.get(field)
-            if type(year) is not int or not 1000 <= year <= 9999:
-                errors.append(f"{label}: dates.{field} must be a four-digit integer.")
+        else:
+            required_year = "first_public_year" if publication_type == "preprint" else "publication_year"
+            for field in ("publication_year", "online_year", "first_public_year"):
+                year = dates.get(field)
+                if year is None and (field != required_year or publication_type not in PUBLICATION_TYPES):
+                    continue
+                if type(year) is not int or not 1000 <= year <= 9999:
+                    errors.append(f"{label}: dates.{field} must be a four-digit integer.")
+            for field in ("first_public_date", "checked_on"):
+                value = dates.get(field)
+                if value is None:
+                    continue
+                if not isinstance(value, str) or not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", value):
+                    errors.append(f"{label}: dates.{field} must use YYYY-MM-DD format.")
+                    continue
+                try:
+                    date.fromisoformat(value)
+                except ValueError:
+                    errors.append(f"{label}: dates.{field} must be a valid calendar date.")
     return errors
 
 
@@ -121,10 +172,34 @@ def paper_link(label, url):
     return f"[![{escape_cell(label)}]({BADGES[label]})]({url})"
 
 
-def render_tables(papers):
-    lines = ["### Research Papers", ""]
+def render_overview(papers, language="en"):
+    labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
+    research_count = sum(
+        any(CATEGORIES[category] == 4 for category in paper["categories"])
+        for paper in papers
+    )
+    research_label = labels.get("Research Papers", "Research Papers")
+    lines = [f"- **[{research_label}](#research-papers)** ({research_count})"]
     for category, level in CATEGORIES.items():
-        lines.extend([f"{'#' * level} {category}", ""])
+        count = sum(category in paper["categories"] for paper in papers)
+        link = f"[{labels.get(category, category)}](#{category.lower().replace(' ', '-')})"
+        label = f"  - {link}" if level == 4 else f"- **{link}**"
+        lines.append(f"{label} ({count})")
+    note = "A paper may appear in more than one category."
+    lines.extend(["", labels.get(note, note)])
+    return "\n".join(lines)
+
+
+def render_tables(papers, language="en"):
+    labels = ZH_HANS_LABELS if language == "zh-Hans" else {}
+    lines = []
+    if language == "zh-Hans":
+        lines.extend(['<a name="research-papers"></a>', ""])
+    lines.extend([f"### {labels.get('Research Papers', 'Research Papers')}", ""])
+    for category, level in CATEGORIES.items():
+        if language == "zh-Hans":
+            lines.extend([f'<a name="{category.lower().replace(" ", "-")}"></a>', ""])
+        lines.extend([f"{'#' * level} {labels.get(category, category)}", ""])
         for target_model_type, heading in TARGET_MODEL_TYPES.items():
             matches = sorted(
                 (paper for paper in papers if category in paper["categories"] and target_model_type in paper["target_model_types"]),
@@ -133,43 +208,58 @@ def render_tables(papers):
             if not matches:
                 continue
             lines.extend([
-                f"{'#' * (level + 1)} {heading}", "",
-                "| Year | Name | Title | Resources | Venue |",
+                f"{'#' * (level + 1)} {labels.get(heading, heading)}", "",
+                "| " + " | ".join(labels.get(column, column) for column in ("Year", "Name", "Title", "Resources", "Venue")) + " |",
                 "| --- | --- | --- | --- | --- |",
             ])
             for paper in matches:
                 year = paper_year(paper)
                 alias = f"**{escape_cell(paper['alias'])}**" if paper.get("alias") else "—"
+                alias = re.sub(r" \((conf-version|journal-version)\)\*\*$", r"**<br>(\1)", alias)
                 resource_links = {paper["paper_url"]: "Paper"}
                 for field, label in (("arxiv_url", "arXiv"), ("code_url", "Code"), ("website_url", "Website")):
                     if paper.get(field):
                         resource_links.setdefault(paper[field], label)
-                resources = " ".join(paper_link(label, url) for url, label in resource_links.items())
+                resources = "<br>".join(paper_link(label, url) for url, label in resource_links.items())
                 venue = escape_cell(paper["venue"])
                 if paper["publication_type"] == "conference":
-                    venue += f"' {year}"
+                    venue += f"<br>{year}"
                 elif paper["publication_type"] == "preprint":
-                    venue += " (preprint)"
+                    venue += labels.get(" (preprint)", " (preprint)")
                 title = escape_cell(paper["title"])
                 lines.append(f"| {year} | {alias} | {title} | {resources} | {venue} |")
             lines.append("")
     return "\n".join(lines).rstrip()
 
 
-def replace_tables(readme, tables):
-    if readme.count(BEGIN_MARKER) != 1 or readme.count(END_MARKER) != 1:
-        raise ValueError("README.md must contain exactly one BEGIN and END GENERATED PAPERS marker.")
-    start = readme.index(BEGIN_MARKER) + len(BEGIN_MARKER)
-    end = readme.index(END_MARKER)
+def replace_tables(readme, tables, begin_marker=BEGIN_MARKER, end_marker=END_MARKER):
+    if readme.count(begin_marker) != 1 or readme.count(end_marker) != 1:
+        raise ValueError(f"README must contain exactly one {begin_marker} and {end_marker} marker.")
+    start = readme.index(begin_marker) + len(begin_marker)
+    end = readme.index(end_marker)
     if end < start:
-        raise ValueError("README.md generated-paper markers are in the wrong order.")
+        raise ValueError("README generated-table markers are in the wrong order.")
     newline = "\r\n" if "\r\n" in readme else "\n"
     tables = tables.replace("\n", newline)
     return readme[:start] + newline * 2 + tables + newline * 2 + readme[end:]
 
 
+def replace_badge_counts(readme, papers):
+    counts = {
+        "Papers": len(papers),
+        "With%20code": sum(bool(paper.get("code_url")) for paper in papers),
+    }
+    for label, count in counts.items():
+        readme = re.sub(
+            rf"(https://img\.shields\.io/badge/{label}-)\d+(-)",
+            rf"\g<1>{count}\2",
+            readme,
+        )
+    return readme
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Validate papers.json and update README paper tables.")
+    parser = argparse.ArgumentParser(description="Validate papers.json and update English and Simplified Chinese README overviews, paper tables, and badge counts.")
     parser.add_argument("--check", action="store_true", help="Check data and README without writing files.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
@@ -183,17 +273,28 @@ def main():
         if not (root / badge).is_file():
             raise FileNotFoundError(f"Missing badge asset: {badge}")
 
-    path = root / "README.md"
-    readme = path.read_bytes().decode("utf-8")
-    updated = replace_tables(readme, render_tables(papers))
-    if updated == readme:
-        print(f"Validated {len(papers)} papers; README.md is up to date.")
+    updates = []
+    for filename, language in (("README.md", "en"), ("README.zh-Hans.md", "zh-Hans")):
+        visible_papers = papers
+        if language == "en":
+            visible_papers = [paper for paper in papers if paper["language"] == "en"]
+        path = root / filename
+        readme = path.read_bytes().decode("utf-8")
+        updated = replace_tables(readme, render_overview(visible_papers, language), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)
+        updated = replace_tables(updated, render_tables(visible_papers, language))
+        updated = replace_badge_counts(updated, papers)
+        if updated != readme:
+            updates.append((path, updated))
+    if not updates:
+        print(f"Validated {len(papers)} papers; README.md and README.zh-Hans.md are up to date.")
         return 0
+    filenames = ", ".join(path.name for path, _ in updates)
     if args.check:
-        print("README.md is out of date. Run python3 scripts/update_readme.py.", file=sys.stderr)
+        print(f"Out of date: {filenames}. Run python3 scripts/update_readme.py.", file=sys.stderr)
         return 1
-    path.write_bytes(updated.encode("utf-8"))
-    print(f"Validated {len(papers)} papers; updated README.md.")
+    for path, updated in updates:
+        path.write_bytes(updated.encode("utf-8"))
+    print(f"Validated {len(papers)} papers; updated {filenames}.")
     return 0
 
 
