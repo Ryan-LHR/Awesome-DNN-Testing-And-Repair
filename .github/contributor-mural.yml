@@ -1,0 +1,12 @@
+style: grid
+output: assets/contributors.svg
+
+contributors:
+  max: 100
+
+grid:
+  columns: auto
+  max_columns: 8
+  avatar_size: 64
+  shape: circle
+  show_names: true

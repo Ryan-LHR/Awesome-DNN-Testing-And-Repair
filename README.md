@@ -370,5 +370,5 @@ Contributions are welcome! [Recommend a paper](https://github.com/Ryan-LHR/aweso
 Thanks to everyone who contributes to this collection!
 
 <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Ryan-LHR/awesome-dnn-testing-and-repair" alt="Contributors to Awesome DNN Testing and Repair" />
+  <img src="assets/contributors.svg" alt="Contributors to Awesome DNN Testing and Repair" />
 </a>

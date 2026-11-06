@@ -391,5 +391,5 @@
 感谢每一位为本合集作出贡献的朋友！
 
 <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Ryan-LHR/awesome-dnn-testing-and-repair" alt="Awesome DNN Testing and Repair 的贡献者" />
+  <img src="assets/contributors.svg" alt="Awesome DNN Testing and Repair 的贡献者" />
 </a>
