@@ -1,5 +1,51 @@
 [
   {
+    "id": "orbit-audits-2026",
+    "title": "Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers",
+    "language": "en",
+    "venue": "arXiv",
+    "paper_url": "https://arxiv.org/abs/2611.05798",
+    "alias": "Orbit Audits",
+    "categories": [
+      "Empirical Studies"
+    ],
+    "target_model_types": [
+      "Non-LLM DNN",
+      "LLM"
+    ],
+    "authors": [
+      "Sungguk Cha",
+      "Mintae Kim",
+      "Youngsub Han",
+      "Byoung-Ki Jeon",
+      "Sangyeob Lee"
+    ],
+    "abstract": "Recognizing visual content from neural-network weights requires separating functional information from arbitrary parameter coordinates. We audit this separation with hidden-neuron permutations and positive ReLU rescalings that preserve the represented function. The study contains 480 independently fitted shape fields and 1,000 MNIST fields, with transformed copies grouped by origin. On shape recognition, a statistics reader falls from \\ShapeRawStats\\% to \\ShapeJointStats\\% accuracy under joint transformations; a normalized set reader retains \\ShapeNormSet\\% with unchanged predictions. Four small frozen language models obtain \\LMRange\\% raw accuracy with next-token scoring. A separate four-configuration reasoning experiment with 1,920 scored sessions obtains \\FrontRawRange\\% raw accuracy with generated answers, while fresh identical raw prompts disagree on \\FrontRawRepeatRange\\% of origins. Canonicalization makes equivalent prompts identical, but this neither establishes recognition nor guarantees identical generated responses. Joint correctness/agreement metrics, semantic-cue controls, fresh repeats, and exact-rational rounding bounds separate these failure modes. The result is an inspectable evaluation protocol for visual weight readers, with claims restricted to the tested fields, prompts, and execution configurations.",
+    "publication_type": "preprint",
+    "dates": {
+      "first_public_year": 2026,
+      "first_public_date": "2026-11-04",
+      "checked_on": "2026-11-06"
+    },
+    "arxiv_url": "https://arxiv.org/abs/2611.05798",
+    "evidence": [
+      {
+        "url": "https://arxiv.org/abs/2611.05798",
+        "label": "arXiv preprint and CC BY 4.0 abstract",
+        "supports": [
+          "title",
+          "authors",
+          "abstract",
+          "publication_type",
+          "dates",
+          "categories",
+          "target_model_types"
+        ]
+      }
+    ],
+    "notes": "The abstract is reproduced from the authors' CC BY 4.0 arXiv page. Unresolved LaTeX macros in numerical results are retained as supplied. Audits separate recognition accuracy from invariance to function-preserving weight transformations and fresh identical-prompt variation."
+  },
+  {
     "id": "cocofuzzing-2023",
     "title": "CoCoFuzzing: Testing Neural Code Models With Coverage-Guided Fuzzing",
     "language": "en",
