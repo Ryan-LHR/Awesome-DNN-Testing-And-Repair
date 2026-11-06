@@ -5,7 +5,7 @@
 <h1 align="center">Awesome DNN Testing and Repair</h1>
 
 <p align="center">
-<a href="#papers"><img alt="Papers" src="https://img.shields.io/badge/Papers-146-00629B?style=flat" /></a> <a href="data/papers.json"><img alt="With code" src="https://img.shields.io/badge/With%20code-90-B45309?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Stars&amp;color=E2BF46" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/forks"><img alt="Forks" src="https://img.shields.io/github/forks/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Forks&amp;color=00629B" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair"><img alt="Visitors" src="https://komarev.com/ghpvc/?username=Ryan-LHR-awesome-dnn-testing-and-repair&amp;label=Visitors&amp;color=1283c3&amp;style=flat" /></a> <a href="data/papers.json"><img alt="Data" src="https://img.shields.io/badge/Data-JSON-087CA7?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Last%20commit&amp;color=087CA7" /></a> <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-E2BF46?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-21865B?style=flat" /></a>
+<a href="#papers"><img alt="Papers" src="https://img.shields.io/badge/Papers-147-00629B?style=flat" /></a> <a href="data/papers.json"><img alt="With code" src="https://img.shields.io/badge/With%20code-90-B45309?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Stars&amp;color=E2BF46" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/forks"><img alt="Forks" src="https://img.shields.io/github/forks/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Forks&amp;color=00629B" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair"><img alt="Visitors" src="https://komarev.com/ghpvc/?username=Ryan-LHR-awesome-dnn-testing-and-repair&amp;label=Visitors&amp;color=1283c3&amp;style=flat" /></a> <a href="data/papers.json"><img alt="Data" src="https://img.shields.io/badge/Data-JSON-087CA7?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/commits/main"><img alt="Last commit" src="https://img.shields.io/github/last-commit/Ryan-LHR/awesome-dnn-testing-and-repair?style=flat&amp;label=Last%20commit&amp;color=087CA7" /></a> <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-E2BF46?style=flat" /></a> <a href="https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-21865B?style=flat" /></a>
 </p>
 
 <p align="center">
@@ -22,15 +22,15 @@ This collection focuses on testing, verifying, and repairing deep neural network
 
 <!-- BEGIN GENERATED OVERVIEW -->
 
-- **[Research Papers](#research-papers)** (141)
+- **[Research Papers](#research-papers)** (142)
   - [Coverage Metrics](#coverage-metrics) (24)
   - [Test Generation](#test-generation) (43)
   - [Test Selection and Prioritization](#test-selection-and-prioritization) (43)
   - [Model Repair](#model-repair) (40)
   - [DNN Verification](#dnn-verification) (3)
-  - [Other](#other) (1)
+  - [Other](#other) (2)
 - **[Surveys](#surveys)** (2)
-- **[Empirical Studies](#empirical-studies)** (16)
+- **[Empirical Studies](#empirical-studies)** (17)
 
 A paper may appear in more than one category.
 
@@ -272,7 +272,14 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2018 | **DeepMutation** | DeepMutation: Mutation Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/issre.2018.00021)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1805.05206) | ISSRE<br>2018 |
+
+##### LLMs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
 ### Surveys
 
@@ -289,6 +296,7 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 
 | Year | Name | Title | Resources | Venue |
 | --- | --- | --- | --- | --- |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2025 | — | Assessing the Robustness of Test Selection Methods for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3715693)<br>[![Code](assets/badges/code.svg)](https://anonymous.4open.science/r/Robust-testing-test-selection-3F83/) | TOSEM |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2024 | — | Seed Selection for Testing Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3607190) | TOSEM |
@@ -305,6 +313,12 @@ CCF venue categories in the paper data refer to the 2026 directory. A `null` val
 | 2020 | — | Is neuron coverage a meaningful measure for testing deep neural networks? | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3368089.3409754)<br>[![Code](assets/badges/code.svg)](https://doi.org/10.5281/zenodo.4021473) | ESEC/FSE<br>2020 |
 | 2020 | — | Towards Characterizing Adversarial Defects of Deep Learning Software from the Lens of Uncertainty | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3377811.3380368)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2004.11573) | ICSE<br>2020 |
 | 2019 | — | Structural Coverage Criteria for Neural Networks Could Be Misleading | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse-nier.2019.00031) | ICSE-NIER<br>2019 |
+
+#### LLMs
+
+| Year | Name | Title | Resources | Venue |
+| --- | --- | --- | --- | --- |
+| 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![Paper](assets/badges/paper.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
 <!-- END GENERATED PAPERS -->
 
