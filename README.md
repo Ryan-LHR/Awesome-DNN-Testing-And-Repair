@@ -68,13 +68,13 @@ For a richer browsing experience, explore the interactive paper browser.
 
 ### Recent Papers
 
-Papers in this collection published within the past month, including preprints. Dates refer to the first formal online publication or, for preprints, the first public release. Only entries with confirmed dates are shown; the window is refreshed when this README is generated.
+Collected papers published in the past month, including preprints, with confirmed dates. [Date policy](data/README.md#english).
 
 <!-- BEGIN GENERATED RECENT PAPERS -->
 
 *2026-10-07 — 2026-11-07*
 
-| Date | Paper | Venue | Resources |
+| Date | Paper | Venue | Links |
 | :---: | --- | :---: | --- |
 | 2026-11-04 | **Orbit Audits** — Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | arXiv (preprint) | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) |
 
@@ -112,7 +112,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2023 | **ATOM** | ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/ase56229.2023.00156) | ASE<br>2023 |
@@ -140,7 +140,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### QNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950)<br>[![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 
@@ -148,7 +148,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **SUNTest** | White-Box Test Input Generation for Enhancing Deep Neural Network Models through Suspicious Neuron Awareness | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3736305)<br>[![Code](assets/badges/code.svg)](https://github.com/TestingAIGroup/SUNTest) | TOSEM |
 | 2025 | **Clover** | Context-Aware Fuzzing for Robustness Enhancement of Deep Learning Models | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3680464)<br>[![Code](assets/badges/code.svg)](https://github.com/PapRep/Clover) | TOSEM |
@@ -194,14 +194,14 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### LLMs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2025 | **NLPLego** | NLPLego: Assembling Test Generation for Natural Language Processing Applications | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691631)<br>[![Code](assets/badges/code.svg)](https://github.com/SSCT-Lab/NLPLego) | TOSEM |
 | 2024 | **LLM-Fuzzer** | LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks | [![Paper](assets/badges/paper.svg)](https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2309.10253)<br>[![Code](assets/badges/code.svg)](https://github.com/hubertyoo/GPTFuzz) | USENIX Security<br>2024 |
 
 ##### QNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950)<br>[![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 
@@ -209,7 +209,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **MetaDTS** | MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.sysarc.2025.103682) | JSA |
 | 2026 | **PriCod** | PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3730435)<br>[![Code](assets/badges/code.svg)](https://github.com/yinghuali/PriCod) | TOSEM |
@@ -256,7 +256,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### LLMs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **AcTracer** | AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3744340)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2408.03573)<br>[![Code](assets/badges/code.svg)](https://github.com/YuhengHuang42/test_selection_llm) | TOSEM |
 
@@ -264,7 +264,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **SMiR** | SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3771545)<br>[![Code](assets/badges/code.svg)](https://github.com/AnonymousSE4AI/SMiR) | TOSEM |
 | 2025 | **AutoRIC** | AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3690634)<br>[![Code](assets/badges/code.svg)](https://github.com/Anonymous89000/AutoRIC) | TOSEM |
@@ -308,7 +308,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### LLMs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2022 | **ROME** | Locating and Editing Factual Associations in GPT | [![Paper](assets/badges/paper.svg)](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2202.05262)<br>[![Code](assets/badges/code.svg)](https://github.com/kmeng01/rome) | NeurIPS<br>2022 |
 
@@ -316,7 +316,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2022 | **DeepPAC** | Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning | [![Paper](assets/badges/paper.svg)](https://conf.researchr.org/details/icse-2022/icse-2022-papers/106/Towards-Practical-Robustness-Analysis-for-DNNs-based-on-PAC-Model-Learning)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2101.10102) | ICSE<br>2022 |
 | 2019 | — | Robustness Verification of Classification Deep Neural Networks via Linear Programming | [![Paper](assets/badges/paper.svg)](https://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Robustness_Verification_of_Classification_Deep_Neural_Networks_via_Linear_Programming_CVPR_2019_paper.html) | CVPR<br>2019 |
@@ -326,14 +326,14 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 ##### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2018 | **DeepMutation** | DeepMutation: Mutation Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/issre.2018.00021)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1805.05206) | ISSRE<br>2018 |
 
 ##### LLMs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
@@ -341,7 +341,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 #### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2024 | — | Test Optimization in DNN Testing: A Survey | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3643678) | TOSEM |
 | 2022 | — | Machine Learning Testing: Survey, Landscapes and Horizons | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2019.2962027)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1906.10742) | TSE |
@@ -350,7 +350,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 #### Non-LLM DNNs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2025 | — | Assessing the Robustness of Test Selection Methods for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3715693)<br>[![Code](assets/badges/code.svg)](https://anonymous.4open.science/r/Robust-testing-test-selection-3F83/) | TOSEM |
@@ -372,7 +372,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 #### LLMs
 
-| Year | Name | Title | Resources | Venue |
+| Year | Name | Title | Links | Venue |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 

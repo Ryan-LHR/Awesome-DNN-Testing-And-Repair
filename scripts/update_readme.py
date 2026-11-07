@@ -47,9 +47,9 @@ ZH_HANS_LABELS = {
     "Date": "日期",
     "Paper": "论文",
     "Name": "简称",
-    "Title": "论文标题",
-    "Resources": "资源<br>Resources",
-    "Venue": "会议／期刊",
+    "Title": "标题",
+    "Links": "链接",
+    "Venue": "来源",
     "A paper may appear in more than one category.": "同一篇论文可能归入多个类别。",
     " (preprint)": "（预印本）",
 }
@@ -395,7 +395,7 @@ def render_recent_papers(papers, end, language="en"):
         )
         return "\n".join(lines)
     lines.extend([
-        "| " + " | ".join(labels.get(column, column) for column in ("Date", "Paper", "Venue", "Resources")) + " |",
+        "| " + " | ".join(labels.get(column, column) for column in ("Date", "Paper", "Venue", "Links")) + " |",
         "| :---: | --- | :---: | --- |",
     ])
     for published, paper in matches:
@@ -462,7 +462,7 @@ def render_tables(papers, language="en"):
                 continue
             lines.extend([
                 f"{'#' * (level + 1)} {labels.get(heading, heading)}", "",
-                "| " + " | ".join(labels.get(column, column) for column in ("Year", "Name", "Title", "Resources", "Venue")) + " |",
+                "| " + " | ".join(labels.get(column, column) for column in ("Year", "Name", "Title", "Links", "Venue")) + " |",
                 "| :---: | --- | --- | --- | :---: |",
             ])
             for paper in matches:

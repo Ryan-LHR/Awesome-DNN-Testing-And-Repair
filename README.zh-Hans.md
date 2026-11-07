@@ -68,13 +68,13 @@
 
 ### 近期论文
 
-展示本库中最近一个月发表的论文，包含预印本。日期采用首次正式在线发表日期；预印本采用首次公开日期。仅展示日期已确认的条目，时间窗口随 README 生成更新。
+展示本库中最近一个月发表且日期已确认的论文，包含预印本。[日期规则](data/README.md#简体中文)。
 
 <!-- BEGIN GENERATED RECENT PAPERS -->
 
 *2026-10-07 — 2026-11-07*
 
-| 日期 | 论文 | 会议／期刊 | 资源<br>Resources |
+| 日期 | 论文 | 来源 | 链接 |
 | :---: | --- | :---: | --- |
 | 2026-11-04 | **Orbit Audits** — Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | arXiv（预印本） | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) |
 
@@ -116,7 +116,7 @@
 
 ##### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2023 | **ATOM** | ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/ase56229.2023.00156) | ASE<br>2023 |
@@ -144,7 +144,7 @@
 
 ##### 量子神经网络（QNN）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950)<br>[![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 
@@ -154,7 +154,7 @@
 
 ##### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **SUNTest** | White-Box Test Input Generation for Enhancing Deep Neural Network Models through Suspicious Neuron Awareness | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3736305)<br>[![Code](assets/badges/code.svg)](https://github.com/TestingAIGroup/SUNTest) | TOSEM |
 | 2025 | **Clover** | Context-Aware Fuzzing for Robustness Enhancement of Deep Learning Models | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3680464)<br>[![Code](assets/badges/code.svg)](https://github.com/PapRep/Clover) | TOSEM |
@@ -200,14 +200,14 @@
 
 ##### 大语言模型（LLM）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2025 | **NLPLego** | NLPLego: Assembling Test Generation for Natural Language Processing Applications | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691631)<br>[![Code](assets/badges/code.svg)](https://github.com/SSCT-Lab/NLPLego) | TOSEM |
 | 2024 | **LLM-Fuzzer** | LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks | [![Paper](assets/badges/paper.svg)](https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2309.10253)<br>[![Code](assets/badges/code.svg)](https://github.com/hubertyoo/GPTFuzz) | USENIX Security<br>2024 |
 
 ##### 量子神经网络（QNN）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950)<br>[![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 
@@ -217,7 +217,7 @@
 
 ##### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **MetaDTS** | MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.sysarc.2025.103682) | JSA |
 | 2026 | **PriCod** | PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3730435)<br>[![Code](assets/badges/code.svg)](https://github.com/yinghuali/PriCod) | TOSEM |
@@ -264,7 +264,7 @@
 
 ##### 大语言模型（LLM）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **AcTracer** | AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3744340)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2408.03573)<br>[![Code](assets/badges/code.svg)](https://github.com/YuhengHuang42/test_selection_llm) | TOSEM |
 
@@ -274,7 +274,7 @@
 
 ##### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **SMiR** | SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3771545)<br>[![Code](assets/badges/code.svg)](https://github.com/AnonymousSE4AI/SMiR) | TOSEM |
 | 2025 | **AutoRIC** | AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3690634)<br>[![Code](assets/badges/code.svg)](https://github.com/Anonymous89000/AutoRIC) | TOSEM |
@@ -318,7 +318,7 @@
 
 ##### 大语言模型（LLM）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2022 | **ROME** | Locating and Editing Factual Associations in GPT | [![Paper](assets/badges/paper.svg)](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2202.05262)<br>[![Code](assets/badges/code.svg)](https://github.com/kmeng01/rome) | NeurIPS<br>2022 |
 
@@ -328,7 +328,7 @@
 
 ##### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2022 | **DeepPAC** | Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning | [![Paper](assets/badges/paper.svg)](https://conf.researchr.org/details/icse-2022/icse-2022-papers/106/Towards-Practical-Robustness-Analysis-for-DNNs-based-on-PAC-Model-Learning)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2101.10102) | ICSE<br>2022 |
 | 2019 | — | Robustness Verification of Classification Deep Neural Networks via Linear Programming | [![Paper](assets/badges/paper.svg)](https://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Robustness_Verification_of_Classification_Deep_Neural_Networks_via_Linear_Programming_CVPR_2019_paper.html) | CVPR<br>2019 |
@@ -340,14 +340,14 @@
 
 ##### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv（预印本） |
 | 2018 | **DeepMutation** | DeepMutation: Mutation Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/issre.2018.00021)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1805.05206) | ISSRE<br>2018 |
 
 ##### 大语言模型（LLM）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv（预印本） |
 
@@ -357,7 +357,7 @@
 
 #### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2024 | — | Test Optimization in DNN Testing: A Survey | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3643678) | TOSEM |
 | 2024 | — | 深度神经网络修复策略综述 | [![Paper](assets/badges/paper.svg)](https://www.jos.org.cn/1000-9825/7061.htm) | 软件学报 |
@@ -371,7 +371,7 @@
 
 #### 非 LLM 深度神经网络
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv（预印本） |
 | 2025 | — | Assessing the Robustness of Test Selection Methods for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3715693)<br>[![Code](assets/badges/code.svg)](https://anonymous.4open.science/r/Robust-testing-test-selection-3F83/) | TOSEM |
@@ -393,7 +393,7 @@
 
 #### 大语言模型（LLM）
 
-| 年份 | 简称 | 论文标题 | 资源<br>Resources | 会议／期刊 |
+| 年份 | 简称 | 标题 | 链接 | 来源 |
 | :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv（预印本） |
 
