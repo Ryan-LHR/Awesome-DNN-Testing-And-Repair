@@ -1,0 +1,50 @@
+name: Deploy paper browser
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - site/**
+      - data/papers.json
+      - scripts/build_site.py
+      - scripts/update_readme.py
+      - .github/workflows/pages.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - name: Build static site
+        run: python3 scripts/build_site.py
+      - uses: actions/configure-pages@v5
+        if: github.event_name == 'workflow_dispatch'
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name == 'workflow_dispatch'
+        with:
+          path: dist
+
+  deploy:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

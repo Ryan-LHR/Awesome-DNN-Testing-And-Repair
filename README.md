@@ -18,6 +18,8 @@
 
 A collection of papers on deep neural network testing, verification, and repair.
 
+The searchable [paper browser](docs/website.md) supports topic, year, venue, and CCF filters. See its guide for local preview and GitHub Pages deployment.
+
 <a name="overview"></a>
 
 ## 📋 Overview

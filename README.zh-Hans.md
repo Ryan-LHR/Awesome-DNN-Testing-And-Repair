@@ -18,6 +18,8 @@
 
 深度神经网络测试、验证与修复相关论文合集。
 
+配套的[论文浏览网站](docs/website.md)支持搜索及分类、年份、Venue、CCF 筛选；本地预览与 GitHub Pages 部署方法见链接中的说明。
+
 <a name="overview"></a>
 
 ## 📋 概览
