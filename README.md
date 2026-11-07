@@ -60,13 +60,7 @@ Papers in this collection published within the past month, including preprints. 
 
 ## 📄 Papers
 
-Within each category, papers are grouped by target model type: Non-LLM DNNs, LLMs, and QNNs (quantum neural networks). Target types describe the models being tested, verified, repaired, or reviewed. Papers covering multiple target types appear in each applicable group.
-
-Within each group, published papers are listed by formal publication year, newest first. Preprints use their first public year and are marked accordingly. Preprint and online publication dates are recorded separately in the [paper data](data/papers.json).
-
-Resource links are shown only when recorded in the paper data.
-
-CCF venue categories in the paper data refer to the 2026 directory. A `null` value means no verified category is recorded.
+Within each category, papers are grouped by target model type: Non-LLM DNNs, LLMs, and QNNs (quantum neural networks). Entries are ordered newest first by formal publication year, or by first public year for preprints.
 
 <!-- BEGIN GENERATED PAPERS -->
 
