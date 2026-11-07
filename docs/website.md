@@ -54,7 +54,7 @@ deploy the site. Pull requests that touch website inputs run a build check.
 
 For this repository the default project URL is:
 
-<https://ryan-lhr.github.io/awesome-dnn-testing-and-repair/>
+<https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/>
 
 Run the workflow again after future paper or website updates. The workflow uses
 GitHub's Pages artifact and deployment actions; it does not create a `gh-pages`
