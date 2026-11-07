@@ -64,6 +64,15 @@ OVERVIEW_BEGIN_MARKER = "<!-- BEGIN GENERATED OVERVIEW -->"
 OVERVIEW_END_MARKER = "<!-- END GENERATED OVERVIEW -->"
 RECENT_BEGIN_MARKER = "<!-- BEGIN GENERATED RECENT PAPERS -->"
 RECENT_END_MARKER = "<!-- END GENERATED RECENT PAPERS -->"
+RECOMMENDED_BEGIN_MARKER = "<!-- BEGIN GENERATED RECOMMENDED PAPERS -->"
+RECOMMENDED_END_MARKER = "<!-- END GENERATED RECOMMENDED PAPERS -->"
+RECOMMENDED_PAPER_IDS = ("dufp-2026",)
+RECOMMENDED_SUMMARIES = {
+    "dufp-2026": {
+        "en": "Prioritizes DNN test inputs by combining decision ambiguity with distributional atypicality.",
+        "zh-Hans": "结合决策歧义与分布非典型性，对 DNN 测试输入进行优先级排序。",
+    },
+}
 BEGIN_MARKER = "<!-- BEGIN GENERATED PAPERS -->"
 END_MARKER = "<!-- END GENERATED PAPERS -->"
 RESOURCE_FIELDS = ("paper_url", "arxiv_url", "code_url", "website_url")
@@ -387,7 +396,7 @@ def render_recent_papers(papers, end, language="en"):
         return "\n".join(lines)
     lines.extend([
         "| " + " | ".join(labels.get(column, column) for column in ("Date", "Paper", "Venue", "Resources")) + " |",
-        "| --- | --- | --- | --- |",
+        "| :---: | --- | :---: | --- |",
     ])
     for published, paper in matches:
         title = escape_cell(paper["title"])
@@ -395,6 +404,25 @@ def render_recent_papers(papers, end, language="en"):
             title = f"**{escape_cell(paper['alias'])}** — {title}"
         lines.append(f"| {published.isoformat()} | {title} | {render_venue(paper, language)} | {render_resources(paper)} |")
     return "\n".join(lines)
+
+
+def render_recommended_papers(papers, language="en"):
+    matches = [paper for paper_id in RECOMMENDED_PAPER_IDS for paper in papers if paper["id"] == paper_id]
+    lines = []
+    for paper in matches:
+        heading = escape_cell(paper.get("alias") or paper["title"])
+        venue = render_venue(paper, language).replace("<br>", " ")
+        lines.extend([f"**{heading}** · {venue}", "", f"> {escape_cell(paper['title'])}"])
+        authors = paper.get("authors")
+        if authors:
+            author = escape_cell(authors[0]) + (" et al." if len(authors) > 1 else "")
+            lines.extend([">", f"> {author}"])
+        summary = RECOMMENDED_SUMMARIES.get(paper["id"], {}).get(language)
+        if summary:
+            lines.extend([">", f"> {summary}"])
+        resources = render_resources(paper).replace("<br>", " ")
+        lines.extend([">", f"> {resources}", ""])
+    return "\n".join(lines).rstrip()
 
 
 def render_overview(papers, language="en"):
@@ -435,7 +463,7 @@ def render_tables(papers, language="en"):
             lines.extend([
                 f"{'#' * (level + 1)} {labels.get(heading, heading)}", "",
                 "| " + " | ".join(labels.get(column, column) for column in ("Year", "Name", "Title", "Resources", "Venue")) + " |",
-                "| --- | --- | --- | --- | --- |",
+                "| :---: | --- | --- | --- | :---: |",
             ])
             for paper in matches:
                 year = paper_year(paper)
@@ -476,7 +504,7 @@ def replace_badge_counts(readme, papers):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate papers.json and update English and Simplified Chinese README overviews, recent papers, paper tables, and badge counts.")
+    parser = argparse.ArgumentParser(description="Validate papers.json and update English and Simplified Chinese README overviews, recent and recommended papers, paper tables, and badge counts.")
     parser.add_argument("--check", action="store_true", help="Check data and README without writing files.")
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
@@ -501,6 +529,7 @@ def main():
         readme = path.read_bytes().decode("utf-8")
         updated = replace_tables(readme, render_overview(visible_papers, language), OVERVIEW_BEGIN_MARKER, OVERVIEW_END_MARKER)
         updated = replace_tables(updated, render_recent_papers(visible_papers, today, language), RECENT_BEGIN_MARKER, RECENT_END_MARKER)
+        updated = replace_tables(updated, render_recommended_papers(visible_papers, language), RECOMMENDED_BEGIN_MARKER, RECOMMENDED_END_MARKER)
         updated = replace_tables(updated, render_tables(visible_papers, language))
         updated = replace_badge_counts(updated, papers)
         if updated != readme:

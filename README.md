@@ -60,9 +60,13 @@ For a richer browsing experience, explore the interactive paper browser.
 
 <br clear="all" />
 
+<a name="recent-and-recommended-papers"></a>
+
+## 🚀 Recent & Recommended Papers
+
 <a name="recent-papers"></a>
 
-## 🆕 Recent Papers
+### Recent Papers
 
 Papers in this collection published within the past month, including preprints. Dates refer to the first formal online publication or, for preprints, the first public release. Only entries with confirmed dates are shown; the window is refreshed when this README is generated.
 
@@ -71,10 +75,28 @@ Papers in this collection published within the past month, including preprints. 
 *2026-10-07 — 2026-11-07*
 
 | Date | Paper | Venue | Resources |
-| --- | --- | --- | --- |
+| :---: | --- | :---: | --- |
 | 2026-11-04 | **Orbit Audits** — Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | arXiv (preprint) | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) |
 
 <!-- END GENERATED RECENT PAPERS -->
+
+<a name="recommended-papers"></a>
+
+### Recommended Papers
+
+<!-- BEGIN GENERATED RECOMMENDED PAPERS -->
+
+**DuFP** · ASE 2026
+
+> When Ambiguity Meets Atypicality: Dual-Perspective Test Input Prioritization for DNNs
+>
+> Haoran Li et al.
+>
+> Prioritizes DNN test inputs by combining decision ambiguity with distributional atypicality.
+>
+> [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3832783.3834351) [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2609.34703) [![Code](assets/badges/code.svg)](https://github.com/Ryan-LHR/DuFP)
+
+<!-- END GENERATED RECOMMENDED PAPERS -->
 
 <a name="papers"></a>
 
@@ -91,7 +113,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
 | 2023 | **ATOM** | ATOM: Automated Black-Box Testing of Multi-Label Image Classification Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/ase56229.2023.00156) | ASE<br>2023 |
 | 2023 | **SA**<br>(journal-version) | Evaluating Surprise Adequacy for Deep Learning System Testing | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3546947)<br>[![Code](assets/badges/code.svg)](https://github.com/coinse/sadl) | TOSEM |
@@ -119,7 +141,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### QNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950)<br>[![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 
 #### Test Generation
@@ -127,7 +149,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **SUNTest** | White-Box Test Input Generation for Enhancing Deep Neural Network Models through Suspicious Neuron Awareness | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3736305)<br>[![Code](assets/badges/code.svg)](https://github.com/TestingAIGroup/SUNTest) | TOSEM |
 | 2025 | **Clover** | Context-Aware Fuzzing for Robustness Enhancement of Deep Learning Models | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3680464)<br>[![Code](assets/badges/code.svg)](https://github.com/PapRep/Clover) | TOSEM |
 | 2025 | **DiffGAN** | DiffGAN: A Test Generation Approach for Differential Testing of Deep Neural Networks for Image Analysis | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2025.3611329) | TSE |
@@ -173,14 +195,14 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### LLMs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2025 | **NLPLego** | NLPLego: Assembling Test Generation for Natural Language Processing Applications | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3691631)<br>[![Code](assets/badges/code.svg)](https://github.com/SSCT-Lab/NLPLego) | TOSEM |
 | 2024 | **LLM-Fuzzer** | LLM-Fuzzer: Scaling Assessment of Large Language Model Jailbreaks | [![Paper](assets/badges/paper.svg)](https://www.usenix.org/conference/usenixsecurity24/presentation/yu-jiahao)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2309.10253)<br>[![Code](assets/badges/code.svg)](https://github.com/hubertyoo/GPTFuzz) | USENIX Security<br>2024 |
 
 ##### QNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2025 | **QuanTest** | QuanTest: Entanglement-Guided Testing of Quantum Neural Network Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3688840)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2402.12950)<br>[![Code](assets/badges/code.svg)](https://github.com/am0x00/QuanTest) | TOSEM |
 
 #### Test Selection and Prioritization
@@ -188,7 +210,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **MetaDTS** | MetaDTS: Distribution difference-based adaptive test input selection for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1016/j.sysarc.2025.103682) | JSA |
 | 2026 | **PriCod** | PriCod: Prioritizing Test Inputs for Compressed Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3730435)<br>[![Code](assets/badges/code.svg)](https://github.com/yinghuali/PriCod) | TOSEM |
 | 2026 | **SETS** | SETS: A Simple yet Effective DNN Test Selection Approach | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3772084)<br>[![Code](assets/badges/code.svg)](https://github.com/GIST-NJU/SETS) | TOSEM |
@@ -235,7 +257,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### LLMs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **AcTracer** | AcTracer: Active Testing of Large Language Model via Multi-Stage Sampling | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3744340)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2408.03573)<br>[![Code](assets/badges/code.svg)](https://github.com/YuhengHuang42/test_selection_llm) | TOSEM |
 
 #### Model Repair
@@ -243,7 +265,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **SMiR** | SMiR: Minimizing Side Effects in Repairing Specific Misclassifications for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3771545)<br>[![Code](assets/badges/code.svg)](https://github.com/AnonymousSE4AI/SMiR) | TOSEM |
 | 2025 | **AutoRIC** | AutoRIC: Automated Neural Network Repairing Based on Constrained Optimization | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3690634)<br>[![Code](assets/badges/code.svg)](https://github.com/Anonymous89000/AutoRIC) | TOSEM |
 | 2025 | **DEFault** | Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/icse55347.2025.00224)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2501.12560)<br>[![Code](assets/badges/code.svg)](https://github.com/SigmaJahan/DEFault-DNN-Debugging)<br>[![Website](assets/badges/website.svg)](https://default-ai.com/) | ICSE<br>2025 |
@@ -287,7 +309,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### LLMs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2022 | **ROME** | Locating and Editing Factual Associations in GPT | [![Paper](assets/badges/paper.svg)](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2202.05262)<br>[![Code](assets/badges/code.svg)](https://github.com/kmeng01/rome) | NeurIPS<br>2022 |
 
 #### DNN Verification
@@ -295,7 +317,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2022 | **DeepPAC** | Towards Practical Robustness Analysis for DNNs based on PAC-Model Learning | [![Paper](assets/badges/paper.svg)](https://conf.researchr.org/details/icse-2022/icse-2022-papers/106/Towards-Practical-Robustness-Analysis-for-DNNs-based-on-PAC-Model-Learning)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2101.10102) | ICSE<br>2022 |
 | 2019 | — | Robustness Verification of Classification Deep Neural Networks via Linear Programming | [![Paper](assets/badges/paper.svg)](https://openaccess.thecvf.com/content_CVPR_2019/html/Lin_Robustness_Verification_of_Classification_Deep_Neural_Networks_via_Linear_Programming_CVPR_2019_paper.html) | CVPR<br>2019 |
 | 2017 | **Reluplex** | Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://link.springer.com/chapter/10.1007/978-3-319-63387-9_5)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1702.01135) | CAV<br>2017 |
@@ -305,14 +327,14 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 ##### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2018 | **DeepMutation** | DeepMutation: Mutation Testing of Deep Learning Systems | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/issre.2018.00021)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1805.05206) | ISSRE<br>2018 |
 
 ##### LLMs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
 ### Surveys
@@ -320,7 +342,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 #### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2024 | — | Test Optimization in DNN Testing: A Survey | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3643678) | TOSEM |
 | 2022 | — | Machine Learning Testing: Survey, Landscapes and Horizons | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1109/tse.2019.2962027)<br>[![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/1906.10742) | TSE |
 
@@ -329,7 +351,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 #### Non-LLM DNNs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 | 2025 | — | Assessing the Robustness of Test Selection Methods for Deep Neural Networks | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3715693)<br>[![Code](assets/badges/code.svg)](https://anonymous.4open.science/r/Robust-testing-test-selection-3F83/) | TOSEM |
 | 2024 | — | Can Coverage Criteria Guide Failure Discovery for Image Classifiers? An Empirical Study | [![Paper](assets/badges/paper.svg)](https://doi.org/10.1145/3672446) | TOSEM |
@@ -351,7 +373,7 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 #### LLMs
 
 | Year | Name | Title | Resources | Venue |
-| --- | --- | --- | --- | --- |
+| :---: | --- | --- | --- | :---: |
 | 2026 | **Orbit Audits** | Consistency Is Not Understanding: Orbit Audits for Neural Field Weight Readers | [![arXiv](assets/badges/arxiv.svg)](https://arxiv.org/abs/2611.05798) | arXiv (preprint) |
 
 <!-- END GENERATED PAPERS -->
@@ -383,7 +405,13 @@ This project's original content and code are licensed under the [MIT License](LI
 
 ## 🙌 Contributing
 
-Contributions are welcome! [Recommend a paper](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=01-recommend-paper.yml), [suggest a correction](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=02-correct-entry.yml), or submit a [pull request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls). Paper recommendations need a title and paper link; suggested categories, extra links, and additional notes are optional. For data contributions, see the [data guide and DeepXplore example](data/README.md#english).
+Contributions are welcome!
+
+- **[Recommend a paper](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=01-recommend-paper.yml)**: provide a title and paper link; suggested categories, extra links, and notes are optional.
+- **[Suggest a correction](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=02-correct-entry.yml)**: report an issue with an existing entry.
+- **[Submit a pull request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls)**: add or improve paper data and repository content.
+
+For data contributions, see the [data guide and DeepXplore example](data/README.md#english).
 
 Thanks to everyone who contributes to this collection!
 
