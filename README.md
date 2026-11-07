@@ -13,12 +13,10 @@
 </p>
 
 <p align="center">
-<a href="assets/wechat.jpg"><img alt="Chat on WeChat" src="https://img.shields.io/badge/Chat_on_WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" /></a> <a href="mailto:Li_Haoran@buaa.edu.cn"><img alt="Contact by Email" src="https://img.shields.io/badge/Contact_by_Email-00629B?style=for-the-badge&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjUiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cGF0aCBkPSJtMyA2IDkgNyA5LTciLz48L3N2Zz4%3D" /></a>
+<a href="https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/"><img alt="Explore papers on the website" src="assets/badges/explore.svg" height="32" /></a> <a href="assets/wechat.jpg"><img alt="Chat on WeChat" src="https://img.shields.io/badge/Chat_on_WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" /></a> <a href="mailto:Li_Haoran@buaa.edu.cn"><img alt="Contact by Email" src="https://img.shields.io/badge/Contact_by_Email-00629B?style=for-the-badge&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjUiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cGF0aCBkPSJtMyA2IDkgNyA5LTciLz48L3N2Zz4%3D" /></a>
 </p>
 
 A collection of papers on deep neural network testing, verification, and repair.
-
-The searchable [paper browser](docs/website.md) supports topic, year, venue, and CCF filters. See its guide for local preview and GitHub Pages deployment.
 
 <a name="overview"></a>
 
@@ -41,6 +39,26 @@ This collection focuses on testing, verifying, and repairing deep neural network
 A paper may appear in more than one category.
 
 <!-- END GENERATED OVERVIEW -->
+
+<a name="website"></a>
+
+## 🌐 Explore the Website
+
+<a href="https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/">
+  <img src="assets/website-preview.png" alt="Paper browser in light and dark themes, with the light theme in front" align="right" width="320" />
+</a>
+
+For a richer browsing experience, explore the interactive paper browser.
+
+- Search titles, authors, and abstracts.
+- Filter by topic, year, venue, and CCF rank.
+- Read full abstracts and share filtered results.
+
+<p>
+  <a href="https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/"><img alt="Explore papers on the website" src="assets/badges/explore.svg" height="32" /></a>
+</p>
+
+<br clear="all" />
 
 <a name="recent-papers"></a>
 

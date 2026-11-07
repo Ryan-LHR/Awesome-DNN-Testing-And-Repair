@@ -13,12 +13,10 @@
 </p>
 
 <p align="center">
-<a href="assets/wechat.jpg"><img alt="Chat on WeChat" src="https://img.shields.io/badge/Chat_on_WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" /></a> <a href="mailto:Li_Haoran@buaa.edu.cn"><img alt="Contact by Email" src="https://img.shields.io/badge/Contact_by_Email-00629B?style=for-the-badge&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjUiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cGF0aCBkPSJtMyA2IDkgNyA5LTciLz48L3N2Zz4%3D" /></a>
+<a href="https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/"><img alt="Explore papers on the website" src="assets/badges/explore.svg" height="32" /></a> <a href="assets/wechat.jpg"><img alt="Chat on WeChat" src="https://img.shields.io/badge/Chat_on_WeChat-07C160?style=for-the-badge&amp;logo=wechat&amp;logoColor=white" /></a> <a href="mailto:Li_Haoran@buaa.edu.cn"><img alt="Contact by Email" src="https://img.shields.io/badge/Contact_by_Email-00629B?style=for-the-badge&amp;logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjMiIHk9IjUiIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNCIgcng9IjIiLz48cGF0aCBkPSJtMyA2IDkgNyA5LTciLz48L3N2Zz4%3D" /></a>
 </p>
 
 深度神经网络测试、验证与修复相关论文合集。
-
-配套的[论文浏览网站](docs/website.md)支持搜索及分类、年份、Venue、CCF 筛选；本地预览与 GitHub Pages 部署方法见链接中的说明。
 
 <a name="overview"></a>
 
@@ -41,6 +39,26 @@
 同一篇论文可能归入多个类别。
 
 <!-- END GENERATED OVERVIEW -->
+
+<a name="website"></a>
+
+## 🌐 在线浏览
+
+<a href="https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/">
+  <img src="assets/website-preview.png" alt="论文浏览网站的浅深主题堆叠预览，浅色主题位于前方" align="right" width="320" />
+</a>
+
+推荐使用交互式网站，获得更完整的论文浏览与检索体验。
+
+- 检索论文标题、作者和摘要。
+- 按研究方向、年份、会议／期刊和 CCF 评级组合筛选。
+- 展开阅读完整摘要，并分享当前检索结果。
+
+<p>
+  <a href="https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/"><img alt="前往网站浏览论文" src="assets/badges/explore.svg" height="32" /></a>
+</p>
+
+<br clear="all" />
 
 <a name="recent-papers"></a>
 
