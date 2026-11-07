@@ -378,6 +378,21 @@ Within each category, papers are grouped by target model type: Non-LLM DNNs, LLM
 
 <!-- END GENERATED PAPERS -->
 
+<a name="citation"></a>
+
+## 📚 Citation
+
+If you use this collection in your research, please cite it as follows:
+
+```bibtex
+@misc{li2026awesome,
+  author = {Li, Haoran},
+  title = {{Awesome DNN Testing and Repair}},
+  year = {2026},
+  url = {https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair}
+}
+```
+
 <a name="star-history"></a>
 
 ## 🌟 Star History

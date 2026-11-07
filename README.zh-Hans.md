@@ -399,6 +399,21 @@
 
 <!-- END GENERATED PAPERS -->
 
+<a name="citation"></a>
+
+## 📚 引用
+
+如果你在研究中使用了本论文合集，欢迎按以下格式引用：
+
+```bibtex
+@misc{li2026awesome,
+  author = {Li, Haoran},
+  title = {{Awesome DNN Testing and Repair}},
+  year = {2026},
+  url = {https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair}
+}
+```
+
 <a name="star-history"></a>
 
 ## 🌟 Star 历史

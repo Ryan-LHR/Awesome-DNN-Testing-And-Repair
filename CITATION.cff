@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this collection in your research, please cite it as follows."
+title: "Awesome DNN Testing and Repair"
+authors:
+  - family-names: "Li"
+    given-names: "Haoran"
+url: "https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair"
+preferred-citation:
+  type: generic
+  title: "Awesome DNN Testing and Repair"
+  authors:
+    - family-names: "Li"
+      given-names: "Haoran"
+  year: 2026
+  url: "https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair"
