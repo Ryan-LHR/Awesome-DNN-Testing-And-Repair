@@ -25,8 +25,13 @@ root or a GitHub project subpath.
 
 - Search matches title, alias, authors, and the full abstract, ignoring case.
   Multiple search words must all match, in any of those fields.
-- Multiple selected categories are combined with OR. Category, year, venue, and
-  CCF filters are combined with AND. Papers are deduplicated by their data IDs.
+- Categories, years, venues, and CCF ranks all support multiple selections. Year,
+  Venue, and CCF use expandable checkbox lists. Selections within a group are
+  combined with OR; the groups are combined with AND. For example, selecting 2024
+  and 2025 plus ICSE and TOSEM matches papers from either year at either venue.
+  An empty group matches all values. Each selected value can be removed
+  individually, each checkbox group has a clear action, and Clear filters resets
+  all groups. Papers are deduplicated by their data IDs.
 - Research Papers includes all existing research categories, including DNN
   Verification. Surveys and Empirical Studies remain separate category choices.
 - Years follow formal publication year, falling back to first public year for
@@ -37,6 +42,8 @@ root or a GitHub project subpath.
   underscore, and multiplication symbols are displayed as readable text without
   changing the source data.
 - Search, filters, and sort are stored in the URL for sharing or reloading.
+  Multiselect groups use repeated parameters, such as `year=2024&year=2025`;
+  existing links with a single year, venue, or CCF rank remain supported.
   The default theme is light. A manually chosen theme is stored in this browser.
 - Mobile filters open in a keyboard-accessible drawer. Escape, Close, or Show
   papers dismisses it. `/` focuses search.

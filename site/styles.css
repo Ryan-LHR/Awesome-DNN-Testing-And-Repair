@@ -44,6 +44,7 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .skip-link { position: fixed; top: -100px; left: 20px; z-index: 200; padding: 12px 18px; border-radius: 12px; background: var(--surface); border: 1px solid var(--ink); }
 .skip-link:focus { top: 15px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .loading { max-width: 650px; margin: 80px auto; padding: 25px; text-align: center; }
 .loading h1 { font-size: 26px; }
 .loading a { text-decoration: underline; }
@@ -86,8 +87,22 @@ svg { width: 20px; height: 20px; flex-shrink: 0; }
 .separate-topics .category { font-size: 15px; }
 .filter-panel { border-top: 1px solid var(--line); margin-top: 25px; padding-top: 18px; }
 .filter-panel h2 { font-size: 15px; margin: 0 15px 16px; font-weight: 650; }
-.filter-field { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin: 12px 10px 12px 15px; font-size: 14px; }
-.filter-field select { width: 154px; max-width: 154px; background: var(--surface); border: 1px solid var(--line); border-radius: 11px; font-size: 14px; padding: 9px 10px; }
+.filter-field { margin: 10px 10px 10px 15px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: 14px; }
+.filter-field summary { display: flex; align-items: center; gap: 9px; padding: 10px 12px; list-style: none; border-radius: 11px; }
+.filter-field summary::-webkit-details-marker { display: none; }
+.filter-field summary>span:first-child { font-weight: 550; }
+.facet-summary { margin-left: auto; min-width: 0; color: var(--muted); overflow-wrap: anywhere; }
+.filter-field summary svg { width: 14px; height: 14px; color: var(--muted); }
+.filter-field[open] summary svg { transform: rotate(180deg); }
+.filter-field[open] summary { border-bottom: 1px solid var(--line); border-radius: 11px 11px 0 0; }
+.facet-options { margin: 0; padding: 5px 0; border: 0; min-width: 0; max-height: 224px; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; }
+.facet-option { display: flex; align-items: center; gap: 9px; min-height: 36px; padding: 7px 12px; cursor: pointer; }
+.facet-option:hover { background: var(--soft); }
+.facet-option input { width: 16px; height: 16px; margin: 0; flex-shrink: 0; accent-color: var(--active); cursor: pointer; }
+.facet-option>span:not(.facet-count) { overflow-wrap: anywhere; }
+.facet-count { margin-left: auto; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.clear-facet { display: block; width: 100%; text-align: left; padding: 8px 12px; border-top: 1px solid var(--line); color: var(--body); font-size: 12px; }
+.clear-facet:disabled { color: var(--muted); opacity: .6; cursor: default; }
 .contribution { margin: 29px 15px; color: var(--muted); font-size: 14px; }
 .contribution a { display: inline-flex; align-items: center; gap: 7px; }
 .contribution svg { width: 14px; height: 14px; }
@@ -166,7 +181,6 @@ main:focus { outline: none; }
 .filter-dialog-heading button { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); font-size: 24px; line-height: 1; }
 .filter-dialog .sidebar { display: block; padding-top: 20px; border: 0; margin: 0; }
 .filter-dialog .sidebar-title { display: none; }
-.filter-dialog .filter-field select { width: 190px; max-width: 190px; }
 .filter-dialog .contribution { margin-block: 22px; }
 .filter-dialog-footer { position: sticky; bottom: 0; padding: 15px 0 20px; background: var(--ground); border-top: 1px solid var(--line); }
 .filter-dialog-footer button { width: 100%; padding: 12px; border-radius: 25px; background: var(--active); color: var(--on-active); font-size: 15px; }
@@ -199,8 +213,7 @@ body.filters-open { overflow: hidden; }
   .paper { padding: 25px; }
   .paper h3 { font-size: 23px; }
   .paper-footer { flex-direction: column; align-items: flex-start; gap: 15px; }
-  .filter-field { gap: 8px; margin-left: 12px; }
-  .filter-field select { width: 135px; }
+  .filter-field { margin-left: 12px; }
   .category { font-size: 15px; }
   .research-topics .category { font-size: 14px; }
 }

@@ -1,6 +1,6 @@
 const repo = 'https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair';
 const topics = ['Coverage Metrics', 'Test Generation', 'Test Selection and Prioritization', 'Model Repair', 'DNN Verification', 'Other'];
-const state = { categories: new Set(), query: '', year: '', venue: '', ccf: '', oldest: false, limit: 12 };
+const state = { categories: new Set(), query: '', year: new Set(), venue: new Set(), ccf: new Set(), oldest: false, limit: 12 };
 const escape = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const yearOf = paper => paper.dates.publication_year || paper.dates.first_public_year;
 const symbols = {
@@ -25,9 +25,28 @@ function categoryButton(name, label, count) {
 }
 
 function fields() {
-  const years = [...new Set(papers.map(yearOf))].sort((a, b) => b - a);
+  const years = [...new Set(papers.map(yearOf))].sort((a, b) => b - a).map(String);
   const venues = [...new Set(papers.map(paper => paper.venue))].sort();
-  return [['year', 'Year', 'All years', years], ['venue', 'Venue', 'All venues', venues], ['ccf', 'CCF', 'All ranks', ['A', 'B', 'C', 'Unspecified']]].map(([key, label, all, choices]) => `<label class="filter-field"><span>${label}</span><select data-filter="${key}" aria-label="${label}"><option value="">${all}</option>${choices.map(choice => `<option>${escape(choice)}</option>`).join('')}</select></label>`).join('');
+  return [['year', 'Year', 'All years', years], ['venue', 'Venue', 'All venues', venues], ['ccf', 'CCF', 'All ranks', ['A', 'B', 'C', 'Unspecified']]].map(([key, label, all, choices]) => `
+    <details class="filter-field" data-facet="${key}">
+      <summary><span>${label}</span><span class="facet-summary" data-empty="${all}">${all}</span>${icon('chevron')}</summary>
+      <fieldset class="facet-options"><legend class="visually-hidden">${label}</legend>${choices.map(choice => `<label class="facet-option"><input type="checkbox" data-filter="${key}" value="${escape(choice)}"><span>${escape(choice)}</span><span class="facet-count" aria-hidden="true">${papers.filter(paper => facetValue(paper, key) === choice).length}</span></label>`).join('')}</fieldset>
+      <button class="clear-facet" data-clear-facet="${key}" disabled>Clear selection</button>
+    </details>`).join('');
+}
+
+function facetValue(paper, key) {
+  return key === 'year' ? String(yearOf(paper)) : key === 'ccf' ? paper.ccf_rank || 'Unspecified' : paper.venue;
+}
+
+function updateFacetControls() {
+  document.querySelectorAll('[data-filter]').forEach(input => input.checked = state[input.dataset.filter].has(input.value));
+  document.querySelectorAll('[data-facet]').forEach(facet => {
+    const selected = state[facet.dataset.facet];
+    const summary = facet.querySelector('.facet-summary');
+    summary.textContent = selected.size === 1 ? [...selected][0] : selected.size ? `${selected.size} selected` : summary.dataset.empty;
+    facet.querySelector('.clear-facet').disabled = !selected.size;
+  });
 }
 
 function setTheme(theme) {
@@ -44,18 +63,15 @@ function readURL() {
   const categories = [...topics, 'Surveys', 'Empirical Studies'];
   state.query = params.get('q') || '';
   state.categories = new Set(params.getAll('category').filter(category => categories.includes(category)));
-  state.year = params.get('year') || '';
-  state.venue = params.get('venue') || '';
-  state.ccf = params.get('ccf') || '';
+  for (const key of ['year', 'venue', 'ccf']) {
+    const choices = new Set([...document.querySelectorAll(`[data-filter="${key}"]`)].map(input => input.value));
+    state[key] = new Set(params.getAll(key).filter(value => choices.has(value)));
+  }
   state.oldest = params.get('sort') === 'oldest';
   state.limit = 12;
   document.querySelector('#search').value = state.query;
   document.querySelector('#sort').value = state.oldest ? 'oldest' : 'newest';
-  document.querySelectorAll('[data-filter]').forEach(select => {
-    const key = select.dataset.filter;
-    if (![...select.options].some(option => option.value === state[key])) state[key] = '';
-    select.value = state[key];
-  });
+  updateFacetControls();
 }
 
 function syncURL() {
@@ -63,7 +79,7 @@ function syncURL() {
   url.search = '';
   if (state.query.trim()) url.searchParams.set('q', state.query.trim());
   state.categories.forEach(category => url.searchParams.append('category', category));
-  for (const key of ['year', 'venue', 'ccf']) if (state[key]) url.searchParams.set(key, state[key]);
+  for (const key of ['year', 'venue', 'ccf']) state[key].forEach(value => url.searchParams.append(key, value));
   if (state.oldest) url.searchParams.set('sort', 'oldest');
   history.replaceState(null, '', url);
 }
@@ -139,7 +155,18 @@ async function init() {
     state.limit = 12;
     render();
   });
-  document.querySelectorAll('[data-filter]').forEach(select => select.onchange = () => { state[select.dataset.filter] = select.value; state.limit = 12; render(); });
+  document.querySelectorAll('[data-filter]').forEach(input => input.onchange = () => {
+    const selected = state[input.dataset.filter];
+    if (input.checked) selected.add(input.value);
+    else selected.delete(input.value);
+    state.limit = 12;
+    render();
+  });
+  document.querySelectorAll('[data-clear-facet]').forEach(button => button.onclick = () => {
+    state[button.dataset.clearFacet].clear();
+    state.limit = 12;
+    render();
+  });
   document.querySelector('#load-more').onclick = () => { state.limit += 12; render(); };
   document.addEventListener('keydown', event => {
     if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !dialog.open && !document.activeElement.closest('input, textarea, select, [contenteditable="true"]')) {
@@ -172,7 +199,7 @@ function render(updateURL = true) {
   const terms = state.query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   const results = papers.filter(paper => {
     const searchable = [paper.title, paper.alias, ...paper.authors, abstractText(paper.abstract)].join(' ').toLowerCase();
-    return terms.every(term => searchable.includes(term)) && (!state.categories.size || paper.categories.some(category => state.categories.has(category))) && (!state.year || yearOf(paper) === Number(state.year)) && (!state.venue || paper.venue === state.venue) && (!state.ccf || (paper.ccf_rank || 'Unspecified') === state.ccf);
+    return terms.every(term => searchable.includes(term)) && (!state.categories.size || paper.categories.some(category => state.categories.has(category))) && ['year', 'venue', 'ccf'].every(key => !state[key].size || state[key].has(facetValue(paper, key)));
   }).sort((a, b) => (state.oldest ? 1 : -1) * (yearOf(a) - yearOf(b)));
   const count = `${results.length} ${results.length === 1 ? 'paper' : 'papers'}`;
   document.querySelector('#result-count').textContent = count;
@@ -185,21 +212,21 @@ function render(updateURL = true) {
     button.setAttribute('aria-pressed', active);
   });
   const selected = [...state.categories].map(category => ['category', category]);
-  for (const key of ['year', 'venue', 'ccf']) if (state[key]) selected.push([key, state[key]]);
+  for (const key of ['year', 'venue', 'ccf']) state[key].forEach(value => selected.push([key, value]));
   document.querySelector('#selected-filters').innerHTML = selected.length ? `${selected.map(([key, value]) => `<button data-remove="${key}" data-value="${escape(value)}" aria-label="Remove ${key} filter: ${escape(value)}">${escape(value)}<span aria-hidden="true">×</span></button>`).join('')}<button data-remove="all">Clear filters</button>` : '';
   document.querySelectorAll('[data-remove]').forEach(button => button.onclick = () => {
     const key = button.dataset.remove;
     if (key === 'category') state.categories.delete(button.dataset.value);
-    else if (key === 'all') { state.categories.clear(); state.year = ''; state.venue = ''; state.ccf = ''; }
-    else state[key] = '';
+    else if (key === 'all') { state.categories.clear(); for (const facet of ['year', 'venue', 'ccf']) state[facet].clear(); }
+    else state[key].delete(button.dataset.value);
     state.limit = 12;
-    document.querySelectorAll('[data-filter]').forEach(select => select.value = state[select.dataset.filter]);
     render();
   });
   document.querySelector('#papers').innerHTML = results.length ? results.slice(0, state.limit).map(paper => paperCard(paper, expanded.has(paper.id))).join('') : '<div class="empty"><h3>No papers found</h3><p>Try a broader search or remove one of the filters.</p><button class="reset-search">Reset search and filters</button></div>';
   const reset = document.querySelector('.reset-search');
   if (reset) reset.onclick = () => { history.replaceState(null, '', location.pathname); readURL(); render(); document.querySelector('#search').focus(); };
   document.querySelector('#load-more').hidden = results.length <= state.limit;
+  updateFacetControls();
   if (updateURL) syncURL();
 }
 
