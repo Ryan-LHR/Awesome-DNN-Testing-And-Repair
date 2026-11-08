@@ -172,6 +172,18 @@ main:focus { outline: none; }
 .filter-dialog-footer button { width: 100%; padding: 12px; border-radius: 25px; background: var(--active); color: var(--on-active); font-size: 15px; }
 body.filters-open { overflow: hidden; }
 
+@media(min-width:801px) {
+  .library > .sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    max-height: calc(100dvh - 48px);
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+  }
+}
+
 @media(min-width:1600px) {
   .shell { max-width: 1440px; }
   .library { grid-template-columns: 272px minmax(0, 1fr); gap: 52px; }
