@@ -2,6 +2,14 @@ name: Deploy paper browser
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - site/**
+      - data/papers.json
+      - scripts/build_site.py
+      - scripts/update_readme.py
+      - .github/workflows/pages.yml
   pull_request:
     paths:
       - site/**
@@ -28,14 +36,14 @@ jobs:
       - name: Build static site
         run: python3 scripts/build_site.py
       - uses: actions/configure-pages@v5
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name != 'pull_request'
       - uses: actions/upload-pages-artifact@v4
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name != 'pull_request'
         with:
           path: dist
 
   deploy:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:

@@ -43,23 +43,28 @@ root or a GitHub project subpath.
 
 ## GitHub Pages
 
-Review, commit, and push the source first. Publication is manual; pushing does not
-deploy the site. Pull requests that touch website inputs run a build check.
+After reviewing changes locally, commit and push to `main`. Changes to `site/`,
+`data/papers.json`, the build or shared validation script, or the Pages workflow
+automatically build and deploy the site. Pull requests run a build check only;
+they do not publish. Documentation-only and README-only changes do not deploy.
 
 1. In the repository, open **Settings → Pages → Build and deployment**.
 2. Set **Source** to **GitHub Actions**.
-3. Open **Actions → Deploy paper browser → Run workflow** and choose `main`.
-4. Wait for the build and deploy jobs to finish. The deployment job reports the
-   published URL.
+3. Push a website or paper-data change to `main`.
+4. Open **Actions → Deploy paper browser** and wait for the build and deploy jobs
+   to finish. The deployment job reports the published URL.
+
+To republish manually, open **Actions → Deploy paper browser → Run workflow** and
+choose `main`. This remains available alongside automatic publishing.
 
 For this repository the default project URL is:
 
 <https://ryan-lhr.github.io/Awesome-DNN-Testing-And-Repair/>
 
-Run the workflow again after future paper or website updates. The workflow uses
-GitHub's Pages artifact and deployment actions; it does not create a `gh-pages`
-branch or require a personal access token. GitHub environment protection rules
-still apply.
+Future paper and website updates publish automatically after their push to `main`.
+The workflow uses GitHub's Pages artifact and deployment actions; it does not
+create a `gh-pages` branch or require a personal access token. GitHub environment
+protection rules still apply.
 
 See [GitHub's custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 and [publishing source settings](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
