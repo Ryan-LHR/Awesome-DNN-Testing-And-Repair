@@ -32,6 +32,9 @@ root or a GitHub project subpath.
   An empty group matches all values. Each selected value can be removed
   individually, each checkbox group has a clear action, and Clear filters resets
   all groups. Papers are deduplicated by their data IDs.
+- On desktop, use **Filters** at the top of the sidebar to show the filters and
+  **Topics** to return to categories. **Search venues** narrows the Venue options
+  while keeping current selections.
 - Option counts reflect the search and other filter groups. The group's own
   selections are excluded so other choices in the same group remain comparable.
 - The `with code` count in the collection header toggles a filter for papers

@@ -76,6 +76,7 @@ svg { width: 20px; height: 20px; flex-shrink: 0; }
 .library { display: grid; grid-template-columns: 258px minmax(0, 1fr); gap: 42px; padding: 10px 0 50px; }
 .sidebar { min-width: 0; }
 .sidebar-title { font-size: 16px; font-weight: 650; margin: 6px 15px 19px; }
+.desktop-filter-shortcut, .venue-lookup, .venue-no-match { display: none; }
 .category { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; line-height: 1.4; padding: 11px 15px; border-radius: 25px; min-height: 44px; }
 .category:hover { background: var(--soft); }
 .category.active { background: var(--active); color: var(--on-active); }
@@ -199,6 +200,21 @@ body.filters-open { overflow: hidden; }
     overscroll-behavior-y: contain;
     scrollbar-width: thin;
   }
+  .sidebar-tools { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 10px 13px 15px; min-height: 35px; }
+  .sidebar-tools .sidebar-title { margin: 0; }
+  .desktop-filter-shortcut { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--body); font-size: 13px; font-weight: 550; }
+  .desktop-filter-shortcut:hover { background: var(--soft); color: var(--ink); }
+  .desktop-filter-shortcut svg, .venue-lookup svg { width: 14px; height: 14px; }
+  .library > .sidebar:not([data-view="filters"]) .filter-panel,
+  .library > .sidebar[data-view="filters"] nav { display: none; }
+  .library > .sidebar[data-view="filters"] .filter-panel { margin-top: 0; padding-top: 0; border: 0; }
+  .library > .sidebar[data-view="filters"] .filter-panel h2 { display: none; }
+  .venue-lookup { display: flex; align-items: center; gap: 7px; margin: 8px 8px 3px; padding: 0 8px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); }
+  .venue-lookup:focus-within { border-color: var(--ink); }
+  .venue-lookup input { width: 100%; min-width: 0; background: none; border: 0; outline: none; color: var(--ink); font-size: 13px; padding: 6px 0; }
+  .venue-lookup input::placeholder { color: var(--muted); opacity: 1; }
+  .facet-option.venue-excluded { display: none; }
+  .venue-no-match:not([hidden]) { display: block; margin: 4px 12px 10px; color: var(--muted); font-size: 13px; }
 }
 
 @media(min-width:1600px) {

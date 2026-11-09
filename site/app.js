@@ -31,7 +31,9 @@ function fields() {
   return [['year', 'Year', 'All years', years], ['venue', 'Venue', 'All venues', venues], ['ccf', 'CCF', 'All ranks', ['A', 'B', 'C', 'Unspecified']]].map(([key, label, all, choices]) => `
     <details class="filter-field" data-facet="${key}">
       <summary><span>${label}</span><span class="facet-summary" data-empty="${all}">${all}</span>${icon('chevron')}</summary>
+      ${key === 'venue' ? `<label class="venue-lookup">${icon('search')}<input type="search" placeholder="Search venues" aria-label="Search venues" autocomplete="off"></label>` : ''}
       <fieldset class="facet-options"><legend class="visually-hidden">${label}</legend>${choices.map(choice => `<label class="facet-option"><input type="checkbox" data-filter="${key}" value="${escape(choice)}"><span>${escape(choice)}</span><span class="facet-count" aria-hidden="true"></span></label>`).join('')}</fieldset>
+      ${key === 'venue' ? '<p class="venue-no-match" role="status" hidden>No matching venues</p>' : ''}
       <button class="clear-facet" data-clear-facet="${key}" disabled>Clear selection</button>
     </details>`).join('');
 }
@@ -120,9 +122,12 @@ async function init() {
       </section>
       <div class="library">
         <aside class="sidebar" id="sidebar" aria-label="Browse and filter papers">
-          <h2 class="sidebar-title">Browse papers</h2>
-          <nav aria-label="Paper categories">${categoryButton('all', 'All papers')}<button class="research-label" data-category="research" aria-pressed="false">${icon('chevron')}Research Papers</button><div class="research-topics">${topics.map(category => categoryButton(category, displayCategory(category))).join('')}</div><div class="separate-topics">${['Surveys', 'Empirical Studies'].map(category => categoryButton(category, category)).join('')}</div></nav>
-          <div class="filter-panel"><h2>Filter by</h2>${fields()}</div>
+          <div class="sidebar-tools">
+            <h2 class="sidebar-title">Browse papers</h2>
+            <button class="desktop-filter-shortcut" aria-controls="paper-categories filter-panel">${icon('filter')}<span>Filters</span></button>
+          </div>
+          <nav id="paper-categories" aria-label="Paper categories">${categoryButton('all', 'All papers')}<button class="research-label" data-category="research" aria-pressed="false">${icon('chevron')}Research Papers</button><div class="research-topics">${topics.map(category => categoryButton(category, displayCategory(category))).join('')}</div><div class="separate-topics">${['Surveys', 'Empirical Studies'].map(category => categoryButton(category, category)).join('')}</div></nav>
+          <div class="filter-panel" id="filter-panel"><h2>Filter by</h2>${fields()}</div>
           <div class="contribution"><a href="${repo}/issues/new?template=01-recommend-paper.yml" target="_blank" rel="noreferrer">Suggest a paper ${icon('arrow')}</a></div>
         </aside>
         <main id="main" tabindex="-1">
@@ -143,6 +148,32 @@ async function init() {
   document.querySelector('.theme-switch').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
   const dialog = document.querySelector('#filter-dialog');
   const sidebar = document.querySelector('#sidebar');
+  const filterShortcut = sidebar.querySelector('.desktop-filter-shortcut');
+  const sidebarTitle = sidebar.querySelector('.sidebar-title');
+  filterShortcut.onclick = () => {
+    const showFilters = sidebar.dataset.view !== 'filters';
+    sidebar.dataset.view = showFilters ? 'filters' : 'topics';
+    filterShortcut.querySelector('span').textContent = showFilters ? 'Topics' : 'Filters';
+    sidebarTitle.textContent = showFilters ? 'Filter papers' : 'Browse papers';
+    sidebar.scrollTop = 0;
+  };
+
+  const venueField = sidebar.querySelector('[data-facet="venue"]');
+  const venueOptions = venueField.querySelector('.facet-options');
+  const venueSearch = venueField.querySelector('input[type="search"]');
+  const venueNoMatch = venueField.querySelector('.venue-no-match');
+  venueSearch.oninput = () => {
+    const query = venueSearch.value.trim().toLowerCase();
+    let matches = 0;
+    for (const option of venueOptions.querySelectorAll('.facet-option')) {
+      const matchesQuery = option.querySelector('input').value.toLowerCase().includes(query);
+      option.classList.toggle('venue-excluded', !matchesQuery);
+      if (matchesQuery) matches++;
+    }
+    venueOptions.scrollTop = 0;
+    venueNoMatch.hidden = matches > 0;
+  };
+
   document.querySelector('.mobile-filters').onclick = () => {
     document.querySelector('#mobile-sidebar').append(sidebar);
     document.body.classList.add('filters-open');
