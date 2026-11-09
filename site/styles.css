@@ -69,6 +69,9 @@ svg { width: 20px; height: 20px; flex-shrink: 0; }
 .collection-meta { display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 14px; margin-top: 17px; }
 .collection-meta b { font-weight: 600; color: var(--ink); }
 .collection-meta i { font-style: normal; color: #b5b6ad; }
+.with-code { margin: -3px -6px; padding: 3px 6px; border-radius: 6px; color: inherit; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+.with-code:hover, .with-code[aria-pressed="true"] { background: var(--soft); color: var(--ink); }
+.with-code[aria-pressed="true"] { box-shadow: inset 0 0 0 1px var(--line); text-decoration: none; }
 
 .library { display: grid; grid-template-columns: 258px minmax(0, 1fr); gap: 42px; padding: 10px 0 50px; }
 .sidebar { min-width: 0; }

@@ -32,6 +32,10 @@ root or a GitHub project subpath.
   An empty group matches all values. Each selected value can be removed
   individually, each checkbox group has a clear action, and Clear filters resets
   all groups. Papers are deduplicated by their data IDs.
+- Option counts reflect the search and other filter groups. The group's own
+  selections are excluded so other choices in the same group remain comparable.
+- The `with code` count in the collection header toggles a filter for papers
+  with a code link. It combines with other filters and is shared as `code=1`.
 - Research Papers includes all existing research categories, including DNN
   Verification. Surveys and Empirical Studies remain separate category choices.
 - Years follow formal publication year, falling back to first public year for

@@ -1,6 +1,7 @@
 const repo = 'https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair';
 const topics = ['Coverage Metrics', 'Test Generation', 'Test Selection and Prioritization', 'Model Repair', 'DNN Verification', 'Other'];
-const state = { categories: new Set(), query: '', year: new Set(), venue: new Set(), ccf: new Set(), oldest: false, limit: 12 };
+const facetKeys = ['year', 'venue', 'ccf'];
+const state = { categories: new Set(), query: '', year: new Set(), venue: new Set(), ccf: new Set(), withCode: false, oldest: false, limit: 12 };
 const escape = (value = '') => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const yearOf = paper => paper.dates.publication_year || paper.dates.first_public_year;
 const symbols = {
@@ -20,8 +21,8 @@ let papers = [];
 const displayCategory = name => name === 'Test Selection and Prioritization' ? 'Test Selection & Prioritization' : name;
 const abstractText = text => text.replace(/\\textbackslashtimes/g, '×').replace(/\\textbackslash/g, '\\').replace(/\\[%_]/g, match => match[1]).replace(/\\[()]/g, '');
 
-function categoryButton(name, label, count) {
-  return `<button class="category" data-category="${escape(name)}" aria-pressed="false"><span>${escape(label)}</span><span class="number">${count}</span></button>`;
+function categoryButton(name, label) {
+  return `<button class="category" data-category="${escape(name)}" aria-pressed="false"><span>${escape(label)}</span><span class="number"></span></button>`;
 }
 
 function fields() {
@@ -30,7 +31,7 @@ function fields() {
   return [['year', 'Year', 'All years', years], ['venue', 'Venue', 'All venues', venues], ['ccf', 'CCF', 'All ranks', ['A', 'B', 'C', 'Unspecified']]].map(([key, label, all, choices]) => `
     <details class="filter-field" data-facet="${key}">
       <summary><span>${label}</span><span class="facet-summary" data-empty="${all}">${all}</span>${icon('chevron')}</summary>
-      <fieldset class="facet-options"><legend class="visually-hidden">${label}</legend>${choices.map(choice => `<label class="facet-option"><input type="checkbox" data-filter="${key}" value="${escape(choice)}"><span>${escape(choice)}</span><span class="facet-count" aria-hidden="true">${papers.filter(paper => facetValue(paper, key) === choice).length}</span></label>`).join('')}</fieldset>
+      <fieldset class="facet-options"><legend class="visually-hidden">${label}</legend>${choices.map(choice => `<label class="facet-option"><input type="checkbox" data-filter="${key}" value="${escape(choice)}"><span>${escape(choice)}</span><span class="facet-count" aria-hidden="true"></span></label>`).join('')}</fieldset>
       <button class="clear-facet" data-clear-facet="${key}" disabled>Clear selection</button>
     </details>`).join('');
 }
@@ -39,10 +40,25 @@ function facetValue(paper, key) {
   return key === 'year' ? String(yearOf(paper)) : key === 'ccf' ? paper.ccf_rank || 'Unspecified' : paper.venue;
 }
 
-function updateFacetControls() {
-  document.querySelectorAll('[data-filter]').forEach(input => input.checked = state[input.dataset.filter].has(input.value));
+function matchesFacet(paper, key) {
+  return !state[key].size || state[key].has(facetValue(paper, key));
+}
+
+function updateFacetControls(candidates) {
   document.querySelectorAll('[data-facet]').forEach(facet => {
-    const selected = state[facet.dataset.facet];
+    const key = facet.dataset.facet;
+    const selected = state[key];
+    const counts = new Map();
+    for (const paper of candidates) {
+      if (!facetKeys.every(other => other === key || matchesFacet(paper, other))) continue;
+      const value = facetValue(paper, key);
+      counts.set(value, (counts.get(value) || 0) + 1);
+    }
+    facet.querySelectorAll('.facet-option').forEach(option => {
+      const input = option.querySelector('input');
+      input.checked = selected.has(input.value);
+      option.querySelector('.facet-count').textContent = counts.get(input.value) || 0;
+    });
     const summary = facet.querySelector('.facet-summary');
     summary.textContent = selected.size === 1 ? [...selected][0] : selected.size ? `${selected.size} selected` : summary.dataset.empty;
     facet.querySelector('.clear-facet').disabled = !selected.size;
@@ -63,15 +79,15 @@ function readURL() {
   const categories = [...topics, 'Surveys', 'Empirical Studies'];
   state.query = params.get('q') || '';
   state.categories = new Set(params.getAll('category').filter(category => categories.includes(category)));
-  for (const key of ['year', 'venue', 'ccf']) {
+  for (const key of facetKeys) {
     const choices = new Set([...document.querySelectorAll(`[data-filter="${key}"]`)].map(input => input.value));
     state[key] = new Set(params.getAll(key).filter(value => choices.has(value)));
   }
+  state.withCode = params.get('code') === '1';
   state.oldest = params.get('sort') === 'oldest';
   state.limit = 12;
   document.querySelector('#search').value = state.query;
   document.querySelector('#sort').value = state.oldest ? 'oldest' : 'newest';
-  updateFacetControls();
 }
 
 function syncURL() {
@@ -79,7 +95,8 @@ function syncURL() {
   url.search = '';
   if (state.query.trim()) url.searchParams.set('q', state.query.trim());
   state.categories.forEach(category => url.searchParams.append('category', category));
-  for (const key of ['year', 'venue', 'ccf']) state[key].forEach(value => url.searchParams.append(key, value));
+  for (const key of facetKeys) state[key].forEach(value => url.searchParams.append(key, value));
+  if (state.withCode) url.searchParams.set('code', '1');
   if (state.oldest) url.searchParams.set('sort', 'oldest');
   history.replaceState(null, '', url);
 }
@@ -89,7 +106,6 @@ async function init() {
   if (!response.ok) throw new Error(`Paper data returned HTTP ${response.status}`);
   const data = await response.json();
   papers = [...new Map(data.map(paper => [paper.id, paper])).values()];
-  const count = category => papers.filter(paper => paper.categories.includes(category)).length;
   const years = papers.map(yearOf);
   document.querySelector('#app').innerHTML = `
     <svg class="icon-filters" aria-hidden="true"><defs><filter id="arxiv-white-to-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -3 -3 -3 9 0"/></filter></defs></svg>
@@ -100,12 +116,12 @@ async function init() {
       </header>
       <section class="introduction" aria-label="About this collection">
         <h1>DNN Testing<br><span>& Repair.</span></h1>
-        <div class="introduction-copy"><p>Papers on testing, verification, and repair of deep neural networks.</p><div class="collection-meta"><span><b>${papers.length}</b> papers</span><i aria-hidden="true">·</i><span><b>${papers.filter(paper => paper.code_url).length}</b> with code</span><i aria-hidden="true">·</i><span>${Math.min(...years)}–${Math.max(...years)}</span></div></div>
+        <div class="introduction-copy"><p>Papers on testing, verification, and repair of deep neural networks.</p><div class="collection-meta"><span><b>${papers.length}</b> papers</span><i aria-hidden="true">·</i><button class="with-code" aria-pressed="false"><b>${papers.filter(paper => paper.code_url).length}</b> with code</button><i aria-hidden="true">·</i><span>${Math.min(...years)}–${Math.max(...years)}</span></div></div>
       </section>
       <div class="library">
         <aside class="sidebar" id="sidebar" aria-label="Browse and filter papers">
           <h2 class="sidebar-title">Browse papers</h2>
-          <nav aria-label="Paper categories">${categoryButton('all', 'All papers', papers.length)}<button class="research-label" data-category="research" aria-pressed="false">${icon('chevron')}Research Papers</button><div class="research-topics">${topics.map(category => categoryButton(category, displayCategory(category), count(category))).join('')}</div><div class="separate-topics">${['Surveys', 'Empirical Studies'].map(category => categoryButton(category, category, count(category))).join('')}</div></nav>
+          <nav aria-label="Paper categories">${categoryButton('all', 'All papers')}<button class="research-label" data-category="research" aria-pressed="false">${icon('chevron')}Research Papers</button><div class="research-topics">${topics.map(category => categoryButton(category, displayCategory(category))).join('')}</div><div class="separate-topics">${['Surveys', 'Empirical Studies'].map(category => categoryButton(category, category)).join('')}</div></nav>
           <div class="filter-panel"><h2>Filter by</h2>${fields()}</div>
           <div class="contribution"><a href="${repo}/issues/new?template=01-recommend-paper.yml" target="_blank" rel="noreferrer">Suggest a paper ${icon('arrow')}</a></div>
         </aside>
@@ -144,6 +160,11 @@ async function init() {
   matchMedia('(min-width: 801px)').addEventListener('change', event => { if (event.matches && dialog.open) closeFilters(); });
   document.querySelector('#search').oninput = event => { state.query = event.target.value; state.limit = 12; render(); };
   document.querySelector('#sort').onchange = event => { state.oldest = event.target.value === 'oldest'; render(); };
+  document.querySelector('.with-code').onclick = () => {
+    state.withCode = !state.withCode;
+    state.limit = 12;
+    render();
+  };
   document.querySelectorAll('[data-category]').forEach(button => button.onclick = () => {
     const value = button.dataset.category;
     if (value === 'all') state.categories.clear();
@@ -197,10 +218,15 @@ function paperCard(paper, expanded) {
 function render(updateURL = true) {
   const expanded = new Set([...document.querySelectorAll('.paper:has(details[open])')].map(paper => paper.dataset.paperId));
   const terms = state.query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  const results = papers.filter(paper => {
+  const candidates = papers.filter(paper => {
+    if (state.withCode && !paper.code_url) return false;
     const searchable = [paper.title, paper.alias, ...paper.authors, abstractText(paper.abstract)].join(' ').toLowerCase();
-    return terms.every(term => searchable.includes(term)) && (!state.categories.size || paper.categories.some(category => state.categories.has(category))) && ['year', 'venue', 'ccf'].every(key => !state[key].size || state[key].has(facetValue(paper, key)));
-  }).sort((a, b) => (state.oldest ? 1 : -1) * (yearOf(a) - yearOf(b)));
+    return terms.every(term => searchable.includes(term));
+  });
+  const matchesCategory = paper => !state.categories.size || paper.categories.some(category => state.categories.has(category));
+  const categoryPapers = candidates.filter(paper => facetKeys.every(key => matchesFacet(paper, key)));
+  const results = categoryPapers.filter(matchesCategory)
+    .sort((a, b) => (state.oldest ? 1 : -1) * (yearOf(a) - yearOf(b)));
   const count = `${results.length} ${results.length === 1 ? 'paper' : 'papers'}`;
   document.querySelector('#result-count').textContent = count;
   document.querySelector('#apply-filters').textContent = `Show ${count}`;
@@ -210,14 +236,23 @@ function render(updateURL = true) {
     const active = category === 'all' ? !state.categories.size : category === 'research' ? topics.every(topic => state.categories.has(topic)) : state.categories.has(category);
     button.classList.toggle('active', active);
     button.setAttribute('aria-pressed', active);
+    const number = button.querySelector('.number');
+    if (number) number.textContent = category === 'all' ? categoryPapers.length : categoryPapers.filter(paper => paper.categories.includes(category)).length;
   });
+  document.querySelector('.with-code').setAttribute('aria-pressed', state.withCode);
   const selected = [...state.categories].map(category => ['category', category]);
-  for (const key of ['year', 'venue', 'ccf']) state[key].forEach(value => selected.push([key, value]));
+  for (const key of facetKeys) state[key].forEach(value => selected.push([key, value]));
+  if (state.withCode) selected.push(['code', 'With code']);
   document.querySelector('#selected-filters').innerHTML = selected.length ? `${selected.map(([key, value]) => `<button data-remove="${key}" data-value="${escape(value)}" aria-label="Remove ${key} filter: ${escape(value)}">${escape(value)}<span aria-hidden="true">×</span></button>`).join('')}<button data-remove="all">Clear filters</button>` : '';
   document.querySelectorAll('[data-remove]').forEach(button => button.onclick = () => {
     const key = button.dataset.remove;
     if (key === 'category') state.categories.delete(button.dataset.value);
-    else if (key === 'all') { state.categories.clear(); for (const facet of ['year', 'venue', 'ccf']) state[facet].clear(); }
+    else if (key === 'code') state.withCode = false;
+    else if (key === 'all') {
+      state.categories.clear();
+      facetKeys.forEach(facet => state[facet].clear());
+      state.withCode = false;
+    }
     else state[key].delete(button.dataset.value);
     state.limit = 12;
     render();
@@ -226,7 +261,7 @@ function render(updateURL = true) {
   const reset = document.querySelector('.reset-search');
   if (reset) reset.onclick = () => { history.replaceState(null, '', location.pathname); readURL(); render(); document.querySelector('#search').focus(); };
   document.querySelector('#load-more').hidden = results.length <= state.limit;
-  updateFacetControls();
+  updateFacetControls(candidates.filter(matchesCategory));
   if (updateURL) syncURL();
 }
 
