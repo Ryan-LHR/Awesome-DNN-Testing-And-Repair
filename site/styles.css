@@ -133,7 +133,10 @@ main:focus { outline: none; }
 .selected-filters button span { margin-left: 8px; }
 
 .paper { background: var(--surface); border: 1px solid var(--line); border-radius: 25px; padding: 27px 30px 26px; margin-bottom: 18px; }
+.shared-paper { scroll-margin-top: 24px; border-color: var(--accent); }
 .paper-topline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 9px 18px; margin-bottom: 15px; }
+.paper-topline-actions { display: contents; }
+.copy-paper-link { display: none; }
 .publication { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 14px; color: var(--muted); }
 .publication .venue { color: var(--ink); font-weight: 550; }
 .publication .rank { font-size: 12px; padding: 2px 6px; border: 1px solid var(--line); border-radius: 5px; color: var(--body); }
@@ -215,6 +218,12 @@ body.filters-open { overflow: hidden; }
   .venue-lookup input::placeholder { color: var(--muted); opacity: 1; }
   .facet-option.venue-excluded { display: none; }
   .venue-no-match:not([hidden]) { display: block; margin: 4px 12px 10px; color: var(--muted); font-size: 13px; }
+  .paper-topline-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+  .copy-paper-link { display: inline-grid; place-items: center; position: relative; width: 30px; height: 30px; margin-block: -4px; padding: 0; border: 1px solid var(--line); border-radius: 9px; color: var(--muted); }
+  .copy-paper-link:hover, .copy-paper-link:focus-visible, .copy-paper-link[data-copied] { background: var(--soft); color: var(--ink); }
+  .copy-paper-link svg { width: 16px; height: 16px; }
+  .copy-link-tip { position: absolute; bottom: calc(100% + 6px); right: 0; z-index: 1; visibility: hidden; white-space: nowrap; border-radius: 6px; background: var(--active); color: var(--on-active); padding: 4px 8px; font-size: 12px; font-weight: 500; pointer-events: none; }
+  .copy-paper-link:hover .copy-link-tip, .copy-paper-link:focus-visible .copy-link-tip, .copy-paper-link[data-copied] .copy-link-tip { visibility: visible; }
 }
 
 @media(min-width:1600px) {

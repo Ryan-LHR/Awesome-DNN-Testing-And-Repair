@@ -39,19 +39,24 @@ root or a GitHub project subpath.
   selections are excluded so other choices in the same group remain comparable.
 - The `with code` count in the collection header toggles a filter for papers
   with a code link. It combines with other filters and is shared as `code=1`.
+- With a search or filter active and no topic selected, the results heading is
+  **Filtered papers**.
 - Research Papers includes all existing research categories, including DNN
   Verification. Surveys and Empirical Studies remain separate category choices.
 - Years follow formal publication year, falling back to first public year for
   preprints. Conference labels use `ICSE' 2021`; journals use `TOSEM` with the year
   shown separately. Sorting is by year; ties retain data order.
 - Titles are plain text. Paper, arXiv, Code, and Website links appear separately
-  when present in the data. Abstracts expand in place. Common escaped percent,
-  underscore, and multiplication symbols are displayed as readable text without
-  changing the source data.
+  when present in the data. If Paper and arXiv point to the same URL, only
+  arXiv is shown. Abstracts expand in place. Common escaped percent, underscore,
+  and multiplication symbols are displayed as readable text without changing
+  the source data.
 - Search, filters, and sort are stored in the URL for sharing or reloading.
   Multiselect groups use repeated parameters, such as `year=2024&year=2025`;
   existing links with a single year, venue, or CCF rank remain supported.
   The default theme is light. A manually chosen theme is stored in this browser.
+- On desktop, **Copy link** at the top right of a paper card copies its direct
+  link. Opening it loads and scrolls to that paper, even past the first 12 results.
 - Mobile filters open in a keyboard-accessible drawer. Escape, Close, or Show
   papers dismisses it. `/` focuses search.
 

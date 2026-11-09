@@ -11,6 +11,8 @@ const symbols = {
   sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',
   moon: '<path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z"/>',
   filter: '<path d="M4 7h16M4 17h16M9 4v6m6 4v6"/>',
+  link: '<path d="M10 13a4 4 0 0 0 5.7 0l4-4A4 4 0 0 0 14 3.3l-2.3 2.3m.3 5.4a4 4 0 0 0-5.7 0l-4 4a4 4 0 0 0 5.7 5.7l2.3-2.3"/>',
+  check: '<path d="m5 12 4 4L19 6"/>',
   website: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]}</svg>`;
@@ -135,6 +137,7 @@ async function init() {
           <div class="results-heading"><div><h2 id="result-title">All papers</h2><span class="result-count" id="result-count" role="status" aria-atomic="true"></span></div><select class="sort-select" id="sort" aria-label="Sort papers"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
           <div class="selected-filters" id="selected-filters" aria-label="Active filters"></div>
           <div id="papers"></div><button class="load-more" id="load-more">Show more papers ↓</button>
+          <p id="copy-paper-status" class="visually-hidden" role="status"></p>
         </main>
       </div>
       <footer class="site-footer"><span>A community-curated collection.</span><a href="assets/credits.html">Asset credits</a></footer>
@@ -220,6 +223,36 @@ async function init() {
     render();
   });
   document.querySelector('#load-more').onclick = () => { state.limit += 12; render(); };
+  const copyStatus = document.querySelector('#copy-paper-status');
+  let copiedButton;
+  let copyTimer;
+  const resetCopyFeedback = () => {
+    if (copiedButton) {
+      delete copiedButton.dataset.copied;
+      copiedButton.innerHTML = `${icon('link')}<span class="copy-link-tip" aria-hidden="true">Copy link</span>`;
+      copiedButton = null;
+    }
+    copyStatus.textContent = '';
+  };
+  document.querySelector('#papers').addEventListener('click', async event => {
+    const button = event.target.closest('.copy-paper-link');
+    if (!button) return;
+    const url = new URL(location.pathname, location.href);
+    url.hash = button.closest('.paper').id;
+    try {
+      await navigator.clipboard.writeText(url.href);
+    } catch {
+      window.prompt('Copy link to this paper', url.href);
+      return;
+    }
+    clearTimeout(copyTimer);
+    resetCopyFeedback();
+    copiedButton = button;
+    button.dataset.copied = 'true';
+    button.innerHTML = `${icon('check')}<span class="copy-link-tip" aria-hidden="true">Link copied</span>`;
+    copyStatus.textContent = 'Paper link copied.';
+    copyTimer = setTimeout(resetCopyFeedback, 2000);
+  });
   document.addEventListener('keydown', event => {
     if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !dialog.open && !document.activeElement.closest('input, textarea, select, [contenteditable="true"]')) {
       event.preventDefault();
@@ -237,9 +270,16 @@ function paperCard(paper, expanded) {
   const venue = conference ? `${paper.venue}' ${year}` : paper.venue;
   const alias = paper.alias && !paper.title.toLowerCase().startsWith(paper.alias.toLowerCase()) ? paper.alias : '';
   const abstract = escape(abstractText(paper.abstract));
-  const links = [['Paper', paper.paper_url], ['arXiv', paper.arxiv_url], ['Code', paper.code_url], ['Website', paper.website_url]].filter(([, url]) => url);
-  return `<article class="paper" data-paper-id="${escape(paper.id)}" aria-labelledby="title-${escape(paper.id)}">
-    <div class="paper-topline"><div class="publication"><span class="venue">${escape(venue)}</span>${!conference ? `<i aria-hidden="true">·</i><span>${year}</span>` : ''}${paper.ccf_rank ? `<span class="rank">CCF ${paper.ccf_rank}</span>` : paper.publication_type === 'preprint' ? '<span class="rank">Preprint</span>' : ''}</div>${alias ? `<span class="alias">${escape(alias)}</span>` : ''}</div>
+  const paperURL = paper.paper_url === paper.arxiv_url ? null : paper.paper_url;
+  const links = [['Paper', paperURL], ['arXiv', paper.arxiv_url], ['Code', paper.code_url], ['Website', paper.website_url]].filter(([, url]) => url);
+  return `<article class="paper" id="paper-${encodeURIComponent(paper.id)}" data-paper-id="${escape(paper.id)}" aria-labelledby="title-${escape(paper.id)}">
+    <div class="paper-topline">
+      <div class="publication"><span class="venue">${escape(venue)}</span>${!conference ? `<i aria-hidden="true">·</i><span>${year}</span>` : ''}${paper.ccf_rank ? `<span class="rank">CCF ${paper.ccf_rank}</span>` : paper.publication_type === 'preprint' ? '<span class="rank">Preprint</span>' : ''}</div>
+      <div class="paper-topline-actions">
+        ${alias ? `<span class="alias">${escape(alias)}</span>` : ''}
+        <button type="button" class="copy-paper-link" aria-label="Copy link to ${escape(paper.alias || paper.title)}">${icon('link')}<span class="copy-link-tip" aria-hidden="true">Copy link</span></button>
+      </div>
+    </div>
     <h3 id="title-${escape(paper.id)}">${escape(paper.title)}</h3><p class="authors">${escape(paper.authors.join(', '))}</p><p class="abstract-excerpt">${abstract}</p>
     <details class="abstract-details"${expanded ? ' open' : ''}><summary><span class="closed-label">Full abstract</span><span class="open-label">Close abstract</span>${icon('chevron')}</summary><p class="abstract-full">${abstract}</p></details>
     <div class="paper-footer"><div class="paper-tags">${paper.categories.map(category => `<span>${escape(category)}</span>`).join('')}</div><div class="paper-resources" aria-label="Resources for ${escape(paper.alias || paper.title)}">${links.map(([label, url]) => `<a class="resource-link resource-${label.toLowerCase()}" href="${escape(url)}" target="_blank" rel="noreferrer">${resourceIcon(label.toLowerCase())}<span>${label}</span></a>`).join('')}</div></div>
@@ -258,10 +298,25 @@ function render(updateURL = true) {
   const categoryPapers = candidates.filter(paper => facetKeys.every(key => matchesFacet(paper, key)));
   const results = categoryPapers.filter(matchesCategory)
     .sort((a, b) => (state.oldest ? 1 : -1) * (yearOf(a) - yearOf(b)));
+  const linkedCard = location.hash.slice(1);
+  const linkedIndex = !updateURL && linkedCard.startsWith('paper-')
+    ? results.findIndex(paper => `paper-${encodeURIComponent(paper.id)}` === linkedCard)
+    : -1;
+  if (linkedIndex >= 0) state.limit = Math.max(state.limit, linkedIndex + 1);
   const count = `${results.length} ${results.length === 1 ? 'paper' : 'papers'}`;
   document.querySelector('#result-count').textContent = count;
   document.querySelector('#apply-filters').textContent = `Show ${count}`;
-  document.querySelector('#result-title').textContent = state.categories.size === 1 ? displayCategory([...state.categories][0]) : state.categories.size === topics.length && topics.every(topic => state.categories.has(topic)) ? 'Research Papers' : state.categories.size ? 'Selected papers' : 'All papers';
+  let resultTitle = 'All papers';
+  if (state.categories.size === 1) {
+    resultTitle = displayCategory([...state.categories][0]);
+  } else if (state.categories.size === topics.length && topics.every(topic => state.categories.has(topic))) {
+    resultTitle = 'Research Papers';
+  } else if (state.categories.size) {
+    resultTitle = 'Selected papers';
+  } else if (terms.length || state.withCode || facetKeys.some(key => state[key].size)) {
+    resultTitle = 'Filtered papers';
+  }
+  document.querySelector('#result-title').textContent = resultTitle;
   document.querySelectorAll('[data-category]').forEach(button => {
     const category = button.dataset.category;
     const active = category === 'all' ? !state.categories.size : category === 'research' ? topics.every(topic => state.categories.has(topic)) : state.categories.has(category);
@@ -293,6 +348,11 @@ function render(updateURL = true) {
   if (reset) reset.onclick = () => { history.replaceState(null, '', location.pathname); readURL(); render(); document.querySelector('#search').focus(); };
   document.querySelector('#load-more').hidden = results.length <= state.limit;
   updateFacetControls(candidates.filter(matchesCategory));
+  if (linkedIndex >= 0) {
+    const card = document.getElementById(linkedCard);
+    card.classList.add('shared-paper');
+    card.scrollIntoView({ block: 'start' });
+  }
   if (updateURL) syncURL();
 }
 
