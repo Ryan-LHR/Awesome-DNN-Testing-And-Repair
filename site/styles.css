@@ -57,6 +57,7 @@ svg { width: 20px; height: 20px; flex-shrink: 0; }
 .wordmark strong span { color: var(--accent); }
 .wordmark small { color: var(--muted); font-size: 15px; letter-spacing: -.2px; }
 .masthead-actions { display: flex; align-items: center; gap: 12px; }
+.about-trigger { display: none; }
 .github-link { display: flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: 30px; background: var(--active); color: var(--on-active); font-size: 14px; font-weight: 600; }
 .github-link svg { width: 17px; height: 17px; }
 .theme-switch { width: 43px; height: 43px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; }
@@ -181,6 +182,36 @@ main:focus { outline: none; }
 .load-more[hidden] { display: none; }
 .load-more:hover { border-color: var(--muted); }
 .site-footer { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding: 22px 0 30px; color: var(--muted); font-size: 13px; }
+
+body:has(.about-dialog[open]) { overflow: hidden; }
+.about-dialog { width: min(662px, calc(100% - 40px)); max-height: calc(100dvh - 44px); padding: 0; border: 1px solid var(--line); border-radius: 23px; background: var(--surface); color: var(--ink); box-shadow: 0 18px 65px rgb(20 22 18 / .14); }
+.about-dialog::backdrop { background: rgb(20 22 18 / .38); }
+.about-content { padding: 29px 32px 24px; }
+.about-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.about-heading h2 { margin: 0; font-size: 30px; font-weight: 650; line-height: 1.18; letter-spacing: -.8px; }
+.about-close { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--muted); }
+.about-close:hover { background: var(--soft); color: var(--ink); }
+.about-close svg { width: 17px; height: 17px; }
+.about-intro { max-width: 540px; margin: 13px 0 24px; color: var(--body); line-height: 1.6; }
+.about-intro strong { color: var(--ink); font-weight: 600; }
+.cite-heading { display: flex; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 11px; }
+.about-content h3 { margin: 0; font-size: 17px; font-weight: 650; letter-spacing: -.15px; }
+.copy-bibtex { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 35px; min-width: 122px; padding: 6px 11px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); font-size: 13px; font-weight: 600; }
+.copy-bibtex svg { width: 15px; height: 15px; }
+.copy-bibtex:hover, .copy-bibtex[data-copied] { background: var(--soft); }
+.about-bibtex { margin: 0; padding: 15px 17px; border: 1px solid var(--line); border-radius: 11px; background: var(--ground); color: var(--body); font: 13px/1.65 ui-monospace, Menlo, Consolas, monospace; white-space: pre-wrap; overflow-wrap: anywhere; }
+#bibtex-status:not(.visually-hidden) { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+.about-contribute { margin-top: 22px; }
+.about-contribute h3 { margin-bottom: 9px; }
+.about-action { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 11px 5px 11px 0; border-top: 1px solid var(--line); }
+.about-action strong, .about-action small { display: block; }
+.about-action strong { font-size: 15px; font-weight: 600; }
+.about-action small { margin-top: 2px; color: var(--muted); font-size: 13px; }
+.about-action svg { width: 17px; height: 17px; color: var(--muted); }
+.about-action:hover { text-decoration: none; }
+.about-action:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.about-action:hover svg { color: var(--ink); }
+
 .filter-dialog { width: min(390px, calc(100% - 28px)); height: 100dvh; max-height: 100dvh; margin: 0; padding: 0 20px; border: 0; border-right: 1px solid var(--line); border-radius: 0 25px 25px 0; background: var(--ground); color: var(--ink); }
 .filter-dialog::backdrop { background: rgb(20 22 18 / .4); }
 .filter-dialog-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; z-index: 1; padding: 18px 5px; border-bottom: 1px solid var(--line); background: var(--ground); }
@@ -194,6 +225,8 @@ main:focus { outline: none; }
 body.filters-open { overflow: hidden; }
 
 @media(min-width:801px) {
+  .about-trigger { display: inline-flex; align-items: center; min-height: 43px; padding: 0 11px; border-radius: 9px; color: var(--body); font-size: 14px; font-weight: 600; white-space: nowrap; }
+  .about-trigger:hover { background: var(--soft); color: var(--ink); }
   .library > .sidebar {
     position: sticky;
     top: 24px;

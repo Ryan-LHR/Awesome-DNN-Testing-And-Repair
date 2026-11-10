@@ -12,7 +12,9 @@ const symbols = {
   moon: '<path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z"/>',
   filter: '<path d="M4 7h16M4 17h16M9 4v6m6 4v6"/>',
   link: '<path d="M10 13a4 4 0 0 0 5.7 0l4-4A4 4 0 0 0 14 3.3l-2.3 2.3m.3 5.4a4 4 0 0 0-5.7 0l-4 4a4 4 0 0 0 5.7 5.7l2.3-2.3"/>',
+  copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
   check: '<path d="m5 12 4 4L19 6"/>',
+  close: '<path d="m6 6 12 12M18 6 6 18"/>',
   website: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]}</svg>`;
@@ -105,6 +107,49 @@ function syncURL() {
   history.replaceState(null, '', url);
 }
 
+function initAboutDialog() {
+  const dialog = document.querySelector('#about-dialog');
+  const bibtex = dialog.querySelector('#about-bibtex');
+  const copyButton = dialog.querySelector('.copy-bibtex');
+  const status = dialog.querySelector('#bibtex-status');
+  let copyTimer;
+
+  function resetFeedback() {
+    copyButton.innerHTML = `${icon('copy')}<span>Copy BibTeX</span>`;
+    copyButton.removeAttribute('data-copied');
+    status.classList.add('visually-hidden');
+    status.textContent = '';
+  }
+
+  document.querySelector('.about-trigger').onclick = () => dialog.showModal();
+  dialog.querySelector('.about-close').onclick = () => dialog.close();
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => {
+    clearTimeout(copyTimer);
+    resetFeedback();
+  });
+  copyButton.onclick = async () => {
+    clearTimeout(copyTimer);
+    resetFeedback();
+    try {
+      await navigator.clipboard.writeText(bibtex.textContent + '\n');
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(bibtex);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.classList.remove('visually-hidden');
+      status.textContent = 'BibTeX selected. Use your keyboard to copy it.';
+      return;
+    }
+    copyButton.dataset.copied = 'true';
+    copyButton.innerHTML = `${icon('check')}<span>Copied</span>`;
+    status.textContent = 'BibTeX copied.';
+    copyTimer = setTimeout(resetFeedback, 2000);
+  };
+}
+
 async function init() {
   const response = await fetch('data/papers.json');
   if (!response.ok) throw new Error(`Paper data returned HTTP ${response.status}`);
@@ -116,7 +161,11 @@ async function init() {
     <div class="shell">
       <header class="masthead">
         <a class="wordmark" href="./" aria-label="Awesome DNN Testing and Repair"><strong>awesome<span>.</span></strong><small>DNN Testing & Repair</small></a>
-        <div class="masthead-actions"><a class="github-link" href="${repo}" target="_blank" rel="noreferrer">GitHub ${icon('arrow')}</a><button class="theme-switch" aria-label="Switch to dark mode">${icon('moon')}</button></div>
+        <div class="masthead-actions">
+          <button type="button" class="about-trigger" aria-haspopup="dialog" aria-controls="about-dialog">About &amp; Cite</button>
+          <a class="github-link" href="${repo}" target="_blank" rel="noreferrer">GitHub ${icon('arrow')}</a>
+          <button class="theme-switch" aria-label="Switch to dark mode">${icon('moon')}</button>
+        </div>
       </header>
       <section class="introduction" aria-label="About this collection">
         <h1>DNN Testing<br><span>& Repair.</span></h1>
@@ -142,6 +191,39 @@ async function init() {
       </div>
       <footer class="site-footer"><span>A community-curated collection.</span><a href="assets/credits.html">Asset credits</a></footer>
     </div>
+    <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
+      <div class="about-content">
+        <header class="about-heading">
+          <h2 id="about-title">About &amp; Cite</h2>
+          <button type="button" class="about-close" aria-label="Close About &amp; Cite" autofocus>${icon('close')}</button>
+        </header>
+        <p class="about-intro"><strong>Awesome DNN Testing and Repair</strong> is a curated collection of papers on testing, verification, and repair of deep neural networks.</p>
+
+        <section class="about-citation" aria-labelledby="cite-title">
+          <div class="cite-heading">
+            <h3 id="cite-title">Cite this collection</h3>
+            <button type="button" class="copy-bibtex">${icon('copy')}<span>Copy BibTeX</span></button>
+          </div>
+          <pre class="about-bibtex"><code id="about-bibtex">@misc{li2026awesome,
+  author = {Li, Haoran},
+  title = {{Awesome DNN Testing and Repair}},
+  year = {2026},
+  url = {${repo}}
+}</code></pre>
+          <p class="visually-hidden" id="bibtex-status" role="status"></p>
+        </section>
+
+        <section class="about-contribute" aria-labelledby="contribute-title">
+          <h3 id="contribute-title">Contribute</h3>
+          <a class="about-action" href="${repo}/issues/new?template=01-recommend-paper.yml" target="_blank" rel="noreferrer">
+            <span><strong>Recommend a paper</strong><small>Suggest a paper to add to the collection.</small></span>${icon('arrow')}
+          </a>
+          <a class="about-action" href="${repo}/issues/new?template=02-correct-entry.yml" target="_blank" rel="noreferrer">
+            <span><strong>Report an error</strong><small>Flag a broken link or an incorrect paper detail.</small></span>${icon('arrow')}
+          </a>
+        </section>
+      </div>
+    </dialog>
     <dialog class="filter-dialog" id="filter-dialog" aria-labelledby="filter-dialog-title">
       <div class="filter-dialog-heading"><h2 id="filter-dialog-title">Browse & filter</h2><button id="close-filters" aria-label="Close filters">×</button></div>
       <div id="mobile-sidebar"></div><div class="filter-dialog-footer"><button id="apply-filters"></button></div>
@@ -149,6 +231,7 @@ async function init() {
 
   setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   document.querySelector('.theme-switch').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+  initAboutDialog();
   const dialog = document.querySelector('#filter-dialog');
   const sidebar = document.querySelector('#sidebar');
   const filterShortcut = sidebar.querySelector('.desktop-filter-shortcut');
@@ -254,7 +337,7 @@ async function init() {
     copyTimer = setTimeout(resetCopyFeedback, 2000);
   });
   document.addEventListener('keydown', event => {
-    if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !dialog.open && !document.activeElement.closest('input, textarea, select, [contenteditable="true"]')) {
+    if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !document.querySelector('dialog[open]') && !document.activeElement.closest('input, textarea, select, [contenteditable="true"]')) {
       event.preventDefault();
       document.querySelector('#search').focus();
     }

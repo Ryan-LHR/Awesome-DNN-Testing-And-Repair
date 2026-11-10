@@ -57,6 +57,9 @@ root or a GitHub project subpath.
   The default theme is light. A manually chosen theme is stored in this browser.
 - On desktop, **Copy link** at the top right of a paper card copies its direct
   link. Opening it loads and scrolls to that paper, even past the first 12 results.
+- On desktop, **About & Cite** beside **GitHub** shows the project citation and
+  links to recommend a paper or report an error. **Copy BibTeX** copies the same
+  entry as the [README](../README.md#citation). Update both if the citation changes.
 - Mobile filters open in a keyboard-accessible drawer. Escape, Close, or Show
   papers dismisses it. `/` focuses search.
 
