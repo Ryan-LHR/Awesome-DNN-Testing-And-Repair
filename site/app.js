@@ -15,6 +15,7 @@ const symbols = {
   copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
   check: '<path d="m5 12 4 4L19 6"/>',
   close: '<path d="m6 6 12 12M18 6 6 18"/>',
+  book: '<path d="M12 6.5C9.5 4.5 6.5 4 3 4.5v14c3.5-.5 6.5 0 9 2 2.5-2 5.5-2.5 9-2v-14c-3.5-.5-6.5 0-9 2v14"/>',
   website: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]}</svg>`;
@@ -26,7 +27,7 @@ const displayCategory = name => name === 'Test Selection and Prioritization' ? '
 const abstractText = text => text.replace(/\\textbackslashtimes/g, '×').replace(/\\textbackslash/g, '\\').replace(/\\[%_]/g, match => match[1]).replace(/\\[()]/g, '');
 
 function categoryButton(name, label) {
-  return `<button class="category" data-category="${escape(name)}" aria-pressed="false"><span>${escape(label)}</span><span class="number"></span></button>`;
+  return `<button class="category" data-category="${escape(name)}" aria-pressed="false"><span>${escape(t(label))}</span><span class="number"></span></button>`;
 }
 
 function fields() {
@@ -34,11 +35,11 @@ function fields() {
   const venues = [...new Set(papers.map(paper => paper.venue))].sort();
   return [['year', 'Year', 'All years', years], ['venue', 'Venue', 'All venues', venues], ['ccf', 'CCF', 'All ranks', ['A', 'B', 'C', 'Unspecified']]].map(([key, label, all, choices]) => `
     <details class="filter-field" data-facet="${key}">
-      <summary><span>${label}</span><span class="facet-summary" data-empty="${all}">${all}</span>${icon('chevron')}</summary>
-      ${key === 'venue' ? `<label class="venue-lookup">${icon('search')}<input type="search" placeholder="Search venues" aria-label="Search venues" autocomplete="off"></label>` : ''}
-      <fieldset class="facet-options"><legend class="visually-hidden">${label}</legend>${choices.map(choice => `<label class="facet-option"><input type="checkbox" data-filter="${key}" value="${escape(choice)}"><span>${escape(choice)}</span><span class="facet-count" aria-hidden="true"></span></label>`).join('')}</fieldset>
-      ${key === 'venue' ? '<p class="venue-no-match" role="status" hidden>No matching venues</p>' : ''}
-      <button class="clear-facet" data-clear-facet="${key}" disabled>Clear selection</button>
+      <summary><span>${t(label)}</span><span class="facet-summary" data-empty="${t(all)}">${t(all)}</span>${icon('chevron')}</summary>
+      ${key === 'venue' ? `<label class="venue-lookup">${icon('search')}<input type="search" placeholder="${t('Search venues')}" aria-label="${t('Search venues')}" autocomplete="off"></label>` : ''}
+      <fieldset class="facet-options"><legend class="visually-hidden">${t(label)}</legend>${choices.map(choice => `<label class="facet-option"><input type="checkbox" data-filter="${key}" value="${escape(choice)}"><span>${escape(t(choice))}</span><span class="facet-count" aria-hidden="true"></span></label>`).join('')}</fieldset>
+      ${key === 'venue' ? `<p class="venue-no-match" role="status" hidden>${t('No matching venues')}</p>` : ''}
+      <button class="clear-facet" data-clear-facet="${key}" disabled>${t('Clear selection')}</button>
     </details>`).join('');
 }
 
@@ -66,7 +67,7 @@ function updateFacetControls(candidates) {
       option.querySelector('.facet-count').textContent = counts.get(input.value) || 0;
     });
     const summary = facet.querySelector('.facet-summary');
-    summary.textContent = selected.size === 1 ? [...selected][0] : selected.size ? `${selected.size} selected` : summary.dataset.empty;
+    summary.textContent = selected.size === 1 ? t([...selected][0]) : selected.size ? t('{count} selected', { count: selected.size }) : summary.dataset.empty;
     facet.querySelector('.clear-facet').disabled = !selected.size;
   });
 }
@@ -75,7 +76,7 @@ function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
   const button = document.querySelector('.theme-switch');
   button.innerHTML = icon(theme === 'dark' ? 'sun' : 'moon');
-  button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+  button.setAttribute('aria-label', t(theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'));
   document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#151613' : '#f6f6f3';
   try { localStorage.setItem('dnn-theme', theme); } catch {}
 }
@@ -96,15 +97,52 @@ function readURL() {
   document.querySelector('#sort').value = state.oldest ? 'oldest' : 'newest';
 }
 
+function collectionURL() {
+  const url = new URL(location.pathname, location.href);
+  if (language !== 'en' || new URLSearchParams(location.search).get('lang') === 'en') url.searchParams.set('lang', language);
+  return url;
+}
+
 function syncURL() {
-  const url = new URL(location.href);
-  url.search = '';
+  const url = collectionURL();
+  url.hash = location.hash;
   if (state.query.trim()) url.searchParams.set('q', state.query.trim());
   state.categories.forEach(category => url.searchParams.append('category', category));
   for (const key of facetKeys) state[key].forEach(value => url.searchParams.append(key, value));
   if (state.withCode) url.searchParams.set('code', '1');
   if (state.oldest) url.searchParams.set('sort', 'oldest');
   history.replaceState(null, '', url);
+}
+
+function initLanguageMenu() {
+  const dropdown = document.querySelector('.language-dropdown');
+  const trigger = dropdown.querySelector('summary');
+  dropdown.addEventListener('click', event => {
+    const option = event.target.closest('[data-language]');
+    if (!option) return;
+    const next = option.dataset.language;
+    try { localStorage.setItem('dnn-language', next); } catch {}
+    if (next === language) {
+      dropdown.open = false;
+      trigger.focus();
+      return;
+    }
+    const url = new URL(location.href);
+    url.searchParams.set('lang', next);
+    location.assign(url);
+  });
+  dropdown.addEventListener('keydown', event => {
+    if (event.key !== 'Escape' || !dropdown.open) return;
+    event.preventDefault();
+    dropdown.open = false;
+    trigger.focus();
+  });
+  document.addEventListener('click', event => {
+    if (!dropdown.contains(event.target)) dropdown.open = false;
+  });
+  dropdown.addEventListener('focusout', event => {
+    if (event.relatedTarget && !dropdown.contains(event.relatedTarget)) dropdown.open = false;
+  });
 }
 
 function initAboutDialog() {
@@ -115,7 +153,7 @@ function initAboutDialog() {
   let copyTimer;
 
   function resetFeedback() {
-    copyButton.innerHTML = `${icon('copy')}<span>Copy BibTeX</span>`;
+    copyButton.innerHTML = `${icon('copy')}<span>${t('Copy BibTeX')}</span>`;
     copyButton.removeAttribute('data-copied');
     status.classList.add('visually-hidden');
     status.textContent = '';
@@ -140,17 +178,23 @@ function initAboutDialog() {
       selection.removeAllRanges();
       selection.addRange(range);
       status.classList.remove('visually-hidden');
-      status.textContent = 'BibTeX selected. Use your keyboard to copy it.';
+      status.textContent = t('BibTeX selected. Use your keyboard to copy it.');
       return;
     }
     copyButton.dataset.copied = 'true';
-    copyButton.innerHTML = `${icon('check')}<span>Copied</span>`;
-    status.textContent = 'BibTeX copied.';
+    copyButton.innerHTML = `${icon('check')}<span>${t('Copied')}</span>`;
+    status.textContent = t('BibTeX copied.');
     copyTimer = setTimeout(resetFeedback, 2000);
   };
 }
 
 async function init() {
+  document.documentElement.lang = language;
+  document.title = t(document.title);
+  const skipLink = document.querySelector('.skip-link');
+  skipLink.textContent = t(skipLink.textContent);
+  const loading = document.querySelector('#app .loading');
+  loading.textContent = t(loading.textContent);
   const response = await fetch('data/papers.json');
   if (!response.ok) throw new Error(`Paper data returned HTTP ${response.status}`);
   const data = await response.json();
@@ -160,49 +204,59 @@ async function init() {
     <svg class="icon-filters" aria-hidden="true"><defs><filter id="arxiv-white-to-alpha" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -3 -3 -3 9 0"/></filter></defs></svg>
     <div class="shell">
       <header class="masthead">
-        <a class="wordmark" href="./" aria-label="Awesome DNN Testing and Repair"><strong>awesome<span>.</span></strong><small>DNN Testing & Repair</small></a>
+        <a class="wordmark" href="${escape(collectionURL().href)}" aria-label="${t('Awesome DNN Testing and Repair')}"><strong>awesome<span>.</span></strong><small>${t('DNN Testing & Repair')}</small></a>
         <div class="masthead-actions">
-          <button type="button" class="about-trigger" aria-haspopup="dialog" aria-controls="about-dialog">About &amp; Cite</button>
-          <a class="github-link" href="${repo}" target="_blank" rel="noreferrer">GitHub ${icon('arrow')}</a>
-          <button class="theme-switch" aria-label="Switch to dark mode">${icon('moon')}</button>
+          <div class="header-project">
+            <button type="button" class="about-trigger" aria-haspopup="dialog" aria-controls="about-dialog">${icon('book')}<span>${t('About & Cite')}</span></button>
+            <a class="github-link" href="${repo}" target="_blank" rel="noreferrer"><span class="header-github-mark">${resourceIcons.code}</span><span>GitHub</span><span class="header-github-arrow">${icon('arrow')}</span></a>
+          </div>
+          <div class="header-preferences">
+            <details class="language-dropdown">
+              <summary class="language-trigger" aria-label="${escape(t('Language: {language}', { language: languageNames.get(language) }))}">${icon('website')}<span lang="${language}">${languageNames.get(language)}</span></summary>
+              <div class="language-menu" role="group" aria-label="${t('Language')}">
+                ${[...languageNames].map(([id, label]) => `<button type="button" lang="${id}" data-language="${id}" aria-pressed="${id === language}">${label}${id === language ? icon('check') : ''}</button>`).join('')}
+              </div>
+            </details>
+            <button type="button" class="theme-switch" aria-label="${t('Switch to dark mode')}">${icon('moon')}</button>
+          </div>
         </div>
       </header>
-      <section class="introduction" aria-label="About this collection">
-        <h1>DNN Testing<br><span>& Repair.</span></h1>
-        <div class="introduction-copy"><p>Papers on testing, verification, and repair of deep neural networks.</p><div class="collection-meta"><span><b>${papers.length}</b> papers</span><i aria-hidden="true">·</i><button class="with-code" aria-pressed="false"><b>${papers.filter(paper => paper.code_url).length}</b> with code</button><i aria-hidden="true">·</i><span>${Math.min(...years)}–${Math.max(...years)}</span></div></div>
+      <section class="introduction" aria-label="${t('About this collection')}">
+        <h1>${t('DNN Testing')}<br><span>${t('& Repair.')}</span></h1>
+        <div class="introduction-copy"><p>${t('Papers on testing, verification, and repair of deep neural networks.')}</p><div class="collection-meta"><span>${t('{count} papers', { count: `<b>${papers.length}</b>` })}</span><i aria-hidden="true">·</i><button class="with-code" aria-pressed="false">${t('{count} with code', { count: `<b>${papers.filter(paper => paper.code_url).length}</b>` })}</button><i aria-hidden="true">·</i><span>${Math.min(...years)}–${Math.max(...years)}</span></div></div>
       </section>
       <div class="library">
-        <aside class="sidebar" id="sidebar" aria-label="Browse and filter papers">
+        <aside class="sidebar" id="sidebar" aria-label="${t('Browse and filter papers')}">
           <div class="sidebar-tools">
-            <h2 class="sidebar-title">Browse papers</h2>
-            <button class="desktop-filter-shortcut" aria-controls="paper-categories filter-panel">${icon('filter')}<span>Filters</span></button>
+            <h2 class="sidebar-title">${t('Browse papers')}</h2>
+            <button class="desktop-filter-shortcut" aria-controls="paper-categories filter-panel">${icon('filter')}<span>${t('Filters')}</span></button>
           </div>
-          <nav id="paper-categories" aria-label="Paper categories">${categoryButton('all', 'All papers')}<button class="research-label" data-category="research" aria-pressed="false">${icon('chevron')}Research Papers</button><div class="research-topics">${topics.map(category => categoryButton(category, displayCategory(category))).join('')}</div><div class="separate-topics">${['Surveys', 'Empirical Studies'].map(category => categoryButton(category, category)).join('')}</div></nav>
-          <div class="filter-panel" id="filter-panel"><h2>Filter by</h2>${fields()}</div>
-          <div class="contribution"><a href="${repo}/issues/new?template=01-recommend-paper.yml" target="_blank" rel="noreferrer">Suggest a paper ${icon('arrow')}</a></div>
+          <nav id="paper-categories" aria-label="${t('Paper categories')}">${categoryButton('all', 'All papers')}<button class="research-label" data-category="research" aria-pressed="false">${icon('chevron')}${t('Research Papers')}</button><div class="research-topics">${topics.map(category => categoryButton(category, displayCategory(category))).join('')}</div><div class="separate-topics">${['Surveys', 'Empirical Studies'].map(category => categoryButton(category, category)).join('')}</div></nav>
+          <div class="filter-panel" id="filter-panel"><h2>${t('Filter by')}</h2>${fields()}</div>
+          <div class="contribution"><a href="${repo}/issues/new?template=01-recommend-paper.yml" target="_blank" rel="noreferrer">${t('Suggest a paper')} ${icon('arrow')}</a></div>
         </aside>
         <main id="main" tabindex="-1">
-          <div class="search-row"><label class="search-box">${icon('search')}<input id="search" type="search" aria-label="Search papers" placeholder="Search papers, authors, or keywords" autocomplete="off"><kbd aria-hidden="true">/</kbd></label><button class="mobile-filters" aria-haspopup="dialog" aria-controls="filter-dialog">${icon('filter')}Filters</button></div>
-          <div class="results-heading"><div><h2 id="result-title">All papers</h2><span class="result-count" id="result-count" role="status" aria-atomic="true"></span></div><select class="sort-select" id="sort" aria-label="Sort papers"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
-          <div class="selected-filters" id="selected-filters" aria-label="Active filters"></div>
-          <div id="papers"></div><button class="load-more" id="load-more">Show more papers ↓</button>
+          <div class="search-row"><label class="search-box">${icon('search')}<input id="search" type="search" aria-label="${t('Search papers')}" placeholder="${t('Search papers, authors, or keywords')}" autocomplete="off"><kbd aria-hidden="true">/</kbd></label><button class="mobile-filters" aria-haspopup="dialog" aria-controls="filter-dialog">${icon('filter')}${t('Filters')}</button></div>
+          <div class="results-heading"><div><h2 id="result-title">${t('All papers')}</h2><span class="result-count" id="result-count" role="status" aria-atomic="true"></span></div><select class="sort-select" id="sort" aria-label="${t('Sort papers')}"><option value="newest">${t('Newest first')}</option><option value="oldest">${t('Oldest first')}</option></select></div>
+          <div class="selected-filters" id="selected-filters" aria-label="${t('Active filters')}"></div>
+          <div id="papers"></div><button class="load-more" id="load-more">${t('Show more papers')} ↓</button>
           <p id="copy-paper-status" class="visually-hidden" role="status"></p>
         </main>
       </div>
-      <footer class="site-footer"><span>A community-curated collection.</span><a href="assets/credits.html">Asset credits</a></footer>
+      <footer class="site-footer"><span>${t('A community-curated collection.')}</span><a href="assets/credits.html">${t('Asset credits')}</a></footer>
     </div>
     <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title">
       <div class="about-content">
         <header class="about-heading">
-          <h2 id="about-title">About &amp; Cite</h2>
-          <button type="button" class="about-close" aria-label="Close About &amp; Cite" autofocus>${icon('close')}</button>
+          <h2 id="about-title">${t('About & Cite')}</h2>
+          <button type="button" class="about-close" aria-label="${t('Close About & Cite')}" autofocus>${icon('close')}</button>
         </header>
-        <p class="about-intro"><strong>Awesome DNN Testing and Repair</strong> is a curated collection of papers on testing, verification, and repair of deep neural networks.</p>
+        <p class="about-intro">${t('{project} is a curated collection of papers on testing, verification, and repair of deep neural networks.', { project: '<strong lang="en">Awesome DNN Testing and Repair</strong>' })}</p>
 
         <section class="about-citation" aria-labelledby="cite-title">
           <div class="cite-heading">
-            <h3 id="cite-title">Cite this collection</h3>
-            <button type="button" class="copy-bibtex">${icon('copy')}<span>Copy BibTeX</span></button>
+            <h3 id="cite-title">${t('Cite this collection')}</h3>
+            <button type="button" class="copy-bibtex">${icon('copy')}<span>${t('Copy BibTeX')}</span></button>
           </div>
           <pre class="about-bibtex"><code id="about-bibtex">@misc{li2026awesome,
   author = {Li, Haoran},
@@ -214,23 +268,24 @@ async function init() {
         </section>
 
         <section class="about-contribute" aria-labelledby="contribute-title">
-          <h3 id="contribute-title">Contribute</h3>
+          <h3 id="contribute-title">${t('Contribute')}</h3>
           <a class="about-action" href="${repo}/issues/new?template=01-recommend-paper.yml" target="_blank" rel="noreferrer">
-            <span><strong>Recommend a paper</strong><small>Suggest a paper to add to the collection.</small></span>${icon('arrow')}
+            <span><strong>${t('Recommend a paper')}</strong><small>${t('Suggest a paper to add to the collection.')}</small></span>${icon('arrow')}
           </a>
           <a class="about-action" href="${repo}/issues/new?template=02-correct-entry.yml" target="_blank" rel="noreferrer">
-            <span><strong>Report an error</strong><small>Flag a broken link or an incorrect paper detail.</small></span>${icon('arrow')}
+            <span><strong>${t('Report an error')}</strong><small>${t('Flag a broken link or an incorrect paper detail.')}</small></span>${icon('arrow')}
           </a>
         </section>
       </div>
     </dialog>
     <dialog class="filter-dialog" id="filter-dialog" aria-labelledby="filter-dialog-title">
-      <div class="filter-dialog-heading"><h2 id="filter-dialog-title">Browse & filter</h2><button id="close-filters" aria-label="Close filters">×</button></div>
+      <div class="filter-dialog-heading"><h2 id="filter-dialog-title">${t('Browse & filter')}</h2><button id="close-filters" aria-label="${t('Close filters')}">×</button></div>
       <div id="mobile-sidebar"></div><div class="filter-dialog-footer"><button id="apply-filters"></button></div>
     </dialog>`;
 
   setTheme(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
   document.querySelector('.theme-switch').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+  initLanguageMenu();
   initAboutDialog();
   const dialog = document.querySelector('#filter-dialog');
   const sidebar = document.querySelector('#sidebar');
@@ -239,8 +294,8 @@ async function init() {
   filterShortcut.onclick = () => {
     const showFilters = sidebar.dataset.view !== 'filters';
     sidebar.dataset.view = showFilters ? 'filters' : 'topics';
-    filterShortcut.querySelector('span').textContent = showFilters ? 'Topics' : 'Filters';
-    sidebarTitle.textContent = showFilters ? 'Filter papers' : 'Browse papers';
+    filterShortcut.querySelector('span').textContent = t(showFilters ? 'Topics' : 'Filters');
+    sidebarTitle.textContent = t(showFilters ? 'Filter papers' : 'Browse papers');
     sidebar.scrollTop = 0;
   };
 
@@ -312,7 +367,7 @@ async function init() {
   const resetCopyFeedback = () => {
     if (copiedButton) {
       delete copiedButton.dataset.copied;
-      copiedButton.innerHTML = `${icon('link')}<span class="copy-link-tip" aria-hidden="true">Copy link</span>`;
+      copiedButton.innerHTML = `${icon('link')}<span class="copy-link-tip" aria-hidden="true">${t('Copy link')}</span>`;
       copiedButton = null;
     }
     copyStatus.textContent = '';
@@ -320,20 +375,20 @@ async function init() {
   document.querySelector('#papers').addEventListener('click', async event => {
     const button = event.target.closest('.copy-paper-link');
     if (!button) return;
-    const url = new URL(location.pathname, location.href);
+    const url = collectionURL();
     url.hash = button.closest('.paper').id;
     try {
       await navigator.clipboard.writeText(url.href);
     } catch {
-      window.prompt('Copy link to this paper', url.href);
+      window.prompt(t('Copy link to this paper'), url.href);
       return;
     }
     clearTimeout(copyTimer);
     resetCopyFeedback();
     copiedButton = button;
     button.dataset.copied = 'true';
-    button.innerHTML = `${icon('check')}<span class="copy-link-tip" aria-hidden="true">Link copied</span>`;
-    copyStatus.textContent = 'Paper link copied.';
+    button.innerHTML = `${icon('check')}<span class="copy-link-tip" aria-hidden="true">${t('Link copied')}</span>`;
+    copyStatus.textContent = t('Paper link copied.');
     copyTimer = setTimeout(resetCopyFeedback, 2000);
   });
   document.addEventListener('keydown', event => {
@@ -355,17 +410,18 @@ function paperCard(paper, expanded) {
   const abstract = escape(abstractText(paper.abstract));
   const paperURL = paper.paper_url === paper.arxiv_url ? null : paper.paper_url;
   const links = [['Paper', paperURL], ['arXiv', paper.arxiv_url], ['Code', paper.code_url], ['Website', paper.website_url]].filter(([, url]) => url);
+  const paperName = paper.alias || paper.title;
   return `<article class="paper" id="paper-${encodeURIComponent(paper.id)}" data-paper-id="${escape(paper.id)}" aria-labelledby="title-${escape(paper.id)}">
     <div class="paper-topline">
-      <div class="publication"><span class="venue">${escape(venue)}</span>${!conference ? `<i aria-hidden="true">·</i><span>${year}</span>` : ''}${paper.ccf_rank ? `<span class="rank">CCF ${paper.ccf_rank}</span>` : paper.publication_type === 'preprint' ? '<span class="rank">Preprint</span>' : ''}</div>
+      <div class="publication"><span class="venue">${escape(venue)}</span>${!conference ? `<i aria-hidden="true">·</i><span>${year}</span>` : ''}${paper.ccf_rank ? `<span class="rank">CCF ${paper.ccf_rank}</span>` : paper.publication_type === 'preprint' ? `<span class="rank">${t('Preprint')}</span>` : ''}</div>
       <div class="paper-topline-actions">
         ${alias ? `<span class="alias">${escape(alias)}</span>` : ''}
-        <button type="button" class="copy-paper-link" aria-label="Copy link to ${escape(paper.alias || paper.title)}">${icon('link')}<span class="copy-link-tip" aria-hidden="true">Copy link</span></button>
+        <button type="button" class="copy-paper-link" aria-label="${escape(t('Copy link to {paper}', { paper: paperName }))}">${icon('link')}<span class="copy-link-tip" aria-hidden="true">${t('Copy link')}</span></button>
       </div>
     </div>
     <h3 id="title-${escape(paper.id)}">${escape(paper.title)}</h3><p class="authors">${escape(paper.authors.join(', '))}</p><p class="abstract-excerpt">${abstract}</p>
-    <details class="abstract-details"${expanded ? ' open' : ''}><summary><span class="closed-label">Full abstract</span><span class="open-label">Close abstract</span>${icon('chevron')}</summary><p class="abstract-full">${abstract}</p></details>
-    <div class="paper-footer"><div class="paper-tags">${paper.categories.map(category => `<span>${escape(category)}</span>`).join('')}</div><div class="paper-resources" aria-label="Resources for ${escape(paper.alias || paper.title)}">${links.map(([label, url]) => `<a class="resource-link resource-${label.toLowerCase()}" href="${escape(url)}" target="_blank" rel="noreferrer">${resourceIcon(label.toLowerCase())}<span>${label}</span></a>`).join('')}</div></div>
+    <details class="abstract-details"${expanded ? ' open' : ''}><summary><span class="closed-label">${t('Full abstract')}</span><span class="open-label">${t('Close abstract')}</span>${icon('chevron')}</summary><p class="abstract-full">${abstract}</p></details>
+    <div class="paper-footer"><div class="paper-tags">${paper.categories.map(category => `<span>${escape(t(category))}</span>`).join('')}</div><div class="paper-resources" aria-label="${escape(t('Resources for {paper}', { paper: paperName }))}">${links.map(([label, url]) => `<a class="resource-link resource-${label.toLowerCase()}" href="${escape(url)}" target="_blank" rel="noreferrer">${resourceIcon(label.toLowerCase())}<span>${t(label)}</span></a>`).join('')}</div></div>
   </article>`;
 }
 
@@ -386,9 +442,9 @@ function render(updateURL = true) {
     ? results.findIndex(paper => `paper-${encodeURIComponent(paper.id)}` === linkedCard)
     : -1;
   if (linkedIndex >= 0) state.limit = Math.max(state.limit, linkedIndex + 1);
-  const count = `${results.length} ${results.length === 1 ? 'paper' : 'papers'}`;
+  const count = t(results.length === 1 ? '{count} paper' : '{count} papers', { count: results.length });
   document.querySelector('#result-count').textContent = count;
-  document.querySelector('#apply-filters').textContent = `Show ${count}`;
+  document.querySelector('#apply-filters').textContent = t('Show {count}', { count });
   let resultTitle = 'All papers';
   if (state.categories.size === 1) {
     resultTitle = displayCategory([...state.categories][0]);
@@ -399,7 +455,7 @@ function render(updateURL = true) {
   } else if (terms.length || state.withCode || facetKeys.some(key => state[key].size)) {
     resultTitle = 'Filtered papers';
   }
-  document.querySelector('#result-title').textContent = resultTitle;
+  document.querySelector('#result-title').textContent = t(resultTitle);
   document.querySelectorAll('[data-category]').forEach(button => {
     const category = button.dataset.category;
     const active = category === 'all' ? !state.categories.size : category === 'research' ? topics.every(topic => state.categories.has(topic)) : state.categories.has(category);
@@ -412,7 +468,10 @@ function render(updateURL = true) {
   const selected = [...state.categories].map(category => ['category', category]);
   for (const key of facetKeys) state[key].forEach(value => selected.push([key, value]));
   if (state.withCode) selected.push(['code', 'With code']);
-  document.querySelector('#selected-filters').innerHTML = selected.length ? `${selected.map(([key, value]) => `<button data-remove="${key}" data-value="${escape(value)}" aria-label="Remove ${key} filter: ${escape(value)}">${escape(value)}<span aria-hidden="true">×</span></button>`).join('')}<button data-remove="all">Clear filters</button>` : '';
+  document.querySelector('#selected-filters').innerHTML = selected.length ? `${selected.map(([key, value]) => {
+    const label = t(value);
+    return `<button data-remove="${key}" data-value="${escape(value)}" aria-label="${escape(t('Remove filter: {value}', { value: label }))}">${escape(label)}<span aria-hidden="true">×</span></button>`;
+  }).join('')}<button data-remove="all">${t('Clear filters')}</button>` : '';
   document.querySelectorAll('[data-remove]').forEach(button => button.onclick = () => {
     const key = button.dataset.remove;
     if (key === 'category') state.categories.delete(button.dataset.value);
@@ -426,9 +485,9 @@ function render(updateURL = true) {
     state.limit = 12;
     render();
   });
-  document.querySelector('#papers').innerHTML = results.length ? results.slice(0, state.limit).map(paper => paperCard(paper, expanded.has(paper.id))).join('') : '<div class="empty"><h3>No papers found</h3><p>Try a broader search or remove one of the filters.</p><button class="reset-search">Reset search and filters</button></div>';
+  document.querySelector('#papers').innerHTML = results.length ? results.slice(0, state.limit).map(paper => paperCard(paper, expanded.has(paper.id))).join('') : `<div class="empty"><h3>${t('No papers found')}</h3><p>${t('Try a broader search or remove one of the filters.')}</p><button class="reset-search">${t('Reset search and filters')}</button></div>`;
   const reset = document.querySelector('.reset-search');
-  if (reset) reset.onclick = () => { history.replaceState(null, '', location.pathname); readURL(); render(); document.querySelector('#search').focus(); };
+  if (reset) reset.onclick = () => { history.replaceState(null, '', collectionURL()); readURL(); render(); document.querySelector('#search').focus(); };
   document.querySelector('#load-more').hidden = results.length <= state.limit;
   updateFacetControls(candidates.filter(matchesCategory));
   if (linkedIndex >= 0) {
@@ -441,6 +500,7 @@ function render(updateURL = true) {
 
 init().catch(error => {
   console.error(error);
-  document.querySelector('#app').innerHTML = `<div class="loading"><h1>Unable to load the paper collection</h1><p>Please try again, or <a href="${repo}">browse the collection on GitHub</a>.</p><button class="load-more" id="retry">Try again</button></div>`;
+  const link = `<a href="${repo}">${t('browse the collection on GitHub')}</a>`;
+  document.querySelector('#app').innerHTML = `<div class="loading"><h1>${t('Unable to load the paper collection')}</h1><p>${t('Please try again, or {link}.', { link })}</p><button class="load-more" id="retry">${t('Try again')}</button></div>`;
   document.querySelector('#retry').onclick = () => location.reload();
 });

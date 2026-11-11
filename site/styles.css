@@ -36,6 +36,8 @@
 
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--ground); color: var(--ink); font-family: "DM Sans", sans-serif; font-size: 16px; line-height: 1.5; font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+:root:lang(zh-Hans) body, [lang="zh-Hans"] { font-family: "DM Sans", "PingFang SC", "Microsoft YaHei", sans-serif; }
+:root:lang(zh-Hant) body, [lang="zh-Hant"] { font-family: "DM Sans", "PingFang TC", "Microsoft JhengHei", sans-serif; }
 button, input, select { font: inherit; color: inherit; }
 button, summary, select { cursor: pointer; }
 button { background: none; border: none; }
@@ -57,7 +59,8 @@ svg { width: 20px; height: 20px; flex-shrink: 0; }
 .wordmark strong span { color: var(--accent); }
 .wordmark small { color: var(--muted); font-size: 15px; letter-spacing: -.2px; }
 .masthead-actions { display: flex; align-items: center; gap: 12px; }
-.about-trigger { display: none; }
+.header-project, .header-preferences, .header-github-arrow { display: flex; align-items: center; }
+.about-trigger, .language-dropdown, .header-github-mark { display: none; }
 .github-link { display: flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: 30px; background: var(--active); color: var(--on-active); font-size: 14px; font-weight: 600; }
 .github-link svg { width: 17px; height: 17px; }
 .theme-switch { width: 43px; height: 43px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; }
@@ -225,8 +228,27 @@ body:has(.about-dialog[open]) { overflow: hidden; }
 body.filters-open { overflow: hidden; }
 
 @media(min-width:801px) {
-  .about-trigger { display: inline-flex; align-items: center; min-height: 43px; padding: 0 11px; border-radius: 9px; color: var(--body); font-size: 14px; font-weight: 600; white-space: nowrap; }
-  .about-trigger:hover { background: var(--soft); color: var(--ink); }
+  .masthead-actions { gap: 13px; }
+  .header-project { gap: 3px; }
+  .about-trigger, .github-link, .language-trigger, .header-preferences .theme-switch { border: 0; background: transparent; color: var(--body); font-size: 14px; font-weight: 550; }
+  .about-trigger, .github-link, .language-trigger { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .about-trigger, .github-link { min-height: 40px; padding: 0 9px; border-radius: 8px; }
+  .header-github-mark { display: flex; }
+  .header-github-arrow { display: none; }
+  .masthead-actions svg { width: 16px; height: 16px; }
+  .about-trigger:hover, .github-link:hover, .language-trigger:hover, .language-dropdown[open] .language-trigger, .header-preferences .theme-switch:hover { background: var(--soft); color: var(--ink); text-decoration: none; }
+  .header-preferences { height: 40px; padding-inline: 2px; border: 1px solid var(--line); border-radius: 22px; }
+  .language-dropdown { display: block; position: relative; }
+  .language-trigger { min-height: 36px; padding: 0 10px; border-radius: 18px 0 0 18px; list-style: none; }
+  .language-trigger::-webkit-details-marker { display: none; }
+  .header-preferences .theme-switch { position: relative; width: 37px; height: 36px; border-radius: 0 18px 18px 0; }
+  .header-preferences .theme-switch::before { content: ""; position: absolute; left: 0; top: 9px; bottom: 9px; border-left: 1px solid var(--line); }
+  .language-menu { position: absolute; z-index: 3; top: calc(100% + 7px); right: 0; display: grid; gap: 2px; min-width: 150px; padding: 5px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); box-shadow: 0 9px 24px rgb(20 22 18 / .1); }
+  .language-menu button { display: flex; justify-content: space-between; align-items: center; gap: 14px; width: 100%; min-height: 36px; padding: 6px 10px; border-radius: 8px; color: var(--body); text-align: left; font-size: 14px; white-space: nowrap; }
+  .language-menu button:hover, .language-menu button[aria-pressed="true"] { background: var(--soft); color: var(--ink); }
+  .language-menu button svg { width: 14px; height: 14px; color: var(--accent); }
+  .language-menu button:focus-visible { outline-offset: -2px; }
+  .introduction h1:lang(zh) { letter-spacing: -.025em; }
   .library > .sidebar {
     position: sticky;
     top: 24px;
