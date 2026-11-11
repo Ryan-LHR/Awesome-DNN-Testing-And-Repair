@@ -50,7 +50,6 @@ ZH_HANS_LABELS = {
     "Title": "标题",
     "Links": "链接",
     "Venue": "来源",
-    "A paper may appear in more than one category.": "同一篇论文可能归入多个类别。",
     " (preprint)": "（预印本）",
 }
 PUBLICATION_TYPES = ("conference", "journal", "preprint")
@@ -438,8 +437,6 @@ def render_overview(papers, language="en"):
         link = f"[{labels.get(category, category)}](#{category.lower().replace(' ', '-')})"
         label = f"  - {link}" if level == 4 else f"- **{link}**"
         lines.append(f"{label} ({count})")
-    note = "A paper may appear in more than one category."
-    lines.extend(["", labels.get(note, note)])
     return "\n".join(lines)
 
 

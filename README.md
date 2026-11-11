@@ -36,9 +36,10 @@ This collection focuses on testing, verifying, and repairing deep neural network
 - **[Surveys](#surveys)** (2)
 - **[Empirical Studies](#empirical-studies)** (17)
 
-A paper may appear in more than one category.
-
 <!-- END GENERATED OVERVIEW -->
+
+> [!NOTE]
+> Papers may appear in multiple categories. Category counts are per README, while **Papers** and **With code** cover the full collection.
 
 <a name="website"></a>
 
@@ -72,7 +73,7 @@ Collected papers published in the past month, including preprints, with confirme
 
 <!-- BEGIN GENERATED RECENT PAPERS -->
 
-*2026-10-07 — 2026-11-07*
+*2026-10-11 — 2026-11-11*
 
 | Date | Paper | Venue | Links |
 | :---: | --- | :---: | --- |
@@ -414,7 +415,6 @@ This project's original content and code are licensed under the [MIT License](LI
 ## 💡 Tips
 
 - The English README lists English-language papers. The [Simplified Chinese README](README.zh-Hans.md#papers) includes both English- and Chinese-language papers.
-- The **Papers** and **With code** badges count the entire collection in both versions. Category counts reflect the papers displayed in each version.
 
 <a name="contributing"></a>
 
@@ -426,7 +426,8 @@ Contributions are welcome!
 - **[Suggest a correction](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=02-correct-entry.yml)**: report an issue with an existing entry.
 - **[Submit a pull request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls)**: add or improve paper data and repository content.
 
-For data contributions, see the [data guide and DeepXplore example](data/README.md#english).
+> [!TIP]
+> Adding a paper by pull request? Use the [DeepXplore entry](data/README.md#deepxplore-example) as a template.
 
 Thanks to everyone who contributes to this collection!
 

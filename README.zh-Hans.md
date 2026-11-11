@@ -36,9 +36,10 @@
 - **[综述](#surveys)** (5)
 - **[实证研究](#empirical-studies)** (17)
 
-同一篇论文可能归入多个类别。
-
 <!-- END GENERATED OVERVIEW -->
+
+> [!NOTE]
+> 同一篇论文可归入多个类别。分类计数以当前 README 为准，**Papers** 和 **With code** 统计全库。
 
 <a name="website"></a>
 
@@ -72,7 +73,7 @@
 
 <!-- BEGIN GENERATED RECENT PAPERS -->
 
-*2026-10-07 — 2026-11-07*
+*2026-10-11 — 2026-11-11*
 
 | 日期 | 论文 | 来源 | 链接 |
 | :---: | --- | :---: | --- |
@@ -435,7 +436,6 @@
 ## 💡 阅读提示
 
 - [英文版](README.md#papers)只展示英文论文；简体中文版同时展示中英文论文。
-- 两版顶部的 **Papers** 和 **With code** 徽章都统计全库；分类计数按各版本实际展示的论文计算。
 
 <a name="contributing"></a>
 
@@ -447,7 +447,8 @@
 - **[提交纠错](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/issues/new?template=02-correct-entry.yml)**：指出已有条目的错误或需要更新之处。
 - **[提交 Pull Request](https://github.com/Ryan-LHR/awesome-dnn-testing-and-repair/pulls)**：补充或完善论文数据与仓库内容。
 
-直接修改论文数据时，请参考[数据填写说明与 DeepXplore 示例](data/README.md#简体中文)。
+> [!TIP]
+> 通过 Pull Request 添加论文时，可以参考 [DeepXplore 条目](data/README.md#deepxplore-example) 的填写方式。
 
 感谢每一位为本合集作出贡献的朋友！
 
